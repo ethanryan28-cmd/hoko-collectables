@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hoko Collectables - Your premier destination for rare and unique collectables. Shop figures, trading cards, vintage toys, and more.">
+  <title>Hoko Collectables | Rare &amp; Unique Collectables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free shipping on orders over $75 &bull; Use code <strong>HOKO10</strong> for 10% off your first order</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon">&#9670;</span>
+          <span class="logo-text">HOKO<span class="logo-accent">Collectables</span></span>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#shop" class="nav-link">Shop</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-icon" id="searchToggle" title="Search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="btn-icon" id="wishlistBtn" title="Wishlist" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <button class="btn-icon cart-icon" id="cartToggle" title="Cart" aria-label="Shopping Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" placeholder="Search for collectables..." id="searchInput" class="search-input">
+        <button class="search-submit">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartItemCount">(0 items)</span></h3>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>Your cart is empty</p>
+        <a href="#shop" class="btn-primary" onclick="closeCart()">Start Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <p class="cart-shipping-note">Shipping &amp; taxes calculated at checkout</p>
+      <button class="btn-primary btn-block">Proceed to Checkout</button>
+      <button class="btn-secondary btn-block" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">New Arrivals Every Week</span>
+        <h1 class="hero-title">Discover Rare &amp;<br><span class="text-accent">Unique Collectables</span></h1>
+        <p class="hero-subtitle">From vintage trading cards to limited edition figures, find the pieces that make your collection extraordinary.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn-primary btn-large">Shop Now</a>
+          <a href="#categories" class="btn-outline btn-large">Browse Categories</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>5,000+</strong><span>Products</span></div>
+          <div class="stat"><strong>15,000+</strong><span>Happy Collectors</span></div>
+          <div class="stat"><strong>98%</strong><span>5-Star Reviews</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-cards">
+          <div class="hero-card card-1">
+            <div class="card-inner">
+              <div class="card-shine"></div>
+              <span class="card-label">Rare Find</span>
+              <div class="card-item">&#9670;</div>
+              <span class="card-name">Limited Series #001</span>
+            </div>
+          </div>
+          <div class="hero-card card-2">
+            <div class="card-inner">
+              <div class="card-shine"></div>
+              <span class="card-label">New Arrival</span>
+              <div class="card-item">&#9733;</div>
+              <span class="card-name">Gold Edition</span>
+            </div>
+          </div>
+          <div class="hero-card card-3">
+            <div class="card-inner">
+              <div class="card-shine"></div>
+              <span class="card-label">Trending</span>
+              <div class="card-item">&#10022;</div>
+              <span class="card-name">Collector's Set</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <div><strong>Free Shipping</strong><span>Orders over $75</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div><strong>Authenticity Guaranteed</strong><span>Every item verified</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div><strong>Easy Returns</strong><span>30-day policy</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <div><strong>Secure Payment</strong><span>256-bit SSL encrypted</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Browse By Type</span>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Explore our curated collection of rare and sought-after collectables</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card cat-figures" onclick="filterCategory('figures')">
+          <div class="cat-icon">&#127925;</div>
+          <h3>Action Figures</h3>
+          <p>Limited edition &amp; rare figures</p>
+          <span class="cat-count">248 items</span>
+        </div>
+        <div class="category-card cat-cards" onclick="filterCategory('cards')">
+          <div class="cat-icon">&#127137;</div>
+          <h3>Trading Cards</h3>
+          <p>Vintage &amp; modern card sets</p>
+          <span class="cat-count">1,432 items</span>
+        </div>
+        <div class="category-card cat-vintage" onclick="filterCategory('vintage')">
+          <div class="cat-icon">&#9874;</div>
+          <h3>Vintage Toys</h3>
+          <p>Classic toys &amp; memorabilia</p>
+          <span class="cat-count">189 items</span>
+        </div>
+        <div class="category-card cat-anime" onclick="filterCategory('anime')">
+          <div class="cat-icon">&#127770;</div>
+          <h3>Anime &amp; Manga</h3>
+          <p>Official &amp; import collectables</p>
+          <span class="cat-count">567 items</span>
+        </div>
+        <div class="category-card cat-comics" onclick="filterCategory('comics')">
+          <div class="cat-icon">&#128218;</div>
+          <h3>Comics &amp; Art</h3>
+          <p>First editions &amp; signed copies</p>
+          <span class="cat-count">312 items</span>
+        </div>
+        <div class="category-card cat-sports" onclick="filterCategory('sports')">
+          <div class="cat-icon">&#127942;</div>
+          <h3>Sports</h3>
+          <p>Memorabilia &amp; signed items</p>
+          <span class="cat-count">445 items</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals / Featured Products -->
+  <section class="shop-section" id="new-arrivals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Just In</span>
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-subtitle">Fresh additions to our collection — get them before they're gone</p>
+      </div>
+      <div class="products-grid" id="newArrivalsGrid">
+        <!-- Products inserted by JS -->
+      </div>
+      <div class="section-footer">
+        <a href="#shop" class="btn-outline">View All New Arrivals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop-section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Collection</span>
+        <h2 class="section-title">All Products</h2>
+        <p class="section-subtitle">Browse our full catalogue of verified authentic collectables</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="figures">Figures</button>
+          <button class="filter-tab" data-filter="cards">Cards</button>
+          <button class="filter-tab" data-filter="vintage">Vintage</button>
+          <button class="filter-tab" data-filter="anime">Anime</button>
+          <button class="filter-tab" data-filter="sports">Sports</button>
+        </div>
+        <div class="sort-select-wrap">
+          <select class="sort-select" id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Products inserted by JS -->
+      </div>
+      <div class="section-footer">
+        <button class="btn-outline" id="loadMoreBtn">Load More Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="banner-section">
+    <div class="container">
+      <div class="banner-content">
+        <span class="banner-badge">Limited Time</span>
+        <h2>New Collector's Bundle</h2>
+        <p>Get our exclusive Starter Bundle — 5 mystery items from top categories at 30% off the individual prices. Limited to 100 bundles.</p>
+        <div class="banner-actions">
+          <a href="#shop" class="btn-primary">Grab Bundle — $49.99</a>
+          <span class="banner-timer" id="bannerTimer">Offer ends in: 02:47:33</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">What Collectors Say</span>
+        <h2 class="section-title">Customer Reviews</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Found a mint-condition 1987 trading card I'd been looking for years. Arrived perfectly packaged with a certificate of authenticity. Hoko never disappoints!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div><strong>Marcus K.</strong><span>Verified Buyer</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"The quality and authenticity verification process is top-notch. Every item I've ordered has been exactly as described. My go-to shop for anime figures."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SL</div>
+            <div><strong>Sarah L.</strong><span>Verified Buyer</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Incredible selection of vintage toys from the 80s and 90s. The team clearly knows their stuff, and customer service was incredibly helpful when I had questions."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JP</div>
+            <div><strong>James P.</strong><span>Verified Buyer</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-image-wrap">
+            <div class="about-badge-float">Est. 2019</div>
+            <div class="about-img-placeholder">
+              <span class="about-icon">&#9670;</span>
+              <span>HOKO</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-badge">Our Story</span>
+          <h2 class="section-title">Passion for Collecting, <br>Built for Collectors</h2>
+          <p>Hoko Collectables was founded in 2019 by a group of passionate collectors who were frustrated with the lack of authentic, fairly-priced rare items online. We built the platform we wished existed.</p>
+          <p>Every item in our catalogue is hand-verified by our team of experts before listing. We work directly with reputable suppliers, private collectors, and estate sales to source genuine pieces you won't find anywhere else.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <span class="value-icon">&#10003;</span>
+              <div><strong>Authenticity First</strong><p>Every item comes with a Certificate of Authenticity</p></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">&#10003;</span>
+              <div><strong>Expert Curation</strong><p>Hand-picked by collectors, for collectors</p></div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">&#10003;</span>
+              <div><strong>Community Driven</strong><p>We listen to and grow with our collector community</p></div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <h2>Join the Hoko Community</h2>
+          <p>Get first access to new arrivals, exclusive deals, and collector tips delivered to your inbox.</p>
+          <ul class="newsletter-perks">
+            <li>&#10003; Early access to new arrivals</li>
+            <li>&#10003; Exclusive subscriber-only discounts</li>
+            <li>&#10003; Monthly collector newsletter</li>
+          </ul>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your name" required class="form-input" id="nlName">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" required class="form-input" id="nlEmail">
+          </div>
+          <button type="submit" class="btn-primary btn-block">Subscribe &amp; Get 10% Off</button>
+          <p class="form-disclaimer">No spam, unsubscribe anytime. By subscribing you agree to our privacy policy.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Questions about an item, a custom order, or just want to chat collecting? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">&#9993;</div>
+            <div><strong>Email</strong><span>hello@hokocollectables.com</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9743;</div>
+            <div><strong>Phone</strong><span>+1 (555) 010-4256</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9200;</div>
+            <div><strong>Hours</strong><span>Mon–Fri 9am–6pm EST</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128205;</div>
+            <div><strong>Location</strong><span>New York, NY 10001</span></div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="Twitter">TW</a>
+            <a href="#" class="social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-input" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-input">
+              <option>Order enquiry</option>
+              <option>Authenticity question</option>
+              <option>Selling an item</option>
+              <option>Partnership</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-input" rows="5" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo logo-light">
+            <span class="logo-icon">&#9670;</span>
+            <span class="logo-text">HOKO<span class="logo-accent">Collectables</span></span>
+          </a>
+          <p>Your premier destination for authentic rare and unique collectables since 2019.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="Twitter">TW</a>
+            <a href="#" class="social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#shop">All Products</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#categories">Action Figures</a></li>
+            <li><a href="#categories">Trading Cards</a></li>
+            <li><a href="#categories">Vintage Toys</a></li>
+            <li><a href="#categories">Anime &amp; Manga</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Authenticity Guide</a></li>
+            <li><a href="#">Track My Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hoko Collectables. All rights reserved.</p>
+        <div class="payment-icons">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MC</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">PayPal</span>
+          <span class="payment-badge">Apple Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
