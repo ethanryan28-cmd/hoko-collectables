@@ -316,9 +316,10 @@ function toggleWishlist(id) {
     showToast('Removed from wishlist');
   }
   saveWishlist();
+  updateWishlistUI();
   // Update button appearance without full re-render
   const btn = `[data-id="${id}"] .product-wishlist`;
-  $$(btn).forEach(el => {
+  $(btn).forEach(el => {
     const svg = el.querySelector('svg');
     if (wishlist.includes(id)) {
       el.classList.add('wishlisted');
@@ -328,6 +329,15 @@ function toggleWishlist(id) {
       svg?.setAttribute('fill', 'none');
     }
   });
+}
+
+function updateWishlistUI() {
+  const count = wishlist.length;
+  const badge = $('#wishlistCount');
+  if (badge) {
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'flex' : 'none';
+  }
 }
 
 $('#wishlistBtn')?.addEventListener('click', () => {
@@ -506,11 +516,91 @@ document.addEventListener('click', e => {
   }
 });
 
+
+// ─── Product Detail Modal ─────────────────────────────────────
+const PRODUCT_DESCS = {
+  figures: 'A highly detailed, museum-quality figure from our certified-authentic collection. Perfect mint condition, comes with original packaging and certificate of authenticity.',
+  cards:   'A rare and highly sought-after trading card in excellent condition. Independently graded and verified. Stored in protective sleeve. Perfect addition to any collection.',
+  vintage: 'An original vintage piece in remarkable condition for its age. Thoroughly cleaned and professionally inspected. A true collector\'s treasure from a golden era.',
+  anime:   'Official licensed merchandise from a reputable manufacturer. Highly detailed sculpt with premium paint applications. Comes in original box with all accessories.',
+  comics:  'A premium-condition comic or art piece, independently graded and verified. Stored in archival-quality materials. A cornerstone for any serious collection.',
+  sports:  'Authentic sports memorabilia with certificate of authenticity. Verified by a reputable third-party service. An iconic piece of sports history.',
+};
+
+function openModal(id) {
+  const p = PRODUCTS.find(prod => prod.id === id);
+  if (!p) return;
+
+  $('#modalImg').textContent   = p.emoji;
+  $('#modalCategory').textContent = p.category.charAt(0).toUpperCase() + p.category.slice(1);
+  $('#modalTitle').textContent = p.name;
+  $('#modalStars').textContent = '★'.repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? '½' : '');
+  $('#modalReviews').textContent = `(${p.reviews} reviews)`;
+  $('#modalDesc').textContent  = PRODUCT_DESCS[p.category] || '';
+
+  const badge = $('#modalBadge');
+  if (badge) {
+    badge.textContent  = p.badge || '';
+    badge.className    = 'product-badge' + (p.badge ? ` badge-${p.badge}` : '');
+    badge.style.display = p.badge ? 'inline-block' : 'none';
+  }
+
+  const price = $('#modalPrice');
+  if (price) {
+    price.innerHTML = p.originalPrice
+      ? `${p.price.toFixed(2)} <span style="font-size:.9rem;color:var(--gray);text-decoration:line-through;margin-left:8px">${p.originalPrice.toFixed(2)}</span>`
+      : `${p.price.toFixed(2)}`;
+  }
+
+  const addBtn = $('#modalAddCart');
+  if (addBtn) {
+    addBtn.onclick = () => { addToCart(p.id); closeModal(); };
+  }
+
+  const wishBtn = $('#modalWishlist');
+  if (wishBtn) {
+    const inWishlist = wishlist.includes(p.id);
+    wishBtn.textContent = inWishlist ? '♥ In Wishlist' : '♡ Wishlist';
+    wishBtn.onclick = () => {
+      toggleWishlist(p.id);
+      wishBtn.textContent = wishlist.includes(p.id) ? '♥ In Wishlist' : '♡ Wishlist';
+    };
+  }
+
+  $('#productModal').classList.add('active');
+  $('#modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  $('#productModal')?.classList.remove('active');
+  $('#modalOverlay')?.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeCart();
+  }
+});
+
+// Make product images/names clickable to open modal
+document.addEventListener('click', e => {
+  const card = e.target.closest('.product-card');
+  if (!card) return;
+  // Don't open modal if they clicked a button
+  if (e.target.closest('button, .add-to-cart-btn')) return;
+  const id = parseInt(card.dataset.id);
+  if (id) openModal(id);
+});
+
 // ─── Init ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderNewArrivals();
   renderProducts(true);
   updateCartUI();
+  updateWishlistUI();
   setupReveal();
 });
 
@@ -519,5 +609,6 @@ if (document.readyState !== 'loading') {
   renderNewArrivals();
   renderProducts(true);
   updateCartUI();
+  updateWishlistUI();
   setupReveal();
 }
