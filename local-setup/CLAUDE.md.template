@@ -1,0 +1,126 @@
+# HOKO Collectables — Local Ops
+
+This is the home base for running HOKO Collectables operations through Claude Code on Windows.
+
+## Brand
+
+- **Name:** HOKO Collectables
+- **Site:** https://www.hokocollectables.com (Shopify)
+- **Based:** Melbourne, Australia (est. 2024)
+- **Owner / GitHub:** ethanryan28-cmd
+- **Socials:** Instagram & TikTok — @hokocollectables
+- **Motto:** "Collector first. Seller second."
+- **Positioning:** Collector-run (~20 yrs hobby experience), honest grading (LP means LP), transparent buybacks, careful packing, same-day dispatch.
+- **Active promos:** HOKO10 (10% off first order), free AU shipping over $100, VIP loyalty with restock early-access, 48-hr collection-quote turnaround.
+
+## Product Domain (TCG-focused)
+
+- Pokémon TCG singles
+- Magic: The Gathering
+- One Piece TCG
+- Dragon Ball Super
+- Japanese sealed product
+- Mystery packs & bulk lots
+- Collection buyback service
+
+## Channel Strategy
+
+| Channel | Role | What goes here |
+|---------|------|----------------|
+| **eBay** | Always-on acquisition | Cheap singles (under ~$30 AUD) — primary discovery channel |
+| **Shopify** | Brand experience + margin | Sealed product, premium singles, graded slabs, signed pieces |
+| **Whatnot** | On-demand live | Streamed sales when owner chooses to go live |
+
+**Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
+
+**Migration in progress:** Shopify products under AUD $30 are being archived (reversible). Owner can do this via the Shopify Connector for Claude — voice prompt: *"Show me which Shopify products are priced under $30 AUD. Don't archive yet."* Then *"Go ahead and archive those."*
+
+## Tooling
+
+- **CardUploader** — bulk-upload tool for Shopify. Owner has adapted/"flipped" the same data flow to push listings to eBay too.
+- **Shopify Connector for Claude** — primary path for running the store by voice. Enabled in claude.ai → Settings → Connectors → Shopify.
+  - **Limit:** can't upload local image files — needs public URLs.
+  - **Safety habit:** for any bulk-destructive action (price changes, archives, deletes), always say *"show me one example first, don't execute yet"*, approve, then *"go ahead."*
+- **Local Claude Code** (this) — daily content, listings, prompts, file work.
+- **Cloud Claude Code scheduled session** — daily brand/SEO scan, competitor pricing, listing freshness check.
+
+## Voice / Tone
+
+- Approachable, community-focused, trust-forward
+- Collector-to-collector — not generic e-commerce hype
+- Honest about condition, never inflate grades
+- Australian English (colour, recognise, organised)
+- No "GUYS! YOU WON'T BELIEVE!". No marketing-agency tone.
+
+---
+
+## Reference Prompts
+
+### eBay listing
+
+**Ask owner for:** card/item, set, condition (NM/LP/MP/HP/DMG or Sealed), graded?, price AUD, qty, special notes, photos y/n.
+
+**Generate:**
+1. **Title** — max 80 chars, AU TCG search terms, no ALL CAPS / no emojis
+2. **Item specifics** — Brand, Set, Card Number, Card Name, Rarity, Language, Condition, Graded, Year, Features
+3. **Description** — one-line hook, bullet list (item / condition honest / packaging), trust block *"Collector-run from Melbourne. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*, cross-sell *"Browse our full range and save 10% on your first order at hokocollectables.com with code HOKO10."*
+4. Suggested eBay AU category path
+5. Suggested price logic if not pinned (sold-comp reasoning)
+
+### Shopify sealed product page
+
+**Ask owner for:** product name, set, format, region, release date, in-stock / pre-order, price AUD, notable chase cards.
+
+**Generate:**
+- Title, meta description (~155 chars)
+- 3-paragraph description: (1) the set + why it matters, (2) what's inside, (3) chase cards + why they matter
+- Bullet block: same-day dispatch if before 2pm AEST, padded packaging, HOKO trust signals
+- Shopify tags + collection assignments
+
+### Social caption (IG / TikTok)
+
+**Ask owner for:** platform, post type, subject, CTA.
+
+**Generate:**
+1. Hook
+2. Body (2–4 short lines)
+3. CTA
+4. 8–12 hashtags (mix #pokemontcg with #tcgaustralia #melbournecollectors)
+
+If TikTok: also produce a 3-beat video script (Hook → Show → Pitch), under 30s.
+
+### Whatnot show prep
+
+**Ask owner for:** date/time AEST, show type, featured products, starting bid baseline, duration.
+
+**Generate:** show title, description, run-of-show (time-stamped), lot list table, 3 pinned chat messages, post-show checklist.
+
+### Package insert
+
+**Ask owner for:** channel, buyer type, order value bracket.
+
+**Generate:** Under 80 words. Collector-to-collector. Pitch Shopify especially for eBay buyers. HOKO10 for first-timers. Sign off *"— Ethan, HOKO Collectables, Melbourne"*. Suggest UTM-tracked QR target.
+
+---
+
+## Voice Intake Protocol
+
+When owner dumps a raw voice transcript (Whisper Flow / phone dictation / iOS native):
+
+1. **Extract, don't invent.** Pull only what he said.
+2. **Categorise** into: listings, social, Whatnot prep, customer messages, pricing decisions, restock notes, to-dos, strategic thoughts.
+3. **Produce structured output** per bucket, using Reference Prompts as templates.
+4. **Use `[FILL IN: ...]` placeholders** for missing info — never block on minor details.
+5. **End with a tight to-do list** of what to review.
+
+---
+
+## Working Notes
+
+- Default to short, direct responses.
+- Don't open browser tabs or start long downloads without confirming.
+- Never inflate condition. Never use marketing hype words.
+
+## Related repo
+
+`github.com/ethanryan28-cmd/hoko-collectables` — separate demo storefront site, NOT the live store. Also hosts the scheduled cloud routine, Shopify archiver script, and prompt template files.
