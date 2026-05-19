@@ -33,6 +33,20 @@ The live business is **TCG-focused**:
 
 The full operational plan / assets live on the owner's PC, not in this repo.
 
+## Tooling owner uses
+
+- **CardUploader** — bulk-upload tool for Shopify; owner has adapted/"flipped" the same data flow to push listings to eBay too (saves duplicate data entry).
+- Local Claude Code on Windows for ops + content gen (folder: `claude\hoko-collectables\`).
+- Cloud Claude Code (this repo) for repo work + scheduled daily routine.
+
+## Catalogue strategy (in progress)
+
+- **Shopify** — sealed product + premium / graded singles (kept for margin & brand).
+- **eBay** — cheap singles only; primary acquisition channel.
+- **Whatnot** — on-demand live streaming when owner chooses to go live.
+- **Bridge:** package inserts in every eBay order push HOKO10 + Shopify URL.
+- Migration helper: `scripts/shopify/archive_cheap_singles.py` archives Shopify products under AUD $30 (reversible, dry-run by default).
+
 ## This Repo
 
 `hoko-collectables` (this repo) is a **demo / portfolio storefront** — single-page static site (`index.html` + `style.css` + `app.js`). Its 32-item hard-coded `PRODUCTS` catalog (Darth Vader figure, Millennium Falcon, Jordan rookie, etc.) does **not** reflect the real shop's TCG-singles inventory. Treat it as a sandbox unless the owner says otherwise.
