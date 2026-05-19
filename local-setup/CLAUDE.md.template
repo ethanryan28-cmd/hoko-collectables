@@ -35,6 +35,12 @@ This is the home base for running HOKO Collectables operations through Claude Co
 
 **Migration in progress:** Shopify products under AUD $30 are being archived (reversible). Owner can do this via the Shopify Connector for Claude — voice prompt: *"Show me which Shopify products are priced under $30 AUD. Don't archive yet."* Then *"Go ahead and archive those."*
 
+## Sourcing
+
+- **Japanese / Korean / Chinese product:** direct supplier relationship. Primarily sealed (booster boxes, ETBs, decks, promos). Use as a trust signal in copy — *"sourced through our regional supplier network"* — but don't claim "direct from Japan" unless owner confirms; chain may go via an AU distributor.
+- **English product:** sourced ad-hoc from eBay and Facebook Marketplace — often collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition channel); premium / graded / signed flow to Shopify.
+- Margins differ: supplier-bought is predictable / lower margin; eBay+FB lot-bought is variable / higher margin but more sorting work. Ask owner which bucket the SKU came from when pricing or restock conversations need it.
+
 ## Tooling
 
 - **CardUploader** — bulk-upload tool for Shopify. Owner has adapted/"flipped" the same data flow to push listings to eBay too.
