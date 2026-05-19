@@ -68,6 +68,28 @@ The full operational plan / assets live on the owner's PC, not in this repo.
 - Don't open PRs unless explicitly asked.
 - Voice when writing copy for the brand: approachable, community-focused, trust-forward — match the "collector first" tone, not generic e-commerce hype.
 
+## Voice Intake Protocol
+
+The owner often dumps raw voice transcripts (via Whisper Flow, Claude mobile, or phone dictation) instead of typing — speaking is ~3× faster than typing and lets him capture ideas while away from his PC.
+
+When you receive a raw transcript-style dump (rambling, half-sentences, multiple topics mixed together, no formatting):
+
+1. **Extract, don't invent.** Pull out only what he actually said. Never fabricate card names, prices, dates, or details he didn't mention.
+2. **Categorise** the contents into any of these buckets that apply:
+   - Listings to draft (eBay or Shopify)
+   - Social posts (IG caption / TikTok script)
+   - Whatnot show ideas / prep
+   - Customer DMs or replies to draft
+   - Pricing or buyback decisions
+   - Restock / inventory notes
+   - To-dos / reminders
+   - Strategic thoughts (file, don't action)
+3. **Produce structured output** — one section per bucket, with concrete drafts where possible. Use the Reference Prompts above (eBay listing, Shopify sealed, social caption, Whatnot show, package insert) as templates.
+4. **Ask only for truly missing info** — never block on details he can fill in later. If a price or condition isn't mentioned, leave a `[FILL IN: price]` placeholder and keep going.
+5. **End with a tight to-do list** — what he should review/approve when he's back at his PC.
+
+Match his tone in any drafts: collector-to-collector, honest, AU English, no marketing hype.
+
 ## Daily Routine
 
 A scheduled Claude Code session runs `routines/daily.md` once per day. Output lands in `reports/YYYY-MM-DD.md` on `main`.
