@@ -53,3 +53,24 @@ The full operational plan / assets live on the owner's PC, not in this repo.
 - Use `claude/<topic>` branches (e.g. `claude/analyze-test-coverage-bF8y1`).
 - Don't open PRs unless explicitly asked.
 - Voice when writing copy for the brand: approachable, community-focused, trust-forward — match the "collector first" tone, not generic e-commerce hype.
+
+## Daily Routine
+
+A scheduled Claude Code session runs `routines/daily.md` once per day. Output lands in `reports/YYYY-MM-DD.md` on `main`.
+
+Sub-routines:
+1. Brand & SEO scan (WebSearch — works today)
+2. Competitor pricing (needs `routines/sku-watchlist.json` populated)
+3. Sales/inventory snapshot (needs Shopify + eBay env vars — see step 3 of routine)
+4. Listing freshness (sitemap probe — works today; eBay portion needs creds)
+
+### Web UI setup (one-time, owner does this)
+
+1. Open environment in https://claude.ai/code → Triggers → **Add scheduled trigger**
+2. Schedule: daily at 8:00 AM AEST (or preferred time)
+3. Source: this repo, branch `main`
+4. Prompt: `Read and execute routines/daily.md`
+5. Environment variables (under env config, not in repo): `SHOPIFY_STORE`, `SHOPIFY_ADMIN_TOKEN`, `EBAY_APP_ID`, `EBAY_CERT_ID`, `EBAY_DEV_ID`, `EBAY_USER_TOKEN`
+6. Network policy: needs outbound to `hokocollectables.com`, eBay APIs, Google (for WebSearch)
+
+Docs: https://code.claude.com/docs/en/claude-code-on-the-web
