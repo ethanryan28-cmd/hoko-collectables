@@ -88,6 +88,10 @@ When you receive a raw transcript-style dump (rambling, half-sentences, multiple
 4. **Ask only for truly missing info** — never block on details he can fill in later. If a price or condition isn't mentioned, leave a `[FILL IN: price]` placeholder and keep going.
 5. **End with a tight to-do list** — what he should review/approve when he's back at his PC.
 
+**Output destination (when in a Claude Code session with GitHub MCP):** create one GitHub issue per bucket, tagged `voice-dump`. Title format: `[voice-dump] <category> — <date>`. Body contains the structured drafts. Owner is on iPhone and reviews on the GitHub mobile app.
+
+**Phone setup the owner uses:** iPhone with either (a) Whisper Flow for system-wide dictation, or (b) Claude.ai mobile / Claude Code web in Safari with native iOS dictation. Both produce raw transcripts that follow this protocol.
+
 Match his tone in any drafts: collector-to-collector, honest, AU English, no marketing hype.
 
 ## Daily Routine
