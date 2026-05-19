@@ -5,9 +5,12 @@ Finds every active product whose entire price range is under AUD $30, then
 optionally archives them. Safe by default — dry-run produces a CSV you review
 before any change is made. Archiving requires a typed 'archive' confirmation.
 
-Strategy: keep premium singles + sealed product on Shopify, push cheap singles
-to eBay-only. Reversible — archived products can be reactivated any time from
-Shopify admin.
+Strategy (post May 2026 pivot to sealed-only):
+HOKO no longer sources new singles. Existing premium singles are allowed to
+sell through naturally on Shopify, but cheap singles (under AUD $30) drag the
+brand toward "discount bin" perception. This script archives them in bulk so
+the Shopify catalogue presents as sealed + graded only. Reversible — archived
+products can be reactivated from Shopify admin at any time.
 
 Usage (PowerShell on Windows):
     $env:SHOPIFY_STORE = "hokocollectables.myshopify.com"

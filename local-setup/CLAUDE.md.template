@@ -13,33 +13,50 @@ This is the home base for running HOKO Collectables operations through Claude Co
 - **Positioning:** Collector-run (~20 yrs hobby experience), honest grading (LP means LP), transparent buybacks, careful packing, same-day dispatch.
 - **Active promos:** HOKO10 (10% off first order), free AU shipping over $100, VIP loyalty with restock early-access, 48-hr collection-quote turnaround.
 
-## Product Domain (TCG-focused)
+## Product Domain (TCG sealed + graded — post May 2026 pivot)
 
-- Pokémon TCG singles
-- Magic: The Gathering
-- One Piece TCG
-- Dragon Ball Super
-- Japanese sealed product
-- Mystery packs & bulk lots
-- Collection buyback service
+HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new singles sourcing.
 
-## Channel Strategy
+**In scope:**
+
+- Pokémon TCG sealed (boxes, ETBs, booster packs, decks, promos)
+- Magic: The Gathering sealed
+- One Piece TCG sealed
+- Dragon Ball Super sealed
+- Japanese sealed (Pokémon, One Piece, DBS, etc.)
+- Graded slabs — PSA / BGS / CGC only
+- Collection buyback service (sealed + verified-grader slabs only)
+
+**Out of scope (sell-through existing, don't replenish):**
+
+- Loose singles — existing Shopify/eBay stock clears naturally
+- Mystery packs / bulk single lots
+- Slabs from unverified graders (HGA, GMG, etc.)
+
+## Channel Strategy (post sealed-only pivot)
 
 | Channel | Role | What goes here |
 |---------|------|----------------|
-| **eBay** | Always-on acquisition | Cheap singles (under ~$30 AUD) — primary discovery channel |
-| **Shopify** | Brand experience + margin | Sealed product, premium singles, graded slabs, signed pieces |
-| **Whatnot** | On-demand live | Streamed sales when owner chooses to go live |
+| **Shopify** | Brand experience + margin | Sealed product + PSA/BGS/CGC slabs. Existing premium singles sell-through, no new singles. |
+| **eBay** | Search-driven acquisition | Sealed + slabs. Captures buyers who search the platform directly. Insert bridge stays. |
+| **Whatnot** | On-demand live | Sealed pack-rip / box-break shows when owner chooses to go live. |
 
 **Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
 
-**Migration in progress:** Shopify products under AUD $30 are being archived (reversible). Owner can do this via the Shopify Connector for Claude — voice prompt: *"Show me which Shopify products are priced under $30 AUD. Don't archive yet."* Then *"Go ahead and archive those."*
+**Pivot in progress:** existing Shopify products under AUD $30 (overwhelmingly cheap singles) are being archived in one pass (reversible). Owner can do this via:
+- The script `scripts/shopify/archive_cheap_singles.py` in the cloud repo, OR
+- The Shopify Connector for Claude — voice prompt: *"Show me Shopify products priced under $30 AUD, don't archive yet."* Then *"Go ahead and archive those."*
+
+Premium singles (≥$30) stay listed and sell through naturally.
 
 ## Sourcing
 
-- **Japanese / Korean / Chinese product:** mix of direct-from-Asia and AU-based wholesale partners — varies per SKU. **Default copy is generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only say *"direct from Japan"* (or similar) when owner has confirmed for that SKU. Ask before writing if unsure.
-- **English product:** sourced ad-hoc from eBay and Facebook Marketplace — collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition); premium / graded / signed flow to Shopify.
-- Margins differ: supplier-bought = predictable / lower margin; eBay+FB lot-bought = variable / higher margin but more sorting work. Ask owner which bucket a SKU came from when pricing or restock convo needs it.
+All new sourcing is **sealed + verified-grader slabs only.** No more lot-splitting, no more single-card sourcing.
+
+- **Japanese / Korean / Chinese sealed:** mix of direct-from-Asia and AU-based wholesale partners — varies per SKU. **Default copy is generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only say *"direct from Japan"* (or similar) when owner has confirmed for that SKU. Ask before writing if unsure.
+- **English sealed:** AU-based wholesalers + opportunistic sealed lots from buybacks.
+- **Graded slabs:** primarily from collection buybacks. Always verify grader (PSA / BGS / CGC only).
+- Margin profile is now consistent (supplier-bought, predictable). Apply replacement-cost pricing on every SKU (see Brand & Pricing Strategy §1).
 
 ---
 
@@ -51,8 +68,9 @@ Four operating principles (PokeNE, May 2026). Apply on every pricing, restock, o
 
 When ~30-40% sold through, check current supplier/lot replacement cost. If it rose, reprice remaining stock to match before running out. Profit must cover *next* restock, not just original purchase.
 
-- Supplier SKUs: check supplier rate at 30% sell-through, reprice if moved.
-- Lot-bought SKUs: check comparable-lot pricing today, reprice if market moved.
+- Asian sealed: check supplier rate at 30% sell-through, reprice if moved.
+- English sealed: check wholesaler/distributor rate, reprice if market moved.
+- Slabs (buyback-sourced): check TCGPlayer + eBay sold comps, reprice if comps moved.
 
 ### 2. Price at market, never undercut
 
@@ -60,9 +78,15 @@ HOKO10 is customer acquisition; day-to-day pricing is at market. Moat = honest g
 
 ### 3. Collection buybacks: rigid, professional, copy-paste
 
-Pay 75-80% of fair market value. Use the fixed intake template every time. Non-negotiable rules: what you buy, where you meet (bank/storage unit), photo+list requirements before quote, quote validity window, payment method.
+Pay 75-80% of fair market value. Use the fixed intake template every time — never freeball.
 
-Stern = signals professional. Sellers of valuable collections prefer rigid rules.
+**Non-negotiables:**
+- What we buy: factory-sealed TCG + PSA/BGS/CGC slabs. Nothing else.
+- Where we meet: bank branch / storage unit, business hours. No home pickups.
+- Quote = 48-hour validity, after photo + typed list received.
+- Payment = bank transfer on the day. No PayPal, no cash, no instalments.
+
+Intake email template lives in the cloud repo at `templates/collection-buyback-intake.md` — copy-paste every time, only customise the recipient's name. Stern = signals professional.
 
 ### 4. Be platform-agnostic — own the brand
 

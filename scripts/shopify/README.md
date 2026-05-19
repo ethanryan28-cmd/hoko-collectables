@@ -4,7 +4,9 @@ Scripts for managing HOKO Collectables' Shopify catalogue. All scripts default t
 
 ## `archive_cheap_singles.py`
 
-Finds active Shopify products priced under AUD $30 and archives them (reversible). Strategy: keep premium singles + sealed on Shopify, push cheap singles to eBay-only.
+Finds active Shopify products priced under AUD $30 and archives them (reversible).
+
+**Strategy (post May 2026 pivot to sealed-only):** HOKO no longer sources new singles. Premium singles already on Shopify sell through naturally. Cheap singles (under $30) drag brand perception toward "discount bin", so they get archived in one pass to tighten the catalogue. Archived products can be reactivated from Shopify admin at any time.
 
 ### Setup (Windows, one-time)
 

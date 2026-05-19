@@ -13,31 +13,44 @@
 
 ## Product Domain
 
-The live business is **TCG-focused**:
+The live business is **TCG sealed + graded**. As of May 2026 HOKO pivoted to strictly sealed product and graded slabs — no new singles sourcing, no more eBay/FB lot-splitting.
 
-- Pokémon TCG singles
-- Magic: The Gathering
-- One Piece TCG
-- Dragon Ball Super
-- Japanese sealed product
-- Mystery packs & bulk lots
-- Collection buyback service
+**In scope (new sourcing + buybacks):**
+
+- Pokémon TCG sealed (boxes, ETBs, booster packs, decks, promos)
+- Magic: The Gathering sealed
+- One Piece TCG sealed
+- Dragon Ball Super sealed
+- Japanese sealed product (Pokémon, One Piece, DBS, etc.)
+- Graded slabs — PSA, BGS, CGC only (modern + vintage)
+- Collection buyback service — **sealed + verified-grader slabs only**
+
+**Out of scope (sell-through, do not replenish):**
+
+- Loose singles (English or Japanese) — existing Shopify/eBay inventory sells through naturally over the coming months. No new singles added.
+- Mystery packs / bulk single lots — out.
+- Slabs from unverified graders (HGA, GMG, etc.) — out.
 
 **Not** the broad figures/vintage/comics/sports-memorabilia mix shown in this repo's demo catalog.
 
 ## Sales Channels
 
-- **eBay** — live
-- **Shopify** (hokocollectables.com) — live
-- **Whatnot** — planned next channel (live-stream selling)
+Post sealed-only pivot:
+
+- **Shopify** (hokocollectables.com) — primary brand storefront. Sealed product + graded slabs going forward. Existing premium singles allowed to sell through naturally.
+- **eBay** — kept, pivoted to sealed + graded. Captures search-driven sealed buyers who don't shop Shopify by default. Bridge to Shopify via package inserts (HOKO10 + URL on every parcel) remains the core acquisition flow.
+- **Whatnot** — planned live-stream channel. Sealed pack-rip / box-break shows make obvious sense as the live format.
 
 The full operational plan / assets live on the owner's PC, not in this repo.
 
 ## Sourcing
 
-- **Japanese / Korean / Chinese product:** mix of direct-from-Asia imports and AU-based wholesale partners — varies per SKU. **Default copy phrasing is the safe generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only escalate to *"direct from Japan"* (or similar) when the owner has confirmed that specific SKU is direct-import. When in doubt, ask before writing.
-- **English product:** sourced ad-hoc from eBay and Facebook Marketplace — often collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition channel); premium / graded / signed flow to Shopify.
-- Margin profile differs significantly between supplier-bought (predictable, lower margin) and eBay/FB lot-bought (variable, higher margin but more sorting work). When suggesting pricing or restocks, ask which bucket the SKU came from if relevant.
+All new sourcing is **sealed product + verified-grader slabs only**. No more lot-buying, no more single-card splits.
+
+- **Japanese / Korean / Chinese sealed:** mix of direct-from-Asia imports and AU-based wholesale partners — varies per SKU. **Default copy phrasing is the safe generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only escalate to *"direct from Japan"* (or similar) when the owner has confirmed that specific SKU is direct-import. When in doubt, ask before writing.
+- **English sealed:** AU-based wholesalers + direct supplier relationships, plus opportunistic sealed lots from collection buybacks. Same default copy phrasing applies.
+- **Graded slabs:** primarily acquired via collection buybacks. Always verify grader (PSA / BGS / CGC only).
+- **Lot-buying on eBay / FB Marketplace is no longer the strategy.** Margin profile is now consistent (supplier-bought, predictable) — apply replacement-cost pricing (see Brand & Pricing Strategy §1).
 
 ## Brand & Pricing Strategy
 
@@ -47,8 +60,9 @@ Four operating principles (PokeNE, May 2026) — apply whenever pricing, restock
 
 When ~30-40% sold through on any SKU, check the *current* supplier or lot replacement cost before running out. If replacement rose, raise the price on remaining stock to match. Profit must cover restock, not just original purchase.
 
-- **Supplier SKUs (Asian sealed):** check supplier rate at 30% sell-through; reprice if it moved.
-- **Lot-bought SKUs (English singles/lots from eBay/FB):** check comparable-lot pricing today; reprice if the market moved.
+- **Asian sealed:** check supplier rate at 30% sell-through; reprice if it moved.
+- **English sealed:** check wholesaler / distributor price today; reprice if the market moved.
+- **Graded slabs (buyback-sourced):** check current TCGPlayer + eBay sold comps; reprice if the comp range moved.
 
 The $20 profit on a $100 box vanishes the moment the next box costs $120.
 
@@ -60,13 +74,13 @@ HOKO10 is for customer acquisition; day-to-day pricing is at market. The moat is
 
 Pay 75-80% of fair market value. Use a fixed intake email template every time (never freeball negotiate). Set non-negotiable rules:
 
-- What you buy (sealed / graded / premium only — defined by owner)
-- Where you meet (local bank or storage unit only)
-- Photo + list requirements before any quote
-- Quote validity window (e.g. 48h)
-- Payment method (bank transfer on the day)
+- **What you buy:** factory-sealed TCG + PSA/BGS/CGC slabs only. No loose singles, binders, bulk, damaged sealed, or unverified-grader slabs.
+- **Where you meet:** local bank branch or nominated storage facility, business hours only. No home pickups, no after-hours.
+- **Photo + list required** before any quote (one wide collection photo + typed inventory).
+- **Quote validity:** 48 hours.
+- **Payment:** bank transfer on the day. No PayPal, no cash, no instalments.
 
-Being stern signals legit operation. Sellers of valuable collections are *more* comfortable with rigid rules — hobbyists fumble, pros are clear.
+The intake email template lives at `templates/collection-buyback-intake.md` — copy-paste every time, customise only the recipient's name. Being stern signals legit operation; sellers of valuable collections prefer rigid rules.
 
 ### 4. Be platform-agnostic — own the brand
 
@@ -87,17 +101,17 @@ Levers already in place: package inserts (HOKO10 + hokocollectables.com on every
 - **Bulk-destructive actions** (price changes, archives, deletes): always ask Claude to *"show me one example first, don't execute yet."* Approve the dry-run, then say *"go ahead."* This pattern prevents catalogue-wide mistakes.
 - **Claude Code + Shopify plugin** exists as a deeper path (theme edits, SEO audits, conversion reports, AOV bundle analysis). Owner is not using it yet — only add when a specific need surfaces.
 
-## Catalogue strategy (in progress)
+## Catalogue strategy (post sealed-only pivot)
 
-- **Shopify** — sealed product + premium / graded singles (kept for margin & brand).
-- **eBay** — cheap singles only; primary acquisition channel.
-- **Whatnot** — on-demand live streaming when owner chooses to go live.
+- **Shopify** — sealed product + PSA/BGS/CGC slabs. Existing premium singles allowed to sell through; no new singles added. Cheap singles (<$30 AUD) archived via the script below to tighten brand perception.
+- **eBay** — sealed + slabs. The bridge (HOKO10 + Shopify URL insert in every parcel) remains the acquisition flow. Existing singles sell through then the channel is sealed-only.
+- **Whatnot** — sealed pack-rip / box-break shows when owner goes live.
 - **Bridge:** package inserts in every eBay order push HOKO10 + Shopify URL.
-- Migration helper: `scripts/shopify/archive_cheap_singles.py` archives Shopify products under AUD $30 (reversible, dry-run by default).
+- **Pivot helper:** `scripts/shopify/archive_cheap_singles.py` archives Shopify singles under AUD $30 (reversible, dry-run by default). Run once as part of the pivot; premium singles are left listed to sell through naturally.
 
 ## This Repo
 
-`hoko-collectables` (this repo) is a **demo / portfolio storefront** — single-page static site (`index.html` + `style.css` + `app.js`). Its 32-item hard-coded `PRODUCTS` catalog (Darth Vader figure, Millennium Falcon, Jordan rookie, etc.) does **not** reflect the real shop's TCG-singles inventory. Treat it as a sandbox unless the owner says otherwise.
+`hoko-collectables` (this repo) is a **demo / portfolio storefront** — single-page static site (`index.html` + `style.css` + `app.js`). Its 32-item hard-coded `PRODUCTS` catalog (Darth Vader figure, Millennium Falcon, Jordan rookie, etc.) does **not** reflect the real shop's TCG sealed + slab inventory. Treat it as a sandbox unless the owner says otherwise.
 
 ### Tech state
 
