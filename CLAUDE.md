@@ -74,7 +74,7 @@ HOKO10 is for customer acquisition; day-to-day pricing is at market. The moat is
 
 Pay 75-80% of fair market value. Use a fixed intake email template every time (never freeball negotiate). Set non-negotiable rules:
 
-- **What you buy:** factory-sealed TCG + PSA/BGS/CGC slabs only. No loose singles, binders, bulk, damaged sealed, or unverified-grader slabs.
+- **What you buy:** factory-sealed TCG + PSA/BGS/CGC slabs valued at AUD $100+ each. No loose singles, binders, bulk, damaged sealed, slabs under $100, or unverified-grader slabs.
 - **Where you meet:** local bank branch or nominated storage facility, business hours only. No home pickups, no after-hours.
 - **Photo + list required** before any quote (one wide collection photo + typed inventory).
 - **Quote validity:** 48 hours.

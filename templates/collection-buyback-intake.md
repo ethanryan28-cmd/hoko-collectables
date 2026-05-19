@@ -13,12 +13,13 @@ Thanks for reaching out about selling your collection. HOKO works a specific way
 **What we buy:**
 - Factory-sealed TCG product — Pokémon, Magic: The Gathering, One Piece, Dragon Ball Super, and Japanese sealed
 - Boxes, ETBs, booster packs, decks, promos, sealed accessories
-- Graded slabs from PSA, BGS, or CGC — modern and vintage
+- Graded slabs from PSA, BGS, or CGC — modern and vintage, **valued at AUD $100+ each**
 
 **What we don't buy:**
 - Loose singles (any value, any condition)
 - Binders, bulk commons, playsets
 - Damaged sealed product — torn seals, water damage, crushed boxes
+- Graded slabs valued under AUD $100 each
 - Slabs from grading services we can't verify (HGA, GMG, etc. — happy to clarify on request)
 
 **Our offer:**
