@@ -35,7 +35,7 @@ The full operational plan / assets live on the owner's PC, not in this repo.
 
 ## Sourcing
 
-- **Japanese / Korean / Chinese product:** direct supplier relationship. Primarily sealed product (booster boxes, ETBs, decks, promos). This is a trust signal in copy — *"sourced through our regional supplier network"* — but **don't claim "direct from Japan" unless confirmed with owner**; the chain may go via an AU distributor.
+- **Japanese / Korean / Chinese product:** mix of direct-from-Asia imports and AU-based wholesale partners — varies per SKU. **Default copy phrasing is the safe generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only escalate to *"direct from Japan"* (or similar) when the owner has confirmed that specific SKU is direct-import. When in doubt, ask before writing.
 - **English product:** sourced ad-hoc from eBay and Facebook Marketplace — often collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition channel); premium / graded / signed flow to Shopify.
 - Margin profile differs significantly between supplier-bought (predictable, lower margin) and eBay/FB lot-bought (variable, higher margin but more sorting work). When suggesting pricing or restocks, ask which bucket the SKU came from if relevant.
 
