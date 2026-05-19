@@ -36,8 +36,15 @@ The full operational plan / assets live on the owner's PC, not in this repo.
 ## Tooling owner uses
 
 - **CardUploader** — bulk-upload tool for Shopify; owner has adapted/"flipped" the same data flow to push listings to eBay too (saves duplicate data entry).
+- **Shopify Connector for Claude (no-code)** — owner's primary path for running the store by voice from iPhone. Enabled in claude.ai → Connectors → Shopify. Gives Claude live-store write access (archive, edit products, bulk price updates, Smart Collections, Metafields).
 - Local Claude Code on Windows for ops + content gen (folder: `claude\hoko-collectables\`).
 - Cloud Claude Code (this repo) for repo work + scheduled daily routine.
+
+### Shopify Connector — known limits + safety habits
+
+- **No local image uploads** — images must be passed as public URLs. For new products with photos on the owner's phone/PC, upload to Shopify Files first or use a CDN, then reference the URL.
+- **Bulk-destructive actions** (price changes, archives, deletes): always ask Claude to *"show me one example first, don't execute yet."* Approve the dry-run, then say *"go ahead."* This pattern prevents catalogue-wide mistakes.
+- **Claude Code + Shopify plugin** exists as a deeper path (theme edits, SEO audits, conversion reports, AOV bundle analysis). Owner is not using it yet — only add when a specific need surfaces.
 
 ## Catalogue strategy (in progress)
 
