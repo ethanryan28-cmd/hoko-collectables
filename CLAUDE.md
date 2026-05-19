@@ -75,6 +75,29 @@ The full operational plan / assets live on the owner's PC, not in this repo.
   - `JSON.parse(localStorage.getItem(...))` at `app.js:55-56` is unguarded; malformed storage breaks the whole app.
   - `productCardHTML` interpolates product fields directly into HTML — safe today (hard-coded data) but an XSS surface once products come from a backend.
 
+## Content Strategy
+
+Target: **~3 IG/TikTok posts per day**, ~30 seconds of owner time per post, via 3 daily phone photos + voice-dumped context.
+
+### 5 content pillars (rotate)
+
+| Pillar | What it looks like | Weekly target |
+|---|---|---|
+| **The Pull** | Pack opens, hits | 2x |
+| **The Drop** | Restocks (especially Japanese sealed), new arrivals | 2x |
+| **The Story** | Packing, sourcing, behind-the-scenes | 2x |
+| **The Tip** | Grading / fakes / collecting advice | 1x |
+| **The Hit-list** | Market commentary, trending sets | 1x |
+
+### Daily workflow
+
+1. 3 phone photos.
+2. Voice-dump 30s of context per photo into Claude mobile.
+3. Claude returns per photo: IG caption + hashtags, TikTok hook, story idea, suggested pillar.
+4. Owner schedules via Meta Business Suite / TikTok Studio.
+
+**Hard rule:** never post on owner's behalf. Always hand drafts back for approval.
+
 ## Working Notes
 
 - Use `claude/<topic>` branches (e.g. `claude/analyze-test-coverage-bF8y1`).

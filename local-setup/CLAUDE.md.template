@@ -58,6 +58,37 @@ This is the home base for running HOKO Collectables operations through Claude Co
 - Australian English (colour, recognise, organised)
 - No "GUYS! YOU WON'T BELIEVE!". No marketing-agency tone.
 
+## Content Strategy
+
+Target: **~3 IG/TikTok posts per day, ~30 seconds of owner time per post**, via 3 daily phone photos + voice-dumped context.
+
+### 5 content pillars (rotate)
+
+| Pillar | What it looks like | Weekly target |
+|---|---|---|
+| **The Pull** | Pack opens, hits, "look what I got" | 2x |
+| **The Drop** | Restock alerts (especially Japanese sealed), new arrivals | 2x |
+| **The Story** | Packing orders, sourcing trips, behind-the-scenes | 2x |
+| **The Tip** | Educational — grading, fake-spotting, collecting advice | 1x |
+| **The Hit-list** | Market commentary, trending sets, "what's hot right now" | 1x |
+
+### Daily workflow
+
+1. Owner takes 3 phone photos of whatever's interesting today.
+2. Voice-dumps 30s of context per photo into Claude mobile.
+3. Claude returns per photo: IG caption + hashtags, TikTok hook (first 3s spoken), IG story idea, suggested pillar.
+4. Owner reviews on phone, schedules via Meta Business Suite (IG) / TikTok Studio (TikTok).
+
+### When asked "draft posts for today" with no photo
+
+Propose a balanced pillar mix for the week, ask which pillar today belongs to, then draft.
+
+### Hard rules
+
+- Never post on owner's behalf — always hand the draft back for approval.
+- Match voice/tone rules above (collector-to-collector, AU English, no hype).
+- Default to honest grading language. Never inflate condition for engagement.
+
 ---
 
 ## Reference Prompts
