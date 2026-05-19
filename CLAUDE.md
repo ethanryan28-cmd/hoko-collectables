@@ -39,6 +39,41 @@ The full operational plan / assets live on the owner's PC, not in this repo.
 - **English product:** sourced ad-hoc from eBay and Facebook Marketplace — often collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition channel); premium / graded / signed flow to Shopify.
 - Margin profile differs significantly between supplier-bought (predictable, lower margin) and eBay/FB lot-bought (variable, higher margin but more sorting work). When suggesting pricing or restocks, ask which bucket the SKU came from if relevant.
 
+## Brand & Pricing Strategy
+
+Four operating principles (PokeNE, May 2026) — apply whenever pricing, restocking, or buying.
+
+### 1. Price at replacement cost, not historical cost
+
+When ~30-40% sold through on any SKU, check the *current* supplier or lot replacement cost before running out. If replacement rose, raise the price on remaining stock to match. Profit must cover restock, not just original purchase.
+
+- **Supplier SKUs (Asian sealed):** check supplier rate at 30% sell-through; reprice if it moved.
+- **Lot-bought SKUs (English singles/lots from eBay/FB):** check comparable-lot pricing today; reprice if the market moved.
+
+The $20 profit on a $100 box vanishes the moment the next box costs $120.
+
+### 2. Price at market, never undercut
+
+HOKO10 is for customer acquisition; day-to-day pricing is at market. The moat is honest grading + same-day dispatch + buybacks + trust — not lowest price. Undercutting trains customers to expect prices that can't scale, and bigger sellers can always go lower on volume.
+
+### 3. Collection buybacks: rigid, professional, copy-paste
+
+Pay 75-80% of fair market value. Use a fixed intake email template every time (never freeball negotiate). Set non-negotiable rules:
+
+- What you buy (sealed / graded / premium only — defined by owner)
+- Where you meet (local bank or storage unit only)
+- Photo + list requirements before any quote
+- Quote validity window (e.g. 48h)
+- Payment method (bank transfer on the day)
+
+Being stern signals legit operation. Sellers of valuable collections are *more* comfortable with rigid rules — hobbyists fumble, pros are clear.
+
+### 4. Be platform-agnostic — own the brand
+
+eBay, TCGPlayer, Whatnot, conventions are channels, not the business. If a customer answers "where'd you buy that?" with the platform name instead of "HOKO Collectables", that's a marketing bottleneck. Every parcel, caption, stream, and DM reinforces the brand so the audience follows when channels change.
+
+Levers already in place: package inserts (HOKO10 + hokocollectables.com on every eBay order), motto in copy ("Collector first. Seller second."), consistent handle `@hokocollectables`, owner's regional voice in all customer comms.
+
 ## Tooling owner uses
 
 - **CardUploader** — bulk-upload tool for Shopify; owner has adapted/"flipped" the same data flow to push listings to eBay too (saves duplicate data entry).

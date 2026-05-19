@@ -41,6 +41,33 @@ This is the home base for running HOKO Collectables operations through Claude Co
 - **English product:** sourced ad-hoc from eBay and Facebook Marketplace — collections/lots bought cheaply, then split. Singles flow to eBay (cheap acquisition); premium / graded / signed flow to Shopify.
 - Margins differ: supplier-bought = predictable / lower margin; eBay+FB lot-bought = variable / higher margin but more sorting work. Ask owner which bucket a SKU came from when pricing or restock convo needs it.
 
+---
+
+## Brand & Pricing Strategy
+
+Four operating principles (PokeNE, May 2026). Apply on every pricing, restock, or buyback question.
+
+### 1. Price at replacement cost, not historical cost
+
+When ~30-40% sold through, check current supplier/lot replacement cost. If it rose, reprice remaining stock to match before running out. Profit must cover *next* restock, not just original purchase.
+
+- Supplier SKUs: check supplier rate at 30% sell-through, reprice if moved.
+- Lot-bought SKUs: check comparable-lot pricing today, reprice if market moved.
+
+### 2. Price at market, never undercut
+
+HOKO10 is customer acquisition; day-to-day pricing is at market. Moat = honest grading + same-day dispatch + buybacks + trust, not low price. Bigger sellers can always go lower on volume.
+
+### 3. Collection buybacks: rigid, professional, copy-paste
+
+Pay 75-80% of fair market value. Use the fixed intake template every time. Non-negotiable rules: what you buy, where you meet (bank/storage unit), photo+list requirements before quote, quote validity window, payment method.
+
+Stern = signals professional. Sellers of valuable collections prefer rigid rules.
+
+### 4. Be platform-agnostic — own the brand
+
+eBay/Whatnot/TCGPlayer/conventions are channels, not the business. Every parcel, caption, stream, DM reinforces the brand identity (`hokocollectables.com`, `@hokocollectables`, "Collector first. Seller second.") so the audience follows when channels change.
+
 ## Tooling
 
 - **CardUploader** — bulk-upload tool for Shopify. Owner has adapted/"flipped" the same data flow to push listings to eBay too.
