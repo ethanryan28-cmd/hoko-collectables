@@ -30,14 +30,16 @@ Focus: get one platform (TikTok) growing + lock in your signature format. Don't 
 - Rotate the 5 pillars (Pull, Drop, Story, Tip, Hit-list)
 - Schedule via Meta Business Suite + TikTok Studio
 
-### The Pokemon Fixer series (TikTok primary)
+### The Collection Buyback Walkthrough series (TikTok primary)
 
 Your signature format. Protect it.
 
-- **One video per visit** to the fixer — don't bank them, post fresh
-- **Format:** authority hook (1 sec) → before shot of damaged card (2 sec) → fix process montage (15-30 sec) → after shot (3 sec) → CTA ("more cards I've saved on hokocollectables.com")
-- **Hashtags:** `#pokemontcg #cardrestoration #pokemonfixer #tcgaustralia #melbournecollectors #pokemoncards`
-- **TikTok hook (first 3 sec spoken):** "Watch what this guy does to a $500 Charizard..." / "I take my worst cards to one man in Melbourne..."
+- **One video per collection** that comes through buyback
+- **Format:** authority hook (1 sec) → "this collection came in today" (overview shot, 3 sec) → walkthrough of valuation logic (15-30 sec — show 2-3 highlight pieces, talk through how you priced them) → final offer + outcome ("paid $X, here's the breakdown") → CTA ("got a collection? hokocollectables.com/sell")
+- **Why this is the moat:** drives buyback inquiries directly, educates viewers on real card values, builds trust through transparency, and *no other AU seller is doing this on video*
+- **Hashtags:** `#pokemontcg #cardvalues #tcgaustralia #pokemoncards #collectionbuyback #melbournecollectors`
+- **TikTok hook (first 3 sec spoken):** "This collection just walked through my door — let me show you what it's actually worth..." / "Guy DM'd me about selling his binder. Here's what I paid and why..."
+- **Confidentiality:** anonymise the seller (no names, no faces, no obvious location detail). Get verbal permission to film the collection before recording.
 - Cross-post to IG Reels + YouTube Shorts only after a video does numbers
 
 ### News / green-screen shorts
@@ -59,7 +61,7 @@ Your signature format. Protect it.
 - 10,000 TikTok followers
 - 1,000 Whatnot followers
 - Daily content loop habitual (not skipping more than 1 day/week)
-- At least 1 Pokemon Fixer video over 50k views
+- At least 1 Collection Buyback Walkthrough video over 50k views
 
 **Don't move to phase 2 until you hit at least 3 of 5.**
 
@@ -86,6 +88,21 @@ Audience now cares about your face and voice. Time to add formats that need that
 - Pick ONE evergreen topic to start: "Best Sealed Pokémon Value 2026 — Tier List" or similar
 - 10-15 minutes, decent production (good audio, basic editing)
 - Title + thumbnail matter more than the video at this stage
+
+### The grade-bumping exposé (one-off centerpiece)
+
+This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
+
+- **Format:** 8-12 min YouTube longform + 3-part TikTok teaser series driving viewers to the long video
+- **Angle:** *"How to protect yourself when buying graded cards"* — educational, defensive, never accusatory toward specific people
+- **Topics to cover:** card alteration techniques (cleaning, edge work, surface restoration), how PSA/BGS/CGC detect (or miss) these, UV light + weight checks buyers can do at home, why HOKO buybacks only accept verified-grader slabs at $100+
+- **Legal guardrails:**
+  - **Never name specific individuals as fraudsters** — defamation risk is real, even with evidence
+  - **Anonymise all examples** (blur card serial numbers, no shop names, no faces)
+  - Frame as *reporting on a practice*, not *accusing specific people*
+  - Verifiable techniques + general examples only
+- **Why this works in Phase 2 specifically:** needs audience size to justify the production effort + reputational stakes are real, so you want a warm audience that already trusts you
+- **One-off, not a series.** You can't make 10 of these. Make ONE that's bulletproof.
 
 ### Phase 2 graduation criteria
 
@@ -155,7 +172,7 @@ Captured from the original brainstorm. Not bad ideas — wrong phase for them.
 
 **Consistency beats volume.** 3 well-made TikToks/week > 15 lazy posts across 4 platforms.
 
-**The Pokemon Fixer is your moat.** No one else has that access. Even when you're tired, even when sales are slow, that series goes out. It's the format that has nothing to do with macro market moves — it always works.
+**The Collection Buyback Walkthrough series is your moat.** No other AU seller is showing valuations on video. Even when you're tired, even when sales are slow, this series goes out. It's the format that drives buyback inquiries directly — every video pays for itself in lead generation.
 
 **Graduation criteria are non-negotiable.** Don't expand to YouTube longform while still under 10k on TikTok. Phases exist so you don't burn out trying to be everywhere at once.
 
