@@ -152,6 +152,64 @@ Post a recap Reel / TikTok the next day. Caps the brand moment + introduces Shop
 
 ---
 
+## 9. Pricing tactics — maximising what each item sells for
+
+**Honest baseline:** Whatnot prices typically run **70-85% of TCGPlayer / eBay "market"**. It's a live auction with a limited audience, not retail. Maxing means hitting the top of that band, not exceeding it.
+
+### The 5 levers that actually move the needle
+
+#### 1. Pre-list the show 48-72h in advance
+
+Whatnot's algorithm boosts shows that pre-list early with a good description + cover image. More followers before you go live = bigger room on the night = higher bids.
+
+- Cover image: one clear shot of your 2-3 flagship items together, no text overlay
+- Description: use section 1 of this doc
+- Slot: **Sunday 7-9pm AEST** is AU TCG prime time
+
+#### 2. Start bids at 60-70% of market, NOT $1
+
+Single biggest pricing decision. Too low → one bidder snipes before the room engages → you lose half the value. Too high → no bids → momentum dies.
+
+| Card market value | Starting bid |
+|---|---|
+| $20 | $12-14 |
+| $80 | $50-55 |
+| $200 PSA 9 | $130-150 |
+
+#### 3. Save flagship items for the 60-75% mark of the show
+
+By mid-show the room is warmed up, latecomers have arrived, bid reflexes are built. Premium items in the first 20 min lose to a cold room. (Run-of-show in section 2 already does this — don't deviate.)
+
+#### 4. Show sold-comp screenshots for anything $100+
+
+Before opening the auction on a premium card, hold your phone up with a TCGPlayer or eBay sold listing visible. *"This one sold $250 on eBay last week, I'm starting at $150."* Anchors price expectation. Justifies the start. Eliminates "is it overpriced?" hesitation.
+
+#### 5. Pace at ~90 seconds per item
+
+Faster = buyers can't lock in. Slower = energy dies. 90 sec = room places 2-3 bid escalations, closes with momentum, next item rides the wave.
+
+### What kills prices — don't do these
+
+- $1 starting bids "to get the room going" — sniped for $5, you lose the $40 it was worth
+- Rushing the close ("going once, twice" in 5 seconds) — kills bid momentum
+- Premium items in the first 20 minutes — cold room, low prices every time
+- Empty silences mid-auction — fill the space (*"PSA 9, dead-centered, top-loaded since I pulled it"*)
+- **Pre-bidding from a second account / asking friends to shill** — Whatnot bans this. Account suspension risk.
+- Bringing up shipping costs / fees mid-auction
+- Selling many items in the same category back-to-back (buyer saturation)
+
+### The lever most people miss
+
+**Run a giveaway 5-10 min into the show.** A $5-10 card given away free draws new viewers (Whatnot pushes giveaways to the Discover feed). Bigger room = higher prices for the rest of the show. ROI on a $10 giveaway is often $200+ in extra realised price across remaining lots.
+
+### Reality check before the stream
+
+- You will NOT sell every card. Some lots no-bid. Plan for ~10-15% no-bid rate, especially on awkward mid-tier singles.
+- The room can stall. If 3 items in a row underperform, pivot to a giveaway or a known-good item to reset energy.
+- Bidder fatigue hits around the 90-minute mark. Save your clearance / "anything left $5 flat" segment for then — turns fatigue into volume.
+
+---
+
 ## What to tell Claude after the stream
 
 > *"Whatnot stream done. Sold [$X] across [Y] lots. Highlights were [chase card sales]. Now generate: thank-you DM template for top 5 buyers, post-stream recap caption, and 3 social story prompts for tomorrow."*
