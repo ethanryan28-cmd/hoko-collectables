@@ -4,7 +4,92 @@ Minimum viable financial infrastructure for a Melbourne TCG sole trader / ABN bu
 
 ---
 
-## The 4-account method
+## ⚠️ Active fix plan — HOKO current state (May 2026)
+
+**Diagnosis (from owner check-in):**
+- Has a CBA Business account but it's effectively unused
+- Shopify + eBay payouts currently land in **personal CBA account**, not business
+- All business expenses (suppliers, postage, fees) flow through the **same personal account**
+- No tax bucket, no restock bucket, no float — single-balance setup
+- "Cash is bullshit imo" mindset → all revenue gets reinvested into Pokemon, no reserves held
+
+This is the most common (and most dangerous) cashflow pattern for an early-stage TCG sole trader. Tax time will be brutal without a fix, and you can't see what's actually profitable when personal and business money are in the same balance.
+
+### The 4 fixes — do today, ~30 min total
+
+Tick boxes from GitHub mobile as you go.
+
+#### Fix 1 — Move payout destinations to the business CBA account (15 min)
+
+- [ ] **Shopify:** Settings → Payments → edit payout bank details → swap in **business CBA BSB + account number**
+- [ ] **eBay:** Seller Hub → Payments → Payout bank account → change to business CBA
+- [ ] **PayPal / Stripe** (if linked anywhere for sales): point to business CBA
+
+From this point, every dollar of revenue lands in the business account. Personal account stops receiving HOKO money entirely.
+
+#### Fix 2 — Open 3 NetBank Saver sub-accounts under business operating (10 min)
+
+Inside the CBA app, link 3 new NetBank Saver accounts to the business operating account. Name them exactly:
+
+- [ ] **Tax** (untouchable — for BAS + income tax)
+- [ ] **Restock** (buying sealed from suppliers)
+- [ ] **Float** (business emergency buffer)
+
+NetBank Savers are free, earn interest, and show as sub-accounts in the CBA app.
+
+#### Fix 3 — Set up scheduled weekly transfers (5 min)
+
+CBA doesn't do auto-percentage splits like Up does — you'll use **fixed weekly transfers** from business operating into the 3 savers.
+
+**Placeholder amounts** (assumes ~$1k/week revenue — adjust once Claude has your real monthly revenue):
+
+| To | Amount/week | % of $1k |
+|---|---|---|
+| → Tax | $250 | 25% |
+| → Restock | $350 | 35% |
+| → Float | $100 | 10% |
+| Stays in Operating | $300 | 30% |
+
+- [ ] Set up the 3 scheduled transfers (CBA app → Transfers → Recurring)
+- [ ] Pick a day right after Shopify usually pays out (e.g. Tuesdays or Fridays)
+
+Adjust the dollar amounts monthly as revenue moves. The accountant will give you real %s; until then these are sane defaults for a sub-$80k/yr sole trader.
+
+#### Fix 4 — Move business expenses to come from the business account (10 min)
+
+- [ ] **Shopify monthly subscription** → update billing card to business account
+- [ ] **eBay store fees** → update payment method
+- [ ] **Postage** (Sendle / Australia Post / Aramex) → update billing
+- [ ] **Supplier payments** → use business account for wires / BPAY / cards
+- [ ] **Whatnot fees** (when streaming) → business account
+
+From here: personal account = personal life only. Business account = HOKO only. No mixing.
+
+### After the 4 fixes are done
+
+- [ ] **Tell Claude your real monthly revenue** so the $250/$350/$100 placeholders can be tuned
+- [ ] **Engage an accountant** ($500-1500/yr in Melbourne) to confirm the actual tax % for your bracket + structure (sole trader vs Pty Ltd)
+- [ ] **Personal emergency fund** — separate goal, target 2 months living expenses (~$4-6k) in a CBA NetBank Saver linked to your personal account
+
+### The mindset piece — why the buckets matter
+
+"Cash is bullshit, I just reinvest into Pokemon" is exactly why the bucket method exists. **The architecture replaces the willpower.**
+
+If all the money lives in one balance, you spend it all on Pokemon — that's how brains work, no shame. The Tax bucket existing in a separate account means **when tax day arrives, the money is already there**, not staring at a $2000 bill you can't pay.
+
+You don't need self-discipline if the money's not in your spending account.
+
+### What changes immediately
+
+- Tax time stops being a panic event
+- You can see real business profitability (revenue − expenses − tax buffer = actual margin)
+- Personal and business stop bleeding into each other
+- When the accountant asks "what's your FY26 business income", you answer in 30 sec instead of 3 hours of bank statement reconciliation
+- The Pokemon spend is finally bounded — you can only buy from the Restock bucket, not the whole pile
+
+---
+
+## The 4-account method (general framework)
 
 Every dollar of revenue auto-splits across four accounts the moment it lands. No in-the-moment decisions about "is this business or personal."
 
@@ -21,37 +106,38 @@ Total = 100%. Adjust the split as the business matures — early stage skews tow
 
 ## AU bank account recommendations
 
-### Default: Up Business
+### HOKO's current bank: CBA Business Transaction Account
+
+- Big 4 traditional bank, useful if business lending is on the roadmap
+- More fees than neobanks but solid for an established business
+- Does NOT support auto-percentage splits natively — use scheduled fixed-amount transfers (see Fix 3 above)
+- Supports multiple NetBank Saver sub-accounts (free, app-visible)
+
+### Alternative if you ever switch: Up Business
 
 - Free for sole traders
-- Fast online onboarding (no branch visit)
-- App-first interface (matches owner's phone-driven ops)
-- Unlimited "Savers" inside the main account — perfect for the 4-bucket method
-- Owned by Bendigo Bank, so deposits are AU government guaranteed
-
-### Alternative: CBA Business Transaction Account
-
-- Big 4 traditional bank
-- Useful if business lending is on the roadmap (Big 4s prefer their own banking history when underwriting)
-- More fees, slower onboarding
-- Separate "Business Savings" sub-accounts available
+- App-first, fast onboarding (no branch visit)
+- **Unlimited "Savers" with auto-percentage splits** — does the bucket method natively without manual transfers
+- Owned by Bendigo Bank, AU government guaranteed deposits
+- Only consider switching once HOKO is past the daily-cashflow-crunch phase — switching banks during an active business is friction you don't need right now
 
 ### Personal high-interest savings (for emergency fund)
 
 Any of these work — pick whichever ecosystem you're already in:
 
-- **CBA NetBank Saver**
-- **Up Saver** (if business account is also Up)
+- **CBA NetBank Saver** (same bank as your business — easiest)
 - **ING Savings Maximiser** (typically highest rate, conditions apply)
 
 ---
 
-## Week-1 setup checklist
+## General week-1 checklist (for new HOKO-like businesses)
+
+This is the generic checklist for any AU TCG sole trader starting from scratch. HOKO's specific fix plan is in the "Active fix plan" section above.
 
 - [ ] Open business bank account (Up or CBA) — 15 min online
 - [ ] Inside the business account, create the 4 named savers / sub-accounts (OPEX, Tax, Restock, Wage)
-- [ ] Set up automated split rule: every Shopify/eBay payout that lands → auto-distribute across the 4 buckets on the % allocation above
-- [ ] Update Shopify Payments + eBay payout destinations to the new business account
+- [ ] Set up automated split rule (Up) or scheduled fixed transfers (CBA): every payout that lands → distribute across the 4 buckets on the % allocation above
+- [ ] Update Shopify Payments + eBay payout destinations to the business account
 - [ ] Find + engage an accountant in Melbourne (Google "small business accountant Melbourne sole trader" / ask in TCG seller groups for recommendations)
 - [ ] Open / fund personal emergency fund — target 2 months living expenses (~$4-6k)
 
