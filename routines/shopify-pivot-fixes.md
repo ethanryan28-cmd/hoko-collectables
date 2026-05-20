@@ -54,13 +54,20 @@ Problem: "sealed" buried at end, "graded" reads as singles condition.
 
 ---
 
-## 5. Hide bulk lots from featured collections
+## 5. Archive ALL singles from Shopify
 
-Search results lead with cheap bulk lots — tanks brand perception. Don't archive yet (the `archive_cheap_singles.py` script does that later). Just unfeature.
+**Updated decision (May 2026):** Shopify goes 100% sealed + slabs **immediately** — not slow sell-through. All singles get archived now. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through only.
 
-- [ ] Voice: *"Show me which products under AUD $30 are currently in 'New Arrivals' or 'Featured'. Don't change anything."*
-- [ ] Review list.
-- [ ] Voice: *"Remove those from 'New Arrivals' and 'Featured' — don't archive, just unfeature."*
+This step replaces the earlier "hide bulk lots from featured collections" plan.
+
+- [ ] Voice: *"Show me every active product on the site that is NOT a sealed box, ETB, booster pack, deck, sealed accessory, or graded slab. Don't change anything yet — show me the list."*
+- [ ] Review the list carefully. Spot-check for sealed product accidentally tagged wrong.
+- [ ] Voice: *"Archive all of them. Don't delete — archive (reversible)."*
+- [ ] After archive: voice: *"Show me what's still active on the site. I want to confirm it's all sealed + slabs."*
+
+**Reversibility:** archived products stay in Shopify admin. To bring one back: Products → filter Status = Archived → open product → Unarchive.
+
+The legacy `scripts/shopify/archive_cheap_singles.py` (sub-$30 only) remains in the repo for narrower future use but is no longer the primary tool.
 
 ---
 
@@ -72,4 +79,5 @@ Bigger lifts — *not* required for the pivot, do later when working capital is 
 - Reviews widget (Loox or Judge.me)
 - Founder story page
 - Structured buyback intake form (replacing free-text "Sell Your Cards" form, mirroring `templates/collection-buyback-intake.md`)
+- **Consignment intake page** (Phase 2 — when the consignment service formally launches)
 - Sticky HOKO10 banner (currently only in footer signup)

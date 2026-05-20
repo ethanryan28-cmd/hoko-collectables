@@ -43,11 +43,17 @@ HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new single
 
 **Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
 
-**Pivot in progress:** existing Shopify products under AUD $30 (overwhelmingly cheap singles) are being archived in one pass (reversible). Owner can do this via:
-- The script `scripts/shopify/archive_cheap_singles.py` in the cloud repo, OR
-- The Shopify Connector for Claude — voice prompt: *"Show me Shopify products priced under $30 AUD, don't archive yet."* Then *"Go ahead and archive those."*
+**Pivot in progress:** **all singles** (not just cheap ones) are being archived from Shopify so the site becomes 100% sealed + slabs. Singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 
-Premium singles (≥$30) stay listed and sell through naturally.
+Preferred path is voice-driven via Shopify Connector:
+
+> *"Show me every active product that is NOT a sealed box, ETB, booster pack, deck, sealed accessory, or graded slab. Don't change anything yet — show me the list."*
+
+Review the list, then:
+
+> *"Archive all of them."*
+
+The legacy `scripts/shopify/archive_cheap_singles.py` script (sub-$30 only) remains in the cloud repo for narrower future use but is no longer the primary archive tool.
 
 ## Sourcing
 
@@ -87,6 +93,25 @@ Pay 75-80% of fair market value. Use the fixed intake template every time — ne
 - Payment = bank transfer on the day. No PayPal, no cash, no instalments.
 
 Intake email template lives in the cloud repo at `templates/collection-buyback-intake.md` — copy-paste every time, only customise the recipient's name. Stern = signals professional.
+
+### 3a. Consignment (future revenue pillar — Phase 2 launch)
+
+Directional intent: HOKO will offer **consignment** alongside buybacks.
+
+- **Buyback:** outright purchase at 75-80% FMV, paid on the day.
+- **Consignment:** HOKO lists on its channels, takes **15-20% commission**, consignor paid after sale.
+
+**Scope:** sealed + PSA/BGS/CGC slabs $100+ only. Same as buyback.
+
+**Casual cases now:** if seller DMs about a collection wanting top dollar, offer consignment as the alternative. Single-page contract per item.
+
+**Formal launch:** Phase 2 (months 4-6) — intake form, tracking system, marketed as a service. Needs Whatnot + Shopify flow proven first.
+
+**Deliverables when launching (not yet written):**
+- Consignment agreement template
+- Intake email template
+- Tracking spreadsheet
+- Commission structure decision (flat 20% vs sliding scale)
 
 ### 4. Be platform-agnostic — own the brand
 

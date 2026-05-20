@@ -82,6 +82,31 @@ Pay 75-80% of fair market value. Use a fixed intake email template every time (n
 
 The intake email template lives at `templates/collection-buyback-intake.md` — copy-paste every time, customise only the recipient's name. Being stern signals legit operation; sellers of valuable collections prefer rigid rules.
 
+### 3a. Consignment (future revenue pillar)
+
+Directional intent — full launch in Phase 2 (months 4-6 of the content plan).
+
+HOKO will offer **consignment** alongside buybacks as a second option for sellers:
+
+- **Buyback:** outright purchase at 75-80% of FMV, paid on the day.
+- **Consignment:** HOKO lists the item on its channels (Shopify, Whatnot, eBay), takes a **15-20% commission** when it sells, consignor gets paid out after the sale clears.
+
+**Scope:** sealed product + PSA/BGS/CGC slabs $100+ only. Same constraints as buyback. No loose singles, no unverified-grader slabs.
+
+**Why it fits:**
+- Inventory flows in without HOKO laying out capital (solves the cashflow problem)
+- Higher margin per hour worked (no purchase-to-list time cost)
+- Two-offer pitch to sellers ("cash now at 75-80%, or wait + get 80-85% via consignment")
+- Reinforces *"Collector first"* — helping collectors monetise on their own timeline
+
+**Casual cases now, formal launch in Phase 2.** If a seller DMs with a collection that fits sealed + slabs and wants top dollar, offer consignment as the alternative. Single-page contract per item. Don't market it yet — formal launch (intake form, tracking system, marketing) waits until Whatnot + Shopify flow is proven so consignors trust HOKO to move their stuff.
+
+**Phase 2 deliverables (not yet written):**
+- `templates/consignment-agreement.md` — single-page contract template
+- `templates/consignment-intake-email.md` — parallel to buyback intake
+- Tracking spreadsheet schema (consignor / item / list price / sale price / commission / payout status)
+- Commission structure decision (flat 20% vs sliding scale by item value)
+
 ### 4. Be platform-agnostic — own the brand
 
 eBay, TCGPlayer, Whatnot, conventions are channels, not the business. If a customer answers "where'd you buy that?" with the platform name instead of "HOKO Collectables", that's a marketing bottleneck. Every parcel, caption, stream, and DM reinforces the brand so the audience follows when channels change.
@@ -103,11 +128,11 @@ Levers already in place: package inserts (HOKO10 + hokocollectables.com on every
 
 ## Catalogue strategy (post sealed-only pivot)
 
-- **Shopify** — sealed product + PSA/BGS/CGC slabs. Existing premium singles allowed to sell through; no new singles added. Cheap singles (<$30 AUD) archived via the script below to tighten brand perception.
+- **Shopify** — sealed product + PSA/BGS/CGC slabs **only**. As of the sealed-only pivot, **all singles get archived** (not just cheap ones) — the site goes 100% sealed + slabs immediately, not via slow sell-through. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 - **eBay** — sealed + slabs. The bridge (HOKO10 + Shopify URL insert in every parcel) remains the acquisition flow. Existing singles sell through then the channel is sealed-only.
 - **Whatnot** — sealed pack-rip / box-break shows when owner goes live.
 - **Bridge:** package inserts in every eBay order push HOKO10 + Shopify URL.
-- **Pivot helper:** `scripts/shopify/archive_cheap_singles.py` archives Shopify singles under AUD $30 (reversible, dry-run by default). Run once as part of the pivot; premium singles are left listed to sell through naturally.
+- **Pivot helper:** preferred path is voice-driven via Shopify Connector (*"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything."* → review → *"Archive all of them."*). The legacy `scripts/shopify/archive_cheap_singles.py` script remains in the repo for the narrower sub-$30 use case but is **not** the primary tool for the all-singles archive.
 
 ## This Repo
 
