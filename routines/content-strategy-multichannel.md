@@ -200,6 +200,30 @@ For when you need to post but don't have a planned idea. All 5 of these use only
 - **Pillar:** The Pull / The Hit-list (depending on framing)
 - **Why it works:** Dramatic reveal pattern = high engagement, viral-friendly, plays well on TikTok algo
 
+#### Slab Reveal — full 90-second script structure
+
+| Beat | Time | What to say/show |
+|---|---|---|
+| **Tease** | 3 sec | *"Look what just came into HOKO..."* / *"PSA just sent this back..."* — hold slab face-down |
+| **Context** | 10-15 sec | Where it came from (anonymised buyback / restock / personal pull), set + year, why it matters |
+| **Reveal** | 5 sec | Flip → hold steady → let the silence land |
+| **Walkthrough** | 45-60 sec | Break down the grade — centering, surface, edges. Reference a comp: *"sold for $X on eBay last week."* Honest take ("I'd have called this a 9 personally" / "fair grade") |
+| **Closer** | 10 sec | *"More slabs at hokocollectables.com — HOKO10 for 10% off. Collector first. Seller second."* |
+
+#### Batch-filming Slab Reveals
+
+Slab Reveals are **evergreen content** — unlike Mail Call, they don't need to be posted same-day. Batching is the right move.
+
+**One-session batching workflow (60-90 min → 5-10 videos):**
+
+1. Pull 5-10 of the most visually striking slabs from inventory
+2. Single filming setup: dark mat under slab (kills glare + frames it), good lighting (window light or one lamp), phone on tripod at table height
+3. Change shirts every 2-3 slabs so the videos look like they're filmed on different days when posted
+4. Film each in one take — 90 sec each, raw file named per slab (`charizard-psa9.mp4`)
+5. Post one per day on TikTok primary; cross-post to IG Reels only if a video breaks through
+
+That's 5-10 days of content from one 90-minute session.
+
 ### 3. "$X budget challenge"
 
 - **Time:** 2-3 min
