@@ -43,17 +43,29 @@ HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new single
 
 **Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
 
-**Pivot in progress:** **all singles** (not just cheap ones) are being archived from Shopify so the site becomes 100% sealed + slabs. Singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
+**Pivot in progress (May 2026):** archiving sub-$50 products from Shopify via `scripts/shopify/archive_cheap_singles.py` (catches most cheap singles + low-end accessories). Premium singles ($50+) stay listed and sell through naturally. Singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 
-Preferred path is voice-driven via Shopify Connector:
+**Primary path is the script:**
 
-> *"Show me every active product that is NOT a sealed box, ETB, booster pack, deck, sealed accessory, or graded slab. Don't change anything yet — show me the list."*
+```powershell
+# In the cloud repo, after pulling latest:
+cd scripts/shopify
+$env:SHOPIFY_STORE = "hokocollectables.myshopify.com"
+$env:SHOPIFY_ADMIN_TOKEN = "shpat_..."
 
-Review the list, then:
+# Step 1 — dry-run, writes candidates.csv. No changes made.
+python archive_cheap_singles.py
 
-> *"Archive all of them."*
+# Step 2 — REVIEW candidates.csv in Excel. Critically: exclude any
+# cheap sealed product (individual booster packs, accessories) that
+# should stay listed.
 
-The legacy `scripts/shopify/archive_cheap_singles.py` script (sub-$30 only) remains in the cloud repo for narrower future use but is no longer the primary archive tool.
+# Step 3 — if happy:
+python archive_cheap_singles.py --execute
+# Type 'archive' at the prompt to confirm.
+```
+
+Voice-driven Shopify Connector remains an alternative for a deeper purge by product type — *"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything yet."*
 
 ## Sourcing
 

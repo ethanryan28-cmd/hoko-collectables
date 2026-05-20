@@ -140,3 +140,38 @@ Only when Whatnot revenue justifies it:
 **Audio > everything else.** A Whatnot stream with a phone camera and clean lav mic audio beats a 4K camera with echo every single time. Buyers stay for the host's voice; the cards are the supporting visual.
 
 If you can only afford one tier from this doc, **buy the RØDE Wireless ME and skip the rest.** Add lights and mounts later.
+
+---
+
+## Workspace setup principles
+
+Before buying gear, get the table right. Once you have the gear, get the layout right. Do this once = months of consistent filming with zero friction.
+
+- **Dedicated table** — don't reuse the dining table. Constant setup/teardown kills filming consistency. Folding table from Officeworks ($50-100) or repurpose an existing desk.
+- **Power outlets within reach** — phone charger, ring light, scanner all plugged in without extension-cord chaos. Add a small power board if needed.
+- **Clean wall behind you** — neutral colour, no clutter. Small HOKO printed sign or vinyl banner mounted = consistent brand presence in every video.
+- **WiFi signal tested at the table location** — check it BEFORE committing the spot. If weak, move the router closer, add a mesh extender, or pick a different spot.
+- **Inventory storage within arm's reach** — bins/trays for "to film", "filmed", "ready to ship". Saves walking back and forth during a session.
+- **Phone position locked** — once you find the right overhead angle, mark the spot with tape so you don't recalibrate every session.
+- **Lighting position locked** — same. Tape the ring light position too.
+
+**Goal: walk to the table → sit down → hit record. Zero setup overhead.**
+
+The lower the friction, the more often you'll actually film. That's the whole game.
+
+### What HOKO already has (May 2026)
+
+Owner has confirmed in chat: play mat ✓, Epson scanner ✓, printer ✓, mic ✓ (type TBC), laptop ✓, 2 phones ✓.
+
+Still needed: ring light, overhead phone arm/clamp, dedicated table (if no existing setup), confirmation of mic type (stand mic vs lav vs phone-attached changes Whatnot audio plan).
+
+### Epson scanner — bonus utility for singles liquidation
+
+The scanner is a hidden weapon for the eBay singles sell-through phase:
+
+- Scan each card front + back → instant listing-ready photos (no phone fumbling)
+- Bulk-scan binder pages — 9 cards per scan, ~30 seconds per page
+- Massively faster than phone-photographing card-by-card
+- Pair with CardUploader to push to eBay in batches
+
+Pipeline: scan binder pages → folder of card photos → voice-dump card list to Claude → Claude returns eBay titles + descriptions paste-ready → CardUploader pushes to eBay.

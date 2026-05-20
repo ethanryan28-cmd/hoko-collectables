@@ -1,16 +1,20 @@
 """
 HOKO Collectables — Shopify cheap-singles archiver.
 
-Finds every active product whose entire price range is under AUD $30, then
+Finds every active product whose entire price range is under AUD $50, then
 optionally archives them. Safe by default — dry-run produces a CSV you review
 before any change is made. Archiving requires a typed 'archive' confirmation.
 
-Strategy (post May 2026 pivot to sealed-only):
-HOKO no longer sources new singles. Existing premium singles are allowed to
-sell through naturally on Shopify, but cheap singles (under AUD $30) drag the
-brand toward "discount bin" perception. This script archives them in bulk so
-the Shopify catalogue presents as sealed + graded only. Reversible — archived
-products can be reactivated from Shopify admin at any time.
+Strategy (May 2026 sealed-only pivot, $50 threshold):
+HOKO no longer sources new singles. This script archives sub-$50 products in
+one pass so the Shopify catalogue presents as sealed + slabs forward. Owner
+review of the CSV is required before execution because the price filter will
+also catch cheap sealed product (individual booster packs, accessories) — those
+should be excluded from the archive list manually if you want them kept active.
+Premium singles ($50+) stay listed and sell through naturally.
+
+Reversible — archived products can be reactivated from Shopify admin at any
+time.
 
 Usage (PowerShell on Windows):
     $env:SHOPIFY_STORE = "hokocollectables.myshopify.com"
@@ -33,7 +37,7 @@ import time
 
 import requests
 
-THRESHOLD_AUD = 30.0
+THRESHOLD_AUD = 50.0
 API_VERSION = "2024-10"  # bump to latest Shopify API version when convenient
 PAGE_SIZE = 100
 RATE_LIMIT_SLEEP = 0.5

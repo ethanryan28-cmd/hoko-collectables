@@ -128,11 +128,11 @@ Levers already in place: package inserts (HOKO10 + hokocollectables.com on every
 
 ## Catalogue strategy (post sealed-only pivot)
 
-- **Shopify** — sealed product + PSA/BGS/CGC slabs **only**. As of the sealed-only pivot, **all singles get archived** (not just cheap ones) — the site goes 100% sealed + slabs immediately, not via slow sell-through. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
+- **Shopify** — sealed product + PSA/BGS/CGC slabs forward. **Threshold-based archive (May 2026):** all products under AUD $50 archived in one pass via `scripts/shopify/archive_cheap_singles.py` (catches most cheap singles + low-end accessories). Premium singles ($50+) stay listed and sell through naturally. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 - **eBay** — sealed + slabs. The bridge (HOKO10 + Shopify URL insert in every parcel) remains the acquisition flow. Existing singles sell through then the channel is sealed-only.
 - **Whatnot** — sealed pack-rip / box-break shows when owner goes live.
 - **Bridge:** package inserts in every eBay order push HOKO10 + Shopify URL.
-- **Pivot helper:** preferred path is voice-driven via Shopify Connector (*"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything."* → review → *"Archive all of them."*). The legacy `scripts/shopify/archive_cheap_singles.py` script remains in the repo for the narrower sub-$30 use case but is **not** the primary tool for the all-singles archive.
+- **Pivot helper:** preferred path is the `scripts/shopify/archive_cheap_singles.py` script (threshold AUD $50, dry-run by default) — review the CSV first to exclude any cheap sealed product (individual booster packs etc.) that should stay listed. Voice-driven Shopify Connector remains an option for a deeper purge by product type later.
 
 ## This Repo
 

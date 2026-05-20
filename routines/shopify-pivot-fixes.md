@@ -54,20 +54,33 @@ Problem: "sealed" buried at end, "graded" reads as singles condition.
 
 ---
 
-## 5. Archive ALL singles from Shopify
+## 5. Archive sub-$50 products from Shopify
 
-**Updated decision (May 2026):** Shopify goes 100% sealed + slabs **immediately** — not slow sell-through. All singles get archived now. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through only.
+**Updated decision (May 2026):** archive everything under AUD $50 via the script. Catches most cheap singles + low-end accessories. Premium singles ($50+) stay listed and sell through naturally. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 
-This step replaces the earlier "hide bulk lots from featured collections" plan.
+**Primary path: run the script.**
 
-- [ ] Voice: *"Show me every active product on the site that is NOT a sealed box, ETB, booster pack, deck, sealed accessory, or graded slab. Don't change anything yet — show me the list."*
-- [ ] Review the list carefully. Spot-check for sealed product accidentally tagged wrong.
-- [ ] Voice: *"Archive all of them. Don't delete — archive (reversible)."*
-- [ ] After archive: voice: *"Show me what's still active on the site. I want to confirm it's all sealed + slabs."*
+```powershell
+cd scripts/shopify
+$env:SHOPIFY_STORE = "hokocollectables.myshopify.com"
+$env:SHOPIFY_ADMIN_TOKEN = "shpat_..."
 
-**Reversibility:** archived products stay in Shopify admin. To bring one back: Products → filter Status = Archived → open product → Unarchive.
+# Step 1 — dry-run, writes candidates.csv. No changes made.
+python archive_cheap_singles.py
+```
 
-The legacy `scripts/shopify/archive_cheap_singles.py` (sub-$30 only) remains in the repo for narrower future use but is no longer the primary tool.
+- [ ] Set up Shopify Admin API token (one-time, see `scripts/shopify/README.md`)
+- [ ] Run dry-run — produces `candidates.csv`
+- [ ] **Open `candidates.csv` in Excel** — review every row
+  - Critically: spot-check for **cheap sealed product** (individual booster packs at $5-8, sealed accessories) that you want to keep listed. The price filter catches these too.
+  - If anything in the list shouldn't be archived, take note for the next step.
+- [ ] If a few items shouldn't be archived: either temporarily raise their price to $50+ in Shopify so they fall outside the filter, or skip the script and manually archive everything else via Shopify Connector instead
+- [ ] When CSV looks right: `python archive_cheap_singles.py --execute` and type `archive` to confirm
+- [ ] After archive: confirm via Shopify Admin → Products → Status = Active filter → should show only sealed + slabs (with premium singles still active by design until they sell through)
+
+**Reversibility:** archived products stay in Shopify admin. Products → filter Status = Archived → open product → Unarchive.
+
+**Alternative path** (voice-driven, by product type instead of price): use the Shopify Connector — *"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything yet."* Useful for a deeper purge later that catches premium singles ($50+) too.
 
 ---
 
