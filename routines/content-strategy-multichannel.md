@@ -178,7 +178,71 @@ Captured from the original brainstorm. Not bad ideas — wrong phase for them.
 
 ---
 
-## When you're tempted to overscope
+## Fast content formats library
+
+For when you need to post but don't have a planned idea. All 5 of these use only: your phone, items already in front of you, your voice. No editing apps, no scripts. Pick the one that matches whatever's happening RIGHT NOW.
+
+### 1. Mail Call ("what just landed today")
+
+- **Time:** 60 sec
+- **When:** Any time a parcel arrives (supplier shipment, return, restock)
+- **Format:** Hook ("today's mail call") → unbox on camera → show 3-5 highlight items → tease ("link in bio")
+- **TikTok hook examples:** *"Look what just landed in the HOKO warehouse..."* / *"Today's supplier drop — let's see what we got..."*
+- **Pillar:** The Drop
+- **Why it works:** Daily-able, builds "always new stuff" perception, no inventory required beyond what just arrived
+
+### 2. Slab Reveal
+
+- **Time:** 90 sec
+- **When:** Any time you have a notable slab (buyback in, restock, personal collection piece)
+- **Format:** Tease the slab face-down → build context ("PSA 9, vintage base, owned by [anonymised seller]") → flip reveal → walk through grade details
+- **TikTok hook examples:** *"This just walked into the shop and I had to film it..."* / *"PSA 9 base [card] — let me show you what makes it special..."*
+- **Pillar:** The Pull / The Hit-list (depending on framing)
+- **Why it works:** Dramatic reveal pattern = high engagement, viral-friendly, plays well on TikTok algo
+
+### 3. "$X budget challenge"
+
+- **Time:** 2-3 min
+- **When:** Periodic — once a week or whenever you want to drive Shopify clicks
+- **Format:** Hook ("$50 at HOKO — what would I buy?") → walk through 3-5 SKUs from your live inventory → recommend the smart pick → CTA to Shopify with HOKO10
+- **Price tiers to rotate:** $20, $50, $100, $250, $500
+- **Pillar:** The Tip + The Hit-list combined
+- **Why it works:** Inherently watchable (curiosity loop), drives store traffic directly, highlights current inventory
+
+### 4. This vs That
+
+- **Time:** 60 sec
+- **When:** Whenever you have two compelling items side-by-side
+- **Format:** Hold both items up → describe each in one sentence → ask "which would you take?" → tease your own answer ("I'll tell you in the next post" — keeps them following)
+- **TikTok hook examples:** *"$200 budget — sealed 151 box, or PSA 9 Mewtwo. Which would you take?"* / *"Two options, comment your pick..."*
+- **Pillar:** The Hit-list
+- **Why it works:** Pure engagement bait (comments boost algo), no production needed, opens debate
+
+### 5. Supplier crack
+
+- **Time:** 2 min
+- **When:** Any time you receive a fresh wholesale shipment
+- **Format:** Show the unopened supplier box → crack it open on camera → reveal contents → mention "this restocks Shopify tomorrow"
+- **Pillar:** The Drop + The Story
+- **Why it works:** Wholesale flex + restock alert in one. Signals legitimate sourcing, builds anticipation for the listing drop
+
+---
+
+### The rule that makes any of these work
+
+**Post fast, while it's actually happening.** Mail Call posted 3 days after the parcel arrived is dead content. Mail Call posted within 30 minutes = real urgency = better engagement.
+
+The phone-photo-voice-dump workflow in CLAUDE.md exists exactly for this: you finish filming, voice-dump 30s of context to Claude, get back the caption + hashtags + TikTok hook, schedule it in Meta Business Suite / TikTok Studio. End-to-end under 5 minutes.
+
+### Suggested rotation (commit to 2 formats)
+
+Pick TWO formats and run them for 30 days. After 30 days, double-down on whichever performed better and rotate in a third.
+
+**Default recommendation for HOKO right now:**
+- **Mail Call** as the daily anchor — high volume, low effort
+- **Slab Reveals** as the weekly hit format — 2-3/week, viral potential
+
+That's 9-10 posts/week from ~5 min effort each.
 
 Re-read this doc. Then ask:
 1. Am I consistent on phase [current] formats? (If no → stay here)
