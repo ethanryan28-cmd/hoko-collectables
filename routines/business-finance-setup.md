@@ -41,19 +41,21 @@ NetBank Savers are free, earn interest, and show as sub-accounts in the CBA app.
 
 CBA doesn't do auto-percentage splits like Up does — you'll use **fixed weekly transfers** from business operating into the 3 savers.
 
-**Placeholder amounts** (assumes ~$1k/week revenue — adjust once Claude has your real monthly revenue):
+**Tuned amounts** (based on most recent 30-day eBay performance: $730.74 gross / $563.51 net = ~$170/week gross):
 
-| To | Amount/week | % of $1k |
-|---|---|---|
-| → Tax | $250 | 25% |
-| → Restock | $350 | 35% |
-| → Float | $100 | 10% |
-| Stays in Operating | $300 | 30% |
+| To | Amount/week | Monthly | % of net |
+|---|---|---|---|
+| → Tax | **$35** | $140 | ~25% |
+| → Restock | **$50** | $200 | ~35% |
+| → Float | **$15** | $60 | ~10% |
+| Stays in Operating | **$30** | $120 | ~21% |
 
 - [ ] Set up the 3 scheduled transfers (CBA app → Transfers → Recurring)
 - [ ] Pick a day right after Shopify usually pays out (e.g. Tuesdays or Fridays)
 
-Adjust the dollar amounts monthly as revenue moves. The accountant will give you real %s; until then these are sane defaults for a sub-$80k/yr sole trader.
+**Important context (May 2026):** owner's 90-day total was $4,712, but most-recent 30 days dropped to $730 — a 37.6% decline. The pivot to sealed-only + slabs (higher AOV than current cheap-singles mix) is designed to reverse this. As monthly revenue climbs back toward $1,500+ and beyond, scale these transfer amounts up proportionally.
+
+**Trigger to revisit amounts:** any month where eBay gross exceeds $1,000, or after a Whatnot stream lands, bump transfers up.
 
 #### Fix 4 — Move business expenses to come from the business account (10 min)
 
@@ -67,9 +69,28 @@ From here: personal account = personal life only. Business account = HOKO only. 
 
 ### After the 4 fixes are done
 
-- [ ] **Tell Claude your real monthly revenue** so the $250/$350/$100 placeholders can be tuned
 - [ ] **Engage an accountant** ($500-1500/yr in Melbourne) to confirm the actual tax % for your bracket + structure (sole trader vs Pty Ltd)
 - [ ] **Personal emergency fund** — separate goal, target 2 months living expenses (~$4-6k) in a CBA NetBank Saver linked to your personal account
+- [ ] **Revisit transfer amounts every 2-3 months** as revenue grows
+
+### One-off cash events (Whatnot streams, large buybacks, lot sales)
+
+**Don't apply the weekly auto-split to one-off cash events.** They distort the maths because:
+
+- The weekly transfers assume steady revenue
+- A $3k Whatnot stream is ~8 weeks of normal revenue arriving at once
+- Auto-splitting would over-allocate to tax (you owe tax on *profit*, not gross sales)
+
+**When a large event lands** (e.g. Whatnot stream payout, big collection sale):
+
+| Bucket | Allocation for one-off events | Why |
+|---|---|---|
+| → Tax | ~25% | Still taxable income, but only on profit portion |
+| → Restock | 50-60% | Rebuild inventory at supplier rates (the main reason for the event) |
+| → Float | 10-15% | Rebuild emergency buffer |
+| → Operating | 10-15% | Covers several months of fees + your living |
+
+Handle these manually after the payout clears. Ping Claude with the real number for an exact split.
 
 ### The mindset piece — why the buckets matter
 
