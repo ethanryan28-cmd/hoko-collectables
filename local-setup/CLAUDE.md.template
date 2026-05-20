@@ -1,0 +1,251 @@
+# HOKO Collectables — Local Ops
+
+This is the home base for running HOKO Collectables operations through Claude Code on Windows.
+
+## Brand
+
+- **Name:** HOKO Collectables
+- **Site:** https://www.hokocollectables.com (Shopify)
+- **Based:** Melbourne, Australia (est. 2024)
+- **Owner / GitHub:** ethanryan28-cmd
+- **Socials:** Instagram & TikTok — @hokocollectables
+- **Motto:** "Collector first. Seller second."
+- **Positioning:** Collector-run (~20 yrs hobby experience), honest grading (LP means LP), transparent buybacks, careful packing, same-day dispatch.
+- **Active promos:** HOKO10 (10% off first order), free AU shipping over $100, VIP loyalty with restock early-access, 48-hr collection-quote turnaround.
+
+## Product Domain (TCG sealed + graded — post May 2026 pivot)
+
+HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new singles sourcing.
+
+**In scope:**
+
+- Pokémon TCG sealed (boxes, ETBs, booster packs, decks, promos)
+- Magic: The Gathering sealed
+- One Piece TCG sealed
+- Dragon Ball Super sealed
+- Japanese sealed (Pokémon, One Piece, DBS, etc.)
+- Graded slabs — PSA / BGS / CGC only
+- Collection buyback service (sealed + verified-grader slabs only)
+
+**Out of scope (sell-through existing, don't replenish):**
+
+- Loose singles — existing Shopify/eBay stock clears naturally
+- Mystery packs / bulk single lots
+- Slabs from unverified graders (HGA, GMG, etc.)
+
+## Channel Strategy (post sealed-only pivot)
+
+| Channel | Role | What goes here |
+|---------|------|----------------|
+| **Shopify** | Brand experience + margin | Sealed product + PSA/BGS/CGC slabs. Existing premium singles sell-through, no new singles. |
+| **eBay** | Search-driven acquisition | Sealed + slabs. Captures buyers who search the platform directly. Insert bridge stays. |
+| **Whatnot** | On-demand live | Sealed pack-rip / box-break shows when owner chooses to go live. |
+
+**Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
+
+**Pivot in progress (May 2026):** archiving sub-$50 products from Shopify via `scripts/shopify/archive_cheap_singles.py` (catches most cheap singles + low-end accessories). Premium singles ($50+) stay listed and sell through naturally. Singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
+
+**Primary path is the script:**
+
+```powershell
+# In the cloud repo, after pulling latest:
+cd scripts/shopify
+$env:SHOPIFY_STORE = "hokocollectables.myshopify.com"
+$env:SHOPIFY_ADMIN_TOKEN = "shpat_..."
+
+# Step 1 — dry-run, writes candidates.csv. No changes made.
+python archive_cheap_singles.py
+
+# Step 2 — REVIEW candidates.csv in Excel. Critically: exclude any
+# cheap sealed product (individual booster packs, accessories) that
+# should stay listed.
+
+# Step 3 — if happy:
+python archive_cheap_singles.py --execute
+# Type 'archive' at the prompt to confirm.
+```
+
+Voice-driven Shopify Connector remains an alternative for a deeper purge by product type — *"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything yet."*
+
+## Sourcing
+
+All new sourcing is **sealed + verified-grader slabs only.** No more lot-splitting, no more single-card sourcing.
+
+- **Japanese / Korean / Chinese sealed:** mix of direct-from-Asia and AU-based wholesale partners — varies per SKU. **Default copy is generic:** *"sourced through our regional supplier network"* or *"imported via our wholesale partners."* Only say *"direct from Japan"* (or similar) when owner has confirmed for that SKU. Ask before writing if unsure.
+- **English sealed:** AU-based wholesalers + opportunistic sealed lots from buybacks.
+- **Graded slabs:** primarily from collection buybacks. Always verify grader (PSA / BGS / CGC only).
+- Margin profile is now consistent (supplier-bought, predictable). Apply replacement-cost pricing on every SKU (see Brand & Pricing Strategy §1).
+
+---
+
+## Brand & Pricing Strategy
+
+Four operating principles (PokeNE, May 2026). Apply on every pricing, restock, or buyback question.
+
+### 1. Price at replacement cost, not historical cost
+
+When ~30-40% sold through, check current supplier/lot replacement cost. If it rose, reprice remaining stock to match before running out. Profit must cover *next* restock, not just original purchase.
+
+- Asian sealed: check supplier rate at 30% sell-through, reprice if moved.
+- English sealed: check wholesaler/distributor rate, reprice if market moved.
+- Slabs (buyback-sourced): check TCGPlayer + eBay sold comps, reprice if comps moved.
+
+### 2. Price at market, never undercut
+
+HOKO10 is customer acquisition; day-to-day pricing is at market. Moat = honest grading + same-day dispatch + buybacks + trust, not low price. Bigger sellers can always go lower on volume.
+
+### 3. Collection buybacks: rigid, professional, copy-paste
+
+Pay 75-80% of fair market value. Use the fixed intake template every time — never freeball.
+
+**Non-negotiables:**
+- What we buy: factory-sealed TCG + PSA/BGS/CGC slabs valued at AUD $100+ each. Nothing else.
+- Where we meet: bank branch / storage unit, business hours. No home pickups.
+- Quote = 48-hour validity, after photo + typed list received.
+- Payment = bank transfer on the day. No PayPal, no cash, no instalments.
+
+Intake email template lives in the cloud repo at `templates/collection-buyback-intake.md` — copy-paste every time, only customise the recipient's name. Stern = signals professional.
+
+### 3a. Consignment (future revenue pillar — Phase 2 launch)
+
+Directional intent: HOKO will offer **consignment** alongside buybacks.
+
+- **Buyback:** outright purchase at 75-80% FMV, paid on the day.
+- **Consignment:** HOKO lists on its channels, takes **15-20% commission**, consignor paid after sale.
+
+**Scope:** sealed + PSA/BGS/CGC slabs $100+ only. Same as buyback.
+
+**Casual cases now:** if seller DMs about a collection wanting top dollar, offer consignment as the alternative. Single-page contract per item.
+
+**Formal launch:** Phase 2 (months 4-6) — intake form, tracking system, marketed as a service. Needs Whatnot + Shopify flow proven first.
+
+**Deliverables when launching (not yet written):**
+- Consignment agreement template
+- Intake email template
+- Tracking spreadsheet
+- Commission structure decision (flat 20% vs sliding scale)
+
+### 4. Be platform-agnostic — own the brand
+
+eBay/Whatnot/TCGPlayer/conventions are channels, not the business. Every parcel, caption, stream, DM reinforces the brand identity (`hokocollectables.com`, `@hokocollectables`, "Collector first. Seller second.") so the audience follows when channels change.
+
+## Tooling
+
+- **CardUploader** — bulk-upload tool for Shopify. Owner has adapted/"flipped" the same data flow to push listings to eBay too.
+- **Shopify Connector for Claude** — primary path for running the store by voice. Enabled in claude.ai → Settings → Connectors → Shopify.
+  - **Limit:** can't upload local image files — needs public URLs.
+  - **Safety habit:** for any bulk-destructive action (price changes, archives, deletes), always say *"show me one example first, don't execute yet"*, approve, then *"go ahead."*
+- **Local Claude Code** (this) — daily content, listings, prompts, file work.
+- **Cloud Claude Code scheduled session** — daily brand/SEO scan, competitor pricing, listing freshness check.
+
+## Voice / Tone
+
+- Approachable, community-focused, trust-forward
+- Collector-to-collector — not generic e-commerce hype
+- Honest about condition, never inflate grades
+- Australian English (colour, recognise, organised)
+- No "GUYS! YOU WON'T BELIEVE!". No marketing-agency tone.
+
+## Content Strategy
+
+Target: **~3 IG/TikTok posts per day, ~30 seconds of owner time per post**, via 3 daily phone photos + voice-dumped context.
+
+### 5 content pillars (rotate)
+
+| Pillar | What it looks like | Weekly target |
+|---|---|---|
+| **The Pull** | Pack opens, hits, "look what I got" | 2x |
+| **The Drop** | Restock alerts (especially Japanese sealed), new arrivals | 2x |
+| **The Story** | Packing orders, sourcing trips, behind-the-scenes | 2x |
+| **The Tip** | Educational — grading, fake-spotting, collecting advice | 1x |
+| **The Hit-list** | Market commentary, trending sets, "what's hot right now" | 1x |
+
+### Daily workflow
+
+1. Owner takes 3 phone photos of whatever's interesting today.
+2. Voice-dumps 30s of context per photo into Claude mobile.
+3. Claude returns per photo: IG caption + hashtags, TikTok hook (first 3s spoken), IG story idea, suggested pillar.
+4. Owner reviews on phone, schedules via Meta Business Suite (IG) / TikTok Studio (TikTok).
+
+### When asked "draft posts for today" with no photo
+
+Propose a balanced pillar mix for the week, ask which pillar today belongs to, then draft.
+
+### Hard rules
+
+- Never post on owner's behalf — always hand the draft back for approval.
+- Match voice/tone rules above (collector-to-collector, AU English, no hype).
+- Default to honest grading language. Never inflate condition for engagement.
+
+---
+
+## Reference Prompts
+
+### eBay listing
+
+**Ask owner for:** card/item, set, condition (NM/LP/MP/HP/DMG or Sealed), graded?, price AUD, qty, special notes, photos y/n.
+
+**Generate:**
+1. **Title** — max 80 chars, AU TCG search terms, no ALL CAPS / no emojis
+2. **Item specifics** — Brand, Set, Card Number, Card Name, Rarity, Language, Condition, Graded, Year, Features
+3. **Description** — one-line hook, bullet list (item / condition honest / packaging), trust block *"Collector-run from Melbourne. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*, cross-sell *"Browse our full range and save 10% on your first order at hokocollectables.com with code HOKO10."*
+4. Suggested eBay AU category path
+5. Suggested price logic if not pinned (sold-comp reasoning)
+
+### Shopify sealed product page
+
+**Ask owner for:** product name, set, format, region, release date, in-stock / pre-order, price AUD, notable chase cards.
+
+**Generate:**
+- Title, meta description (~155 chars)
+- 3-paragraph description: (1) the set + why it matters, (2) what's inside, (3) chase cards + why they matter
+- Bullet block: same-day dispatch if before 2pm AEST, padded packaging, HOKO trust signals
+- Shopify tags + collection assignments
+
+### Social caption (IG / TikTok)
+
+**Ask owner for:** platform, post type, subject, CTA.
+
+**Generate:**
+1. Hook
+2. Body (2–4 short lines)
+3. CTA
+4. 8–12 hashtags (mix #pokemontcg with #tcgaustralia #melbournecollectors)
+
+If TikTok: also produce a 3-beat video script (Hook → Show → Pitch), under 30s.
+
+### Whatnot show prep
+
+**Ask owner for:** date/time AEST, show type, featured products, starting bid baseline, duration.
+
+**Generate:** show title, description, run-of-show (time-stamped), lot list table, 3 pinned chat messages, post-show checklist.
+
+### Package insert
+
+**Ask owner for:** channel, buyer type, order value bracket.
+
+**Generate:** Under 80 words. Collector-to-collector. Pitch Shopify especially for eBay buyers. HOKO10 for first-timers. Sign off *"— Ethan, HOKO Collectables, Melbourne"*. Suggest UTM-tracked QR target.
+
+---
+
+## Voice Intake Protocol
+
+When owner dumps a raw voice transcript (Whisper Flow / phone dictation / iOS native):
+
+1. **Extract, don't invent.** Pull only what he said.
+2. **Categorise** into: listings, social, Whatnot prep, customer messages, pricing decisions, restock notes, to-dos, strategic thoughts.
+3. **Produce structured output** per bucket, using Reference Prompts as templates.
+4. **Use `[FILL IN: ...]` placeholders** for missing info — never block on minor details.
+5. **End with a tight to-do list** of what to review.
+
+---
+
+## Working Notes
+
+- Default to short, direct responses.
+- Don't open browser tabs or start long downloads without confirming.
+- Never inflate condition. Never use marketing hype words.
+
+## Related repo
+
+`github.com/ethanryan28-cmd/hoko-collectables` — separate demo storefront site, NOT the live store. Also hosts the scheduled cloud routine, Shopify archiver script, and prompt template files.

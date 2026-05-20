@@ -1,0 +1,11 @@
+{
+  "_comment": "SKUs the daily routine watches for competitor pricing. Owner to populate. ebayQuery = the search string to use on eBay sold listings.",
+  "skus": [
+    {
+      "id": "example-charizard-base-1ed-psa9",
+      "name": "Pokemon Charizard Base Set 1st Edition PSA 9",
+      "ebayQuery": "charizard base set 1st edition psa 9",
+      "shopifyHandle": null
+    }
+  ]
+}
