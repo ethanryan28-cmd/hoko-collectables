@@ -165,7 +165,59 @@ Owner has confirmed in chat: play mat ✓, Epson scanner ✓, printer ✓, mic �
 
 Still needed: ring light, overhead phone arm/clamp, dedicated table (if no existing setup), confirmation of mic type (stand mic vs lav vs phone-attached changes Whatnot audio plan).
 
-### Epson scanner — bonus utility for singles liquidation
+---
+
+## Branded sign / background — AU options
+
+A visible HOKO sign in every video keeps the brand top-of-mind without having to mention it constantly. PokeNE principle of "look professional" made physical.
+
+| Tier | Option | Cost AUD | Notes |
+|---|---|---|---|
+| Cheap & fast | Officeworks A3 print on foamboard | $15-30 | Walk-in same-day. Mount with Command strips. Not portable. |
+| **Recommended** | **Vistaprint AU pull-up retractable banner (~2m)** | **$100-150** | Rolls into a tube case → portable AND home setup in one purchase |
+| Brand alternative | Etsy AU routed wood plaque | $80-120 | Premium feel, matches "Collector first" tone better than vinyl |
+| Premium | Custom Neon AU LED sign | $150-400 | Eye-catching but may feel too hype for the brand voice |
+
+**Recommendation:** Vistaprint pull-up banner. Solves the portability question at the same time. Reusable for conventions, pop-ups, and buyback meet-ups later.
+
+---
+
+## Portable setup
+
+**Design rule: don't buy two of everything.** Make the home setup BE the portable setup — same gear, packs down.
+
+### Portable-friendly gear choices
+
+| Gear | Portable choice |
+|---|---|
+| Lighting | Lume Cube Panel Mini (USB-rechargeable, runs off power bank) OR Neewer 18" with collapsible stand + carry bag |
+| Phone mount | Joby GorillaPod Mobile (flexible legs, packs small) |
+| Mat | Ultra Pro playmat (rolls up) |
+| Mic | RØDE Wireless ME (pocket-portable) |
+| Background | Pull-up retractable banner (see above) |
+| Power | Anker / Belkin 10000mAh power bank (runs lights + charges phone) |
+| Carry case | 25-35L camera bag, tote, or backpack |
+
+### Add-ons for portable-from-day-one
+
+- [ ] Pull-up banner — $100-150 (Vistaprint AU)
+- [ ] Power bank (Anker / Belkin 10000mAh) — $25-30 (JB Hi-Fi)
+- [ ] Gear bag — $30 (Kmart) up to $150 (camera shop)
+- [ ] Optional: Lume Cube Panel Mini instead of Neewer (~$80) if you want light that runs without wall power
+
+**~$160-310 incremental** on top of base recommended gear for a fully portable kit.
+
+### Use cases for portability
+
+- **Conventions / pop-ups** — pack and go
+- **Supplier visits** — Mail Call content from on-location
+- **TCG show coverage** — record content at events
+- **Outdoor / window-light shoots** — natural light when available
+- **Buyback meet-ups** — sign visible at the bank or storage facility signals legit operation, reinforces the rigid intake template's professionalism
+
+---
+
+## Epson scanner — bonus utility for singles liquidation
 
 The scanner is a hidden weapon for the eBay singles sell-through phase:
 
