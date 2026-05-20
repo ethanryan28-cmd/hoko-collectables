@@ -191,38 +191,53 @@ For when you need to post but don't have a planned idea. All 5 of these use only
 - **Pillar:** The Drop
 - **Why it works:** Daily-able, builds "always new stuff" perception, no inventory required beyond what just arrived
 
-### 2. Slab Reveal
+### 2. Slab Reveal — PC Showcase or Commercial
 
-- **Time:** 90 sec
-- **When:** Any time you have a notable slab (buyback in, restock, personal collection piece)
-- **Format:** Tease the slab face-down → build context ("PSA 9, vintage base, owned by [anonymised seller]") → flip reveal → walk through grade details
-- **TikTok hook examples:** *"This just walked into the shop and I had to film it..."* / *"PSA 9 base [card] — let me show you what makes it special..."*
-- **Pillar:** The Pull / The Hit-list (depending on framing)
-- **Why it works:** Dramatic reveal pattern = high engagement, viral-friendly, plays well on TikTok algo
+**Two variants of the same format**, depending on whether the slab is from owner's Personal Collection (not for sale) or commercial inventory (for sale).
 
-#### Slab Reveal — full 90-second script structure
+#### Variant A: PC Showcase (primary brand format)
+
+- **Source:** owner's personal collection — these slabs are NOT for sale
+- **Purpose:** brand authority + buyback lead generation
+- **Why it works:** positions HOKO as collector-first (literal motto), drives buyback inquiries because viewers think *"if Ethan has slabs like this, he probably wants to buy mine"*
+- **Pillar:** The Story / The Hit-list (brand authority)
+- **TikTok hook examples:** *"This one's not for sale — it's from my personal collection..."* / *"From my own collection — let me show you why I love this one..."*
+
+#### Variant B: Mail Call / Restock Reveal (commercial)
+
+- **Source:** commercial inventory (buyback intake, restock, supplier shipment)
+- **Purpose:** drive Shopify clicks + direct sales
+- **Pillar:** The Pull / The Drop
+- **TikTok hook examples:** *"This just walked into the shop and I had to film it..."* / *"PSA 9 base [card] — listed now at HOKO..."*
+
+#### Shared 90-second script structure
 
 | Beat | Time | What to say/show |
 |---|---|---|
-| **Tease** | 3 sec | *"Look what just came into HOKO..."* / *"PSA just sent this back..."* — hold slab face-down |
-| **Context** | 10-15 sec | Where it came from (anonymised buyback / restock / personal pull), set + year, why it matters |
+| **Tease** | 3 sec | PC: *"This isn't for sale — but..."* / Commercial: *"Look what just came in..."* — hold slab face-down |
+| **Context** | 10-15 sec | Where it came from / set + year / why it matters |
 | **Reveal** | 5 sec | Flip → hold steady → let the silence land |
-| **Walkthrough** | 45-60 sec | Break down the grade — centering, surface, edges. Reference a comp: *"sold for $X on eBay last week."* Honest take ("I'd have called this a 9 personally" / "fair grade") |
-| **Closer** | 10 sec | *"More slabs at hokocollectables.com — HOKO10 for 10% off. Collector first. Seller second."* |
+| **Walkthrough** | 45-60 sec | Break down the grade — centering, surface, edges. Reference a comp: *"sold for $X on eBay last week."* Honest take. |
+| **Closer (PC)** | 10 sec | *"Got slabs like this? HOKO buys at 75-80% FMV — DM me. Browse what HOKO sells at hokocollectables.com."* |
+| **Closer (Commercial)** | 10 sec | *"Listed now at hokocollectables.com — HOKO10 for 10% off. Collector first. Seller second."* |
 
-#### Batch-filming Slab Reveals
+#### Batch-filming slab content
 
-Slab Reveals are **evergreen content** — unlike Mail Call, they don't need to be posted same-day. Batching is the right move.
+Slab content (both variants) is **evergreen** — unlike Mail Call, it doesn't need same-day posting. Batching is the right move.
 
 **One-session batching workflow (60-90 min → 5-10 videos):**
 
-1. Pull 5-10 of the most visually striking slabs from inventory
-2. Single filming setup: dark mat under slab (kills glare + frames it), good lighting (window light or one lamp), phone on tripod at table height
+1. Pull 5-10 of the most visually striking slabs — mix of PC + commercial if you have both
+2. Single filming setup: dark mat under slab (kills glare + frames it), good lighting, phone on tripod at table height
 3. Change shirts every 2-3 slabs so the videos look like they're filmed on different days when posted
-4. Film each in one take — 90 sec each, raw file named per slab (`charizard-psa9.mp4`)
+4. Tag each raw file with type — `pc-charizard-psa9.mp4` vs `commercial-psa9-blastoise.mp4`
 5. Post one per day on TikTok primary; cross-post to IG Reels only if a video breaks through
 
 That's 5-10 days of content from one 90-minute session.
+
+#### Important: don't blur the distinction on camera
+
+If you film a PC slab and use the commercial closer ("listed now at HOKO"), viewers see it on the site and find it's not for sale → trust hit. Tag your raw files carefully and use the matching closer. The framing IS the brand.
 
 ### 3. "$X budget challenge"
 

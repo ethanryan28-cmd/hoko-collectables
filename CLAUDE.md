@@ -128,11 +128,11 @@ Levers already in place: package inserts (HOKO10 + hokocollectables.com on every
 
 ## Catalogue strategy (post sealed-only pivot)
 
-- **Shopify** — sealed product + PSA/BGS/CGC slabs forward. **Threshold-based archive (May 2026):** all products under AUD $50 archived in one pass via `scripts/shopify/archive_cheap_singles.py` (catches most cheap singles + low-end accessories). Premium singles ($50+) stay listed and sell through naturally. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
-- **eBay** — sealed + slabs. The bridge (HOKO10 + Shopify URL insert in every parcel) remains the acquisition flow. Existing singles sell through then the channel is sealed-only.
+- **Shopify** — sealed product + PSA/BGS/CGC slabs only. **Clean-slate decision (May 2026):** all existing products archived in one pass (owner confirmed no sealed booster packs or accessories currently listed, so nothing was sacrificed). Going forward, new Shopify listings only — slabs from buybacks + sealed product from suppliers. PC slabs are **content fuel only**, never listed.
+- **eBay** — sealed + slabs going forward, plus $3 cheap singles for sell-through (search-driven cheap buyers handle the dregs there). The bridge (HOKO10 + Shopify URL insert in every parcel) remains the acquisition flow.
 - **Whatnot** — sealed pack-rip / box-break shows when owner goes live.
 - **Bridge:** package inserts in every eBay order push HOKO10 + Shopify URL.
-- **Pivot helper:** preferred path is the `scripts/shopify/archive_cheap_singles.py` script (threshold AUD $50, dry-run by default) — review the CSV first to exclude any cheap sealed product (individual booster packs etc.) that should stay listed. Voice-driven Shopify Connector remains an option for a deeper purge by product type later.
+- **Pivot helper:** preferred path is voice-driven Shopify Connector (*"Archive ALL active products. Confirm before starting."*). Fallback when at PC: `scripts/shopify/archive_cheap_singles.py` with `THRESHOLD_AUD` set to a very high number (e.g. $99999) for an all-products archive.
 
 ## This Repo
 

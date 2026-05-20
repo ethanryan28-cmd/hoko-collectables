@@ -54,33 +54,54 @@ Problem: "sealed" buried at end, "graded" reads as singles condition.
 
 ---
 
-## 5. Archive sub-$50 products from Shopify
+## 5. Archive EVERYTHING currently on Shopify (clean slate)
 
-**Updated decision (May 2026):** archive everything under AUD $50 via the script. Catches most cheap singles + low-end accessories. Premium singles ($50+) stay listed and sell through naturally. Existing singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
+**Updated decision (May 2026):** instead of triaging by price, **archive every active product** on the site. Cleanest possible move. Site keeps its hero / theme / collections / pages — only products go hidden. Reversible: any product can be unarchived later from Shopify admin if you change your mind.
 
-**Primary path: run the script.**
+Owner confirmed no sealed booster packs or accessories currently listed, so the threshold-review approach is unnecessary — the whole catalogue is off-strategy and goes.
+
+### Path A: Shopify Connector (preferred, do from phone)
+
+If Connector isn't set up yet:
+
+1. On phone, open Safari (or Chrome) → `claude.ai/settings/connectors`
+2. Find Shopify → Connect → OAuth into Shopify admin → approve
+3. Pick `hokocollectables.myshopify.com`
+4. ~5 min total
+
+Then voice prompts:
+
+- [ ] *"Show me every active product on hokocollectables. Don't change anything yet — give me the count and the first 20 names."*
+- [ ] Sanity-check the list (just confirms the Connector is talking to the right store)
+- [ ] *"Archive ALL active products. Don't delete — archive. Confirm with me before you start."*
+- [ ] Approve confirmation prompt
+- [ ] *"Show me how many products are still active. I expect 0."*
+
+### Path B: Script (PC required, API token route)
+
+When at PC:
 
 ```powershell
 cd scripts/shopify
 $env:SHOPIFY_STORE = "hokocollectables.myshopify.com"
 $env:SHOPIFY_ADMIN_TOKEN = "shpat_..."
 
-# Step 1 — dry-run, writes candidates.csv. No changes made.
-python archive_cheap_singles.py
+# Edit archive_cheap_singles.py: THRESHOLD_AUD = 99999.0
+python archive_cheap_singles.py            # dry-run, writes candidates.csv
+# Review CSV (should be everything active)
+python archive_cheap_singles.py --execute
+# Type 'archive' to confirm
 ```
 
-- [ ] Set up Shopify Admin API token (one-time, see `scripts/shopify/README.md`)
-- [ ] Run dry-run — produces `candidates.csv`
-- [ ] **Open `candidates.csv` in Excel** — review every row
-  - Critically: spot-check for **cheap sealed product** (individual booster packs at $5-8, sealed accessories) that you want to keep listed. The price filter catches these too.
-  - If anything in the list shouldn't be archived, take note for the next step.
-- [ ] If a few items shouldn't be archived: either temporarily raise their price to $50+ in Shopify so they fall outside the filter, or skip the script and manually archive everything else via Shopify Connector instead
-- [ ] When CSV looks right: `python archive_cheap_singles.py --execute` and type `archive` to confirm
-- [ ] After archive: confirm via Shopify Admin → Products → Status = Active filter → should show only sealed + slabs (with premium singles still active by design until they sell through)
+### After archive
 
-**Reversibility:** archived products stay in Shopify admin. Products → filter Status = Archived → open product → Unarchive.
+Catalogue is empty. Going forward, new listings only:
 
-**Alternative path** (voice-driven, by product type instead of price): use the Shopify Connector — *"Show me every product that is NOT a sealed box, ETB, pack, deck, sealed accessory, or graded slab. Don't change anything yet."* Useful for a deeper purge later that catches premium singles ($50+) too.
+- **Slabs** from buybacks (commercial, for sale) — listed via Connector after each filming/photo session
+- **Sealed product** from supplier orders — listed when shipments arrive
+- **NEVER** the PC slabs (those are content fuel, not inventory)
+
+The first new listings come from today's slab filming session (commercial slabs only — PC slabs stay off-Shopify).
 
 ---
 
