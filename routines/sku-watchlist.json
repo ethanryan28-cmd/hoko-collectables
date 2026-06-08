@@ -1,11 +1,53 @@
 {
-  "_comment": "SKUs the daily routine watches for competitor pricing. Owner to populate. ebayQuery = the search string to use on eBay sold listings.",
-  "skus": [
-    {
-      "id": "example-charizard-base-1ed-psa9",
-      "name": "Pokemon Charizard Base Set 1st Edition PSA 9",
-      "ebayQuery": "charizard base set 1st edition psa 9",
-      "shopifyHandle": null
-    }
-  ]
+    "_comment": "SKUs the daily routine watches for competitor pricing. ebayQuery = the search string to use on eBay sold listings. shopifyHandle = the Shopify product URL handle (null if not yet listed). lastUpdated = date this entry was added/reviewed.",
+    "skus": [
+          {
+                  "id": "pokemon-mega-dream-booster-box-jp-m2a",
+                  "name": "Pokemon MEGA Dream (M2a) Japanese Booster Box",
+                  "ebayQuery": "pokemon mega dream booster box japanese M2a sealed",
+                  "shopifyHandle": "pokemon-mega-dream-booster-box-japanese-m2a",
+                  "targetPriceAUD": 219.00,
+                  "lastUpdated": "2026-06-08"
+          },
+          {
+                  "id": "pokemon-surging-sparks-etb",
+                  "name": "Pokemon Surging Sparks Elite Trainer Box (English)",
+                  "ebayQuery": "pokemon surging sparks elite trainer box sealed australia",
+                  "shopifyHandle": null,
+                  "targetPriceAUD": null,
+                  "lastUpdated": "2026-06-08"
+          },
+          {
+                  "id": "pokemon-destined-rivals-booster-box",
+                  "name": "Pokemon Destined Rivals Booster Box (English)",
+                  "ebayQuery": "pokemon destined rivals booster box sealed australia",
+                  "shopifyHandle": null,
+                  "targetPriceAUD": null,
+                  "lastUpdated": "2026-06-08"
+          },
+          {
+                  "id": "one-piece-royal-blood-booster-box",
+                  "name": "One Piece Royal Blood (OP-10) Booster Box",
+                  "ebayQuery": "one piece royal blood OP-10 booster box sealed australia",
+                  "shopifyHandle": null,
+                  "targetPriceAUD": null,
+                  "lastUpdated": "2026-06-08"
+          },
+          {
+                  "id": "mtg-final-fantasy-booster-box",
+                  "name": "Magic: The Gathering Final Fantasy Booster Box",
+                  "ebayQuery": "magic the gathering final fantasy booster box sealed australia",
+                  "shopifyHandle": null,
+                  "targetPriceAUD": null,
+                  "lastUpdated": "2026-06-08"
+          },
+          {
+                  "id": "pokemon-charizard-base-1ed-psa9",
+                  "name": "Pokemon Charizard Base Set 1st Edition PSA 9 (slab benchmark)",
+                  "ebayQuery": "charizard base set 1st edition psa 9",
+                  "shopifyHandle": null,
+                  "targetPriceAUD": null,
+                  "lastUpdated": "2026-06-08"
+          }
+    ]
 }
