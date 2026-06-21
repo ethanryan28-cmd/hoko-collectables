@@ -1,45 +1,59 @@
-# routines/prompts/
+# Prompts — Index
 
-Reusable AI prompt templates for HOKO Collectables. Each file is a structured prompt — fill in the inputs section and paste to Claude (or Claude Code) to generate the output.
+AI prompts for running HOKO Collectables. Each file is a structured prompt template
+with inputs, expected outputs, and usage notes. Run against Claude, ChatGPT, or similar.
 
----
-
-## Prompt index
-
-| File | What it generates | When to use |
-|------|------------------|-------------|
-| `buyback-dm-reply.md` | DM replies for inbound buyback enquiries | When a seller DMs asking about selling their collection |
-| `convention-post-content.md` | Post-show social content and 7-day content calendar | After attending a card show or convention |
-| `convention-prep.md` | Full convention run sheet: packing checklist, pricing strategy, elevator pitch | Before attending a card show or convention |
-| `customer-review-request.md` | Post-purchase follow-up message for eBay (feedback) and Shopify (review) | 3-7 days after confirmed delivery |
-| `dispute-resolution.md` | Response templates for INR, INAD, returns, negative feedback, eBay escalations | When a buyer opens a case or complaint |
-| `ebay-listing.md` | eBay listing title, condition description, and item specifics | Every new eBay listing |
-| `end-of-month-review.md` | Monthly business health review: revenue, inventory, eBay health, content, priorities | Last day of each month |
-| `package-insert.md` | Thank-you card / package insert copy | When creating or updating package inserts |
-| `pricing-update.md` | Repricing decisions based on replacement cost and sell-through | When reviewing prices (30-40% sell-through trigger) |
-| `restock-order.md` | Supplier order summary and priority list | When planning a restock run |
-| `shopify-sealed.md` | Shopify product listing copy for sealed TCG product | Every new sealed product added to Shopify |
-| `slab-listing.md` | Full listing copy for PSA/BGS/CGC graded slabs | Every new slab listing on any platform |
-| `social-caption.md` | Instagram/social caption for a product post | When posting a product photo to social |
-| `voice-dump-processor.md` | Structured business notes from a raw voice memo transcript | After recording a voice note or brain dump |
-| `whatnot-show.md` | Whatnot show script, lot order, and pricing strategy | Before a Whatnot live show |
-| `youtube-optimiser.md` | YouTube video title, description, tags, and chapter markers | Before publishing a YouTube video |
+Always review AI output before using. Never post, send, or publish without owner approval.
 
 ---
 
-## How to use
+## Prompt Files
 
-1. Open the relevant prompt file
-2. Fill in the **Inputs** section at the top with the specifics for this run
-3. Paste the whole file (including your filled-in inputs) into Claude or Claude Code
-4. Review the output before using — always hand it back to Ethan for approval before posting publicly
-
-**Important:** These prompts generate drafts. Never post social content, send customer messages, or publish listings without reviewing the output first.
+| File | Purpose | When to Use |
+|---|---|---|
+| `buyback-dm-reply.md` | Reply to inbound buyback DM enquiries | When someone messages asking to sell slabs |
+| `buyer-followup.md` | Repeat buyer relationship messages | After 2+ purchases from same buyer |
+| `convention-post-content.md` | Post-event social content | After a card show or convention |
+| `convention-prep.md` | Pre-event checklist and prep | 1-2 weeks before a convention |
+| `customer-review-request.md` | Post-purchase review follow-up | 3-5 days after item delivered |
+| `dispute-resolution.md` | INR/INAD/return/negative feedback responses | When a buyer opens a case |
+| `ebay-listing.md` | Generate a new eBay listing | When listing a slab or sealed item |
+| `email-newsletter.md` | Monthly email newsletter | First week of each month |
+| `end-of-month-review.md` | Monthly business health review | Last day of each month |
+| `grading-submission.md` | PSA/BGS/CGC submission viability check | Before sending cards to grader |
+| `package-insert.md` | Generate a thank-you insert for packages | When packing an order |
+| `pricing-update.md` | Reprice a slab or sealed item | Weekly or when market shifts |
+| `restock-order.md` | Draft a restock order from a supplier | When stock runs low |
+| `shopify-sealed.md` | Generate a Shopify product listing | When adding sealed product |
+| `sku-generator.md` | Generate SKUs for slabs and sealed | When adding any new product |
+| `slab-listing.md` | Generate a full slab listing (eBay + Shopify) | When listing a graded slab |
+| `tiktok-content.md` | TikTok/Reels video content prompt | Weekly content planning |
 
 ---
 
-## Related folders
+## Usage Notes
 
-- `routines/` — daily, weekly, and monthly operational checklists
-- `templates/` — ready-to-send document templates (consignment agreements, buyback intake forms, etc.)
-- `docs/` — reference guides (SEO, fees, packaging, photography, etc.)
+**Inputs:** Each prompt has an Inputs section listing what to gather before running.
+Fill these in before pasting into an AI tool — the more specific the inputs, the better the output.
+
+**Outputs:** Each prompt specifies what it will produce (e.g. 3 subject line options, a full listing,
+a DM reply). Review all outputs before use.
+
+**Never post directly:** All prompts produce drafts only. Ethan reviews and approves before
+anything is posted, sent, or listed.
+
+**Tone:** All prompts use AU English, collector-to-collector voice, no marketing hype.
+
+---
+
+## Quick Reference by Category
+
+**Listings:** `ebay-listing.md` / `shopify-sealed.md` / `slab-listing.md` / `pricing-update.md`
+
+**Operations:** `sku-generator.md` / `restock-order.md` / `grading-submission.md` / `end-of-month-review.md`
+
+**Customer comms:** `buyback-dm-reply.md` / `buyer-followup.md` / `customer-review-request.md` / `dispute-resolution.md` / `package-insert.md`
+
+**Content:** `tiktok-content.md` / `convention-post-content.md` / `email-newsletter.md`
+
+**Events:** `convention-prep.md` / `convention-post-content.md`
