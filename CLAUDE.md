@@ -143,11 +143,11 @@ Levers already in place: package inserts (HOKO10 + hokocollectables.com on every
 - Vanilla JS, no build step, no framework.
 - No `package.json`, no linter, no tests, no CI.
 - State (`cart`, `wishlist`) persisted in `localStorage`; countdown in `sessionStorage`.
-- Known bugs spotted during review (not yet fixed):
-  - `app.js:322` — `$(btn).forEach(...)` uses single-element selector; this whole wishlist re-style branch throws.
-  - `app.js:459` and `app.js:514` — unescaped apostrophes inside single-quoted strings (`'We'll'`, `'We're'`) → syntax errors.
-  - `JSON.parse(localStorage.getItem(...))` at `app.js:55-56` is unguarded; malformed storage breaks the whole app.
-  - `productCardHTML` interpolates product fields directly into HTML — safe today (hard-coded data) but an XSS surface once products come from a backend.
+- Known bugs — all 4 fixed (May–Jun 2026):
+-   - `app.js:322` — ~~`$(btn).forEach(...)` uses single-element selector~~ → **FIXED**: now uses `$$()` (querySelectorAll).
+    -   - `app.js:459` and `app.js:514` — ~~unescaped apostrophes inside single-quoted strings~~ → **FIXED**: newsletter + contact forms now use template literals.
+        -   - `JSON.parse(localStorage.getItem(...))` at `app.js:55-56` — ~~unguarded; malformed storage breaks the whole app~~ → **FIXED**: wrapped in `safeLoadStorage()` try/catch.
+            -   - `productCardHTML` interpolates product fields directly into HTML — ~~XSS surface~~ → **FIXED**: `escapeHTML()` helper added; all dynamic fields escaped before injection.
 
 ## Content Strategy
 
