@@ -208,6 +208,8 @@ Match his tone in any drafts: collector-to-collector, honest, AU English, no mar
 
 A scheduled Claude Code session runs `routines/daily.md` once per day. Output lands in `reports/YYYY-MM-DD.md` on `main`.
 
+A scheduled Claude Code session also runs `routines/weekly.md` once per week (suggested: Monday 8am AEST). Output lands in `reports/YYYY-MM-week-N.md` on `main`.
+
 Sub-routines:
 1. Brand & SEO scan (WebSearch — works today)
 2. Competitor pricing (needs `routines/sku-watchlist.json` populated)
