@@ -12,6 +12,7 @@ claude
 ```
 
 Then either:
+
 - `Read routines/prompts/ebay-listing.md and use it for: Charizard Base Set 1st Ed, LP, ungraded, $750 AUD`
 - Or copy the template, fill in the inputs, paste back
 
@@ -24,10 +25,18 @@ Then either:
 | `social-caption.md` | Instagram / TikTok post — also gives TikTok script |
 | `whatnot-show.md` | Going live — show title, run-of-show, lot list, pinned messages |
 | `package-insert.md` | The card going in the box — converts eBay buyers to Shopify |
+| `voice-dump-processor.md` | Raw voice transcript dump — categorises and drafts structured output across all content buckets |
+| `buyback-dm-reply.md` | Incoming DM/email from a seller offering a collection — drafts a compliant reply that enforces buyback rules |
+| `youtube-optimiser.md` | YouTube video upload — generates SEO title, description, tags, and thumbnail brief |
 
 ## Channel strategy these support
 
-- **eBay** — always-on cheap singles, customer acquisition
-- **Shopify** — sealed product + premium / graded singles, brand experience
-- **Whatnot** — on-demand live streaming
+- **eBay** — sealed product + graded slabs, customer acquisition via search
+- **Shopify** — primary brand storefront, sealed + slabs
+- **Whatnot** — live pack-rip / box-break shows
+- **YouTube** — long-form content (unboxings, collection reviews, grading reveals)
 - **Package insert** is the bridge: eBay buyers get a HOKO10 + Shopify pitch in every parcel
+
+## Post–May 2026 pivot note
+
+All prompts reflect the sealed-product + verified-grader slab focus. In-scope: Pokémon, MTG, One Piece, Dragon Ball Super sealed; PSA/BGS/CGC slabs. Out of scope: loose singles, mystery packs, HGA/GMG/unverified-grader slabs.
