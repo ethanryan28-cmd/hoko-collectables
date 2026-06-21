@@ -1,53 +1,68 @@
 {
-    "_comment": "SKUs the daily routine watches for competitor pricing. ebayQuery = the search string to use on eBay sold listings. shopifyHandle = the Shopify product URL handle (null if not yet listed). lastUpdated = date this entry was added/reviewed.",
-    "skus": [
-          {
-                  "id": "pokemon-mega-dream-booster-box-jp-m2a",
-                  "name": "Pokemon MEGA Dream (M2a) Japanese Booster Box",
-                  "ebayQuery": "pokemon mega dream booster box japanese M2a sealed",
-                  "shopifyHandle": "pokemon-mega-dream-booster-box-japanese-m2a",
-                  "targetPriceAUD": 219.00,
-                  "lastUpdated": "2026-06-08"
-          },
-          {
-                  "id": "pokemon-surging-sparks-etb",
-                  "name": "Pokemon Surging Sparks Elite Trainer Box (English)",
-                  "ebayQuery": "pokemon surging sparks elite trainer box sealed australia",
-                  "shopifyHandle": null,
-                  "targetPriceAUD": null,
-                  "lastUpdated": "2026-06-08"
-          },
-          {
-                  "id": "pokemon-destined-rivals-booster-box",
-                  "name": "Pokemon Destined Rivals Booster Box (English)",
-                  "ebayQuery": "pokemon destined rivals booster box sealed australia",
-                  "shopifyHandle": null,
-                  "targetPriceAUD": null,
-                  "lastUpdated": "2026-06-08"
-          },
-          {
-                  "id": "one-piece-royal-blood-booster-box",
-                  "name": "One Piece Royal Blood (OP-10) Booster Box",
-                  "ebayQuery": "one piece royal blood OP-10 booster box sealed australia",
-                  "shopifyHandle": null,
-                  "targetPriceAUD": null,
-                  "lastUpdated": "2026-06-08"
-          },
-          {
-                  "id": "mtg-final-fantasy-booster-box",
-                  "name": "Magic: The Gathering Final Fantasy Booster Box",
-                  "ebayQuery": "magic the gathering final fantasy booster box sealed australia",
-                  "shopifyHandle": null,
-                  "targetPriceAUD": null,
-                  "lastUpdated": "2026-06-08"
-          },
-          {
-                  "id": "pokemon-charizard-base-1ed-psa9",
-                  "name": "Pokemon Charizard Base Set 1st Edition PSA 9 (slab benchmark)",
-                  "ebayQuery": "charizard base set 1st edition psa 9",
-                  "shopifyHandle": null,
-                  "targetPriceAUD": null,
-                  "lastUpdated": "2026-06-08"
-          }
-    ]
+      "_comment": "SKUs the daily routine watches for competitor pricing. ebayQuery = the search string to use on eBay sold listings. shopifyHandle = the Shopify product URL handle (null if not yet listed). targetPriceAUD = HOKO target/current price per unit (null if not listed). lastUpdated = date this entry was last reviewed.",
+      "skus": [
+              {
+                        "id": "pokemon-mega-dream-booster-box-jp-m2a",
+                        "name": "Pokemon MEGA Dream (M2a) Japanese Booster Box",
+                        "ebayQuery": "pokemon mega dream booster box japanese M2a sealed",
+                        "shopifyHandle": "pokemon-mega-dream-booster-box-japanese-m2a",
+                        "targetPriceAUD": 199.83,
+                        "shopifyNote": "Listed as Lot of 6 at $1,199 AUD ($199.83/box equiv.) as of 2026-06-21",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "pokemon-surging-sparks-etb",
+                        "name": "Pokemon Surging Sparks Elite Trainer Box (English)",
+                        "ebayQuery": "pokemon surging sparks elite trainer box sealed australia",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": 210.00,
+                        "shopifyNote": "Not listed. AU eBay domestic sold median ~$200-220 (Jun 2026). Strong restock candidate.",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "pokemon-destined-rivals-booster-box",
+                        "name": "Pokemon Destined Rivals Booster Box (English)",
+                        "ebayQuery": "pokemon destined rivals booster box sealed australia",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": 894.70,
+                        "shopifyNote": "Not listed. AU eBay domestic sold median ~$849-910 (Jun 2026). High-value SKU.",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "pokemon-destined-rivals-booster-bundle",
+                        "name": "Pokemon Destined Rivals Booster Bundle (English)",
+                        "ebayQuery": "pokemon destined rivals booster bundle sealed australia",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": 120.00,
+                        "shopifyNote": "Not listed. AU eBay domestic sold median ~$115-133 (Jun 2026). High velocity, low barrier.",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "one-piece-royal-blood-booster-box",
+                        "name": "One Piece Royal Blood (OP-10) Booster Box",
+                        "ebayQuery": "one piece royal blood OP-10 booster box sealed australia",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": 375.00,
+                        "shopifyNote": "Not listed. AU eBay domestic sold median ~$318-424 English (Jun 2026); JP version ~$95-125.",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "mtg-final-fantasy-booster-box",
+                        "name": "Magic: The Gathering Final Fantasy Play Booster Box",
+                        "ebayQuery": "magic the gathering final fantasy booster box sealed australia",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": 279.00,
+                        "shopifyNote": "Not listed. AU eBay domestic sold median ~$265-285 (Jun 2026). Collector Box ~$1,487-1,900.",
+                        "lastUpdated": "2026-06-21"
+              },
+              {
+                        "id": "pokemon-charizard-base-1ed-psa9",
+                        "name": "Pokemon Charizard Base Set 1st Edition PSA 9 (slab benchmark)",
+                        "ebayQuery": "charizard base set 1st edition psa 9",
+                        "shopifyHandle": null,
+                        "targetPriceAUD": null,
+                        "shopifyNote": "Slab benchmark only - not for listing. AU eBay sold ~$7,387-9,435 English 1st Ed (May-Jun 2026).",
+                        "lastUpdated": "2026-06-21"
+              }
+      ]
 }
