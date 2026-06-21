@@ -1,34 +1,44 @@
-# docs/
+# Docs — Index
 
-Reference documents for HOKO Collectables operations. These are owner-facing guides — not customer-facing content.
+Reference documentation for running HOKO Collectables.
+These are guides, policies, and reference material — not operational prompts.
+
+For AI prompt templates, see `routines/prompts/README.md`.
 
 ---
 
 ## Files
 
-| File | What it covers |
-|------|----------------|
-| `seo-guide.md` | Keyword clusters, Shopify product title/meta/collection copy templates, eBay + YouTube title formulas, on-page checklist, quick wins (Google Search Console etc.) |
-| `platform-fees.md` | eBay/Shopify/Whatnot fee tables, net margin cheat sheet, postage costs, minimum viable price formula |
-| `google-search-console-setup.md` | Step-by-step GSC property setup via Shopify DNS, sitemap submission, monthly review checklist, Google Analytics connection |
-| `packaging-guide.md` | Packing standards for slabs, sealed boxes, and small packs; dispatch protocol; high-value order procedure; materials stock list |
-| `ebay-reputation-guide.md` | TRS requirements, defect rate targets, feedback management, INAD prevention, listing accuracy standards, monthly seller health checklist |
-| `photography-guide.md` | Slab and sealed product photo standards — required shots, lighting, equipment, social vs listing, file naming, minimum photo counts |
-| `tax-and-gst-guide.md` | GST basics for a small AU collectables business — registration threshold, taxable sales, record-keeping, BAS obligations |
-| `whatnot-setup-guide.md` | Whatnot seller setup, show configuration, shipping settings, and show run tips |
+| File | Purpose | How to Use |
+|---|---|---|
+| `buyback-policy.md` | Full buyback policy — rules, eligibility, process | Reference when a seller enquires; share the relevant section if needed |
+| `ebay-reputation-guide.md` | TRS targets, defect rate, feedback management | Review monthly alongside eBay health dashboard |
+| `insurance-guide.md` | Stock insurance, transit cover, shipping value thresholds | Review annually or when stock value changes significantly |
+| `photography-guide.md` | Slab and sealed photo standards, equipment, file naming | Reference when photographing new stock |
+| `supplier-guide.md` | Sourcing principles, supplier types, red flags, authenticity checks | Reference when evaluating a new supplier |
+| `tax-and-gst-guide.md` | GST registration, BAS dates, deductibles, record-keeping | Review quarterly; share relevant sections with accountant |
+| `whatnot-setup-guide.md` | Whatnot seller account setup and show guide | Reference before your first show or when onboarding to Whatnot |
 
 ---
 
-## How to use
+## How to Use
 
-These documents are reference material. Open them when:
+**Before a listing run:** Check `photography-guide.md` for photo standards.
 
-- **Listing a new product** → `seo-guide.md` for title formula, meta description template, and alt text guidance
-- **Pricing a product** → `platform-fees.md` for the fee tables and minimum viable price formula
-- **Packing an order** → `packaging-guide.md` for the correct packing method by product type
-- **Photographing stock** → `photography-guide.md` for required shots and lighting tips
-- **Handling an eBay dispute or feedback** → `ebay-reputation-guide.md`
-- **Running a Whatnot show** → `whatnot-setup-guide.md`
-- **End of financial year or BAS time** → `tax-and-gst-guide.md`
+**Before a Whatnot show:** Run through `whatnot-setup-guide.md` — lot naming, show config, post-show steps.
 
-For reusable prompts (voice dumps, buyback replies, YouTube optimizer, repricing), see `routines/prompts/`.
+**When a buyer wants to sell:** Direct them to the buyback process in `buyback-policy.md`.
+
+**At tax time:** Use `tax-and-gst-guide.md` as a reference alongside your accountant.
+
+**When sourcing:** Use `supplier-guide.md` red flags checklist before committing to a new source.
+
+**For insurance:** Review `insurance-guide.md` before shipping high-value items or renewing cover.
+
+---
+
+## Notes
+
+- All dollar amounts are AUD unless stated
+- These docs are internal reference only — not for sharing with customers
+- Keep docs up to date as the business evolves (especially post-pivot to sealed + slabs)
