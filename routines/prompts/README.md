@@ -28,6 +28,7 @@ Then either:
 | `voice-dump-processor.md` | Raw voice transcript dump — categorises and drafts structured output across all content buckets |
 | `buyback-dm-reply.md` | Incoming DM/email from a seller offering a collection — drafts a compliant reply that enforces buyback rules |
 | `youtube-optimiser.md` | YouTube video upload — generates SEO title, description, tags, and thumbnail brief |
+| `pricing-update.md` | Repricing a SKU at replacement cost — new list price calc, Shopify Connector command, eBay update note |
 
 ## Channel strategy these support
 
