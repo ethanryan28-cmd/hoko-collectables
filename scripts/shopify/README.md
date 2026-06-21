@@ -22,91 +22,60 @@ SHOPIFY_STORE=your-store.myshopify.com
 SHOPIFY_TOKEN=shpat_xxxxxxxxxxxxxxxxxxxx
 ```
 
-Or export them in your shell before running.
-
 ---
 
 ## Scripts
 
 ### archive_cheap_singles.py
-
-Archives active Shopify listings below a price floor.
-
-**Use case:** Clean up old single card listings after the May 2026 pivot to sealed + slabs only.
-
+Archives active Shopify listings below a price floor. Use after the May 2026 pivot.
 ```bash
 python archive_cheap_singles.py --dry-run
 python archive_cheap_singles.py --threshold 10
-python archive_cheap_singles.py --threshold 25 --confirm
 ```
 
----
-
 ### check_inventory.py
-
 Read-only audit for zero-stock active variants.
-
-**Use case:** Weekly inventory hygiene check before restocking or repricing.
-
 ```bash
 python check_inventory.py
 python check_inventory.py --output zero_stock.csv
-python check_inventory.py --type 'Graded Card'
 ```
 
----
+### export_sold_orders.py
+Read-only export of shipped Shopify orders to CSV. For GST reconciliation and sales analysis.
+```bash
+python export_sold_orders.py --days 30
+python export_sold_orders.py --from 2026-05-01 --to 2026-05-31
+python export_sold_orders.py --output may_orders.csv
+```
 
 ### list_active_products.py
-
 Read-only export of all active Shopify products to CSV.
-
-**Use case:** Cross-reference with eBay listings, repricing runs, stock audits.
-
 ```bash
 python list_active_products.py
-python list_active_products.py --output active_products.csv
-python list_active_products.py --type 'Graded Card'
-python list_active_products.py --type 'Sealed TCG'
+python list_active_products.py --type "Graded Card"
 ```
 
-**CSV output columns:** product_id, product_title, product_type, vendor, status,
-variant_id, sku, price, inventory_quantity, created_at, updated_at
-
----
-
 ### price_check.py
-
-Read-only audit of current Shopify prices vs a reference CSV.
-
-**Use case:** Spot pricing anomalies before a price update run.
-
+Read-only price audit vs a reference CSV.
 ```bash
 python price_check.py --file prices.csv
 python price_check.py --file prices.csv --output discrepancies.csv
 ```
 
----
-
 ### update_prices.py
-
-Bulk price updater. Reads a CSV and updates variant prices via the Shopify Admin API.
-
-**Use case:** Apply monthly repricing across the full catalogue in one run.
-
+Bulk price updater. Always dry-run first.
 ```bash
 python update_prices.py --file prices.csv --dry-run
 python update_prices.py --file prices.csv
 python update_prices.py --file prices.csv --floor 5 --ceiling 2000
 ```
-
-**CSV format:** `sku,price`
+CSV format: `sku,price`
 
 ---
 
 ## Notes
 
-- All write operations prompt for confirmation unless `--force` is passed
-- Dry run mode is available on all write scripts — use it first
-- API rate limit: 2 requests/second (scripts handle this automatically)
-- Do not commit `.env` files or API tokens
-- Test on a staging store first if making large bulk changes
+- Never commit `.env` files or API tokens
+- Dry run mode available on write scripts — always use it first
+- API rate limit handled automatically (2 req/sec)
+- Test on staging store before large bulk operations
