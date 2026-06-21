@@ -11,7 +11,7 @@ const PRODUCTS = [
   { id: 2,  name: 'Marvel Legends – Wolverine Retro Series',          category: 'figures', price: 34.99,   originalPrice: 44.99,  badge: 'sale', rating: 4.7, reviews: 189, emoji: '🦅', new: false },
   { id: 3,  name: 'One Piece – Monkey D. Luffy Gear 5 Figure',        category: 'figures', price: 124.99,  originalPrice: null,   badge: 'rare', rating: 5.0, reviews: 67,  emoji: '⚓', new: true  },
   { id: 4,  name: 'Star Wars Black Series – Darth Vader',             category: 'figures', price: 54.99,   originalPrice: null,   badge: 'new',  rating: 4.8, reviews: 302, emoji: '🌑', new: true  },
-  { id: 5,  name: 'DC Multiverse – Batman The Dark Knight',           category: 'figures', price: 39.99,   originalPrice: 49.99,  badge: 'sale', rating: 4.6, reviews: 143, emoji: '🦇', new: false },
+  { id: 5,  name: 'DC Multiverse – Batman The Dark Knight',           category: 'figures', price: 39.99h,   originalPrice: 49.99,  badge: 'sale', rating: 4.6, reviews: 143, emoji: '🦇', new: false },
   { id: 6,  name: 'Transformers Masterpiece – Optimus Prime',         category: 'figures', price: 219.99,  originalPrice: null,   badge: 'rare', rating: 4.9, reviews: 88,  emoji: '🤖', new: false },
 
   // ── Trading Cards ──
@@ -536,7 +536,7 @@ document.addEventListener('mousemove', e => {
 document.addEventListener('click', e => {
     if (e.target.closest('.cart-footer .btn-primary:not(.btn-secondary)')) {
           if (!e.target.closest('.btn-secondary')) {
-                  showToast('🛒 Checkout coming soon! We\'re working on it.', 4000);
+                  showToast(`🛒 Checkout coming soon! We're working on it.`, 4000);
           }
     }
 });
@@ -545,7 +545,7 @@ document.addEventListener('click', e => {
 const PRODUCT_DESCS = {
     figures: 'A highly detailed, museum-quality figure from our certified-authentic collection. Perfect mint condition, comes with original packaging and certificate of authenticity.',
     cards:   'A rare and highly sought-after trading card in excellent condition. Independently graded and verified. Stored in protective sleeve. Perfect addition to any collection.',
-    vintage: 'An original vintage piece in remarkable condition for its age. Thoroughly cleaned and professionally inspected. A true collector\'s treasure from a golden era.',
+    vintage: 'An original vintage piece in remarkable condition for its age. Thoroughly cleaned and professionally inspected. A true collector's treasure from a golden era.',
     anime:   'Official licensed merchandise from a reputable manufacturer. Highly detailed sculpt with premium paint applications. Comes in original box with all accessories.',
     comics:  'A premium-condition comic or art piece, independently graded and verified. Stored in archival-quality materials. A cornerstone for any serious collection.',
     sports:  'Authentic sports memorabilia with certificate of authenticity. Verified by a reputable third-party service. An iconic piece of sports history.',
