@@ -1,0 +1,10 @@
+{
+    "_comment": "Manual snapshot of current Shopify list prices for SKUs in sku-watchlist.json. Update whenever prices change on Shopify. Used by daily.md step 2 to flag pricing vs market median.",
+    "_lastUpdated": "2026-06-21",
+    "prices": {
+          "pokemon-mega-dream-booster-box-japanese-m2a": {
+                  "priceAUD": 1199.00,
+                  "note": "Listed as Lot of 6 ($199.83/box equiv.). Update if repriced."
+          }
+    }
+}
