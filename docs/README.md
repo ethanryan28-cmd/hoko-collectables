@@ -18,6 +18,7 @@ For AI prompt templates, see `routines/prompts/README.md`.
 | `supplier-guide.md` | Sourcing principles, supplier types, red flags, authenticity checks | Reference when evaluating a new supplier |
 | `tax-and-gst-guide.md` | GST registration, BAS dates, deductibles, record-keeping | Review quarterly; share relevant sections with accountant |
 | `whatnot-setup-guide.md` | Whatnot seller account setup and show guide | Reference before your first show or when onboarding to Whatnot |
+| `storybook/` | **Not HOKO** — dated screenshot progress log for the FormFinder app | See `storybook/README.md`; add an entry per build worth recording |
 
 ---
 
