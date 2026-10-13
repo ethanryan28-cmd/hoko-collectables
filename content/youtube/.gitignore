@@ -1,0 +1,19 @@
+# secrets
+.env
+.secrets/
+*token*.json
+client_secret*.json
+
+# rendered / cached media (reproducible: run.py reel ... / run.py shorts)
+*.mp4
+*.wav
+.cache/
+out/
+inbox/*
+!inbox/.gitkeep
+
+# local run state
+publish.log
+TODAY.md
+
+__pycache__/
