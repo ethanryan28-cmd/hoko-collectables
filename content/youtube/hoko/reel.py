@@ -403,6 +403,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
             out_mp4.with_name(out_mp4.stem + '.caption.txt').write_text(caption_text(row, kind, k), encoding='utf-8')
         return json.loads(meta_p.read_text())
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
+    _fade_cache.clear()   # per-reel cache; without this memory grows ~0.5 GB per reel until the OS kills us
     hook, vo = override or hook_text(row, kind, k)
     vo_base = out_mp4.with_name(out_mp4.stem + '.vo')
     engine = tts.synth(vo, vo_base)
