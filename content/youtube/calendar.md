@@ -62,7 +62,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-11-29 | Mega Brave (M1L) $175 · h2 | reels/sealed/10734773731606/h2.mp4 | captions/2026-11-29.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-30 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h1 | reels/slab/10655248220438/h1.mp4 | captions/2026-11-30.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-01 | **Tip: What "no outer shrink" means** | reels/tips/no-outer-shrink.mp4 | captions/2026-12-01.txt | IG, YT, TT(manual) | queued |  |
-| 2026-12-02 | Terastal Festival ex (sv8a) $280 · h2 | reels/sealed/10734779433238/h2.mp4 | captions/2026-12-02.txt | IG, YT, TT(manual) | queued |  |
+| 2026-12-02 | Terastal Festival ex (sv8a) $280 · h1 | reels/sealed/10734779433238/h1.mp4 | captions/2026-12-02.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-03 | VSTAR Universe (s12a) $375 · h2 | reels/sealed/10734779564310/h2.mp4 | captions/2026-12-03.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-04 | Nico Robin OP12-087 Alt Art Super Rare BGS 9.5 $275 · h1 | reels/slab/10655248711958/h1.mp4 | captions/2026-12-04.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-05 | **Roundup: Pre-orders landing before Christmas** | reels/roundups/preorders.mp4 | captions/2026-12-05.txt | IG, YT, TT(manual) | blocked:draft-product |  |
