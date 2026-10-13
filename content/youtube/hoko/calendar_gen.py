@@ -147,6 +147,20 @@ def build(log=print, render_beats=True):
     cfg = config()
     start, end = date.fromisoformat(cfg['calendar_start']), date.fromisoformat(cfg['calendar_end'])
     sealed = sorted([r for r in load_rows('sealed') if reel.promotable(r, 'sealed')], key=rank)
+    hot = [r for r in sealed if r.get('set_code') in cfg['hot_sets'] or 'newest-drop' in flags(r)]
+    filler = [r for r in sealed if r not in hot]
+    # hot sets (Mega era, VSTAR, Terastal, newest One Piece) take `hot_share` slots per filler slot
+    def weighted():
+        hi, fi, n = 0, 0, 0
+        while True:
+            if filler and n % (cfg['hot_share'] + 1) == cfg['hot_share']:
+                yield filler[fi % len(filler)]
+                fi += 1
+            else:
+                yield hot[hi % len(hot)]
+                hi += 1
+            n += 1
+    sealed = weighted()
     slabs = sorted(load_rows('slab'), key=lambda r: -float(r['price']))
 
     # rotation queues of (row, hook) — every item once per pass, hook index advances per pass
@@ -158,7 +172,15 @@ def build(log=print, render_beats=True):
                 yield r, hooks[passes % len(hooks)]
             passes += 1
 
-    sq, lq = cycle(sealed, 'sealed'), cycle(slabs, 'slab')
+    def cycle_weighted(gen, kind):
+        seen = {}
+        for r in gen:
+            hooks = reel.eligible_hooks(r, kind)
+            k = seen.get(r['id'], 0)
+            seen[r['id']] = k + 1
+            yield r, hooks[k % len(hooks)]
+
+    sq, lq = cycle_weighted(sealed, 'sealed'), cycle(slabs, 'slab')
     fixed = beats(cfg)
     CAPS.mkdir(exist_ok=True)
     rows_out, missing = [], []
@@ -178,8 +200,7 @@ def build(log=print, render_beats=True):
             kind, item, pin = 'tip', f'**Tip: {tip[1]}**', ''
             cap = tip_caption(tip, r)
         else:
-            # 2 sealed : 1 slab until the cutoff; 1 : 1 after it (slabs ship in 1–3 days, boxes don't)
-            pattern = ['sealed', 'sealed', 'slab'] if d <= cutoff else ['slab', 'sealed']
+            pattern = ['sealed', 'sealed', 'slab']
             kind = pattern[i % len(pattern)]
             i += 1
             r, k = next(sq) if kind == 'sealed' else next(lq)
@@ -220,7 +241,7 @@ def build(log=print, render_beats=True):
 
 One post per day, queue-ordered: `run.py publish` posts the first `queued` row dated today or earlier,
 so a missed day rolls forward. Rows with `pin = yes` are fixed beats and wait for their date.
-Mix: 2 sealed : 1 slab, newest sets first. Sealed items tagged OOS-SUPPLIER are left out.
+Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR, Terastal, newest One Piece) take 3 of every 4 sealed slots; older sets fill the rest. OOS-SUPPLIER boxes are left out.
 
 - **Christmas cutoff (sealed imports):** order by **{dlong(cutoff)}** — see CUTOFF.md
 - **BF:** list opens 1 Nov · countdown 20 / 24 / 26 Nov · live 27 Nov (free AU post on every sealed box 27–30 Nov)

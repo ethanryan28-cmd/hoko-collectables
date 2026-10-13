@@ -5,7 +5,7 @@
 | 0 State check | **PASS** | sealed/source.csv 32 rows, slabs/source.csv 6 rows, every row ≥1 image. All tools import. |
 | 1 Reel engine | **PASS** | 67 product reels (55 sealed, 12 slab) + 6 beat + 4 tip reels = 77; all 1080x1920, 8–12s, with audio |
 | 2 Shorts + package | **PASS** | 90s testsrc + spoken track → 1 short (1080x1920, 36.1s, audio), 3 titles, 3 thumbs 1280x720. Test outputs deleted |
-| 3 Calendar | **PASS** | 72 rows (14 Oct → 24 Dec, one a day), 0 missing reels, 0 missing captions. One Tip reel a week; slab-heavy after the cutoff |
+| 3 Calendar | **PASS** | 72 rows (14 Oct → 24 Dec, one a day), 0 missing reels, 0 missing captions. One Tip reel a week; hot sets take 3 of 4 sealed slots |
 | 4 Auto-publish | **PASS (dry-run)** · scheduler **NOT CHECKED** | Mocked IG + Shopify Files + YT run changed `queued` → `posted-dryrun`; queue.md produced. The Windows task can't exist in a Linux cloud container. Run `run.py schedule` on the PC |
 | 5 Shopify wiring | **BLOCKED → MANUAL** | Shopify writes were denied by this session's permission guard. Nothing on the live store was changed. Ready to run: `run.py cutoff` (dry run) then `--apply` |
 | 6 Wire-up | **PASS** | .env.example, .gitignore, README.md, QUEUE.md, commit "hoko content machine" |
@@ -15,7 +15,7 @@ Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md.
 
 ## Counts
 - Reels: **77** (sealed 55 · slab 12 · BF/Christmas beats 6 · tips 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
-- Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab until 30 Nov, then 1 slab : 1 sealed (slabs ship in 1–3 days; boxes don't).
+- Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json) take 3 of every 4 sealed slots; older sets get 1–2 posts each.
 - Source CSVs: sealed 32 (all live Japanese sealed) · slabs 6 (PSA/BGS — no CGC/TAG in stock). One title match, "Paladin Elizabeth Taggerdy", is an MTG single and was excluded.
 
 ## LEAD TIME + CUTOFF

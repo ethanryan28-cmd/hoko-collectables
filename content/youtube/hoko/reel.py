@@ -133,7 +133,7 @@ def caption_text(row, kind, k, when=None):
             if when <= cutoff:
                 lines.append(f"Christmas delivery: order by {dshort(cutoff)}.")
             else:
-                lines.append('Ordering now? Sealed imports land early January — slabs ship in 1–3 days if you need it under the tree.')
+                lines.append('Slabs ship in 1–3 days if you need it under the tree.')
         if kind == 'slab' and when.month == 12:
             lines.append('Slabs ship from Victoria in 1–3 business days — AusPost Christmas send-by dates apply.')
     lines += ['', 'Collector first. Seller second.', '', ' '.join(hashtags(row, kind))]

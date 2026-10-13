@@ -19,5 +19,29 @@
   "calendar_end": "2026-12-24",
   "publish_time_local": "18:30",
   "formula": "DEFAULTS",
-  "bf_list_source": "Existing Shopify page \"Black Friday\" (/pages/black-friday, created 2026-10-12) with customer form tagged bf-early-access \u2014 reused, not recreated"
+  "bf_list_source": "Existing Shopify page \"Black Friday\" (/pages/black-friday, created 2026-10-12) with customer form tagged bf-early-access \u2014 reused, not recreated",
+  "hot_sets": [
+    "M7",
+    "M6a",
+    "M6",
+    "M5",
+    "M4",
+    "M3",
+    "M2a",
+    "M2",
+    "M1S",
+    "M1L",
+    "sv10",
+    "sv8a",
+    "s12a",
+    "OP-18",
+    "OP-17",
+    "OP-16",
+    "OP-15",
+    "OP-14",
+    "OP-13",
+    "OP-12",
+    "OP-11"
+  ],
+  "hot_share": 3
 }
