@@ -14,7 +14,7 @@
 Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md. Not rebuilt: the existing Shopify "Black Friday" page with its box-drop signup form (created 12 Oct) is reused as the BF list URL instead of creating a duplicate.
 
 ## Counts
-- Reels: **84** (sealed 58 incl. 3 pre-order text cards · slab 12 · BF/Christmas beats 6 · tips 4 · roundups 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
+- Reels: **67** (sealed 41 incl. 3 pre-order text cards · slab 12 · BF/Christmas beats 6 · tips 4 · roundups 4) — fewer than before because the bait hooks were cut, not replaced with filler. 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
 - Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json) take 3 of every 4 sealed slots; older sets get 1–2 posts each.
 - Source CSVs: sealed 32 (all live Japanese sealed) · slabs 6 (PSA/BGS — no CGC/TAG in stock). One title match, "Paladin Elizabeth Taggerdy", is an MTG single and was excluded.
 

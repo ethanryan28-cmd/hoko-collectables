@@ -2,12 +2,12 @@
   "product_id": "10655248613654",
   "kind": "slab",
   "hook_index": 1,
-  "hook": "Would you pull the trigger at $475?",
-  "voiceover": "Would you pull the trigger at $475? BGS 9 Detective Pikachu. On HOKO now. Link in bio.",
+  "hook": "One in stock \u2014 BGS 9 Detective Pikachu, $475",
+  "voiceover": "One in stock. BGS 9 Detective Pikachu, $475. Link in bio.",
   "tts": "piper:en_GB-alan-medium",
-  "duration": 10.99,
+  "duration": 9.6,
   "url": "https://www.hokocollectables.com/products/detective-pikachu-098-svp-black-star-promo-pokemon-bgs-9-silver",
   "title": "Detective Pikachu 098/SVP Black Star Promo Pokemon BGS 9 Silver",
   "reel": "reels/slab/10655248613654/h1.mp4",
-  "words": 17
+  "words": 11
 }
