@@ -37,11 +37,9 @@ def eligible_hooks(row, kind):
         return [0, 1]
     if is_preorder(row):
         return [3] if row.get('release_date') else [1]
-    out = []
-    inv = int(float(row.get('inventory') or 0))
-    if 1 <= inv <= 2:
-        out.append(0)
-    out += [1, 2]
+    out = [1, 2]
+    if row.get('chase'):
+        out.insert(0, 4)        # "What's in [set]?" — only when Ethan has filled the chase column
     return out
 
 
@@ -61,24 +59,27 @@ def hook_text(row, kind, k):
         g = f"{row['grader']} {row['grade']}"
         name = slab_short(row)
         if k == 0:
-            return (f"{g} {name} — what's it worth?",
-                    f"{g} {name}. What's it worth? We've got it at {p}. Link in bio.")
-        return (f"Would you pull the trigger at {p}?",
-                f"Would you pull the trigger at {p}? {g} {name}. On HOKO now. Link in bio.")
+            return (f"{g} {row['card']}",
+                    f"{g} {row['card']}. {p}, tracked from Victoria. Link in bio.")
+        return (f"One in stock — {g} {name}, {p}",
+                f"One in stock. {g} {name}, {p}. Link in bio.")
     s = set_name(row)
     kd = product_kind(row)
-    if k == 0:
-        n = int(float(row['inventory']))
-        return ("This box is about to be gone",
-                f"This box is about to be gone. {s}, sealed Japanese {kd}. Only {n} left at {p}. Link in bio.")
     if k == 1:
         inv = int(float(row.get('inventory') or 0))
         where = 'in Victoria now' if inv > 0 else 'imported to order'
         return (f"{s} — sealed Japanese {kd}, {where}",
                 f"{s}. Sealed Japanese {kd}, {where}. {p} on HOKO. Link in bio.")
     if k == 2:
-        return (f"Would you pay {p} for {s}?",
-                f"Would you pay {p} for a sealed {s} {kd}? Tell us below. Link in bio.")
+        if row.get('packs'):
+            n_packs, n_cards = row['packs'].lower().split('x')
+            return (f"{s} — {n_packs} packs, {n_cards} cards a pack",
+                    f"{s}. {n_packs} packs, {n_cards} cards a pack, factory sealed. {p} on HOKO. Link in bio.")
+        return (f"{s} for {p} — free AU post over $250",
+                f"{s}, {p}. Free Australian postage when your sealed order is over two fifty. Link in bio.")
+    if k == 4:
+        return (f"What's in {s}?",
+                f"What's in {s}? {row['chase']}. Sealed {kd}, {p} on HOKO. Link in bio.")
     from datetime import date
     rd = date.fromisoformat(row['release_date'])
     return (f"Pre-order — lands {rd:%B}",
@@ -127,13 +128,15 @@ def caption_text(row, kind, k, when=None):
                   'Verified grader (PSA / BGS / CGC only). Ships from Victoria.',
                   f'{p} — tracked post, free on orders $150+.']
     else:
-        extra = ' (no outer shrink)' if 'no-shrink' in flags(row) else ''
+        extra = ' (outer film removed, packs untouched)' if 'no-shrink' in flags(row) else ''
+        if k == 4:
+            extra += f". Chase: {row['chase']}"
         if k == 3:
             from datetime import date
             rd = date.fromisoformat(row['release_date'])
             extra += f". Pre-order: Japan release {dshort(rd)}, ships tracked from Victoria 2–4 business days after"
         lines += [f"{short_title(row)} — sealed Japanese {game_label(row)} {product_kind(row)}{extra}.",
-                  'Imported via our wholesale partners. Packed carefully, tracked from Victoria.',
+                  'Imported direct from our Japanese distributor. Packed carefully, tracked from Victoria.',
                   f'{p} — free AU post on sealed orders $250+.']
     lines.append(f"Grab it at hokocollectables.com → {row['url']}")
     if when is not None:

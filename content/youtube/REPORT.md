@@ -79,4 +79,10 @@ Still thin: it's product photos only. A 30s phone clip of a pack rip or a packin
 - Renderer memory leak fixed (fade cache now cleared per reel — it was getting OOM-killed after ~15 reels).
 - Layout: photo shifted on body reels so a 3-line hook no longer touches it.
 
+## Fifth pass — "some of these promotions are shit" (went over all 84)
+Cut: "Would you pay $X? Tell us below" (bait), "This box is about to be gone — only 2 left" (every box shows 2 — placeholder stock, fake scarcity), "What's it worth? We've got it at $X" (asks, doesn't answer).
+Replaced with: plain descriptive hook · "N packs, M cards a pack" where your descriptions state it · "free AU post over $250" offer · slabs: "PSA 10 Pikachu 27 Black Star Promo" and "One in stock" (true — each slab is one item).
+Fixed: no-shrink variants labelled everywhere (roundup no longer reads "Nihil Zero $115, Nihil Zero $130"); captions now say "direct from our Japanese distributor" (your wording) instead of the generic line.
+Added but EMPTY: `chase` + `packs` columns in sealed/source.csv. The engine won't invent card names. One voice-dump from you fills them and unlocks "What's in [set]?" reels — the thing sealed content is actually about.
+
 ## COMPLETE

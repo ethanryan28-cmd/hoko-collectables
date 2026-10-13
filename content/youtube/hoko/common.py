@@ -63,6 +63,8 @@ def short_title(row):
     t = t.strip().rstrip('—').strip()
     if t.startswith('Center '):
         t = 'Pokémon ' + t
+    if 'no-shrink' in flags(row):
+        t += ' · no shrink'
     return t
 
 

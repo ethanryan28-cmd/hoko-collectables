@@ -19,6 +19,11 @@ Setup (once, on the PC): `pip install faster-whisper edge-tts google-api-python-
 | `python content/youtube/run.py cutoff` | Dry-run: show the Christmas-cutoff line on one sealed product; `--apply` writes all + collection; `--remove` after Christmas |
 | `python content/youtube/run.py schedule` | Register Windows Task Scheduler job **HOKO publish**, daily 6:30pm, via `hoko-publish.cmd` |
 
+Make the sealed reels actually sell — fill two columns in `sealed/source.csv` (voice-dump them, one line per set):
+- `chase` — the cards people rip the box for, e.g. `Umbreon ex SAR, Eevee ex SAR`. Unlocks a "What's in [set]?" reel per box (hook 4), which goes first in rotation.
+- `packs` — `30x5` = 30 packs, 5 cards a pack. Unlocks the "30 packs, 5 cards a pack" reel. Only 3 sets have it so far (from your own product descriptions).
+Then `python content/youtube/run.py reel sealed all` and `run.py calendar`. Never guess these — the engine won't.
+
 Notes
 - Voice: edge-tts `en-AU-WilliamMultilingualNeural`. If edge-tts can't connect it falls back to Piper (`HOKO_PIPER_MODEL`). Each reel's `.json` records which voice it used.
 - `*.mp4` is gitignored. `publish` renders a missing reel on the fly, so a fresh clone works.
