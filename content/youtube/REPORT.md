@@ -3,9 +3,9 @@
 | Step | Result | Notes |
 |---|---|---|
 | 0 State check | **PASS** | sealed/source.csv 32 rows, slabs/source.csv 6 rows, every row ≥1 image. All tools import. |
-| 1 Reel engine | **PASS** | 67 product reels (55 sealed, 12 slab) + 6 beat reels = 73; all 1080x1920, 8–12s, with audio |
+| 1 Reel engine | **PASS** | 67 product reels (55 sealed, 12 slab) + 6 beat + 4 tip reels = 77; all 1080x1920, 8–12s, with audio |
 | 2 Shorts + package | **PASS** | 90s testsrc + spoken track → 1 short (1080x1920, 36.1s, audio), 3 titles, 3 thumbs 1280x720. Test outputs deleted |
-| 3 Calendar | **PASS** | 72 rows (14 Oct → 24 Dec, one a day), 0 missing reels, 0 missing captions |
+| 3 Calendar | **PASS** | 72 rows (14 Oct → 24 Dec, one a day), 0 missing reels, 0 missing captions. One Tip reel a week; slab-heavy after the cutoff |
 | 4 Auto-publish | **PASS (dry-run)** · scheduler **NOT CHECKED** | Mocked IG + Shopify Files + YT run changed `queued` → `posted-dryrun`; queue.md produced. The Windows task can't exist in a Linux cloud container. Run `run.py schedule` on the PC |
 | 5 Shopify wiring | **BLOCKED → MANUAL** | Shopify writes were denied by this session's permission guard. Nothing on the live store was changed. Ready to run: `run.py cutoff` (dry run) then `--apply` |
 | 6 Wire-up | **PASS** | .env.example, .gitignore, README.md, QUEUE.md, commit "hoko content machine" |
@@ -14,8 +14,8 @@
 Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md. Not rebuilt: the existing Shopify "Black Friday" page with its box-drop signup form (created 12 Oct) is reused as the BF list URL instead of creating a duplicate.
 
 ## Counts
-- Reels: **73** (sealed 55 · slab 12 · BF/Christmas beats 6). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
-- Calendar rows: **72** (48 sealed-led incl. 6 pinned beats, 24 slab). Pattern 2 sealed : 1 slab, newest sets first.
+- Reels: **77** (sealed 55 · slab 12 · BF/Christmas beats 6 · tips 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
+- Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab until 30 Nov, then 1 slab : 1 sealed (slabs ship in 1–3 days; boxes don't).
 - Source CSVs: sealed 32 (all live Japanese sealed) · slabs 6 (PSA/BGS — no CGC/TAG in stock). One title match, "Paladin Elizabeth Taggerdy", is an MTG single and was excluded.
 
 ## LEAD TIME + CUTOFF
@@ -57,5 +57,14 @@ Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md.
 - Calendar: `content/youtube/calendar.md`, dated captions `content/youtube/captions/YYYY-MM-DD.txt`, `CUTOFF.md`, `config.json`
 - Publish: `hoko/publish.py`, `hoko-publish.cmd`, `TODAY.md` (written per run), `publish.log`
 - Comments: `comments/queue.md` (created on first `run.py comments`)
+
+## Second pass (same day) — content review
+Looked at the reels as a viewer, not a gate. Changed:
+- Dropped the bait hook "What you can pull from X" (showed a box, never a pull) → "[Set] — sealed Japanese box, in Victoria now / imported to order".
+- Dropped "Still $X on HOKO" (reads as unsold) → "Would you pay $X for [set]?" (invites comments).
+- BF / Christmas beat reels now carry their own on-screen lines ($5 off · join at link in bio · dates) instead of a price block.
+- Added 4 Tip reels (spot a fake JP box · no outer shrink · why PSA/BGS/CGC only · how we buy collections), copy lifted from your live product descriptions. One runs every 7th day.
+- December captions no longer say "lands after Christmas"; they point sealed to early-Jan and slabs to under-the-tree.
+Still thin: it's product photos only. A 30s phone clip of a pack rip or a packing table would lift every reel. Drop clips in `inbox/` and `run.py shorts` cuts them.
 
 ## COMPLETE

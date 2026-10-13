@@ -13,7 +13,7 @@ from pathlib import Path
 from datetime import date, timedelta
 
 from . import reel
-from .common import ROOT, config, dshort, dlong, flags, load_rows, price_str, rel, set_name, short_title
+from .common import ROOT, SITE, config, dshort, dlong, flags, load_rows, price_str, rel, set_name, short_title
 
 CAL = Path(os.environ.get('HOKO_CALENDAR') or ROOT / 'calendar.md')   # override for dry-run tests
 CAPS = ROOT / 'captions'
@@ -60,22 +60,63 @@ def beats(cfg):
 
 
 def beat_hook(label, cfg):
-    """(on-screen hook, voiceover) for a beat reel."""
+    """(on-screen hook, voiceover, body lines, tag) for a beat reel."""
     cutoff = date.fromisoformat(cfg['christmas_cutoff'])
     if label.startswith('BF box drop list'):
         return ('BF box drop list is open',
-                'The Black Friday box drop list is open. Join for five dollars off boxes. Link in bio.')
+                'The Black Friday box drop list is open. Five dollars off any Japanese box, and you hear first on '
+                'the twenty seventh. Link in bio.',
+                ['$5 off boxes', 'Join at the link in bio', 'List hears first · 27 Nov'], 'BLACK FRIDAY')
     if label.startswith('BF countdown'):
         n = label.split('— ')[1]
         return (f'Black Friday: {n}',
                 f'Black Friday, {n}. Free postage on every sealed box, the twenty seventh to the thirtieth of '
-                f'November. Link in bio.')
+                f'November. Link in bio.',
+                ['Free AU post on every box', '27 – 30 Nov', 'List: $5 off · link in bio'], 'BLACK FRIDAY')
     if label.startswith("It's live"):
-        return ("It's live — free post on every sealed box",
-                "It's live. Black Friday at HOKO. Free postage on every sealed box until Monday. Link in bio.")
+        return ("It's live", "It's live. Black Friday at HOKO. Free postage on every sealed box until Monday. "
+                "List members, your five dollar code is in your inbox. Link in bio.",
+                ['Free AU post on every box', 'Until Mon 30 Nov', 'hokocollectables.com'], 'BLACK FRIDAY')
     return (f'Christmas cutoff: order sealed by {dshort(cutoff)}',
-            f'Christmas cutoff. Order sealed boxes by {cutoff:%A} the {cutoff.day}{'th' if 10 <= cutoff.day % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(cutoff.day % 10, 'th')} of {cutoff:%B} '
-            f'to have them for Christmas. Link in bio.')
+            f'Christmas cutoff. Order sealed boxes by {cutoff:%A} the {_ord(cutoff.day)} of {cutoff:%B} '
+            f'to have them for Christmas. Slabs ship in one to three days. Link in bio.',
+            [f'Sealed: order by {dshort(cutoff)}', 'Slabs: ship in 1–3 days', 'hokocollectables.com'], 'CHRISTMAS')
+
+
+def _ord(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+# Tip reels: text over a blurred product photo, copy taken from the live product descriptions / policies.
+TIPS = [
+    ('spot-a-fake', 'How to spot a fake Japanese box',
+     'How to spot a fake Japanese box. Printed shrink, one clean seal. Clear wrap or a double seam is a red flag. '
+     'Not sure? Send us a photo before you open it.',
+     ['Printed shrink, one clean seal', 'Clear wrap / double seam = red flag', 'Same set code on every pack',
+      'Unsure? DM a photo first']),
+    ('no-outer-shrink', 'What "no outer shrink" means',
+     'What does no outer shrink mean? The box is still factory sealed, the printed film is just removed. '
+     'Same packs, lower price.',
+     ['Box is still factory sealed', 'Outer film removed, packs untouched', 'Same product, lower price']),
+    ('verified-graders', 'Why we only buy PSA, BGS and CGC',
+     'Why only PSA, BGS and CGC? The cert checks online and the pop reports are public. '
+     'If you cannot verify it, walk away.',
+     ['Cert checks online', 'Public pop reports', "Can't verify it? Walk away"]),
+    ('buyback', 'Selling a collection? Here is how we buy',
+     'Selling a collection? We buy sealed and PSA, BGS or CGC slabs over a hundred dollars. One photo and a list '
+     'gets you a quote in forty eight hours. Link in bio.',
+     ['Sealed + PSA/BGS/CGC slabs $100+', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
+]
+
+
+def tip_caption(tip, row):
+    key, hook, vo, body = tip
+    tags = ' '.join(reel.hashtags(row, 'sealed')[:-4] + ['#tcgtips', '#collectortips', '#tcgaustralia',
+                                                         '#hokocollectables'])
+    extra = {'buyback': f"\n\nSell to HOKO: {SITE}/pages/sell-your-cards",
+             'verified-graders': f"\n\nSlabs in stock: {SITE}/collections/graded-slabs"}.get(key, '')
+    return f"{hook}\n\n" + '\n'.join(f'• {b}' for b in body) + extra + \
+        f"\n\nCollector first. Seller second.\n\n{tags}\n"
 
 
 def beat_caption(label, row, cfg):
@@ -121,16 +162,25 @@ def build(log=print, render_beats=True):
     fixed = beats(cfg)
     CAPS.mkdir(exist_ok=True)
     rows_out, missing = [], []
-    pattern = ['sealed', 'sealed', 'slab']
-    i = 0
+    cutoff = date.fromisoformat(cfg['christmas_cutoff'])
+    i, tip_i = 0, 0
     for d in daterange(start, end):
         if d in fixed:
             label = fixed[d]
             r, k = next(sq)   # beats feature a sealed box
             kind, item, pin = 'sealed', f'**{label}** · {short_title(r)} {price_str(r["price"])}', 'yes'
             cap = beat_caption(label, r, cfg)
+        elif (d - start).days % 7 == 6:
+            # one Tip reel a week (CLAUDE.md pillar "The Tip") — text over a product photo
+            tip = TIPS[tip_i % len(TIPS)]
+            tip_i += 1
+            r, k = next(sq)
+            kind, item, pin = 'tip', f'**Tip: {tip[1]}**', ''
+            cap = tip_caption(tip, r)
         else:
-            kind = pattern[i % 3]
+            # 2 sealed : 1 slab until the cutoff; 1 : 1 after it (slabs ship in 1–3 days, boxes don't)
+            pattern = ['sealed', 'sealed', 'slab'] if d <= cutoff else ['slab', 'sealed']
+            kind = pattern[i % len(pattern)]
             i += 1
             r, k = next(sq) if kind == 'sealed' else next(lq)
             item = (f'{short_title(r)} {price_str(r["price"])}' if kind == 'sealed'
@@ -142,8 +192,14 @@ def build(log=print, render_beats=True):
         if pin:
             rp = reel.REELS / 'beats' / f'{d.isoformat()}.mp4'
             if render_beats:
-                m = reel.render(r, 'sealed', k, rp, override=beat_hook(fixed[d], cfg))
+                hook, vo, body, tag = beat_hook(fixed[d], cfg)
+                m = reel.render(r, 'sealed', k, rp, override=(hook, vo), body=body, tag=tag)
                 log(f"  beat {d} {m['duration']}s {m['reel']}")
+        elif kind == 'tip':
+            rp = reel.REELS / 'tips' / f'{tip[0]}.mp4'
+            if render_beats:
+                m = reel.render(r, 'sealed', k, rp, override=(tip[1], tip[2]), body=tip[3], tag='THE TIP')
+                log(f"  tip {tip[0]} {m['duration']}s {m['reel']}")
         if not rp.exists():
             missing.append(rel(rp))
         cp = CAPS / f'{d.isoformat()}.txt'

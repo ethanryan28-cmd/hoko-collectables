@@ -72,11 +72,13 @@ def hook_text(row, kind, k):
         return ("This box is about to be gone",
                 f"This box is about to be gone. {s}, sealed Japanese {kd}. Only {n} left at {p}. Link in bio.")
     if k == 1:
-        return (f"What you can pull from {s}",
-                f"What can you pull from {s}? Sealed Japanese {kd}, {p} on HOKO. Link in bio.")
+        inv = int(float(row.get('inventory') or 0))
+        where = 'in Victoria now' if inv > 0 else 'imported to order'
+        return (f"{s} — sealed Japanese {kd}, {where}",
+                f"{s}. Sealed Japanese {kd}, {where}. {p} on HOKO. Link in bio.")
     if k == 2:
-        return (f"Still {p} on HOKO",
-                f"Still {p} on HOKO. {s}, sealed Japanese {kd}. Link in bio.")
+        return (f"Would you pay {p} for {s}?",
+                f"Would you pay {p} for a sealed {s} {kd}? Tell us below. Link in bio.")
     month = row['release_date'][:7]
     from datetime import date
     mname = date.fromisoformat(month + '-01').strftime('%B')
@@ -131,7 +133,7 @@ def caption_text(row, kind, k, when=None):
             if when <= cutoff:
                 lines.append(f"Christmas delivery: order by {dshort(cutoff)}.")
             else:
-                lines.append('Heads up: sealed imports ordered now land after Christmas.')
+                lines.append('Ordering now? Sealed imports land early January — slabs ship in 1–3 days if you need it under the tree.')
         if kind == 'slab' and when.month == 12:
             lines.append('Slabs ship from Victoria in 1–3 business days — AusPost Christmas send-by dates apply.')
     lines += ['', 'Collector first. Seller second.', '', ' '.join(hashtags(row, kind))]
@@ -216,7 +218,9 @@ class Slide:
     BOX = (940, 940)   # foreground area
     CY = 1000           # foreground centre y
 
-    def __init__(self, path, seed):
+    def __init__(self, path, seed, box=None, cy=None):
+        self.BOX = box or self.BOX
+        self.CY = cy or self.CY
         src = Image.open(path)
         src = src.convert('RGBA') if src.mode in ('P', 'LA', 'RGBA') else src.convert('RGB')
         if src.mode == 'RGBA':
@@ -255,8 +259,9 @@ class Slide:
         return out
 
 
-def render(row, kind, k, out_mp4, force=False, override=None):
-    """override=(on-screen hook, voiceover) for calendar beat reels (BF / Christmas)."""
+def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=None):
+    """override=(on-screen hook, voiceover) for beat / tip reels; body = list of on-screen lines that
+    replace the price block in the second half; tag overrides the top pill."""
     out_mp4 = Path(out_mp4)
     meta_p = out_mp4.with_suffix('.json')
     if out_mp4.exists() and meta_p.exists() and not force:
@@ -279,9 +284,10 @@ def render(row, kind, k, out_mp4, force=False, override=None):
     total = round(content + END_CARD_S, 2)
 
     imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
-    slides = [Slide(p, i + int(row['id'][-3:])) for i, p in enumerate(imgs)]
+    slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else None, cy=800 if body else None)
+              for i, p in enumerate(imgs)]
     p = price_str(row['price'])
-    tag = f"{row['grader']} {row['grade']}" if kind == 'slab' else f"JAPANESE SEALED · {game_label(row).upper()}"
+    tag = tag or (f"{row['grader']} {row['grade']}" if kind == 'slab' else f"JAPANESE SEALED · {game_label(row).upper()}")
     sub = row['card'] if kind == 'slab' else short_title(row)
     post = 'Tracked post · free $150+' if kind == 'slab' else 'Free AU post on sealed $250+'
     L_tag = text_layer(tag, 46, 120, color=(15, 15, 15), black=True, box=(*GOLD, 255))
@@ -289,6 +295,14 @@ def render(row, kind, k, out_mp4, force=False, override=None):
     L_price = text_layer(p, 180, 1470, color=GOLD, stroke=12)
     L_sub = text_layer(sub, 52, 1690, black=False, stroke=7)
     L_post = text_layer(post, 46, 250, black=False, box=(0, 0, 0, 190))
+    L_body = None
+    if body:
+        L_body = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        y = 1260
+        for i, line in enumerate(body):
+            L_body.alpha_composite(text_layer(line, 66 if i == 0 else 52, y, color=GOLD if i == 0 else (255, 255, 255),
+                                              black=(i == 0), stroke=8))
+            y += 150 if i == 0 else 118
     endc = end_card()
 
     hook_end = content * 0.48
@@ -319,9 +333,12 @@ def render(row, kind, k, out_mp4, force=False, override=None):
                 fr.alpha_composite(_fade(L_hook, a))
             else:
                 a = min(1, (t - hook_end) / 0.25)
-                fr.alpha_composite(_fade(L_post, a))
-                fr.alpha_composite(_fade(L_price, a))
-                fr.alpha_composite(_fade(L_sub, a))
+                if L_body is not None:
+                    fr.alpha_composite(_fade(L_body, a))
+                else:
+                    fr.alpha_composite(_fade(L_post, a))
+                    fr.alpha_composite(_fade(L_price, a))
+                    fr.alpha_composite(_fade(L_sub, a))
             fr = fr.convert('RGB')
             prev = fr
         proc.stdin.write(fr.tobytes())
