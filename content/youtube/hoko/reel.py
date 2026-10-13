@@ -421,7 +421,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
     if kind == 'sealed' and k == 3 and not body:
         body = preorder_body(row)
     words = [] if items else word_times(vo_wav, tempo, script=vo)
-    L_words = caption_layers(words, y=1175 if body else 1385)
+    L_words = caption_layers(words, y=1235 if body else 1385)
     item_layers = []
     if items:
         # roundup: one slide per product, ranked label under each
@@ -437,7 +437,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
     else:
         imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
         if imgs:
-            slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else (860, 860), cy=800 if body else 930)
+            slides = [Slide(p, i + int(row['id'][-3:]), box=(660, 660) if body else (860, 860), cy=880 if body else 930)
                       for i, p in enumerate(imgs)]
         else:
             slides = [CardSlide(row.get('set_code') or 'NEW', int(row['id'][-3:]))]
@@ -453,11 +453,11 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
     L_body = None
     if body:
         L_body = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        y = 1300
+        y = 1340
         for i, line in enumerate(body):
             L_body.alpha_composite(text_layer(line, 66 if i == 0 else 52, y, color=GOLD if i == 0 else (255, 255, 255),
                                               black=(i == 0), stroke=8))
-            y += 150 if i == 0 else 118
+            y += 140 if i == 0 else 112
     endc = end_card()
 
     hook_end = 1.3 if items else content * 0.48

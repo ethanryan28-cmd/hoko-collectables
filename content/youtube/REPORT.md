@@ -14,7 +14,7 @@
 Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md. Not rebuilt: the existing Shopify "Black Friday" page with its box-drop signup form (created 12 Oct) is reused as the BF list URL instead of creating a duplicate.
 
 ## Counts
-- Reels: **80** (sealed 58 incl. 3 pre-order text cards · slab 12 · BF/Christmas beats 6 · tips 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
+- Reels: **84** (sealed 58 incl. 3 pre-order text cards · slab 12 · BF/Christmas beats 6 · tips 4 · roundups 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
 - Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json) take 3 of every 4 sealed slots; older sets get 1–2 posts each.
 - Source CSVs: sealed 32 (all live Japanese sealed) · slabs 6 (PSA/BGS — no CGC/TAG in stock). One title match, "Paladin Elizabeth Taggerdy", is an MTG single and was excluded.
 
@@ -72,5 +72,11 @@ Still thin: it's product photos only. A 30s phone clip of a pack rip or a packin
 - Pre-orders M7 / OP-18 / FB12 added as text-card reels (no borrowed photos) with release date + "ships 2–4 days after" on screen; they drop out of the queue after their release date.
 - Voice-cutoff audit: 0 of 80 reels trim the voiceover.
 - `publish` pulls the next queued row forward when today's row is blocked, so a draft product never loses a posting day.
+
+## Fourth pass — "we can do better"
+- **Word-synced captions** on every product / tip / beat reel: Whisper times the voiceover, the words are aligned back to the script (so names stay right), and each word pops in gold as it's spoken.
+- **Roundup reels** (ranked lists, ≤4 items, from live stock): Mega-era cheapest-first · One Piece JP in stock · Japanese sealed under $200 · Pre-orders before Christmas. One a week in the calendar; the pre-order one is blocked until those products are published.
+- Renderer memory leak fixed (fade cache now cleared per reel — it was getting OOM-killed after ~15 reels).
+- Layout: photo shifted on body reels so a 3-line hook no longer touches it.
 
 ## COMPLETE
