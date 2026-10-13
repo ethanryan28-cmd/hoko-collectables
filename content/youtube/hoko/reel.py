@@ -35,13 +35,13 @@ def eligible_hooks(row, kind):
     """Only hooks that are true for this item (no fake scarcity, no fake pre-orders)."""
     if kind == 'slab':
         return [0, 1]
+    if is_preorder(row):
+        return [3] if row.get('release_date') else [1]
     out = []
     inv = int(float(row.get('inventory') or 0))
-    if 1 <= inv <= 2 and not is_preorder(row):
+    if 1 <= inv <= 2:
         out.append(0)
     out += [1, 2]
-    if is_preorder(row) and row.get('release_date'):
-        out.append(3)
     return out
 
 
@@ -79,11 +79,18 @@ def hook_text(row, kind, k):
     if k == 2:
         return (f"Would you pay {p} for {s}?",
                 f"Would you pay {p} for a sealed {s} {kd}? Tell us below. Link in bio.")
-    month = row['release_date'][:7]
     from datetime import date
-    mname = date.fromisoformat(month + '-01').strftime('%B')
-    return (f"Pre-order — lands {mname}",
-            f"Pre-order now. {s} lands in {mname}. {p} on HOKO. Link in bio.")
+    rd = date.fromisoformat(row['release_date'])
+    return (f"Pre-order — lands {rd:%B}",
+            f"Pre-order open. {s}, {game_label(row)}. Japan release {rd.day} {rd:%B}, ships from Victoria "
+            f"a few days after. {p} on HOKO. Link in bio.")
+
+
+def preorder_body(row):
+    from datetime import date
+    rd = date.fromisoformat(row['release_date'])
+    return [f'{set_name(row)} ({row["set_code"]})', f'JP release {dshort(rd)}', 'Ships from Victoria 2–4 days after',
+            f'{price_str(row["price"])} · free AU post $250+']
 
 
 # ---------------------------------------------------------------- captions
@@ -121,6 +128,10 @@ def caption_text(row, kind, k, when=None):
                   f'{p} — tracked post, free on orders $150+.']
     else:
         extra = ' (no outer shrink)' if 'no-shrink' in flags(row) else ''
+        if k == 3:
+            from datetime import date
+            rd = date.fromisoformat(row['release_date'])
+            extra += f". Pre-order: Japan release {dshort(rd)}, ships tracked from Victoria 2–4 business days after"
         lines += [f"{short_title(row)} — sealed Japanese {game_label(row)} {product_kind(row)}{extra}.",
                   'Imported via our wholesale partners. Packed carefully, tracked from Victoria.',
                   f'{p} — free AU post on sealed orders $250+.']
@@ -212,6 +223,34 @@ def end_card():
 
 # ---------------------------------------------------------------- render
 
+class CardSlide:
+    """No photo yet (pre-orders): dark card with the set code, slow drift. Never borrows another product's photo."""
+
+    def __init__(self, label, seed):
+        self.bg = Image.new('RGB', (W, H), (14, 14, 18))
+        d = ImageDraw.Draw(self.bg)
+        for y in range(0, H, 4):
+            v = int(14 + 22 * (1 - abs(y - 900) / 1100))
+            d.line([(0, y), (W, y + 4)], fill=(v, v, v + 6), width=4)
+        card = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        cd = ImageDraw.Draw(card)
+        cd.rounded_rectangle([170, 560, 910, 1180], 40, outline=GOLD, width=8, fill=(24, 24, 30, 255))
+        f = font(170 if len(label) <= 4 else 120)
+        tw = cd.textlength(label, font=f)
+        cd.text(((W - tw) / 2, 760), label, font=f, fill=GOLD)
+        f2 = font(44, False)
+        tw = cd.textlength('PRE-ORDER', font=f2)
+        cd.text(((W - tw) / 2, 1030), 'PRE-ORDER', font=f2, fill=(255, 255, 255))
+        self.card = card
+        self.dir = 1 if seed % 2 else -1
+
+    def frame(self, t, sweep):
+        out = self.bg.copy()
+        dx = int(self.dir * 30 * (ease(t) - 0.5))
+        out.paste(self.card, (dx, int(-20 * ease(t))), self.card)
+        return out
+
+
 class Slide:
     """One product photo: blurred cover background + Ken Burns foreground."""
 
@@ -283,9 +322,14 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
     content = max(6.0, min(9.8, vo_len + 0.6))
     total = round(content + END_CARD_S, 2)
 
+    if kind == 'sealed' and k == 3 and not body:
+        body = preorder_body(row)
     imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
-    slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else None, cy=800 if body else None)
-              for i, p in enumerate(imgs)]
+    if imgs:
+        slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else None, cy=800 if body else None)
+                  for i, p in enumerate(imgs)]
+    else:
+        slides = [CardSlide(row.get('set_code') or 'NEW', int(row['id'][-3:]))]
     p = price_str(row['price'])
     tag = tag or (f"{row['grader']} {row['grade']}" if kind == 'slab' else f"JAPANESE SEALED · {game_label(row).upper()}")
     sub = row['card'] if kind == 'slab' else short_title(row)

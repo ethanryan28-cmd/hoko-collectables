@@ -48,17 +48,19 @@ def refresh():
          "(status:draft AND (tag:preorder OR tag:pre-order)))")
     for n in products(http, q):
         ims = [i['url'] for i in n['images']['nodes']]
-        if not ims:
-            skipped.append(n['title'])
-            continue
         mf = {m['key']: m['value'] for m in n['metafields']['nodes']}
+        is_pre = any(t in n['tags'] for t in ('preorder', 'pre-order', 'label:PRE-ORDER'))
+        if not ims and not (is_pre and mf.get('release_date')):
+            skipped.append(n['title'])   # pre-orders with a release date get a text-card reel instead
+            continue
         sealed.append(dict(
             id=n['id'].split('/')[-1], handle=n['handle'], title=n['title'], set_code=mf.get('set_code', ''),
             game=next((t.split(':')[1] for t in n['tags'] if t.startswith('game:')), ''),
             price=n['priceRangeV2']['minVariantPrice']['amount'], inventory=n['totalInventory'], status=n['status'],
             release_date=mf.get('release_date', ''), listed_at=(n['publishedAt'] or '')[:10],
             url=n['onlineStoreUrl'] or f"https://www.hokocollectables.com/products/{n['handle']}",
-            flags='|'.join(t for t in n['tags'] if t in KEEP_FLAGS), images='|'.join(ims), image_source='shopify',
+            flags='|'.join(t for t in n['tags'] if t in KEEP_FLAGS), images='|'.join(ims),
+            image_source='shopify' if ims else 'none (no photo yet)',
             reel_images='|'.join(ims)))
     slabs = []
     for n in products(http, 'status:active AND (title:*PSA* OR title:*BGS* OR title:*CGC* OR title:*TAG*)'):

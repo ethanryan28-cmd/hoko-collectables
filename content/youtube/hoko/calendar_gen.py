@@ -204,6 +204,9 @@ def build(log=print, render_beats=True):
             kind = pattern[i % len(pattern)]
             i += 1
             r, k = next(sq) if kind == 'sealed' else next(lq)
+            while kind == 'sealed' and reel.is_preorder(r) and r.get('release_date') and \
+                    date.fromisoformat(r['release_date']) < d:
+                r, k = next(sq)   # pre-order already released — skip until `run.py source` re-tags it
             item = (f'{short_title(r)} {price_str(r["price"])}' if kind == 'sealed'
                     else f'{r["card"]} {r["grader"]} {r["grade"]} {price_str(r["price"])}')
             item += f' · h{k}'
@@ -225,14 +228,15 @@ def build(log=print, render_beats=True):
             missing.append(rel(rp))
         cp = CAPS / f'{d.isoformat()}.txt'
         cp.write_text(cap, encoding='utf-8')
-        rows_out.append(f'| {d.isoformat()} | {item} | {rel(rp)} | {rel(cp)} | {PLATFORMS} | queued | {pin} |')
+        status = 'queued' if r.get('status', 'ACTIVE') == 'ACTIVE' else 'blocked:draft-product'
+        rows_out.append(f'| {d.isoformat()} | {item} | {rel(rp)} | {rel(cp)} | {PLATFORMS} | {status} | {pin} |')
 
     # keep status of rows already posted
     old = {}
     if CAL.exists():
         for line in CAL.read_text(encoding='utf-8').splitlines():
             c = parse_row(line)
-            if c and c['status'] != 'queued':
+            if c and c['status'].split(':')[0] in ('posted', 'posted-dryrun', 'partial', 'missed'):
                 old[c['date']] = line
     rows_out = [old.get(parse_row(l)['date'], l) for l in rows_out]
 
@@ -246,6 +250,8 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 - **Christmas cutoff (sealed imports):** order by **{dlong(cutoff)}** — see CUTOFF.md
 - **BF:** list opens 1 Nov · countdown 20 / 24 / 26 Nov · live 27 Nov (free AU post on every sealed box 27–30 Nov)
 - **TikTok** is manual — `publish` writes TODAY.md with the reel + caption.
+- `blocked:draft-product` = the Shopify product is still a draft (no public page to link). Publish it in Shopify,
+  then `run.py source` + `run.py calendar` and the row goes back to `queued`. `publish` skips blocked rows.
 - Regenerate: `python content/youtube/run.py calendar` (keeps posted rows).
 
 {HEADER}
@@ -321,9 +327,15 @@ def next_due(when):
     for i, r in rows:
         if r['status'] == 'queued' and r['pin'] == 'yes' and date.fromisoformat(r['date']) < when:
             set_status(i, 'missed')
-    for i, r in read():
+    rows = read()
+    for i, r in rows:
         if r['status'] == 'queued' and r['pin'] != 'yes' and date.fromisoformat(r['date']) <= when:
             return i, r
+    # today's row is blocked (draft product) → pull the next queued row forward so the day isn't lost
+    if any(r['status'].startswith('blocked') and date.fromisoformat(r['date']) <= when for _, r in rows):
+        for i, r in rows:
+            if r['status'] == 'queued' and r['pin'] != 'yes':
+                return i, r
     return None
 
 

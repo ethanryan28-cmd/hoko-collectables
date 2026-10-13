@@ -14,7 +14,7 @@
 Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md. Not rebuilt: the existing Shopify "Black Friday" page with its box-drop signup form (created 12 Oct) is reused as the BF list URL instead of creating a duplicate.
 
 ## Counts
-- Reels: **77** (sealed 55 · slab 12 · BF/Christmas beats 6 · tips 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
+- Reels: **80** (sealed 58 incl. 3 pre-order text cards · slab 12 · BF/Christmas beats 6 · tips 4). 19 promotable sealed boxes (13 skipped as `OOS-SUPPLIER`) × 2–3 true hooks; 6 slabs × 2 hooks.
 - Calendar rows: **72** — 9 Tip, 6 pinned beats, the rest 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json) take 3 of every 4 sealed slots; older sets get 1–2 posts each.
 - Source CSVs: sealed 32 (all live Japanese sealed) · slabs 6 (PSA/BGS — no CGC/TAG in stock). One title match, "Paladin Elizabeth Taggerdy", is an MTG single and was excluded.
 
@@ -48,7 +48,7 @@ Nothing. There was no QUEUE.md, no `content/youtube/`, and no earlier REPORT.md.
 3. `.env` from `.env.example`, then `run.py schedule` on the PC. The first YT run opens a browser once for OAuth.
 4. Re-voice in en-AU on the PC: `run.py reel sealed all --force` and `run.py reel slab all --force`, then `run.py calendar`. Alternatively, just let `publish` render as it goes; mp4s are gitignored.
 5. **BF shipping wording.** The brief said "free AU post on all sealed 27–30 Nov". The live BF page says "every Australian order of $100 or more ships free". The cheapest sealed item (Mega Gengar deck, $70) is under $100, so copy says "every sealed box" (all boxes are $115+). Align the page or the copy.
-6. **Pre-orders** (OP-18, FB12, M7) are DRAFT with no images, so they're not in the CSV or the calendar. Publish them with photos, then `run.py source` + `calendar`.
+6. **Pre-orders** (M7 27 Nov · OP-18 21 Nov · FB12 12 Dec) are in the calendar at the top as text-card reels, status `blocked:draft-product` because the Shopify products are drafts. Publish them (a photo is optional — add one and `run.py reel sealed <id> --force` swaps the card for it), then `run.py source` + `calendar`.
 7. **Scarcity hook** ("This box is about to be gone · only N left") is used only where Shopify inventory is 1–2. Check those counts are real stock, not a drop-ship placeholder, before posting.
 
 ## Paths
@@ -66,5 +66,11 @@ Looked at the reels as a viewer, not a gate. Changed:
 - Added 4 Tip reels (spot a fake JP box · no outer shrink · why PSA/BGS/CGC only · how we buy collections), copy lifted from your live product descriptions. One runs every 7th day.
 - December captions no longer say "lands after Christmas"; they point sealed to early-Jan and slabs to under-the-tree.
 Still thin: it's product photos only. A 30s phone clip of a pack rip or a packing table would lift every reel. Drop clips in `inbox/` and `run.py shorts` cuts them.
+
+## Third pass — sell the newest / popular stuff
+- `hot_sets` in config.json (Mega era, VSTAR, Terastal, newest One Piece, pre-orders) take 3 of every 4 sealed slots; sv3 / sv3a / sv7 / OP-07 / Fukuoka get 1–2 posts in 72 days.
+- Pre-orders M7 / OP-18 / FB12 added as text-card reels (no borrowed photos) with release date + "ships 2–4 days after" on screen; they drop out of the queue after their release date.
+- Voice-cutoff audit: 0 of 80 reels trim the voiceover.
+- `publish` pulls the next queued row forward when today's row is blocked, so a draft product never loses a posting day.
 
 ## COMPLETE

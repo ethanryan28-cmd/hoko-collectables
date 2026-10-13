@@ -56,7 +56,7 @@ def price_str(p):
 
 def short_title(row):
     """'Pokemon Abyss Eye (M5) Sealed Japanese Booster Box' -> 'Abyss Eye (M5)'."""
-    t = row['title']
+    t = re.sub(r'^\[PRE-ORDER\]\s*', '', row['title'])
     t = re.sub(r'^(Pokemon|Pokémon|One Piece TCG|One Piece|Dragon Ball Super)\s+', '', t)
     t = re.sub(r'\s+(Sealed\s+)?Japanese.*$', '', t)
     t = re.sub(r'\s+Sealed$', '', t)
@@ -69,7 +69,7 @@ def short_title(row):
 def set_name(row):
     """Set name without the code: 'Abyss Eye (M5)' -> 'Abyss Eye'; 'OP-07 500 Years...' -> '500 Years in the Future'."""
     s = re.sub(r'\s*\([^)]*\)', '', short_title(row)).strip()
-    s = re.sub(r'^(OP|EB|PRB)-\d+\s*', '', s).strip()
+    s = re.sub(r'^(OP|EB|PRB|FB)-?\d+\s*', '', s).strip()
     return s or row.get('set_code') or short_title(row)
 
 
