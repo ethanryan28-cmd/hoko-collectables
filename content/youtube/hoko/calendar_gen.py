@@ -13,7 +13,7 @@ from pathlib import Path
 from datetime import date, timedelta
 
 from . import reel
-from .common import ROOT, SITE, config, dshort, dlong, flags, load_rows, price_str, rel, set_name, short_title
+from .common import ROOT, SITE, config, dshort, dlong, set_name, flags, load_rows, price_str, rel, set_name, short_title
 
 CAL = Path(os.environ.get('HOKO_CALENDAR') or ROOT / 'calendar.md')   # override for dry-run tests
 CAPS = ROOT / 'captions'
@@ -109,6 +109,50 @@ TIPS = [
 ]
 
 
+# Roundup reels: ranked multi-product lists (honest, useful, and they sell boxes). One a week.
+def roundups(cfg):
+    rows = load_rows('sealed')
+    live = [r for r in rows if r['status'] == 'ACTIVE' and 'OOS-SUPPLIER' not in flags(r)
+            and int(float(r['inventory'] or 0)) > 0]
+    by_price = lambda rs: sorted(rs, key=lambda r: float(r['price']))
+    pre = [r for r in rows if reel.is_preorder(r) and r.get('release_date')
+           and r['release_date'] <= cfg['calendar_end']]
+    out = [
+        ('mega-era', 'Every Mega-era box in stock, cheapest first', 'IN STOCK NOW',
+         by_price([r for r in live if r['game'] == 'pokemon' and r.get('set_code', '').startswith('M')])[:4]),
+        ('one-piece', 'One Piece JP boxes in stock right now', 'IN STOCK NOW',
+         by_price([r for r in live if r['game'] == 'onepiece'])[:4]),
+        ('under-200', 'Japanese sealed under $200', 'IN STOCK NOW',
+         by_price([r for r in live if float(r['price']) < 200])[:4]),
+        ('preorders', 'Pre-orders landing before Christmas', 'PRE-ORDER',
+         sorted(pre, key=lambda r: r['release_date'])[:4]),
+    ]
+    return [r for r in out if r[3]]
+
+
+def roundup_vo(hook, items, pre=False):
+    parts = []
+    for it in items:
+        name = set_name(it)
+        if pre:
+            rd = date.fromisoformat(it['release_date'])
+            parts.append(f'{name}, {rd.day} {rd:%B}, {price_str(it["price"])}')
+        else:
+            parts.append(f'{name}, {price_str(it["price"])}')
+    return f'{hook}. ' + '. '.join(parts) + '. Link in bio.'
+
+
+def roundup_caption(hook, items, pre=False):
+    lines = [hook, '']
+    for i, it in enumerate(items, 1):
+        extra = f' · JP release {dshort(date.fromisoformat(it["release_date"]))}' if pre else ''
+        lines.append(f'{i}. {short_title(it)} — {price_str(it["price"])}{extra}\n   {it["url"]}')
+    lines += ['', 'All sealed, all tracked from Victoria. Free AU post on sealed orders $250+.',
+              '', 'Collector first. Seller second.', '',
+              ' '.join(reel.hashtags(items[0], 'sealed'))]
+    return '\n'.join(lines) + '\n'
+
+
 def tip_caption(tip, row):
     key, hook, vo, body = tip
     tags = ' '.join(reel.hashtags(row, 'sealed')[:-4] + ['#tcgtips', '#collectortips', '#tcgaustralia',
@@ -185,13 +229,21 @@ def build(log=print, render_beats=True):
     CAPS.mkdir(exist_ok=True)
     rows_out, missing = [], []
     cutoff = date.fromisoformat(cfg['christmas_cutoff'])
-    i, tip_i = 0, 0
+    rups = roundups(cfg)
+    i, tip_i, rup_i = 0, 0, 0
     for d in daterange(start, end):
         if d in fixed:
             label = fixed[d]
             r, k = next(sq)   # beats feature a sealed box
             kind, item, pin = 'sealed', f'**{label}** · {short_title(r)} {price_str(r["price"])}', 'yes'
             cap = beat_caption(label, r, cfg)
+        elif (d - start).days % 7 == 3 and rups:
+            key, rhook, rtag, items = rups[rup_i % len(rups)]
+            rup_i += 1
+            r, k, kind, pin = items[0], 1, 'roundup', ''
+            item = f'**Roundup: {rhook}**'
+            cap = roundup_caption(rhook, items, pre=(key == 'preorders'))
+            rup = (key, rhook, rtag, items)
         elif (d - start).days % 7 == 6:
             # one Tip reel a week (CLAUDE.md pillar "The Tip") — text over a product photo
             tip = TIPS[tip_i % len(TIPS)]
@@ -219,6 +271,12 @@ def build(log=print, render_beats=True):
                 hook, vo, body, tag = beat_hook(fixed[d], cfg)
                 m = reel.render(r, 'sealed', k, rp, override=(hook, vo), body=body, tag=tag)
                 log(f"  beat {d} {m['duration']}s {m['reel']}")
+        elif kind == 'roundup':
+            rp = reel.REELS / 'roundups' / f'{rup[0]}.mp4'
+            if render_beats:
+                m = reel.render(r, 'sealed', k, rp, override=(rup[1], roundup_vo(rup[1], rup[3], rup[0] == 'preorders')),
+                                tag=rup[2], items=rup[3])
+                log(f"  roundup {rup[0]} {m['duration']}s {m['reel']}")
         elif kind == 'tip':
             rp = reel.REELS / 'tips' / f'{tip[0]}.mp4'
             if render_beats:
@@ -228,7 +286,8 @@ def build(log=print, render_beats=True):
             missing.append(rel(rp))
         cp = CAPS / f'{d.isoformat()}.txt'
         cp.write_text(cap, encoding='utf-8')
-        status = 'queued' if r.get('status', 'ACTIVE') == 'ACTIVE' else 'blocked:draft-product'
+        drafts = [x for x in (rup[3] if kind == 'roundup' else [r]) if x.get('status', 'ACTIVE') != 'ACTIVE']
+        status = 'blocked:draft-product' if drafts else 'queued'
         rows_out.append(f'| {d.isoformat()} | {item} | {rel(rp)} | {rel(cp)} | {PLATFORMS} | {status} | {pin} |')
 
     # keep status of rows already posted

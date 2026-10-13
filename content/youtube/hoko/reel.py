@@ -298,7 +298,102 @@ class Slide:
         return out
 
 
-def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=None):
+_whisper = None
+
+
+def align_to_script(heard, script):
+    """Whisper mishears names ('Nihil Zero' → 'Nile'). Keep its timings, show the script's words.
+    Matched words take their heard timing; the rest are interpolated between neighbours."""
+    import difflib
+    norm = lambda w: re.sub(r'[^a-z0-9$]', '', w.lower())
+    sw = script.split()
+    hw = [h[2] for h in heard]
+    times = [None] * len(sw)
+    sm = difflib.SequenceMatcher(a=[norm(w) for w in sw], b=[norm(w) for w in hw], autojunk=False)
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == 'equal':
+            for di in range(i2 - i1):
+                times[i1 + di] = (heard[j1 + di][0], heard[j1 + di][1])
+        elif tag == 'replace' and (i2 - i1) == (j2 - j1):
+            for di in range(i2 - i1):
+                times[i1 + di] = (heard[j1 + di][0], heard[j1 + di][1])
+    # interpolate gaps
+    known = [i for i, t in enumerate(times) if t]
+    if not known:
+        return []
+    out = []
+    for i, w in enumerate(sw):
+        if times[i]:
+            out.append((times[i][0], times[i][1], w))
+            continue
+        prev = max([k for k in known if k < i], default=None)
+        nxt = min([k for k in known if k > i], default=None)
+        a = times[prev][1] if prev is not None else heard[0][0]
+        b = times[nxt][0] if nxt is not None else heard[-1][1]
+        span = (b - a) / ((nxt if nxt is not None else len(sw)) - (prev if prev is not None else -1))
+        k = i - (prev if prev is not None else -1)
+        out.append((a + span * (k - 1), a + span * k, w))
+    return out
+
+
+def word_times(wav, tempo, delay=0.3, script=None):
+    """[(start, end, word)] in reel seconds, from faster-whisper on the voiceover (works for any TTS voice)."""
+    global _whisper
+    import numpy as np
+    pcm = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(wav), '-ac', '1', '-ar', '16000', '-f', 's16le', '-'],
+                         capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
+    if _whisper is None:
+        from faster_whisper import WhisperModel
+        _whisper = WhisperModel('base', device='auto', compute_type='int8')
+    segs, _ = _whisper.transcribe(audio, word_timestamps=True, language='en')
+    out = []
+    for sg in segs:
+        for w_ in sg.words or []:
+            out.append((w_.start / tempo + delay, w_.end / tempo + delay, w_.word.strip()))
+    return align_to_script(out, script) if script else out
+
+
+def caption_layers(words, y=1385):
+    """One layer per word: its 3-word phrase in a dark pill, the spoken word in gold."""
+    layers = []
+    f = font(58)
+    # phrase-aware chunks: ≤3 words, break after punctuation
+    phrase_of, cur = [], []
+    for idx, w in enumerate(words):
+        cur.append(idx)
+        if len(cur) == 3 or w[2][-1:] in '.,?!:' or idx == len(words) - 1:
+            for j in cur:
+                phrase_of.append([words[j2] for j2 in cur])
+            cur = []
+    for i, (a, b, w_) in enumerate(words):
+        phrase = phrase_of[i]
+        layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        widths = [d.textlength(p[2].upper(), font=f) for p in phrase]
+        gap = 22
+        total = sum(widths) + gap * (len(phrase) - 1)
+        x = (W - total) / 2
+        d.rounded_rectangle([x - 30, y - 16, x + total + 30, y + 78], 22, fill=(0, 0, 0, 200))
+        for (aa, bb, ww), wd in zip(phrase, widths):
+            col = GOLD if (aa, bb, ww) == (a, b, w_) else (255, 255, 255)
+            d.text((x, y), ww.upper(), font=f, fill=col)
+            x += wd + gap
+        layers.append((a, layer))
+    return layers
+
+
+def caption_at(layers, t):
+    cur = None
+    for a, layer in layers:
+        if a <= t:
+            cur = layer
+        else:
+            break
+    return cur
+
+
+def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=None, items=None):
     """override=(on-screen hook, voiceover) for beat / tip reels; body = list of on-screen lines that
     replace the price block in the second half; tag overrides the top pill."""
     out_mp4 = Path(out_mp4)
@@ -324,32 +419,47 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
 
     if kind == 'sealed' and k == 3 and not body:
         body = preorder_body(row)
-    imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
-    if imgs:
-        slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else None, cy=800 if body else None)
-                  for i, p in enumerate(imgs)]
+    words = [] if items else word_times(vo_wav, tempo, script=vo)
+    L_words = caption_layers(words, y=1175 if body else 1385)
+    item_layers = []
+    if items:
+        # roundup: one slide per product, ranked label under each
+        slides = []
+        for i, it in enumerate(items):
+            im = next((u for u in it['reel_images'].split('|') if u), None)
+            slides.append(Slide(fetch_image(im), i, box=(760, 760), cy=880) if im
+                          else CardSlide(it.get('set_code') or 'NEW', i))
+            lab = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+            lab.alpha_composite(text_layer(f'#{i + 1}  {short_title(it)}', 60, 1490, black=True, stroke=8))
+            lab.alpha_composite(text_layer(price_str(it['price']), 130, 1590, color=GOLD, stroke=11))
+            item_layers.append(lab)
     else:
-        slides = [CardSlide(row.get('set_code') or 'NEW', int(row['id'][-3:]))]
+        imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
+        if imgs:
+            slides = [Slide(p, i + int(row['id'][-3:]), box=(720, 720) if body else (860, 860), cy=800 if body else 930)
+                      for i, p in enumerate(imgs)]
+        else:
+            slides = [CardSlide(row.get('set_code') or 'NEW', int(row['id'][-3:]))]
     p = price_str(row['price'])
     tag = tag or (f"{row['grader']} {row['grade']}" if kind == 'slab' else f"JAPANESE SEALED · {game_label(row).upper()}")
     sub = row['card'] if kind == 'slab' else short_title(row)
     post = 'Tracked post · free $150+' if kind == 'slab' else 'Free AU post on sealed $250+'
     L_tag = text_layer(tag, 46, 120, color=(15, 15, 15), black=True, box=(*GOLD, 255))
     L_hook = text_layer(hook.upper(), 92, 215)
-    L_price = text_layer(p, 180, 1470, color=GOLD, stroke=12)
-    L_sub = text_layer(sub, 52, 1690, black=False, stroke=7)
+    L_price = text_layer(p, 170, 1500, color=GOLD, stroke=12)
+    L_sub = text_layer(sub, 50, 1715, black=False, stroke=7)
     L_post = text_layer(post, 46, 250, black=False, box=(0, 0, 0, 190))
     L_body = None
     if body:
         L_body = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        y = 1260
+        y = 1300
         for i, line in enumerate(body):
             L_body.alpha_composite(text_layer(line, 66 if i == 0 else 52, y, color=GOLD if i == 0 else (255, 255, 255),
                                               black=(i == 0), stroke=8))
             y += 150 if i == 0 else 118
     endc = end_card()
 
-    hook_end = content * 0.48
+    hook_end = 1.3 if items else content * 0.48
     n = int(round(total * FPS))
     cmd = ['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS),
            '-i', '-', '-i', str(vo_wav), '-filter_complex',
@@ -372,7 +482,9 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
                 fr = Image.blend(fr, slides[si + 1].frame(0, kind == 'slab'), a)
             fr = fr.convert('RGBA')
             fr.alpha_composite(L_tag)
-            if t < hook_end:
+            if items:
+                fr.alpha_composite(_fade(L_hook, min(1, t / 0.25)) if t < hook_end else item_layers[si])
+            elif t < hook_end:
                 a = min(1, t / 0.25)
                 fr.alpha_composite(_fade(L_hook, a))
             else:
@@ -383,6 +495,9 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
                     fr.alpha_composite(_fade(L_post, a))
                     fr.alpha_composite(_fade(L_price, a))
                     fr.alpha_composite(_fade(L_sub, a))
+            cap = caption_at(L_words, t)
+            if cap is not None and (not items or t >= hook_end):
+                fr.alpha_composite(cap)
             fr = fr.convert('RGB')
             prev = fr
         proc.stdin.write(fr.tobytes())
@@ -391,7 +506,8 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
         raise RuntimeError(f'ffmpeg failed for {out_mp4}')
     vo_wav.unlink(missing_ok=True)
     meta = {'product_id': row['id'], 'kind': kind, 'hook_index': k, 'hook': hook, 'voiceover': vo,
-            'tts': engine, 'duration': total, 'url': row['url'], 'title': row['title'], 'reel': rel(out_mp4)}
+            'tts': engine, 'duration': total, 'url': row['url'], 'title': row['title'], 'reel': rel(out_mp4),
+            'words': len(words)}
     meta_p.write_text(json.dumps(meta, indent=2))
     if not override:
         out_mp4.with_name(out_mp4.stem + '.caption.txt').write_text(caption_text(row, kind, k), encoding='utf-8')
