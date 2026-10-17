@@ -131,14 +131,15 @@ def roundups(cfg):
 
 
 def roundup_vo(hook, items, pre=False):
+    # no prices in the voiceover (social rule); they stay on the on-screen list and in the caption
     parts = []
     for it in items:
         name = set_name(it)
         if pre:
             rd = date.fromisoformat(it['release_date'])
-            parts.append(f'{name}, {rd.day} {rd:%B}, {price_str(it["price"])}')
+            parts.append(f'{name}, {rd.day} {rd:%B}')
         else:
-            parts.append(f'{name}, {price_str(it["price"])}')
+            parts.append(name)
     return f'{hook}. ' + '. '.join(parts) + '. Link in bio.'
 
 

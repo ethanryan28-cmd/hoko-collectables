@@ -53,38 +53,38 @@ def slab_short(row):
 
 
 def hook_text(row, kind, k):
-    """(on-screen hook, voiceover script)."""
+    """(on-screen hook, voiceover script). Voiceovers never say a price (social rule); the on-screen card does."""
     p = price_str(row['price'])
     if kind == 'slab':
         g = f"{row['grader']} {row['grade']}"
         name = slab_short(row)
         if k == 0:
             return (f"{g} {row['card']}",
-                    f"{g} {row['card']}. {p}, tracked from Victoria. Link in bio.")
+                    f"{g} {row['card']}. Tracked from Victoria. Link in bio.")
         return (f"One in stock — {g} {name}, {p}",
-                f"One in stock. {g} {name}, {p}. Link in bio.")
+                f"One in stock. {g} {name}. Link in bio.")
     s = set_name(row)
     kd = product_kind(row)
     if k == 1:
         inv = int(float(row.get('inventory') or 0))
         where = 'in Victoria now' if inv > 0 else 'imported to order'
         return (f"{s} — sealed Japanese {kd}, {where}",
-                f"{s}. Sealed Japanese {kd}, {where}. {p} on HOKO. Link in bio.")
+                f"{s}. Sealed Japanese {kd}, {where}. Link in bio.")
     if k == 2:
         if row.get('packs'):
             n_packs, n_cards = row['packs'].lower().split('x')
             return (f"{s} — {n_packs} packs, {n_cards} cards a pack",
-                    f"{s}. {n_packs} packs, {n_cards} cards a pack, factory sealed. {p} on HOKO. Link in bio.")
+                    f"{s}. {n_packs} packs, {n_cards} cards a pack, factory sealed. Link in bio.")
         return (f"{s} for {p} — free AU post over $250",
-                f"{s}, {p}. Free Australian postage when your sealed order is over two fifty. Link in bio.")
+                f"{s}. Free Australian postage when your sealed order is over two fifty. Link in bio.")
     if k == 4:
         return (f"What's in {s}?",
-                f"What's in {s}? {row['chase']}. Sealed {kd}, {p} on HOKO. Link in bio.")
+                f"What's in {s}? {row['chase']}. Sealed {kd}. Link in bio.")
     from datetime import date
     rd = date.fromisoformat(row['release_date'])
     return (f"Pre-order — lands {rd:%B}",
             f"Pre-order open. {s}, {game_label(row)}. Japan release {rd.day} {rd:%B}, ships from Victoria "
-            f"a few days after. {p} on HOKO. Link in bio.")
+            f"a few days after. Link in bio.")
 
 
 def preorder_body(row):
