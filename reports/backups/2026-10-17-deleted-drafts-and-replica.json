@@ -1,0 +1,102 @@
+{
+ "deleted_on": "2026-10-17",
+ "reason": "Ethan: delete draft mystery-pack products + archived Official Replica",
+ "products": [
+  {
+   "id": "gid://shopify/Product/10417003462934",
+   "title": "DOOM 2 Commemorative Floppy Disk Antique Silver Edition Official Replica #/5000",
+   "handle": "doom-2-commemorative-floppy-disk-antique-silver-edition-official-replica-5000",
+   "status": "ARCHIVED",
+   "productType": "",
+   "tags": [],
+   "descriptionHtml": "<p><strong>DOOM 2 Commemorative Floppy Disk Antique Silver Edition Official Replica #/5000</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Singles: double-sleeved, rigid toploader, team bag, rigid cardboard mailer. Foils get foil-safe sleeves. Sealed product is bubble-wrapped and double-boxed.</p><h3>🎴 Condition Grading</h3><p><strong>NM · LP · MP · HP · DMG.</strong> Assessed in hand, front and back, and scanned individually. We err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Returns accepted within 7 days of delivery if the item is not as described. Sealed and international orders are final sale. Sealed product is not returnable for change of mind. This doesn't limit your rights under the Australian Consumer Law. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>. Collector first. Seller second.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": "EB-317838487602",
+    "price": "105.63",
+    "inventoryQuantity": 1
+   },
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0980/2678/2998/files/57_fd649e58-f978-46de-a799-003a749a1122.jpg?v=1771501652",
+    "https://cdn.shopify.com/s/files/1/0980/2678/2998/files/57_ece7ca81-069c-48a3-87a7-6d48280f0550.jpg?v=1771501652",
+    "https://cdn.shopify.com/s/files/1/0980/2678/2998/files/57_2e3eace0-52ac-4440-93d9-55bab533a1da.jpg?v=1771501652"
+   ]
+  },
+  {
+   "id": "gid://shopify/Product/10481706828054",
+   "title": "Japanese Pokémon Booster Pack Bundle — 3 Sealed Packs + Bonus Holos",
+   "handle": "japanese-pokemon-booster-pack-bundle-3-sealed-packs",
+   "status": "DRAFT",
+   "productType": "Card Bundle",
+   "tags": [
+    "game:pokemon",
+    "hoko-mystery",
+    "japanese",
+    "mystery-pack",
+    "pokemon"
+   ],
+   "descriptionHtml": "<p><strong>What's inside:</strong> 3 sealed Japanese Pokémon booster packs plus bonus holo cards. Sets vary by batch. Every pack is factory sealed.</p><p>Collector first. Seller second. · Shipped tracked from Victoria, Australia · Tracked postage free on orders over $30 · Dispatched within 1–3 business days.</p><p>Sealed product is final sale.</p>",
+   "seo": {
+    "title": "JP Pokemon Mystery Pack Basic — 3 Sealed Booster Packs | HOKO Collectables",
+    "description": "3 sealed Japanese Pokemon booster packs plus bonus holo cards. Random sets, authentic stock. Ships Australia-wide. HOKO Collectables."
+   },
+   "variant": {
+    "sku": "HOKO-JPKMN-BASIC",
+    "price": "25.00",
+    "inventoryQuantity": 20
+   },
+   "images": []
+  },
+  {
+   "id": "gid://shopify/Product/10481731731734",
+   "title": "Japanese One Piece Booster Pack Bundle — 3 Sealed Packs + Bonus Holos",
+   "handle": "japanese-one-piece-booster-pack-bundle-3-sealed-packs",
+   "status": "DRAFT",
+   "productType": "Card Bundle",
+   "tags": [
+    "game:onepiece",
+    "hoko-mystery",
+    "jp-sealed",
+    "mystery-pack",
+    "one-piece"
+   ],
+   "descriptionHtml": "<p><strong>What's inside:</strong> 3 sealed Japanese One Piece Card Game booster packs plus bonus holo cards. Sets vary by batch. Every pack is factory sealed.</p><p>Collector first. Seller second. · Shipped tracked from Victoria, Australia · Tracked postage free on orders over $30 · Dispatched within 1–3 business days.</p><p>Sealed product is final sale.</p>",
+   "seo": {
+    "title": "JP One Piece Mystery Pack Basic — 3 Sealed Booster Packs | HOKO Collectables",
+    "description": "3 sealed Japanese One Piece TCG booster packs plus bonus cards. Random sets, authentic stock. Ships Australia-wide. HOKO Collectables."
+   },
+   "variant": {
+    "sku": "HOKO-JPOP-BASIC",
+    "price": "25.00",
+    "inventoryQuantity": 15
+   },
+   "images": []
+  },
+  {
+   "id": "gid://shopify/Product/10573352304918",
+   "title": "HOKO Mystery Pack Guaranteed Art Rare + 50",
+   "handle": "hoko-mystery-pack-guaranteed-art-rare-50-cards",
+   "status": "DRAFT",
+   "productType": "Card Bundle",
+   "tags": [
+    "mystery",
+    "mystery-pack",
+    "stream"
+   ],
+   "descriptionHtml": "<p><strong>Every HOKO Mystery Pack comes with a guaranteed Art Rare (AR) plus 50 bonus cards.</strong> No duds — every single pack has a real hit.</p><h3>🎴 What's Inside</h3><ul>\n<li>\n<strong>1× guaranteed Art Rare (AR)</strong> — every pack, no exceptions</li>\n<li>\n<strong>50× bonus cards</strong> — holos, rares, and collectables mixed in</li>\n</ul><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Collector first, seller second. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": "HOKO-MYS-AR",
+    "price": "8.00",
+    "inventoryQuantity": 0
+   },
+   "images": []
+  }
+ ]
+}
