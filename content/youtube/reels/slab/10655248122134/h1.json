@@ -4,7 +4,7 @@
   "hook_index": 1,
   "hook": "One in stock \u2014 PSA 9 Bellsprout, $115",
   "voiceover": "One in stock. PSA 9 Bellsprout. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 8.0,
   "url": "https://www.hokocollectables.com/products/bellsprout-69-topps-chrome-tv-animation-series-pokemon-psa-9",
   "title": "Bellsprout 69 Topps Chrome TV Animation Series Pokemon PSA 9",

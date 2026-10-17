@@ -4,7 +4,7 @@
   "hook_index": 1,
   "hook": "One in stock \u2014 BGS 10 Nami, $499",
   "voiceover": "One in stock. BGS 10 Nami. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 8.0,
   "url": "https://www.hokocollectables.com/products/nami-alt-art-r-eb02017-one-piece-bgs-10-gold",
   "title": "Nami Alt Art R EB02017 One Piece BGS 10 Gold",
