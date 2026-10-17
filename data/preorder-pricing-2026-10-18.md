@@ -237,7 +237,9 @@ Breakeven at $235: ¥23,769.
 - Hobby Search prices are read from search results (product pages 403).
 
 ETHAN DECIDES:
-- M7 · now $190 · rec $190 · [ ] keep [ ] change
-- OP-18 · now $200 · rec $219 · [ ] keep [ ] change
-- FB12 · now $165 · rec $165 · [ ] keep [ ] change
-- EB-05 · now $235 · rec $235 · [ ] keep [ ] change
+- M7 · now $190 · rec $190 · [x] keep [ ] change
+- OP-18 · now $200 · rec $219 · [ ] keep [x] change $219 (written 18 Oct run, read back 219.00)
+- FB12 · now $165 · rec $165 · [x] keep [ ] change
+- EB-05 · now $235 · rec $235 · [x] keep [ ] change
+
+Decided 18 Oct 2026 by Ethan.

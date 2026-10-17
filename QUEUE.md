@@ -2,8 +2,15 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · Pre-order prices: OP-18 $200 → $219, BF tile, merges (`claude/preorder-prices-1018`)
+- **Status:** built, merged (with `claude/phone-ops-1018`). Report → `REPORT-2026-10-18-preorder-prices.md`
+- Ethan's call 18 Oct: OP-18 → **$219** (variant 67686723518742, price only; read back 219.00, storefront 21900). M7 $190 / FB12 $165 / EB-05 $235 kept, no write. Brief ticked + "Decided 18 Oct 2026 by Ethan".
+- BF page tile OP-18 $200 → $219 (backup `reports/backups/2026-10-18-bf-page-before.json`, storefront tiles read back $330/$235/$219/$190/$165). Captions with OP-18 $200: 0.
+- Banned-word gate script excluded itself (it matched its own regex line). 86 tests OK, check PASS 60%.
+- **Ethan to do:** PC `run.py source` refreshes `sealed/source.csv` (still 200.0 for OP-18; calendar.md history rows say $200).
+
 ## 2026-10-18 · Phone ops: phone-pack 2-day merged in, Discord ready, pre-order pricing brief (`claude/phone-ops-1018`)
-- **Status:** built, **not merged** (Ethan merges). Report → `REPORT-2026-10-18-phone-ops.md`
+- **Status:** built, merged 18 Oct (preorder-prices run). Report → `REPORT-2026-10-18-phone-ops.md`
 - `claude/phone-pack-2day` merged into this branch (`--days`, log dedupe, save-line env toggle, `routines/prompts/phone-pack-task.md`); prompt now opens with "Push works only after Ethan adds the repo to the task's sources in claude.ai."
 - Discord: poster reads `DISCORD_WEBHOOK_URL` (old `DISCORD_WEBHOOK_PICKUPS` still read); `dry-run` prints the next 3 Discord items (product-drop photos, no clips, no price) or NOT CONFIGURED. README "Discord webhook on phone". 86 tests OK.
 - `data/preorder-pricing-2026-10-18.md`: Urara full export, none of M7 / OP-18 / FB12 / EB-05 listed; JP RRP stand-in reads LOW (Urara runs ~2× RRP). Recs: M7 $190 keep · OP-18 $219 (+$19) · FB12 $165 keep · EB-05 $235 keep. No price written.
@@ -31,10 +38,10 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Platform keys (IG/FB, YouTube, Pinterest). Discord moved to PHONE. Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
 - Cloud environment: setup-script line `pip install edge-tts piper-tts` + network allowlist (list in the MANUAL of `REPORT-2026-10-17-bf-media-2.md`).
 - `schtasks /Delete /TN "HOKO publish" /F` (PC publisher retired).
+- eBay→Shopify fulfilment sync stopped ~10 Oct (#1472+ show UNFULFILLED though shipped) — check eBay channel order-sync.
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
-- Confirm/adjust pre-order prices — see `data/preorder-pricing-2026-10-18.md`.
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 
 ## DONE 17 Oct (struck in the entries below)
