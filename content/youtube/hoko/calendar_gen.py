@@ -130,6 +130,10 @@ def roundups(cfg):
     return [r for r in out if r[3]]
 
 
+# spoken opener where the on-screen title carries a price
+SPOKEN_HOOK = {'under-200': 'The cheapest Japanese sealed in stock right now'}
+
+
 def roundup_vo(hook, items, pre=False):
     # no prices in the voiceover (social rule); they stay on the on-screen list and in the caption
     parts = []
@@ -275,7 +279,7 @@ def build(log=print, render_beats=True):
         elif kind == 'roundup':
             rp = reel.REELS / 'roundups' / f'{rup[0]}.mp4'
             if render_beats:
-                m = reel.render(r, 'sealed', k, rp, override=(rup[1], roundup_vo(rup[1], rup[3], rup[0] == 'preorders')),
+                m = reel.render(r, 'sealed', k, rp, override=(rup[1], roundup_vo(SPOKEN_HOOK.get(rup[0], rup[1]), rup[3], rup[0] == 'preorders')),
                                 tag=rup[2], items=rup[3])
                 log(f"  roundup {rup[0]} {m['duration']}s {m['reel']}")
         elif kind == 'tip':
