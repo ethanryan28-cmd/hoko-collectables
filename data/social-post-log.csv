@@ -1,3 +1,6 @@
 ts,item_id,platform,slot,asset_id,attempt,status,remote_id,error
 2026-10-17T17:12:25+11:00,tiktok_queue:2026-10-17T07:00,tiktok_queue,2026-10-17T07:00:00+11:00,"sealed/10734773633302/h1,slab/10655248220438/h1,sealed/10734775501078/h2",,SKIP,,stale: slot passed by more than 7h
 2026-10-17T17:12:25+11:00,pinterest:2026-10-17T10:00,pinterest,2026-10-17T10:00:00+11:00,product/10734771765526,,SKIP,,stale: slot passed by more than 7h
+2026-10-17T20:13:38+11:00,youtube:2026-10-17T11:00,youtube,2026-10-17T11:00:00+11:00,sealed/15431829848342/h3,,SKIP,,stale: slot passed by more than 7h
+2026-10-17T20:13:38+11:00,instagram:2026-10-17T12:15,instagram,2026-10-17T12:15:00+11:00,sealed/15398993723670/h1,,SKIP,,stale: slot passed by more than 7h
+2026-10-17T20:13:38+11:00,facebook:2026-10-17T12:15,facebook,2026-10-17T12:15:00+11:00,sealed/15398993723670/h1,,SKIP,,stale: slot passed by more than 7h

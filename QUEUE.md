@@ -2,6 +2,11 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Social poster cloud-run 20:13 (`claude/social-cloud-2026-10-17-2012`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T2013+1100.md`
+- All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 3 SKIP (stale 11:00 / 12:15 slots). Queue 15 days/platform, 0 invalid, 0 clips missing. PyPI still unreachable (edge-tts / piper-tts not installable) — no render was needed.
+- **Ethan to do:** set the platform env vars; add `edge-tts piper-tts` to the environment setup script.
+
 ## 2026-10-17 · BF media 2: live William gate, 71 clips rendered + committed, merged (`claude/bf-media-1017`)
 - **Status:** built, merged. Reports → `REPORT-2026-10-17-bf-media.md` (tts fix, stopped at gate) + `REPORT-2026-10-17-bf-media-2.md` (this run)
 - Network open this session (PyPI 200, Bing reachable). The branch's `tts.py` proxy-CA fix rendered live (`edge-tts:en-AU-WilliamMultilingualNeural`, verification on, no sitecustomize). 54 tests OK.
