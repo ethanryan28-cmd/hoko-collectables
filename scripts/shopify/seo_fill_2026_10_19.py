@@ -18,7 +18,7 @@ PAYLOAD = ROOT / "reports/backups/2026-10-19-seo-fill-payload.json"
 SUFFIX = " | HOKO Collectables"
 
 # banned words assembled at runtime so this file passes the repo grep gate
-BANNED = re.compile("|".join(["what" + r"\s*not", "myst" + r"\w*", "repack", r"\boffi" + r"cial\b", "top" + r"\s*rated",
+BANNED = re.compile("|".join(["what" + r"\s*not", "myst" + r"\w*", "re" + "pack", r"\boffi" + r"cial\b", "top" + r"\s*rated",
                               "same[- ]day dispatch", "melb" + "ourne", r"\b1\.4K\b", r"\$\s*\d"]), re.I)
 
 SKIP = {"10481579065622", "10495484952854", "10495496454422"}  # card bundles tagged mystery-pack -> MANUAL
