@@ -7,7 +7,8 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - M7 + FB12 ACTIVE, CONTINUE, 7/7 channels. FB12 = Bandai JP pack art; **M7 = HOKO placeholder card (no publisher art exists yet)** — swap when pokemon-card.com publishes. 24/24 ACTIVE jp-sealed on all 7 channels.
 - M6a + EB-05 guides link the other four newest; 2026 guide has a "Newest releases" list; 0 dead links across 41 articles. BF page = 5 newest tiles + collection link, no postage figure; `japan-direct-sealed` sorted M6a, EB-05, OP-18, M7, FB12 first.
 - Social: `hot_sets` = the 5, builder pushes them to ≥60% (2-day hot repeat), BF-week block 20–30 Nov built in (BFDROP5 + box drop list, product/collection links only), check PASS, 47 tests. All platforms NOT CONFIGURED. CLAUDE.md: newest-sets rule + prices-are-Ethan's line.
-- **Ethan to do:** answer the free-sealed-postage question ("$100+" vs "all sealed, no minimum"); social keys + piper in the env setup; PC re-render of EB-05/M7/FB12 h3 clips.
+- 07:27 Ethan ruled: free postage on ALL sealed, no minimum; M7 stays live with the placeholder. Page/email/captions reworded (`claude/bf-postage-1017`).
+- **Ethan to do:** edit the scheduled BF free-shipping automatic (all orders $100+ → Japanese Sealed collection, no minimum); social keys + piper in the env setup; PC re-render of EB-05/M7/FB12 h3 clips.
 
 ## 2026-10-17 · Organic-2 run 2: re-verify + eBay box maths (`claude/organic-2-1017-9a79lu`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-organic-2.md`
