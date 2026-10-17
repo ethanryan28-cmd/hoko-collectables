@@ -2,6 +2,12 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Organic-2 run 2: re-verify + eBay box maths (`claude/organic-2-1017-9a79lu`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-organic-2.md`
+- Steps 1–6 skipped as done (run 1), re-verified live: 2026 guide + JP cards guide unchanged, 6 JP-sealed articles 1 DRAFT link (EB-05, accepted), 20/20 × 7 channels, social env/dry-run/check PASS, 44 tests OK. FB12/M7 JAN still blank.
+- eBay maths: `data/ebay-box-maths-2026-10-17.csv`, 20 rows, bulk landed at ¥6,500/12 freight, FX 0.009112. eBay price now + last-sold NOT CHECKED (no export, 403) → Shopify stand-in. Nihil Zero M3 no-shrink cost is a flagged proxy. 0 Shopify writes.
+- **Ethan to do:** pick the eBay repricing rule; drop an eBay active-listings export in `data/` for real eBay columns.
+
 ## 2026-10-17 · Social poster cloud-run 17:12 (`claude/social-cloud-2026-10-17-1711`)
 - **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T1712+1100.md`
 - All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 2 SKIP (stale 07:00 / 10:00 slots). Queue 15 days/platform, 0 invalid. 49 clips unrendered — `piper-tts` could not be installed (PyPI unreachable from the sandbox).
