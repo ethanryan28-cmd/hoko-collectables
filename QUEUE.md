@@ -2,6 +2,15 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-19 · Copy hygiene: postage copy (637), bundles retitle/retag (3), SEO titles (300), M7 + OP-18 published (`claude/copy-hygiene-1019-n6reb3`)
+- **Status:** built, merged. Report → `REPORT-2026-10-19-copy-hygiene.md`
+- Postage: the old "$12.50 / free over $30" was only on the 3 bundles. 612 singles carried "Express Post is $19.50" and offered the letter on $50+ cards; now canon by kind (601 < $50 letter · 11 $50+ / slabs tracked · 25 sealed). Read back 637/637. CSV `data/postage-copy-2026-10-19.csv`.
+- Bundles: `mystery-pack` / `hoko-mystery` tags gone, "Mystery Chaos" → "Multi-Game Card Bundle — 20+ Cards", SEO set, still ACTIVE (3/3).
+- SEO titles: 300/301 → `<card> <set> <cond> | HOKO` ≤ 60, read back 300/300. 1 left: Mass of Mysteries (card name trips the gate).
+- Articles 688483762454 (M7) + 688483795222 (OP-18) published, both 200.
+- `bulkOperationRunMutation` is blocked by the connector, so bulk writes go as aliased `productUpdate` calls.
+- **Ethan to do:** Mass of Mysteries SEO title; bundle handle still says mystery-chaos (redirect?); multi-game bundle's 3-point condition scale.
+
 ## 2026-10-19 · Overnight: listing sweep, SEO fill (6), M7 + OP-18 draft articles, reads (`claude/overnight-1018`)
 - **Status:** built, merged. Report → `REPORT-2026-10-19-overnight.md`
 - Sweep of 640 ACTIVE products → `data/listing-quality-2026-10-19.csv`: 279 pass all; 301 SEO titles > 60, 89 with < 3 tags, 3 sealed without barcode, 0 missing image/type/collection.
@@ -40,7 +49,6 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 4. Discord app → Server Settings → Integrations → Webhooks → New Webhook → Copy URL → paste as `DISCORD_WEBHOOK_URL` in the cloud-run task env.
 5. Publish the draft theme (Shopify app, Ethan's click).
 6. Post the daily pack (07:10 message: save each mp4, paste caption, post).
-7. Review + publish the DRAFT articles 688483762454 (M7) and 688483795222 (OP-18).
 
 ## WAITING ON PC
 - Platform keys (IG/FB, YouTube, Pinterest). Discord moved to PHONE. Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
@@ -50,7 +58,8 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
-- 3 card bundles tagged `mystery-pack` (10481579065622, 10495484952854, 10495496454422): keep, retitle or archive.
+- ~~3 card bundles tagged `mystery-pack`~~ retitled/retagged 19 Oct. Left: multi-game bundle handle (`ultimate-tcg-mystery-chaos-…`, needs a redirect) + its 3-point condition scale.
+- Mass of Mysteries (10543567470870) SEO title: real card name trips the gate; keep the name?
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 
 ## DONE 17 Oct (struck in the entries below)
