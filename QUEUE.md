@@ -2,8 +2,14 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · Phone ops: phone-pack 2-day merged in, Discord ready, pre-order pricing brief (`claude/phone-ops-1018`)
+- **Status:** built, **not merged** (Ethan merges). Report → `REPORT-2026-10-18-phone-ops.md`
+- `claude/phone-pack-2day` merged into this branch (`--days`, log dedupe, save-line env toggle, `routines/prompts/phone-pack-task.md`); prompt now opens with "Push works only after Ethan adds the repo to the task's sources in claude.ai."
+- Discord: poster reads `DISCORD_WEBHOOK_URL` (old `DISCORD_WEBHOOK_PICKUPS` still read); `dry-run` prints the next 3 Discord items (product-drop photos, no clips, no price) or NOT CONFIGURED. README "Discord webhook on phone". 86 tests OK.
+- `data/preorder-pricing-2026-10-18.md`: Urara full export, none of M7 / OP-18 / FB12 / EB-05 listed; JP RRP stand-in reads LOW (Urara runs ~2× RRP). Recs: M7 $190 keep · OP-18 $219 (+$19) · FB12 $165 keep · EB-05 $235 keep. No price written.
+
 ## 2026-10-17 · Phone pack 2-day + task prompt (`claude/phone-pack-2day`)
-- **Status:** built, **not merged** (Ethan merges). Report → `REPORT-2026-10-17-phone-pack-2day.md`
+- **Status:** built, folded into `claude/phone-ops-1018` (not on main yet). Report → `REPORT-2026-10-17-phone-pack-2day.md`
 - `phone-pack --days N` (each day its own heading, log dedupes date+platform+asset) · save line under each heading, env `PHONE_PACK_FILES_FIRST=1` flips it to the Files route · task prompt `routines/prompts/phone-pack-task.md` for `trig_01QeakRTdC9hVqwinFfMP1CB`.
 
 ## 2026-10-18 · Close-out: discount canon, `phone-pack`, QUEUE tidy (`claude/hoko-close-out-1018-6c8z6p`)
@@ -13,17 +19,22 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Repo banned-word gate now a script (`scripts/banned-word-gate.sh`), 0 hits (5 demo/doc lines reworded). check PASS 60%.
 - **Ethan to do:** see WAITING ON PC / WAITING ON ETHAN below.
 
+## PHONE (Ethan can do these from the phone)
+1. Add repo `ethanryan28-cmd/hoko-collectables` to the phone-pack task's sources (`trig_01QeakRTdC9hVqwinFfMP1CB`, claude.ai).
+2. Add the same repo to the cloud-run poster task's sources (`trig_015SKsJWBRCz4Y549d2kHgeL`, claude.ai).
+3. Paste `routines/prompts/phone-pack-task.md` (between the `---8<---` lines) into `trig_01QeakRTdC9hVqwinFfMP1CB`.
+4. Discord app → Server Settings → Integrations → Webhooks → New Webhook → Copy URL → paste as `DISCORD_WEBHOOK_URL` in the cloud-run task env.
+5. Publish the draft theme (Shopify app, Ethan's click).
+6. Post the daily pack (07:10 message: save each mp4, paste caption, post).
+
 ## WAITING ON PC
-- Platform keys (IG/FB, YouTube, Pinterest, Discord webhooks). Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
+- Platform keys (IG/FB, YouTube, Pinterest). Discord moved to PHONE. Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
 - Cloud environment: setup-script line `pip install edge-tts piper-tts` + network allowlist (list in the MANUAL of `REPORT-2026-10-17-bf-media-2.md`).
 - `schtasks /Delete /TN "HOKO publish" /F` (PC publisher retired).
-- Publish the draft theme (Ethan's click).
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
-- Add repo `ethanryan28-cmd/hoko-collectables` to the phone-pack task's sources (claude.ai; CC can't).
-- Paste `routines/prompts/phone-pack-task.md` into `trig_01QeakRTdC9hVqwinFfMP1CB`.
-- Prices for the M7 / OP-18 / FB12 pre-orders.
+- Confirm/adjust pre-order prices — see `data/preorder-pricing-2026-10-18.md`.
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 
 ## DONE 17 Oct (struck in the entries below)
