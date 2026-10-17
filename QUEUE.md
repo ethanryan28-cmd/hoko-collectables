@@ -2,6 +2,10 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Phone pack 2-day + task prompt (`claude/phone-pack-2day`)
+- **Status:** built, **not merged** (Ethan merges). Report → `REPORT-2026-10-17-phone-pack-2day.md`
+- `phone-pack --days N` (each day its own heading, log dedupes date+platform+asset) · save line under each heading, env `PHONE_PACK_FILES_FIRST=1` flips it to the Files route · task prompt `routines/prompts/phone-pack-task.md` for `trig_01QeakRTdC9hVqwinFfMP1CB`.
+
 ## 2026-10-18 · Close-out: discount canon, `phone-pack`, QUEUE tidy (`claude/hoko-close-out-1018-6c8z6p`)
 - **Status:** built, merged. Report → `REPORT-2026-10-18-close-out.md`
 - CLAUDE.md free-postage line = the live automatic ("Black Friday: Free AU postage", every AU order, no minimum); `local-setup/CLAUDE.md.template` = copy of CLAUDE.md; email Checks bullet marked done.
@@ -17,6 +21,8 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
+- Add repo `ethanryan28-cmd/hoko-collectables` to the phone-pack task's sources (claude.ai; CC can't).
+- Paste `routines/prompts/phone-pack-task.md` into `trig_01QeakRTdC9hVqwinFfMP1CB`.
 - Prices for the M7 / OP-18 / FB12 pre-orders.
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 

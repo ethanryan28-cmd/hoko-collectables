@@ -64,11 +64,16 @@ A platform with missing keys is skipped and reported as `NOT CONFIGURED`. Add th
 
 ## Phone pack
 
-`python -m tools.social phone-pack [--date YYYY-MM-DD]` prints the day's `tiktok_queue` clips and Instagram items as
+`python -m tools.social phone-pack [--date YYYY-MM-DD] [--days N]` prints the day's `tiktok_queue` clips and Instagram items as
 markdown: platform + slot · name, the clip as a `raw.githubusercontent.com/.../main/<media>` mp4 URL (reels are
 committed), the product link, and the caption verbatim in a code block. Day = today in Victoria; if it has no
-TikTok / Instagram items, the next day that does. Every printed item is appended to `data/phone-pack-log.csv`
-(`date,platform,asset_id,url`, header written if the file is new). A scheduled cloud task (07:10 daily) runs it.
+TikTok / Instagram items, the next day that does. `--days N` (default 1) adds the following N-1 days that have
+items, each under its own `# HOKO phone pack · <date>` heading; `--date` sets where day 1 starts. Under each heading
+a save line: "Tap mp4 → share → Save Video → post.", or with env `PHONE_PACK_FILES_FIRST=1`
+"Tap mp4 → Files → Share → Save Video → post.". Every printed item is appended to `data/phone-pack-log.csv`
+(`date,platform,asset_id,url`, header written if the file is new) unless that date + platform + asset_id is already
+logged (re-runs print but don't re-append). A scheduled cloud task (07:10 daily) runs it; its prompt is
+`routines/prompts/phone-pack-task.md`.
 
 ## Cloud (Claude Code web, no PC)
 
