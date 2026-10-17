@@ -14,9 +14,9 @@ Goal: every link on the Japanese-sealed content path resolves to a buyable box, 
 | 3 Dead-link sweep | PASS with one listed link — 40 articles, 19 links, 3 hit DRAFT; 2 fixed (by step 1), 1 has no ACTIVE equivalent (EB-05 guide → its own DRAFT pre-order) and is listed, not guessed |
 | 4 Channels | PASS — 20/20 ACTIVE jp-sealed already on all 7 channels; 0 gaps, 0 publish writes. 4 pre-order drafts untouched |
 | 5 Social poster | PASS — `env`: every platform MISSING (names below); `dry-run` 0 invalid / 0 problems; cloud-run `--dry-run` every platform NOT CONFIGURED, would_post 0; new Discord-only unit test passes with no network |
-| 6 JAN retry | JAN_RESULT_SUMMARY |
-| 7 Gates | GATE_SUMMARY |
-| 8 Wrap | WRAP_SUMMARY |
+| 6 JAN retry | PASS (no write) — FB12 and M7 both left blank: FB12 has two box listings printing different JANs; M7 has no listing yet. Sources logged in `data/jan-2026-10-17.csv` |
+| 7 Gates | **FAIL on 1 of 7** — 1 DRAFT product link left in the 6 JP-sealed articles (EB-05 guide → EB-05 pre-order draft). The other 6 gates PASS |
+| 8 Wrap | PARTIAL — QUEUE.md updated, committed, pushed to `claude/organic-2-1017-h3c9kj`. **Not merged into main** (failed gate = stop). The Shopify writes are already live; only the repo record is unmerged |
 
 ## Step 1 — 2026 guide (688213655830, `japanese-pokemon-one-piece-booster-boxes-australia-2026`)
 
@@ -79,11 +79,26 @@ Publications: Online Store, Shop, Point of Sale, Google & YouTube, Facebook & In
 
 ## Step 6 — JAN retry
 
-JAN_SECTION
+| Product | Result | Where I looked |
+|---|---|---|
+| FB12 Reach the God · 15417947291926 | **blank** | amiami (search 403 / API 502; no FB12 found via site search) · hlj.co.jp (newest Fusion World box listed is FB09) · kakaku S0001046479 = the FB12 [BOX] page, 24 packs, release 12 Dec 2026, **prints no JAN** · retailer listings linked from it: Yahoo media-world/13922006000 "(BOX)… 24パック" prints JAN **4582770078718** (Rakuten toysprime shows the same number as its 商品番号 / item number); Yahoo baton-store/stoy-13448 "【BOX】… 24パック入り" prints JAN **4582770078701**. Two box listings, two different JANs, and none of the four named sources prints one. Not an exact match, so not set |
+| M7 Aura Seeker · 15417947455766 | **blank** | amiami (403; site search shows no M7) · hlj.co.jp (newest MEGA boxes: Mega Brave, Mega Symphonia, Mega Dream ex) · kakaku (no item for ハドウシーカー or 波動シーカー; MEGA [BOX] pages only up to 30th Celebration) · pokemoncenter-online (search sits behind a waiting-room queue) · pokemon-card.com/products (no M7). Not on sale anywhere with a JAN yet. Japanese name is probably ハドウシーカー (katakana), per a trademark filed 10 Mar 2026 |
+
+Barcode field on both products: unchanged (empty). Notes appended to both rows of `data/jan-2026-10-17.csv` (other rows byte-identical). Next try: once kakaku's FB12 page or amiami prints the JAN (amiami usually does by release week), take the one that matches.
 
 ## Step 7 — Gates
 
-GATES_SECTION
+| Gate | Result |
+|---|---|
+| 0 DRAFT/ARCHIVED product links in the 6 JP-sealed articles | **FAIL — 1**: 688481534230 (EB-05 guide) → `/products/pre-order-one-piece-heroines-edition-vol-2-eb-05-sealed-japanese-booster-box` (15431829848342, DRAFT). No ACTIVE same-set product exists, and publishing the draft is a status write (out of scope, and step 4 says DRAFT stays DRAFT). Was 3 before this run |
+| 20/20 ACTIVE jp-sealed on all 7 channels | PASS — 20/20 × 7 |
+| 0 banned words on everything touched | PASS — both live article bodies (asserted in the build script), dead-link CSV, channel CSV, JAN CSV, new test, script, this report |
+| `python -m tools.social check` PASS, queue untouched | PASS — 15 days on all 6 queued platforms, 0 violations; `content/social-queue.json` md5 `50f9ac76…` before and after |
+| dry-run 0 errors | PASS — `dry-run` 0 invalid / `problems: []`; `cloud-run --dry-run` `invalid.count 0` |
+| 43 tests OK | PASS — **44** OK (the 43 + the new Discord-only test) |
+| Edited articles = before + stated edit only | PASS — 688213655830 and 683629674774 read back MATCH against the built after-bodies; the build asserts undoing the edits returns the backup byte for byte |
+
+**Stopped at the merge.** Per the run protocol a failed gate is the stop, so nothing went to `main`. Everything is on `claude/organic-2-1017-h3c9kj`. To finish: either publish the EB-05 pre-order (gate goes to 0) or accept the one link, then merge the branch (`git checkout main && git merge --no-ff claude/organic-2-1017-h3c9kj && git push`).
 
 ## NOT CHECKED
 - Storefront HTTP from the cloud (shell proxy blocks hokocollectables.com). Links were verified by Admin API handle → status, not by fetching pages.
@@ -93,6 +108,7 @@ GATES_SECTION
 ## MANUAL
 
 **Ethan only:**
+- Merge `claude/organic-2-1017-h3c9kj` into main (held back by the EB-05 link gate; see Step 7).
 - EB-05: publishing the pre-order (15431829848342) is your click. It fixes the last DRAFT link in the EB-05 guide. Price is still the $235 placeholder from the pre-orders run.
 - Optional: drop the "Pull rates in Japanese sets are often better…" bullet from the Japanese cards guide (one line, say so).
 - Social keys. One line per key. Put them in **claude.ai/code → this environment → Environment variables** for cloud-run, and/or Windows *User* environment variables for the PC runner. Never in the repo.
