@@ -84,12 +84,15 @@ environment config. A platform with a missing key is reported `NOT CONFIGURED` a
 Optional: `SOCIAL_LATE_WINDOW_HOURS` (default 7), `DISCORD_MAX_UPLOAD_MB` (default 10), `HOKO_PIPER_MODEL` (path to a
 Piper `.onnx` voice; cloud-run downloads `en_GB-alan-medium` to `content/youtube/.cache/piper/` when unset).
 
-**Rendering in the cloud.** The en-AU edge-tts voice cannot connect from the cloud sandbox (its TLS goes around the
-proxy), so cloud-run renders every missing clip with the Piper fallback voice and logs `fallback voice` per clip.
+**Rendering in the cloud.** The en-AU edge-tts voice verifies against the session proxy's CA bundle when `SSL_CERT_FILE` /
+`REQUESTS_CA_BUNDLE` (or `/root/.ccr/ca-bundle.crt`) is set and uses `HTTPS_PROXY` (see `content/youtube/hoko/tts.py`;
+verification is never disabled). If edge-tts still cannot reach Microsoft, cloud-run renders the clip with the Piper
+fallback voice and logs `fallback voice` per clip.
 Beat-matched captions need faster-whisper; without it the script's words are spaced evenly over the voiceover.
-Needs `ffmpeg` on PATH plus `pip install pillow numpy requests piper-tts` in the environment (add them to the
-environment's setup script). Shorts cut from long-form, CardDrop and social-bank clips need their source video and are
-reported `cannot_render`; render those on the PC. Every rendered clip is a reproducible mp4 and stays gitignored.
+Needs `ffmpeg` on PATH plus `pip install edge-tts piper-tts faster-whisper pillow numpy requests` in the environment (add
+them to the environment's setup script). Shorts cut from long-form, CardDrop and social-bank clips need their source
+video and are reported `cannot_render`; render those on the PC.
+Reels are committed; cloud-run only renders what's missing.
 
 **Schedule it (one-time, in Claude Code web):** open the environment → Triggers → Add scheduled trigger, daily (a
 second one later in the day catches the evening slots), source this repo on `main`, with this prompt:
