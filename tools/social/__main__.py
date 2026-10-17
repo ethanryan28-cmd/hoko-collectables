@@ -10,6 +10,8 @@
   run        post / schedule what is due (every 15 min, "HOKO Social Runner"); --dry-run = validate only
   dry-run    validate every future payload for every platform → data/social-dryrun.json
   check      queue gate: ≥14 days per platform, no repeats (7 d; hot sets 2 d), hot-set share ≥ target, no banned words / prices
+  phone-pack today's tiktok_queue clips + instagram items as markdown for the phone (Victoria day; next day
+             with items if today has none) → stdout + data/phone-pack-log.csv. --date YYYY-MM-DD overrides today
   render     render any clip the next 14 days need (PC only: ffmpeg + content/youtube deps)
 """
 
@@ -35,6 +37,8 @@ def main(argv=None):
     sub.add_parser('dry-run')
     sub.add_parser('check')
     sub.add_parser('render')
+    pp = sub.add_parser('phone-pack')
+    pp.add_argument('--date', help='YYYY-MM-DD (default today, Victoria)')
     cr = sub.add_parser('cloud-run')
     cr.add_argument('--dry-run', action='store_true', help='no renders / uploads / posts; print JSON summary')
     cr.add_argument('--render-limit', type=int, default=None, help='render at most N missing clips this pass')
@@ -44,6 +48,9 @@ def main(argv=None):
     if a.cmd == 'env':
         print('\n'.join(C.env_report() if a.keys else C.platform_lines()))
         return 0
+    if a.cmd == 'phone-pack':
+        from . import phone_pack
+        return phone_pack.main(a)
     if a.cmd == 'cloud-run':
         from . import cloud_run
         return cloud_run.main(a)

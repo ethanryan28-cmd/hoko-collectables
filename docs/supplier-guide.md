@@ -59,10 +59,10 @@ Before listing any sealed product, verify:
 
 - **Shrink wrap:** tight, even, no bubbles or peeling edges (sign of resealing)
 - **Holo seal sticker** (where applicable): present, centred, not wrinkled
-- **Box artwork:** matches official reference photos — check The Pok\u00e9mon Company / Wizards release details
+- **Box artwork:** matches the publisher's reference photos — check The Pok\u00e9mon Company / Wizards release details
 - **Weight:** booster boxes should feel consistent — obviously light boxes are a red flag
 - **Language:** confirm JP/EN/KR etc. matches what you were sold
-- **Set symbol / set code:** verify against official set release list
+- **Set symbol / set code:** verify against the publisher's set release list
 
 If in doubt — do not list. Pull the item and verify before selling.
 
