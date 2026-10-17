@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-19 · Overnight: listing sweep, SEO fill (6), M7 + OP-18 draft articles, reads (`claude/overnight-1018`)
+- **Status:** built, merged. Report → `REPORT-2026-10-19-overnight.md`
+- Sweep of 640 ACTIVE products → `data/listing-quality-2026-10-19.csv`: 279 pass all; 301 SEO titles > 60, 89 with < 3 tags, 3 sealed without barcode, 0 missing image/type/collection.
+- SEO title on 6 slabs (read back 6/6, nothing else changed); 3 `mystery-pack` bundles skipped. Articles 688483762454 (M7) + 688483795222 (OP-18) are DRAFT.
+- Social check PASS 60%, queue to 31 Oct, no topup. 54 open UNFULFILLED orders, all eBay, back to June. 0 abandoned checkouts in 24 h. Discounts match canon. Pre-orders 190/219/165/235.
+- **Ethan to do:** publish the 2 drafts (PHONE); rule on the 3 mystery-tagged bundles; eBay order sync (PC).
+
 ## 2026-10-18 · Pre-order prices: OP-18 $200 → $219, BF tile, merges (`claude/preorder-prices-1018`)
 - **Status:** built, merged (with `claude/phone-ops-1018`). Report → `REPORT-2026-10-18-preorder-prices.md`
 - Ethan's call 18 Oct: OP-18 → **$219** (variant 67686723518742, price only; read back 219.00, storefront 21900). M7 $190 / FB12 $165 / EB-05 $235 kept, no write. Brief ticked + "Decided 18 Oct 2026 by Ethan".
@@ -33,15 +40,17 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 4. Discord app → Server Settings → Integrations → Webhooks → New Webhook → Copy URL → paste as `DISCORD_WEBHOOK_URL` in the cloud-run task env.
 5. Publish the draft theme (Shopify app, Ethan's click).
 6. Post the daily pack (07:10 message: save each mp4, paste caption, post).
+7. Review + publish the DRAFT articles 688483762454 (M7) and 688483795222 (OP-18).
 
 ## WAITING ON PC
 - Platform keys (IG/FB, YouTube, Pinterest). Discord moved to PHONE. Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
 - Cloud environment: setup-script line `pip install edge-tts piper-tts` + network allowlist (list in the MANUAL of `REPORT-2026-10-17-bf-media-2.md`).
 - `schtasks /Delete /TN "HOKO publish" /F` (PC publisher retired).
-- eBay→Shopify fulfilment sync stopped ~10 Oct (#1472+ show UNFULFILLED though shipped) — check eBay channel order-sync.
+- eBay→Shopify fulfilment sync stopped ~10 Oct (#1472+ show UNFULFILLED though shipped) — check eBay channel order-sync. (19 Oct read: 54 open UNFULFILLED eBay orders, incl. 39 from Jun–Aug.)
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
+- 3 card bundles tagged `mystery-pack` (10481579065622, 10495484952854, 10495496454422): keep, retitle or archive.
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 
 ## DONE 17 Oct (struck in the entries below)
