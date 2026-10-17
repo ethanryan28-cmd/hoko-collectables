@@ -29,7 +29,8 @@ KEYS = {
     'YT_REFRESH_TOKEN': ('youtube', 'OAuth refresh token with youtube.upload scope'),
     'PINTEREST_TOKEN': ('pinterest', 'Pinterest v5 access token with pins:write, boards:read'),
     'PINTEREST_BOARD_ID': ('pinterest', 'board the pins go to'),
-    'DISCORD_WEBHOOK_PICKUPS': ('discord', 'webhook URL for #pickups-and-drops'),
+    'DISCORD_WEBHOOK_URL': ('discord', 'webhook URL for #pickups-and-drops'),
+    'DISCORD_WEBHOOK_PICKUPS': ('discord', 'old name for DISCORD_WEBHOOK_URL, still read if that is unset'),
     'DISCORD_WEBHOOK_TIKTOK_QUEUE': ('tiktok', 'webhook URL for #tiktok-queue (clips + captions for the phone)'),
     'TIKTOK_ENABLED': ('tiktok', 'true to post via the Content Posting API (default false)'),
     'TIKTOK_CLIENT_KEY': ('tiktok', 'TikTok app client key (only if TIKTOK_ENABLED=true)'),
@@ -45,7 +46,7 @@ NEEDS = {
     'facebook': ['META_PAGE_TOKEN', 'FB_PAGE_ID', 'SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],
     'youtube': ['YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN'],
     'pinterest': ['PINTEREST_TOKEN', 'PINTEREST_BOARD_ID'],
-    'discord': ['DISCORD_WEBHOOK_PICKUPS'],
+    'discord': ['DISCORD_WEBHOOK_URL'],
     'tiktok_queue': ['DISCORD_WEBHOOK_TIKTOK_QUEUE'],
     'tiktok': ['TIKTOK_CLIENT_KEY', 'TIKTOK_CLIENT_SECRET', 'TIKTOK_REFRESH_TOKEN', 'SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],
     'shopify_files': ['SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],     # hosting clips for IG / FB / TikTok
@@ -54,9 +55,16 @@ NEEDS = {
 PLATFORM_ORDER = ['instagram', 'facebook', 'youtube', 'pinterest', 'discord', 'tiktok_queue', 'tiktok', 'shopify_files']
 
 
+# new key name -> older names still read when the new one is unset
+ALIASES = {'DISCORD_WEBHOOK_URL': ('DISCORD_WEBHOOK_PICKUPS',)}
+
+
 def get(key, default=None):
-    v = os.environ.get(key)
-    return v if v not in (None, '') else default
+    for k in (key, *ALIASES.get(key, ())):
+        v = os.environ.get(k)
+        if v not in (None, ''):
+            return v
+    return default
 
 
 def tiktok_enabled():

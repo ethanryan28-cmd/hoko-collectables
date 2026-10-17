@@ -21,6 +21,7 @@ Always review AI output before using. Never post, send, or publish without owner
 | `email-newsletter.md` | Monthly email newsletter | First week of each month |
 | `end-of-month-review.md` | Monthly business health review | Last day of each month |
 | `grading-submission.md` | PSA/BGS/CGC submission viability check | Before sending cards to grader |
+| `phone-pack-task.md` | Prompt for the 07:10 phone-pack scheduled task | Paste into `trig_01QeakRTdC9hVqwinFfMP1CB` |
 | `package-insert.md` | Generate a thank-you insert for packages | When packing an order |
 | `pricing-update.md` | Reprice a slab or sealed item | Weekly or when market shifts |
 | `restock-order.md` | Draft a restock order from a supplier | When stock runs low |
