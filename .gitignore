@@ -1,0 +1,8 @@
+
+# social auto-poster run state (tools/social)
+data/social-post-log.csv
+data/social-media-cache.json
+data/social-dryrun.json
+data/social-runner.log
+__pycache__/
+.pytest_cache/
