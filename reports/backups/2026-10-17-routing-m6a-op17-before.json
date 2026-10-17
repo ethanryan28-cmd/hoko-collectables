@@ -1,0 +1,73 @@
+[
+ {
+  "product_id": "gid://shopify/Product/15398993723670",
+  "handle": "pokemon-30th-celebration-m6a-sealed-japanese-booster-box",
+  "status": "DRAFT",
+  "tags": [
+   "booster-box",
+   "game:pokemon",
+   "japanese",
+   "jp-sealed",
+   "label:NEEDS-COMP",
+   "latest-set",
+   "moq-6",
+   "pokemon",
+   "sealed",
+   "set:M6a"
+  ],
+  "variant_id": "gid://shopify/ProductVariant/67618313470230",
+  "price": "330.00",
+  "inventoryPolicy": "DENY",
+  "inventoryQuantity": 0,
+  "metafield_hoko_supplier": null
+ },
+ {
+  "product_id": "gid://shopify/Product/10734775730454",
+  "handle": "one-piece-tcg-op-17-sealed-japanese-booster-box",
+  "status": "DRAFT",
+  "tags": [
+   "booster-box",
+   "drop-ship",
+   "dropship-urara",
+   "ds-active",
+   "game:onepiece",
+   "IMPORT-THRESHOLD",
+   "japanese",
+   "jp-sealed",
+   "label:NEEDS-COMP",
+   "one-piece",
+   "OVER-5KG",
+   "PROVISIONAL-INSURANCE",
+   "sealed",
+   "set:OP-17",
+   "supplier:urara-chii"
+  ],
+  "variant_id": "gid://shopify/ProductVariant/51869279355158",
+  "price": "200.00",
+  "inventoryPolicy": "DENY",
+  "inventoryQuantity": 0,
+  "metafield_hoko_supplier": null
+ },
+ {
+  "product_id": "gid://shopify/Product/15402647453974",
+  "handle": "one-piece-op-17-the-worlds-strongest-warriors-sealed-japanese-booster-box-pre-order",
+  "status": "DRAFT",
+  "tags": [
+   "booster-box",
+   "game:onepiece",
+   "japanese",
+   "jp-sealed",
+   "label:NEEDS-COMP",
+   "moq-6",
+   "one-piece",
+   "pre-order",
+   "sealed",
+   "set:OP-17"
+  ],
+  "variant_id": "gid://shopify/ProductVariant/67633159864598",
+  "price": "175.00",
+  "inventoryPolicy": "CONTINUE",
+  "inventoryQuantity": 0,
+  "metafield_hoko_supplier": null
+ }
+]
