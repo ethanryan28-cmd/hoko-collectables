@@ -69,11 +69,13 @@ class History:
         self.cats = {}        # platform -> {cat: n}
         self.hot = {}         # platform -> [n_hot, n_total]
 
-    def add(self, platform, a_id, pkey, cat, dt, hot=False):
+    def add(self, platform, a_id, pkey, cat, dt, hot=False, share=True):
         self.uses.setdefault((platform, a_id), []).append(dt)
         self.puses.setdefault((platform, pkey), []).append(dt)
         c = self.cats.setdefault(platform, {})
         c[cat] = c.get(cat, 0) + 1
+        if not share:  # past items still block repeats, but the hot share is measured from today, as check does
+            return
         h = self.hot.setdefault(platform, [0, 0])
         h[0] += int(bool(hot))
         h[1] += 1
@@ -169,7 +171,7 @@ def build(start=None, n_days=HORIZON, existing=None, assets=None):
         for c in clips:
             ca = by_id.get(c['asset_id'])
             hist.add(it['platform'], c['asset_id'], pkey(ca) if ca else c['asset_id'],
-                     category(ca) if ca else 'other', dt, hot=bool(ca) and is_hot(ca, hs))
+                     category(ca) if ca else 'other', dt, hot=bool(ca) and is_hot(ca, hs), share=local_date(dt) >= start)
         if local_date(dt) >= start:
             keep.append(it)
             have_days.setdefault(it['platform'], set()).add(local_date(dt))

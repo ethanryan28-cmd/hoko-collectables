@@ -2,6 +2,12 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-19 · Copy-hygiene follow-up: banned-word allowlist, Mass of Mysteries SEO, bundle handle + 301, condition scale (`claude/copy-hygiene-followup-1019`)
+- **Status:** built, merged. Report → `REPORT-2026-10-19-copy-hygiene-followup.md`
+- `tools/banned_words.py` + allowlist (Mass of Mysteries, Mystical Archive, Chaos Warp; case-sensitive whole phrase), the repo gate uses it, 5 tests. 2 real misses reworded (`index.html` demo, content-strategy doc).
+- Mass of Mysteries SEO title 68 → 58. Multi-game bundle handle → `multi-game-card-bundle-20-cards`, 301 from the old URL (old 301, new 200), condition paragraph → NM · LP · MP · HP · DMG. Store diff: exactly those 3 fields.
+- Topup hot-share fix (past items no longer count toward the share), 1 test; queue topped up, check PASS 60%. 92 tests OK.
+
 ## 2026-10-19 · Copy hygiene: postage copy (637), bundles retitle/retag (3), SEO titles (300), M7 + OP-18 published (`claude/copy-hygiene-1019-n6reb3`)
 - **Status:** built, merged. Report → `REPORT-2026-10-19-copy-hygiene.md`
 - Postage: the old "$12.50 / free over $30" was only on the 3 bundles. 612 singles carried "Express Post is $19.50" and offered the letter on $50+ cards; now canon by kind (601 < $50 letter · 11 $50+ / slabs tracked · 25 sealed). Read back 637/637. CSV `data/postage-copy-2026-10-19.csv`.
@@ -58,8 +64,7 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
 
 ## WAITING ON ETHAN (not PC)
-- ~~3 card bundles tagged `mystery-pack`~~ retitled/retagged 19 Oct. Left: multi-game bundle handle (`ultimate-tcg-mystery-chaos-…`, needs a redirect) + its 3-point condition scale.
-- Mass of Mysteries (10543567470870) SEO title: real card name trips the gate; keep the name?
+- ~~3 card bundles tagged `mystery-pack`~~ retitled/retagged 19 Oct; ~~handle + 301, condition scale, Mass of Mysteries SEO~~ done 19 Oct (follow-up).
 - eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
 
 ## DONE 17 Oct (struck in the entries below)
