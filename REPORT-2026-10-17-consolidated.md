@@ -201,7 +201,7 @@ Backup of all five live policy bodies (as read 17 Oct 2026): `/home/user/hoko-co
 | Terms of service | gid://shopify/ShopPolicy/50504696086 | 2026-10-04 | **PASS with notes.** Governing law Victoria, Australia; contact block correct (email, Victoria, ABN); no banned words. Still Shopify's template: refers to "U.S. and foreign patent" law, "federal and state" law, "state or province", and has a blanket warranty disclaimer with no ACL carve-out. Not blocking; a one-paragraph ACL clause would be the only canon-relevant fix. Not rewritten. |
 | Contact information | gid://shopify/ShopPolicy/50504761622 | 2026-10-04 | **OFF CANON — incomplete.** Has name, support email, Instagram, 1–2 business day reply line. Missing ABN 25 308 780 156, "Victoria, Australia", and the other channels (TikTok/YouTube/Pinterest @hokocollectables, Discord, eBay). Carries leftover ChatGPT `data-start`/`data-end` attributes. Replacement below. |
 
-Banned-word scan of all five bodies: none of the live-auction W-word, the eBay seller-tier badge phrase, "mystery pack", "official", the same-day promise, the old sold-count figure, "HOKO10", or the capital city's name. Clean.
+Banned-word scan of all five bodies: none of the live-auction W-word, the eBay seller-tier badge phrase, "mystery pack", "official", the same-day promise, the old sold-count figure, the retired welcome code, or the capital city's name. Clean.
 
 #### Write attempt
 `shopPolicyUpdate(shopPolicy:{type:CONTACT_INFORMATION, body:…})` →
