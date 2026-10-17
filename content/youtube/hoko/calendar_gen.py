@@ -105,7 +105,7 @@ TIPS = [
     ('buyback', 'Selling a collection? Here is how we buy',
      'Selling a collection? We buy sealed and PSA, BGS or CGC slabs. One photo and a list '
      'gets you a quote in forty eight hours. Link in bio.',
-     ['Sealed + PSA / BGS / CGC slabs', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
+     ['Sealed + graded slabs', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
 ]
 
 

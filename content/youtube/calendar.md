@@ -30,7 +30,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-10-28 | The Dominance of God (OP-18) $200 · h3 | reels/sealed/15417946865942/h3.mp4 | captions/2026-10-28.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-29 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h0 | reels/slab/10655248220438/h0.mp4 | captions/2026-10-29.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-30 | Heroines Edition vol.2 (EB-05) $235 · h3 | reels/sealed/15431829848342/h3.mp4 | captions/2026-10-30.txt | IG, YT, TT(manual) | queued |  |
-| 2026-10-31 | **Roundup: Japanese sealed under $200** | reels/roundups/under-200.mp4 | captions/2026-10-31.txt | IG, YT, TT(manual) | queued |  |
+| 2026-10-31 | **Roundup: Cheapest Japanese sealed in stock** | reels/roundups/under-200.mp4 | captions/2026-10-31.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-01 | **BF box drop list open** · Nihil Zero (M3) · no shrink $115 | reels/beats/2026-11-01.mp4 | captions/2026-11-01.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-02 | Aura Seeker (M7) $190 · h3 | reels/sealed/15417947455766/h3.mp4 | captions/2026-11-02.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-03 | **Tip: Why we only buy PSA, BGS and CGC** | reels/tips/verified-graders.mp4 | captions/2026-11-03.txt | IG, YT, TT(manual) | queued |  |
@@ -58,7 +58,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-11-25 | Aura Seeker (M7) $190 · h3 | reels/sealed/15417947455766/h3.mp4 | captions/2026-11-25.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-26 | **BF countdown — tomorrow** · Terastal Festival ex (sv8a) $280 | reels/beats/2026-11-26.mp4 | captions/2026-11-26.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-27 | **It's live — BF: free AU post on every sealed box 27–30 Nov** · Reach the God (FB12) $165 | reels/beats/2026-11-27.mp4 | captions/2026-11-27.txt | IG, YT, TT(manual) | queued | yes |
-| 2026-11-28 | **Roundup: Japanese sealed under $200** | reels/roundups/under-200.mp4 | captions/2026-11-28.txt | IG, YT, TT(manual) | queued |  |
+| 2026-11-28 | **Roundup: Cheapest Japanese sealed in stock** | reels/roundups/under-200.mp4 | captions/2026-11-28.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-29 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h1 | reels/slab/10655248220438/h1.mp4 | captions/2026-11-29.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-30 | **Christmas cutoff reel — order sealed by Mon 7 Dec** · OP-16 $180 | reels/beats/2026-11-30.mp4 | captions/2026-11-30.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-12-01 | **Tip: What "no outer shrink" means** | reels/tips/no-outer-shrink.mp4 | captions/2026-12-01.txt | IG, YT, TT(manual) | queued |  |
