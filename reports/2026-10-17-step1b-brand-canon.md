@@ -170,7 +170,7 @@ The Admin API doesn't expose Shopify Email campaigns or automations (`marketingA
 **BFDROP5 (already exists, scheduled):** $5.00 off, scoped to collection `japanese-sealed` (56 products), once per customer, any customer. Runs **Fri 27 Nov 00:00 → Mon 30 Nov 23:59 AEDT**. That matches the /pages/black-friday window (27–30 Nov).
 ⚠ "Early access" isn't enforced: the code isn't segment-limited and doesn't start before the public sale. Either send the email now-ish and accept that, or move `startsAt` earlier (e.g. Thu 26 Nov) to give the list a real head start.
 
-### Draft: BF early-access box-drop email (NOT sent; build in Shopify Email)
+### Draft: BF early-access box-drop email. **SUPERSEDED by `content/email/` (its postage line matches the live BF page)**
 
 - **Subject:** Black Friday box drop — the list gets first look
 - **Preview text:** $5 off Japanese sealed with code BFDROP5. Small batches.
@@ -183,7 +183,7 @@ The Admin API doesn't expose Shopify Email campaigns or automations (`marketingA
 
   - Code: BFDROP5, once per customer
   - Runs Friday 27 to Monday 30 November, ends 11:59pm AEDT
-  - Sealed boxes ship tracked from Victoria within 2–4 business days. Postage $15.25, free on sealed orders of $250 or more.
+  - ~~Postage $15.25, free on sealed orders of $250 or more~~ (conflicts with the BF page: "$100+ ships free that weekend")
 
   These come in small batches. When a box sells out it stays out until the next shipment lands.
 
@@ -196,7 +196,7 @@ Banned-word check on the draft: 0 hits.
 
 ## GATE — banned-word sweep (Whatnot, Top Rated, mystery pack, official)
 
-ARTICLES_SECTION_PLACEHOLDER
+Final gate results and the 12-article "official" rewrite table: see `REPORT-2026-10-17T1140+1100.md` (Step 2). Articles 0 · collections 0 · published pages 0 · active products 0. Residuals are only on the unpublished `whatnot-live` page and archived/draft products.
 
 ---
 

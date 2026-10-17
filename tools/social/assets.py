@@ -104,7 +104,7 @@ def _flags(row):
 
 
 def product_eligible(row):
-    """Promotable = ACTIVE, not supplier-out-of-stock, and either in stock or drop-ship (continue selling)."""
+    """Promotable = ACTIVE, not supplier-out-of-stock, inventory > 0 (live variants are DENY, so 0 = not buyable)."""
     if not row:
         return False, 'no source row'
     if row.get('status') != 'ACTIVE':
@@ -116,7 +116,7 @@ def product_eligible(row):
         inv = int(float(row.get('inventory') or 0))
     except ValueError:
         inv = 0
-    if inv <= 0 and 'ds-active' not in fl:
+    if inv <= 0:   # every live variant is inventoryPolicy DENY: 0 stock = sold out, even drop-ship
         return False, 'inventory 0'
     return True, ''
 

@@ -44,7 +44,7 @@ A platform with missing keys is skipped and reported as `NOT CONFIGURED`. Add th
 - **Sources.** Product reels `content/youtube/reels/{sealed,slab}/<id>/h<k>`, tips, ranked roundups, BF/Christmas
   beat reels (pinned to their date). The poster also picks up `content/youtube/out/*/short_*` (Shorts cut from long-form),
   `content/carddrop/**` and `content/social-bank/**` (an mp4 with a sidecar `.json` of `hook/url/title/game`).
-- **What gets promoted.** Only products that are ACTIVE, not `OOS-SUPPLIER`, and in stock or drop-ship. Draft pre-orders
+- **What gets promoted.** Only products that are ACTIVE, not `OOS-SUPPLIER`, and inventory > 0 (every live variant is set to DENY, so 0 means sold out). Draft pre-orders
   are left out until they are published. To refresh from Shopify: `python content/youtube/run.py source`.
 - **Mix.** Japanese sealed takes about 70% through November (50% in December). Slabs take 20–30%, tips and buy-posts the rest.
 - **No repeats.** The same clip or pin never goes to the same platform within 7 days, and each product appears at most once
