@@ -13,7 +13,7 @@ Branch `claude/hoko-close-out-1018-6c8z6p` (the session's assigned branch; the p
 | 6b `python -m tools.social check` | **PASS** | 60% hot share on every platform |
 | 6c unittest `tools/social/tests` | **PASS** | 66 OK (56 + 10) |
 | 6d unittest `content/youtube` | **PASS (0 tests)** | No test modules live under `content/youtube`; its tests (`test_reel_prices`, `test_tts`) are in `tools/social/tests` and pass in 6c |
-| 6e commit / merge / push / ls-remote | see `## Push` below |
+| 6e commit / merge / push / ls-remote | **PASS** | see `## Push` below |
 
 ## Notes
 - `phone-pack` output for 17 Oct (Victoria) was 3 TikTok + 2 Instagram items. The log rows from my test runs were deleted so `data/phone-pack-log.csv` starts with the scheduled task's first run.
@@ -30,3 +30,11 @@ Branch `claude/hoko-close-out-1018-6c8z6p` (the session's assigned branch; the p
 - PC-only and Ethan-only: see `## WAITING ON PC` / `## WAITING ON ETHAN (not PC)` in QUEUE.md.
 
 ## Push
+| Check | Result |
+|---|---|
+| Branch commit | `6743ba8` pushed to `origin/claude/hoko-close-out-1018-6c8z6p` |
+| Merge `--no-ff` into main | `a025c6e`, tests re-run on main: 66 OK |
+| `git push origin main` | `3cc706c..a025c6e` |
+| `git ls-remote` | `refs/heads/main` = `a025c6e` = local main · branch = `6743ba8` = local branch → **PASS** |
+
+## COMPLETE
