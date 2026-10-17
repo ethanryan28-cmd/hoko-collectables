@@ -39,7 +39,8 @@ and sets the PC to never sleep on mains power.
 ## Env keys (User environment variables; nothing is stored in the repo)
 
 `META_PAGE_TOKEN`, `IG_BUSINESS_ID`, `FB_PAGE_ID`, `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`,
-`PINTEREST_TOKEN`, `PINTEREST_BOARD_ID`, `DISCORD_WEBHOOK_PICKUPS`, `DISCORD_WEBHOOK_TIKTOK_QUEUE`,
+`PINTEREST_TOKEN`, `PINTEREST_BOARD_ID`, `DISCORD_WEBHOOK_URL` (old name `DISCORD_WEBHOOK_PICKUPS` still read),
+`DISCORD_WEBHOOK_TIKTOK_QUEUE`,
 `TIKTOK_ENABLED` (default false), `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN`,
 `SHOPIFY_STORE`, `SHOPIFY_ADMIN_TOKEN` (needs `write_files`, used to host clips for IG / FB / TikTok).
 Optional: `TIKTOK_PRIVACY` (default `SELF_ONLY` until the TikTok app is audited), `DISCORD_MAX_UPLOAD_MB` (default 10).
@@ -75,6 +76,14 @@ a save line: "Tap mp4 → share → Save Video → post.", or with env `PHONE_PA
 logged (re-runs print but don't re-append). A scheduled cloud task (07:10 daily) runs it; its prompt is
 `routines/prompts/phone-pack-task.md`.
 
+## Discord webhook on phone
+
+In the Discord app open the HOKO server → Server Settings → Integrations → Webhooks → New Webhook, pick
+#pickups-and-drops as its channel, then Copy URL. In claude.ai open the cloud-run scheduled task's environment and paste
+it as `DISCORD_WEBHOOK_URL` (treat the URL as a password: anyone with it can post as the bot). `python -m tools.social
+dry-run` then shows `Discord next 3 · would post` with each item's text, product link and photo; without the variable it
+prints `Discord next 3 · NOT CONFIGURED (DISCORD_WEBHOOK_URL missing)` and the runner leaves Discord items pending.
+
 ## Cloud (Claude Code web, no PC)
 
 `python -m tools.social cloud-run` is the whole poster in one pass for a scheduled Claude Code web session:
@@ -94,7 +103,7 @@ environment config. A platform with a missing key is reported `NOT CONFIGURED` a
 | Facebook Page | `META_PAGE_TOKEN`, `FB_PAGE_ID` + Shopify Files hosting | Same clip scheduled natively (`scheduled_publish_time`), up to 14 days ahead |
 | YouTube Shorts | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | Every Short due in the next 14 days uploaded at once with `publishAt` |
 | Pinterest | `PINTEREST_TOKEN`, `PINTEREST_BOARD_ID` | Image pins at 10:00 / 15:00 / 20:00 linking product / collection pages |
-| Discord #pickups-and-drops | `DISCORD_WEBHOOK_PICKUPS` | 17:00 product embed |
+| Discord #pickups-and-drops | `DISCORD_WEBHOOK_URL` | 17:00 product embed (title, caption, product link, photo) |
 | TikTok phone pack | `DISCORD_WEBHOOK_TIKTOK_QUEUE` | 07:00 package of 3 clips + captions to #tiktok-queue (you post from the phone) |
 | TikTok direct API (off by default) | `TIKTOK_ENABLED=true`, `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` + Shopify Files hosting; optional `TIKTOK_PRIVACY` | Direct posting via the Content Posting API (SELF_ONLY until the app is audited) |
 | Shopify Files hosting | `SHOPIFY_STORE` (xxxx.myshopify.com), `SHOPIFY_ADMIN_TOKEN` (Admin API, `write_files`) | Public URLs for clips, needed by Instagram, Facebook and the TikTok API. Also lets `content/youtube/run.py source` refresh the product list |

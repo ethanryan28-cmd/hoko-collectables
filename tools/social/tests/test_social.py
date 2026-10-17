@@ -307,7 +307,7 @@ class RunnerLog(unittest.TestCase):
         self.assertEqual(runner.read_log(self.log)[0]['status'], 'SKIP')
 
     def test_unconfigured_platform_waits(self):
-        with mock.patch.dict(os.environ, {'DISCORD_WEBHOOK_PICKUPS': ''}):
+        with mock.patch.dict(os.environ, {'DISCORD_WEBHOOK_URL': '', 'DISCORD_WEBHOOK_PICKUPS': ''}):
             h = FakeHttp()
             runner.run(now=self.now, http=h, queue=self.q, log_path=self.log, out=lambda *_: None)
         self.assertEqual(h.calls, [])

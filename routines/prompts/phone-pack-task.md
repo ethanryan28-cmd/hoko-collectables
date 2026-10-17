@@ -2,9 +2,9 @@
 
 Scheduled task `trig_01QeakRTdC9hVqwinFfMP1CB` · 07:10 daily (Victoria) · cloud.
 
-> **Before the log push can work:** Ethan adds `ethanryan28-cmd/hoko-collectables` to this task's authorised
-> sources in claude.ai (scheduled task → sources). Claude Code cannot do that. Until then step 3 gets a 403 from
-> the git proxy; the task says so in one line and the message still goes out.
+> **Push works only after Ethan adds the repo to the task's sources in claude.ai.** (`ethanryan28-cmd/hoko-collectables`;
+> Claude Code cannot do it.) Until then step 3 gets a 403 from the git proxy; the task says so in one line and the
+> message still goes out.
 
 To install: paste everything between the two `---8<---` lines into the task's prompt.
 

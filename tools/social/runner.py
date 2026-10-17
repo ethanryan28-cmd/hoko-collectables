@@ -222,6 +222,9 @@ def dry_run(now=None, queue=None, out=print, write=True):
             f'media present {r["media_present"]:>3} / missing {r["media_missing"]:>3}')
     for pr in report['problems'][:50]:
         out('  ✗ ' + pr)
+    report['discord_preview'] = discord.preview(q['items'], now)
+    for line in report['discord_preview']:
+        out(line)
     if write:
         C.DRYRUN_PATH.parent.mkdir(parents=True, exist_ok=True)
         C.DRYRUN_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=1, default=str), encoding='utf-8')
