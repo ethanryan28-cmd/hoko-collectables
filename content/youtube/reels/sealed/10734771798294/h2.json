@@ -3,11 +3,11 @@
   "kind": "sealed",
   "hook_index": 2,
   "hook": "Abyss Eye \u00b7 no shrink for $120 \u2014 free AU post over $250",
-  "voiceover": "Abyss Eye \u00b7 no shrink, $120. Free Australian postage when your sealed order is over two fifty. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.4,
+  "voiceover": "Abyss Eye \u00b7 no shrink. Free Australian postage when your sealed order is over two fifty. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 9.39,
   "url": "https://www.hokocollectables.com/products/pokemon-abyss-eye-m5-japanese-booster-box-no-outer-shrink",
   "title": "Pokemon Abyss Eye (M5) Japanese Booster Box \u2014 No Outer Shrink",
   "reel": "reels/sealed/10734771798294/h2.mp4",
-  "words": 20
+  "words": 19
 }

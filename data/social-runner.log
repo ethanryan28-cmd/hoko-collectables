@@ -28,3 +28,89 @@
 2026-10-17T14:11:05+11:00 dry-run: would render 45 clip(s) with the fallback voice
 2026-10-17T14:11:05+11:00 due now: 60 · on configured platforms: 0 · hosted: 0
 2026-10-17T14:11:05+11:00 cloud-run end
+2026-10-17T17:12:25+11:00 cloud-run start · late window 7 h
+2026-10-17T17:12:25+11:00 instagram: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 facebook: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 youtube: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 pinterest: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 discord: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 tiktok: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 shopify_files: NOT CONFIGURED
+2026-10-17T17:12:25+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-17T17:12:25+11:00 invalid payloads / rule violations: 0
+2026-10-17T17:12:25+11:00 clips missing on disk: 49
+2026-10-17T17:12:25+11:00 render skipped — no TTS engine (pip install piper-tts, or edge-tts)
+2026-10-17T17:12:25+11:00 due now: 61 · on configured platforms: 0 · hosted: 0
+2026-10-17T17:12:25+11:00 tiktok_queue: 1 SKIP×1
+2026-10-17T17:12:25+11:00 pinterest: 1 SKIP×1
+2026-10-17T17:12:25+11:00 youtube NOT CONFIGURED: 29 
+2026-10-17T17:12:25+11:00 instagram NOT CONFIGURED: 1 
+2026-10-17T17:12:25+11:00 facebook NOT CONFIGURED: 29 
+2026-10-17T17:12:25+11:00 pinterest NOT CONFIGURED: 1 
+2026-10-17T17:12:25+11:00 discord NOT CONFIGURED: 1 
+2026-10-17T17:12:25+11:00 cloud-run end
+2026-10-17T18:51:24+11:00 cloud-run DRY-RUN start · late window 7 h
+2026-10-17T18:51:24+11:00 instagram: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 facebook: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 youtube: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 pinterest: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 discord: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 tiktok: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 shopify_files: NOT CONFIGURED
+2026-10-17T18:51:24+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-17T18:51:24+11:00 invalid payloads / rule violations: 0
+2026-10-17T18:51:24+11:00 clips missing on disk: 0
+2026-10-17T18:51:24+11:00 due now: 61 · on configured platforms: 0 · hosted: 0
+2026-10-17T18:51:24+11:00 cloud-run end
+2026-10-17T18:51:27+11:00 cloud-run DRY-RUN start · late window 7 h
+2026-10-17T18:51:27+11:00 instagram: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 facebook: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 youtube: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 pinterest: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 discord: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 tiktok: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 shopify_files: NOT CONFIGURED
+2026-10-17T18:51:27+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-17T18:51:27+11:00 invalid payloads / rule violations: 0
+2026-10-17T18:51:27+11:00 clips missing on disk: 0
+2026-10-17T18:51:27+11:00 due now: 61 · on configured platforms: 0 · hosted: 0
+2026-10-17T18:51:27+11:00 cloud-run end
+2026-10-17T20:12:54+11:00 cloud-run DRY-RUN start · late window 7 h
+2026-10-17T20:12:54+11:00 instagram: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 facebook: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 youtube: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 pinterest: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 discord: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 tiktok: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 shopify_files: NOT CONFIGURED
+2026-10-17T20:12:54+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-17T20:12:54+11:00 invalid payloads / rule violations: 0
+2026-10-17T20:12:54+11:00 clips missing on disk: 0
+2026-10-17T20:12:54+11:00 due now: 62 · on configured platforms: 0 · hosted: 0
+2026-10-17T20:12:54+11:00 cloud-run end
+2026-10-17T20:13:38+11:00 cloud-run start · late window 7 h
+2026-10-17T20:13:38+11:00 instagram: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 facebook: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 youtube: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 pinterest: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 discord: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 tiktok: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 shopify_files: NOT CONFIGURED
+2026-10-17T20:13:38+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-17T20:13:38+11:00 invalid payloads / rule violations: 0
+2026-10-17T20:13:38+11:00 clips missing on disk: 0
+2026-10-17T20:13:38+11:00 due now: 62 · on configured platforms: 0 · hosted: 0
+2026-10-17T20:13:38+11:00 youtube: 1 SKIP×1
+2026-10-17T20:13:38+11:00 instagram: 1 SKIP×1
+2026-10-17T20:13:38+11:00 facebook: 1 SKIP×1
+2026-10-17T20:13:38+11:00 pinterest NOT CONFIGURED: 2 
+2026-10-17T20:13:38+11:00 discord NOT CONFIGURED: 1 
+2026-10-17T20:13:38+11:00 youtube NOT CONFIGURED: 29 
+2026-10-17T20:13:38+11:00 instagram NOT CONFIGURED: 1 
+2026-10-17T20:13:38+11:00 facebook NOT CONFIGURED: 29 
+2026-10-17T20:13:38+11:00 cloud-run end

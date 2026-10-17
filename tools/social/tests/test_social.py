@@ -10,6 +10,7 @@ from pathlib import Path
 from unittest import mock
 
 from tools.social import captions as cap
+from tools.social import config as C
 from tools.social import queue_builder as qb
 from tools.social import runner
 from tools.social.assets import Asset, load as load_assets, strip_prices
@@ -45,13 +46,54 @@ class QueueRules(unittest.TestCase):
         self.assertEqual(qb.violations(self.q), [])
 
     def test_no_clip_repeat_within_7_days_same_platform(self):
+        hot = C.hot_config()
         for p in SLOTS:
             last = {}
             for it, e in sorted(entries(self.q, p), key=lambda x: x[0]['slot']):
                 dt = parse(it['slot'])
+                window = timedelta(days=hot['repeat_days']) if e.get('set_code') in hot['hot_sets'] else timedelta(days=7)
                 if e['asset_id'] in last:
-                    self.assertGreaterEqual(dt - last[e['asset_id']], timedelta(days=7), (p, e['asset_id']))
+                    self.assertGreaterEqual(dt - last[e['asset_id']], window, (p, e['asset_id']))
                 last[e['asset_id']] = dt
+
+    def test_hot_sets_take_their_share_on_every_platform(self):
+        hot = C.hot_config()
+        self.assertEqual(hot['hot_sets'], ['M6a', 'EB-05', 'OP-18', 'M7', 'FB12'])
+        share = qb.hot_share(self.q, start=START)
+        for p, (h, n, s) in share.items():
+            self.assertGreaterEqual(s, hot['share'], (p, h, n))
+        # and every hot product is actually used somewhere
+        used = {e.get('set_code') for it in self.q['items'] for e in (it.get('clips') or [it])}
+        self.assertTrue(set(hot['hot_sets']) <= used, used)
+
+    def test_bf_week_block(self):
+        q = build(start=date(2026, 11, 20), n=11)
+        self.assertEqual(qb.violations(q), [])
+        for it in q['items']:
+            day = it['slot'][:10]
+            for e in (it.get('clips') or [it]):
+                if not e.get('asset_id'):
+                    continue
+                link = e.get('link', '')
+                self.assertTrue('/products/' in link or link.endswith('/collections/japan-direct-sealed'), (it['id'], link))
+                text = e.get('caption', '')
+                if it['platform'] == 'pinterest':
+                    continue
+                self.assertIn('BFDROP5', text, it['id'])
+                self.assertEqual(cap.check(text), [], it['id'])
+                if day < '2026-11-27':
+                    self.assertIn('box drop list', text, it['id'])
+        pins = [it for it in q['items'] if it['platform'] == 'pinterest']
+        self.assertTrue(all('BFDROP5' in it['caption'] for it in pins))
+
+    def test_bf_lines_only_in_bf_week(self):
+        self.assertEqual(cap.bf_lines('2026-11-19'), [])
+        self.assertEqual(cap.bf_lines('2026-12-01'), [])
+        self.assertTrue(cap.bf_lines('2026-11-20'))
+        self.assertTrue(cap.bf_lines('2026-11-30'))
+        for d in ('2026-11-20', '2026-11-27'):
+            for line in cap.bf_lines(d):
+                self.assertEqual(cap.check(line), [], line)
 
     def test_slot_times_local(self):
         for p, times in SLOTS.items():

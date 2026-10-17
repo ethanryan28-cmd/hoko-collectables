@@ -3,11 +3,11 @@
   "kind": "sealed",
   "hook_index": 2,
   "hook": "Heat Wave Arena for $285 \u2014 free AU post over $250",
-  "voiceover": "Heat Wave Arena, $285. Free Australian postage when your sealed order is over two fifty. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.6,
+  "voiceover": "Heat Wave Arena. Free Australian postage when your sealed order is over two fifty. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 8.98,
   "url": "https://www.hokocollectables.com/products/pokemon-heat-wave-arena-sv9a-sealed-japanese-booster-box",
   "title": "Pokemon Heat Wave Arena (sv9a) Sealed Japanese Booster Box",
   "reel": "reels/sealed/10734773633302/h2.mp4",
-  "words": 18
+  "words": 17
 }

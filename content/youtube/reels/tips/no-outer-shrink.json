@@ -1,13 +1,13 @@
 {
-  "product_id": "15413124268310",
+  "product_id": "15398993723670",
   "kind": "sealed",
   "hook_index": 1,
   "hook": "What \"no outer shrink\" means",
   "voiceover": "What does no outer shrink mean? The box is still factory sealed, the printed film is just removed. Same packs, lower price.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.02,
-  "url": "https://www.hokocollectables.com/products/pokemon-mega-symphonia-m1s-sealed-japanese-booster-box",
-  "title": "Pokemon Mega Symphonia (M1S) Sealed Japanese Booster Box",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 10.76,
+  "url": "https://www.hokocollectables.com/products/pokemon-30th-celebration-m6a-sealed-japanese-booster-box",
+  "title": "Pokemon 30th Celebration (M6a) Japanese Booster Box \u2014 No Outer Shrink",
   "reel": "reels/tips/no-outer-shrink.mp4",
   "words": 22
 }

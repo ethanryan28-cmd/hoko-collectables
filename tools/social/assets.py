@@ -189,7 +189,7 @@ def load(today=None):
         ok, why = product_eligible(feat) if feat else (False, 'not in sealed/source.csv (DRAFT or removed)')
         out.append(Asset(id=f'beat/{d}', kind='beat', media_type='video',
                          media=str(j.with_suffix('.mp4').relative_to(REPO)).replace('\\', '/'),
-                         url=f'{SITE}/pages/black-friday' if bf else f'{SITE}/collections/japan-direct-sealed',
+                         url=f'{SITE}/collections/japan-direct-sealed',   # every post links a product or the collection (17 Oct)
                          name=strip_prices(meta.get('hook', '')), hook=strip_prices(meta.get('hook', '')),
                          game='pokemon', jp_sealed=True, pin_date=d, product_id=str(meta.get('product_id', '')),
                          eligible=ok, reason='' if ok else f'featured box {why}; re-render with run.py calendar',
@@ -234,3 +234,8 @@ def load(today=None):
 
 def by_id(assets):
     return {a.id: a for a in assets}
+
+
+def is_hot(asset, hot_sets):
+    """Newest-set push: product assets of a set in hot_sets (video reels, image pins, discord embeds)."""
+    return bool(asset.set_code) and asset.set_code in set(hot_sets)

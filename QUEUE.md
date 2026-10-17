@@ -2,6 +2,51 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Social poster cloud-run 20:13 (`claude/social-cloud-2026-10-17-2012`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T2013+1100.md`
+- All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 3 SKIP (stale 11:00 / 12:15 slots). Queue 15 days/platform, 0 invalid, 0 clips missing. PyPI still unreachable (edge-tts / piper-tts not installable) — no render was needed.
+- **Ethan to do:** set the platform env vars; add `edge-tts piper-tts` to the environment setup script.
+
+## 2026-10-17 · BF media 2: live William gate, 71 clips rendered + committed, merged (`claude/bf-media-1017`)
+- **Status:** built, merged. Reports → `REPORT-2026-10-17-bf-media.md` (tts fix, stopped at gate) + `REPORT-2026-10-17-bf-media-2.md` (this run)
+- Network open this session (PyPI 200, Bing reachable). The branch's `tts.py` proxy-CA fix rendered live (`edge-tts:en-AU-WilliamMultilingualNeural`, verification on, no sitecustomize). 54 tests OK.
+- 71/71 mp4s rendered in William (45 sealed incl. EB-05/M7/FB12 h3 forced, 12 slab, 4 tips, 4 roundups, 6 BF beats). ffprobe PASS 1080×1920, audio, 8–20 s, no "$" spoken. **86.5 MB committed**, mp4s now in git. 30 sidecars piper → William.
+- Queue: check PASS 60% hot everywhere, dry-run 0 invalid / **0 missing media** (was 30), all platforms NOT CONFIGURED.
+- **Ethan to do:** BF free-shipping automatic edit; platform keys; env setup line + network allowlist (in the report MANUAL).
+
+## 2026-10-17 · BF media: tts.py proxy-CA fix, un-ignore reels mp4s, re-render + keep (`claude/bf-media-1017`)
+- **Status:** built, **NOT merged** — stopped at the Step 1 live-render gate. Report → `REPORT-2026-10-17-bf-media.md`
+- Cloud run with every render host policy-denied (403 at the proxy): PyPI, `speech.platform.bing.com`, `huggingface.co`. No edge-tts / piper / faster-whisper installable, so **0 clips rendered, 0 MB committed**; the 38 bf-render mp4s are still gone.
+- Done + tested: `content/youtube/hoko/tts.py` trusts `SSL_CERT_FILE` / `REQUESTS_CA_BUNDLE` / `/root/.ccr/ca-bundle.crt` via a verifying `ssl.create_default_context(cafile=…)` handed to edge-tts' connector **and** its per-request context (edge-tts 7.x overrides the connector), `proxy=$HTTPS_PROXY`; no env var → unchanged PC path. 7 new unit tests, 54 OK. `content/youtube/.gitignore` now keeps `reels/**/*.mp4` (out/, wav, cache, inbox still ignored). README Cloud line added.
+- Queue: check PASS 15 days / 60% hot on all 6, 0 invalid, **missing media 30** (the unrendered clips), all platforms NOT CONFIGURED.
+- **Ethan to do:** merge the branch or re-run with network (prompt line in the report MANUAL); PC render + push the mp4s meanwhile; BF automatic edit + platform keys still pending.
+
+## 2026-10-17 · BF render: 38 clips in en-AU, queue check, BF automatic re-read (`claude/bf-render-1017-idka4q`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-bf-render.md`
+- Cloud run, PyPI reachable this time: edge-tts William worked through the proxy CA (session-only sitecustomize, no repo code change). 38/38 clips rendered + ffprobe PASS (1080×1920, audio, 8–20 s, no "$" spoken): EB-05/M7/FB12 h3 (`stale_render` cleared), the 27 the queue listed missing, 6 BF beats (text unchanged, none said $100). mp4s are gitignored, so only sidecars are committed.
+- Queue: topup kept all 165 items, check PASS, 60% hot on every platform, 0 invalid, 0 missing media, all platforms NOT CONFIGURED; 47 tests OK. `source.csv` not refreshed (no token): committed rows already right.
+- BF free-shipping automatic read live: still "$100+, all products, AU". CLAUDE.md line now says so explicitly.
+- **Ethan to do:** change that automatic to Japanese Sealed / no minimum; PC: `run.py source` + `tools.social render` (mp4s are local-only); decide on the 3-line `tts.py` proxy fix.
+
+## 2026-10-17 · BF lock-in: M7 + FB12 live, newest-set links, BF page/collection, social queue 60% newest (`claude/bf-lockin-1017`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-bf-lockin.md`
+- M7 + FB12 ACTIVE, CONTINUE, 7/7 channels. FB12 = Bandai JP pack art; **M7 = HOKO placeholder card (no publisher art exists yet)** — swap when pokemon-card.com publishes. 24/24 ACTIVE jp-sealed on all 7 channels.
+- M6a + EB-05 guides link the other four newest; 2026 guide has a "Newest releases" list; 0 dead links across 41 articles. BF page = 5 newest tiles + collection link, no postage figure; `japan-direct-sealed` sorted M6a, EB-05, OP-18, M7, FB12 first.
+- Social: `hot_sets` = the 5, builder pushes them to ≥60% (2-day hot repeat), BF-week block 20–30 Nov built in (BFDROP5 + box drop list, product/collection links only), check PASS, 47 tests. All platforms NOT CONFIGURED. CLAUDE.md: newest-sets rule + prices-are-Ethan's line.
+- 07:27 Ethan ruled: free postage on ALL sealed, no minimum; M7 stays live with the placeholder. Page/email/captions reworded (`claude/bf-postage-1017`).
+- **Ethan to do:** edit the scheduled BF free-shipping automatic (all orders $100+ → Japanese Sealed collection, no minimum); social keys + piper in the env setup; PC re-render of EB-05/M7/FB12 h3 clips.
+
+## 2026-10-17 · Organic-2 run 2: re-verify + eBay box maths (`claude/organic-2-1017-9a79lu`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-organic-2.md`
+- Steps 1–6 skipped as done (run 1), re-verified live: 2026 guide + JP cards guide unchanged, 6 JP-sealed articles 1 DRAFT link (EB-05, accepted), 20/20 × 7 channels, social env/dry-run/check PASS, 44 tests OK. FB12/M7 JAN still blank.
+- eBay maths: `data/ebay-box-maths-2026-10-17.csv`, 20 rows, bulk landed at ¥6,500/12 freight, FX 0.009112. eBay price now + last-sold NOT CHECKED (no export, 403) → Shopify stand-in. Nihil Zero M3 no-shrink cost is a flagged proxy. 0 Shopify writes.
+- **Ethan to do:** pick the eBay repricing rule; drop an eBay active-listings export in `data/` for real eBay columns.
+
+## 2026-10-17 · Social poster cloud-run 17:12 (`claude/social-cloud-2026-10-17-1711`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T1712+1100.md`
+- All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 2 SKIP (stale 07:00 / 10:00 slots). Queue 15 days/platform, 0 invalid. 49 clips unrendered — `piper-tts` could not be installed (PyPI unreachable from the sandbox).
+- **Ethan to do:** set the platform env vars + add `piper-tts` to the environment setup script (or render on the PC).
+
 ## 2026-10-17 · Organic-2: JP-sealed links, channels, social readiness, JAN retry (`claude/organic-2-1017-h3c9kj`)
 - **Status:** built, merged. EB-05 guide → DRAFT pre-order link accepted by Ethan. Report → `REPORT-2026-10-17-organic-2.md`
 - 2026 guide stock list rebuilt from live: 14 Pokémon + 4 One Piece boxes, OP-17/OP-13 out, M6a → product, range $115–$470. JP cards guide: price/pull-rate bullet replaced with the per-box line; the separate pull-rate bullet removed (follow-up). Both read back byte-exact.

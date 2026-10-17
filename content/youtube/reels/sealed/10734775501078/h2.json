@@ -3,11 +3,11 @@
   "kind": "sealed",
   "hook_index": 2,
   "hook": "Legacy of the Master for $240 \u2014 free AU post over $250",
-  "voiceover": "Legacy of the Master, $240. Free Australian postage when your sealed order is over two fifty. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.4,
+  "voiceover": "Legacy of the Master. Free Australian postage when your sealed order is over two fifty. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 9.18,
   "url": "https://www.hokocollectables.com/products/one-piece-tcg-op-12-legacy-of-the-master-sealed-japanese-booster-box",
   "title": "One Piece TCG OP-12 Legacy of the Master Sealed Japanese Booster Box",
   "reel": "reels/sealed/10734775501078/h2.mp4",
-  "words": 19
+  "words": 18
 }

@@ -1,13 +1,13 @@
 {
-  "product_id": "10734779564310",
+  "product_id": "15398993723670",
   "kind": "sealed",
-  "hook_index": 1,
+  "hook_index": 2,
   "hook": "Selling a collection? Here is how we buy",
   "voiceover": "Selling a collection? We buy sealed and PSA, BGS or CGC slabs over a hundred dollars. One photo and a list gets you a quote in forty eight hours. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 11.8,
-  "url": "https://www.hokocollectables.com/products/pokemon-vstar-universe-s12a-sealed-japanese-booster-box",
-  "title": "Pokemon VSTAR Universe (s12a) Sealed Japanese Booster Box",
+  "url": "https://www.hokocollectables.com/products/pokemon-30th-celebration-m6a-sealed-japanese-booster-box",
+  "title": "Pokemon 30th Celebration (M6a) Japanese Booster Box \u2014 No Outer Shrink",
   "reel": "reels/tips/buyback.mp4",
   "words": 32
 }

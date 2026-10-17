@@ -1,13 +1,13 @@
 {
-  "product_id": "15413124170006",
+  "product_id": "15417947291926",
   "kind": "sealed",
-  "hook_index": 2,
+  "hook_index": 3,
   "hook": "It's live",
   "voiceover": "It's live. Black Friday at HOKO. Free postage on every sealed box until Monday. List members, your five dollar code is in your inbox. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 11.8,
-  "url": "https://www.hokocollectables.com/products/pokemon-nihil-zero-m3-sealed-japanese-booster-box",
-  "title": "Pokemon Nihil Zero (M3) Sealed Japanese Booster Box",
+  "url": "https://www.hokocollectables.com/products/pre-order-dragon-ball-super-reach-the-god-fb12-sealed-japanese-booster-box",
+  "title": "[PRE-ORDER] Dragon Ball Super Reach the God (FB12) Sealed Japanese Booster Box",
   "reel": "reels/beats/2026-11-27.mp4",
   "words": 27
 }
