@@ -2,6 +2,11 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · Social poster cloud-run 07:11 (`claude/social-cloud-2026-10-18-0711`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-18T0711+1100.md`
+- All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 0 SKIP (queue starts 18 Oct; 57 due in the 14-day FB/YT windows). Queue 15 days/platform, 0 invalid, 0 clips missing. PyPI still unreachable (piper-tts / edge-tts not installable) — no render was needed.
+- **Ethan to do:** set the platform env vars; add `edge-tts piper-tts` to the environment setup script.
+
 ## 2026-10-19 · Copy-hygiene follow-up: banned-word allowlist, Mass of Mysteries SEO, bundle handle + 301, condition scale (`claude/copy-hygiene-followup-1019`)
 - **Status:** built, merged. Report → `REPORT-2026-10-19-copy-hygiene-followup.md`
 - `tools/banned_words.py` + allowlist (Mass of Mysteries, Mystical Archive, Chaos Warp; case-sensitive whole phrase), the repo gate uses it, 5 tests. 2 real misses reworded (`index.html` demo, content-strategy doc).
