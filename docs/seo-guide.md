@@ -53,10 +53,10 @@ These are the primary search intents HOKO should target. Each cluster has a prim
 
 | Keyword | Intent | Target |
 |---------|--------|--------|
-| sell pokemon collection melbourne | Sell | Dedicated landing page (future) |
+| sell pokemon collection victoria | Sell | Dedicated landing page (future) |
 | pokemon buyback australia | Sell | Shopify page / Blog |
 | sell graded pokemon cards australia | Sell | Shopify page |
-| pokemon card buyer melbourne | Sell | Google Business / Blog |
+| pokemon card buyer victoria | Sell | Google Business / Blog |
 
 ---
 
@@ -96,20 +96,20 @@ Keep between 140–160 characters. Include the primary keyword and a differentia
 ### Sealed product:
 
 ```
-[Product name] — factory-sealed, sourced through our regional supplier network. Free AU shipping over $100. Collector-run Melbourne shop.
+[Product name] — factory-sealed, sourced through our regional supplier network. Free AU shipping over $100. Collector-run Victoria shop.
 ```
 
 **Example:**
-> Pokémon 151 Booster Box — factory-sealed, sourced through our regional supplier network. Free AU shipping over $100. Collector-run Melbourne shop.
+> Pokémon 151 Booster Box — factory-sealed, sourced through our regional supplier network. Free AU shipping over $100. Collector-run Victoria shop.
 
 ### Graded slab:
 
 ```
-[Grade] [Card name] — authenticated by [PSA/BGS/CGC]. Secure packaging, same-day dispatch. Melbourne-based collector shop.
+[Grade] [Card name] — authenticated by [PSA/BGS/CGC]. Secure packaging, Dispatched within 1–3 business days. Victoria-based collector shop.
 ```
 
 **Example:**
-> PSA 9 Charizard Base Set — authenticated by PSA. Secure packaging, same-day dispatch. Melbourne-based collector shop.
+> PSA 9 Charizard Base Set — authenticated by PSA. Secure packaging, Dispatched within 1–3 business days. Victoria-based collector shop.
 
 ---
 
@@ -126,7 +126,7 @@ regional supplier network. Priced at replacement cost, not historical purchase p
 you're always paying fair market.
 
 Free shipping across Australia on orders over $100. Every order ships same business day 
-from Melbourne. Collector-run, so you get honest listings and careful packing — no bent 
+from Victoria. Collector-run, so you get honest listings and careful packing — no bent 
 corners, no resealed product.
 ```
 
@@ -137,8 +137,8 @@ PSA, BGS, and CGC authenticated trading card slabs — Pokémon, Magic: The Gath
 more. Every slab on HOKO Collectables is verified grader only: PSA, BGS, or CGC. No HGA, 
 no GMG, no unverified-grader slabs, ever.
 
-Sourced primarily via our collection buyback service from Melbourne collectors. Priced 
-against current eBay sold comps. Free AU shipping over $100, same-day dispatch.
+Sourced primarily via our collection buyback service from Victoria collectors. Priced 
+against current eBay sold comps. Free AU shipping over $100, Dispatched within 1–3 business days.
 ```
 
 ---
@@ -188,7 +188,7 @@ YouTube SEO = search keyword in title + watch-bait hook. Both matter.
 ```
 
 **Examples:**
-- `Buying a $3,000 Pokemon Collection in Melbourne — Full Breakdown | HOKO Collectables`
+- `Buying a $3,000 Pokemon Collection in Victoria — Full Breakdown | HOKO Collectables`
 - `What Makes a Pokemon Slab Worth PSA 10? | HOKO Collectables`
 
 ---
@@ -217,7 +217,7 @@ Review monthly as part of `routines/weekly.md` (SEO rankings step).
 | pokemon booster box australia | TBC | Top 10 | High competition — long game |
 | buy pokemon cards australia | TBC | Top 10 | Broad, high volume |
 | psa graded pokemon australia | TBC | Top 5 | Lower competition, buyer intent |
-| sell pokemon collection melbourne | TBC | Top 3 | Unique to HOKO — buyback page needed |
+| sell pokemon collection victoria | TBC | Top 3 | Unique to HOKO — buyback page needed |
 | one piece tcg booster box australia | TBC | Top 5 | Growing category |
 | pokemon etb australia | TBC | Top 5 | Mid-volume, strong buyer intent |
 

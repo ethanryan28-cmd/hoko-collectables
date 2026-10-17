@@ -4,7 +4,7 @@ The poster queues 14 days of posts across Instagram, Facebook, YouTube Shorts, P
 package sent to your phone, and then posts them on schedule. Its content comes from what's already in `content/`. It
 replaces the old one-post-a-day `content/youtube/run.py publish` job.
 
-| Platform | When (Melbourne) | How |
+| Platform | When (AEDT/AEST) | How |
 |---|---|---|
 | Instagram Reels | 12:15, 19:15 | Graph API. The clip is hosted on Shopify Files and published at the slot (no native scheduling). |
 | Facebook Page | 12:15, 19:15 (mirrors IG) | `scheduled_publish_time`, scheduled 15 min–14 days ahead |
@@ -50,7 +50,7 @@ A platform with missing keys is skipped and reported as `NOT CONFIGURED`. Add th
 - **No repeats.** The same clip or pin never goes to the same platform within 7 days, and each product appears at most once
   per platform per day.
 - **Captions.** These are written by `captions.py` templates with no API calls. Every caption ends "Collector first.
-  Seller second.", and none contains prices, Whatnot, "mystery pack", "official" or "Top Rated".
+  Seller second.", and none contains prices or any of the banned words in `captions.BANNED`.
   `check` enforces this. Edit any caption directly in `content/social-queue.json`; the runner posts the text it finds there.
 - **Runner.** `data/social-post-log.csv` is the source of truth: OK / FAIL / SKIP mean done. A failed post is logged RETRY,
   retried on the next run, and marked FAIL after 2 retries. Anything more than 6 h past its slot is logged SKIP

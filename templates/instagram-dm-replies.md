@@ -9,7 +9,7 @@ Quick-copy reply templates for the most common DMs. Customise the [bracketed] pa
 ## 1. Price check / "how much is this?"
 
 **If it's listed on Shopify/eBay:**
-> Hey! That one's listed at $[X] on the store — hokocollectables.com. Happy to answer any questions about it. Use HOKO10 for 10% off your first order 👊
+> Hey! That one's listed at $[X] on the store — hokocollectables.com. Happy to answer any questions about it. Use WELCOME10 for 10% off your first order 👊
 
 **If it's not currently listed:**
 > Hey! That one's not on the store right now but I can check what I've got. What condition / grade are you after? [OR: I don't have that one in stock at the moment but worth checking back — I'll tag you if it comes in.]
@@ -24,7 +24,7 @@ Quick-copy reply templates for the most common DMs. Customise the [bracketed] pa
 
 ## 3. "Can you hold this?" / "Can you reserve it?"
 
-> Hey! We can't hold items without payment unfortunately — too many no-shows 😅. If you want to lock it in, easiest is to grab it on the store and I'll get it out same day. hokocollectables.com — HOKO10 for 10% off first order if you haven't used it.
+> Hey! We can't hold items without payment unfortunately — too many no-shows 😅. If you want to lock it in, easiest is to grab it on the store and I'll get it out same day. hokocollectables.com — WELCOME10 for 10% off first order if you haven't used it.
 
 ---
 
@@ -74,7 +74,7 @@ Quick-copy reply templates for the most common DMs. Customise the [bracketed] pa
 
 ## 11. "Can I pick up?" / "Are you local?"
 
-> Hey! We're Melbourne-based but we're online-only for sales — no pickup unfortunately. Everything ships Express Post, free over $100, same-day dispatch. hokocollectables.com
+> Hey! We're Victoria-based but we're online-only for sales — no pickup unfortunately. Everything ships Express Post, free over $100, Dispatched within 1–3 business days. hokocollectables.com
 
 ---
 

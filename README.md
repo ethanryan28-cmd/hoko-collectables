@@ -1,7 +1,7 @@
 # HOKO Collectables
 
 > **Collector first. Seller second.**
-> Melbourne-based TCG sealed product + graded slab shop. Founded 2024 by Ethan, ~20 years collecting experience.
+> TCG singles, Japanese sealed and PSA/BGS/CGC graded slabs. Victoria, Australia. Selling since 2023; run by Ethan, ~20 years collecting.
 > Live store: [hokocollectables.com](https://www.hokocollectables.com)
 
 ---
@@ -18,15 +18,14 @@ The 32-item hard-coded demo catalogue (action figures, vintage toys, comics, spo
 
 HOKO now sells strictly:
 
-- Pokemon TCG sealed: booster boxes, ETBs, packs, Japanese imports
-- Magic: The Gathering sealed
-- One Piece TCG sealed (English + Japanese)
-- Dragon Ball Super TCG sealed
-- Graded slabs: PSA, BGS, CGC only (modern + vintage)
+- Singles across Magic · Pokémon · One Piece · Lorcana · Gundam · Dragon Ball Super (English and Japanese)
+- Japanese sealed booster boxes, imported from Japan by HOKO — dispatched tracked from Victoria within 2–4 business days once it lands
+- Pre-orders on the newest Japanese sets
+- Graded slabs: PSA, BGS, CGC only
 
-Out of scope: loose singles, mystery packs, HGA/GMG slabs.
+Out of scope: repacks and bulk lots, HGA/GMG slabs.
 
-Buyback service: 75-80% FMV for sealed + PSA/BGS/CGC slabs $100+. Bank transfer on the day. Quote within 48 hours.
+Buying: sealed, PSA/BGS/CGC slabs ($100+) and premium singles ($25+), Australia-wide, 70–85% of eBay last-sold. Itemised offer within 1–2 business days.
 
 ---
 
@@ -104,7 +103,6 @@ Or: python -m http.server 8000
 |---------|--------|
 | hokocollectables.com | Primary Shopify storefront |
 | eBay | Search-driven sealed + slab buyers |
-| Whatnot | Planned live-stream box-break shows |
 | Instagram / TikTok | @hokocollectables content |
 | YouTube | @HokoCollectables pack opens |
 

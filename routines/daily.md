@@ -52,7 +52,7 @@ Requires environment variables (set in Claude Code environment config, not in re
 **If any required var is unset:** print `Credentials not configured — skipping.` and move on. Do not fail.
 
 **If set:**
-- Pull Shopify orders from last 24h via Admin API (`/admin/api/2024-10/orders.json?status=any&created_at_min=...`)
+- Pull Shopify orders from last 24h via Admin API (`/admin/api/2025-01/orders.json?status=any&created_at_min=...`)
 - Pull eBay sales from last 24h via Trading API or Sell API
 - Report: total revenue (AUD), unit count, top 5 SKUs by units sold
 - Pull current inventory levels; flag SKUs at 0 or below threshold (default 2 units)

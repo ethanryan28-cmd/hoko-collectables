@@ -8,7 +8,6 @@ Keep announcements genuine and specific — avoid vague celebrations.
 ## When to Use
 
 - Hitting a feedback milestone on eBay (100, 250, 500 positive)
-- First Whatnot show completed
 - First full buyback completed
 - Business anniversary (1 year, 2 year)
 - Major stock milestone (first PSA 10 above $1k sold)
@@ -34,7 +33,7 @@ Do not announce minor milestones or create artificial celebrations.
 
 ```
 Write a milestone announcement post for HOKO Collectables.
-HOKO is a Melbourne-based graded slab and sealed TCG seller.
+HOKO is a Victoria-based graded slab and sealed TCG seller.
 Voice: collector-to-collector, honest, AU English. No hype or empty self-promotion.
 
 Milestone: [DESCRIBE IT]

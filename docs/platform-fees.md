@@ -57,17 +57,14 @@ Net = $200 - $3.80 - $15 = $181.20
 **Shopify vs eBay on same $200 item (absorbing $15 postage):**
 - eBay: $200 - $26.80 - $15 = $158.20 net
 - Shopify: $200 - $3.80 - $15 = $181.20 net
-- **Shopify advantage: +$23/order** — this is why every eBay parcel has a HOKO10 + Shopify URL insert.
+- **Shopify advantage: +$23/order** — this is why every eBay parcel has a WELCOME10 + Shopify URL insert.
 
 ---
 
-## 3. Whatnot
 
 | Fee | Rate | Notes |
 |-----|------|-------|
 | Seller commission | 8% of sale price | Current standard rate |
-| Payment processing | Included in Whatnot fee | No separate processing charge |
-| Shipping | Buyer pays (you set flat rate) | Whatnot generates label — you pay, buyer reimburses |
 
 **Net calculation:**
 ```
@@ -76,16 +73,15 @@ Net = Lot Price x (1 - 0.08) - Postage Cost
 
 **Example — $50 lot:**
 ```
-Sale = $50 | Whatnot fee = $4 | Postage = $10 | Net = $36
+Sale = $50 | live shows fee = $4 | Postage = $10 | Net = $36
 ```
 
-Note: Whatnot is best for moving volume at live events, not maximising per-unit margin. Audience-building compounds over time.
+Note: live shows is best for moving volume at live events, not maximising per-unit margin. Audience-building compounds over time.
 
 ---
 
 ## 4. Margin Cheat Sheet
 
-| Sale Price | eBay Net (fee only, excl. postage) | Shopify Net (fee only, excl. postage) | Whatnot Net (fee only, excl. postage) |
 |-----------|-------------------------------------|---------------------------------------|---------------------------------------|
 | $50 | $43.30 | $49.00 | $46.00 |
 | $100 | $86.60 | $98.25 | $92.00 |
@@ -129,4 +125,3 @@ Target 20% margin = $137.20 x 1.20 = $164.64 → list at $165
 
 - eBay FVF rates: check every 6 months (eBay AU typically adjusts in July).
 - Shopify Payments rates: check in Shopify admin → Settings → Payments.
-- Whatnot commission: check in your Whatnot seller dashboard.

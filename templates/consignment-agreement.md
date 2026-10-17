@@ -8,7 +8,7 @@
 
 **Date:** _______________
 
-**HOKO Collectables** (ABN: 25 308 780 156), Melbourne, Australia ("HOKO")
+**HOKO Collectables** (ABN: 25 308 780 156), Victoria, Australia ("HOKO")
 
 **Consignor:** _______________________________________________
 
@@ -35,7 +35,7 @@
 ## Terms
 
 **1. What HOKO will do**
-HOKO will list the item on its active sales channels (Shopify, eBay, Whatnot) at the agreed list price. HOKO may adjust pricing with consignor approval if market conditions change materially (>10% movement in comparable sold comps).
+HOKO will list the item on its active sales channels (Shopify, eBay, live shows) at the agreed list price. HOKO may adjust pricing with consignor approval if market conditions change materially (>10% movement in comparable sold comps).
 
 **2. Commission**
 HOKO retains 20% of the final sale price (inclusive of any platform fees). Consignor receives 80% of the final sale price. If the item sells below agreed list price (e.g. Best Offer), HOKO will confirm with consignor before accepting.
@@ -78,7 +78,6 @@ Either party may terminate this agreement with 48 hours written notice (email). 
 ## Usage notes (for Ethan — remove before printing)
 
 - **When to use:** A seller contacts you about a collection that fits sealed + slabs and wants top dollar rather than an immediate buyback. Offer consignment as the alternative ("cash now at 75–80%, or wait and get ~80% via consignment").
-- **Don't market consignment yet** — casual cases only. Formal Phase 2 launch (intake form, tracking sheet, marketing) waits until Whatnot + Shopify flow is proven.
 - **One agreement per item** — not per collection. If a seller has 3 slabs, print 3 agreements.
 - **Photo at handover** — always photograph the item together before handing it off. Date the photo.
 - **Tracking:** Log each consignment in a spreadsheet: Consignor / Item / Cert # / List Price / Date In / Date Sold / Sale Price / Commission / Payout Status.

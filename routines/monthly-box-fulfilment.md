@@ -18,7 +18,7 @@ Owner to confirm exact formula, but suggested default:
 
 - 1x featured item: PSA/BGS/CGC graded slab OR sealed promo pack OR high-value single [FILL IN: confirm formula]
 - 3-5x booster packs: mix of Pokemon + one other TCG (One Piece / MTG / DBS) [FILL IN: confirm mix]
-- 1x HOKO insert card (see templates for design brief -- collector tips, buyback info, HOKO10 code)
+- 1x HOKO insert card (see templates for design brief -- collector tips, buyback info, WELCOME10 code)
 - Optional: 1x bonus item at owner discretion (budget permitting)
 
 Target cost per box (inc. packaging): $35-40 AUD

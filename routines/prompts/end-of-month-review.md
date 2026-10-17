@@ -19,7 +19,6 @@ Revenue target for the month: $[amount]
 Actual revenue for the month: $[amount]
   - eBay revenue: $[amount]
   - Shopify revenue: $[amount]
-  - Whatnot revenue: $[amount]
 
 Number of orders shipped: [count]
 Number of buyback transactions completed: [count]

@@ -49,7 +49,6 @@ Print or open in a text editor and check off items as you go.
 - [ ] Post at least 1 TikTok or Reel this week (use `tiktok-content.md` if needed)
 - [ ] Any new arrivals worth a quick photo post?
 - [ ] Check Instagram/TikTok comments — any questions to reply to?
-- [ ] Whatnot show coming up? — check `whatnot-setup-guide.md` if within 7 days
 
 ---
 

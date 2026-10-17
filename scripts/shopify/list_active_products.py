@@ -33,7 +33,7 @@ def get_env():
 def fetch_active_products(store, token, product_type=None):
     """Fetch all active products from Shopify, handling pagination."""
     headers = {'X-Shopify-Access-Token': token}
-    base_url = f'https://{store}/admin/api/2024-01/products.json'
+    base_url = f'https://{store}/admin/api/2025-01/products.json'
     params = {
         'status': 'active',
         'limit': 250,

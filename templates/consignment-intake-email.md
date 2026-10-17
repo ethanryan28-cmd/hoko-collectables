@@ -11,7 +11,7 @@ Hi [Name],
 Thanks for reaching out. HOKO offers two options for sellers — here's how consignment works and what we accept.
 
 **What consignment means:**
-Instead of a cash buyback, HOKO lists your item on our channels (Shopify, eBay, Whatnot) and takes a **20% commission** when it sells. You receive **80% of the sale price**, paid by bank transfer after the sale clears. No upfront cash — you wait for the sale, but you keep more of the value.
+Instead of a cash buyback, HOKO lists your item on our channels (Shopify, eBay, live shows) and takes a **20% commission** when it sells. You receive **80% of the sale price**, paid by bank transfer after the sale clears. No upfront cash — you wait for the sale, but you keep more of the value.
 
 If you want cash today instead, our buyback offer is **75–80% of fair market value**, paid on pickup day.
 
@@ -44,7 +44,7 @@ Consignment agreements are for **90 days**. If unsold after 90 days, you can col
 Send the photo and details and I'll come back to you with a proposed list price and next steps.
 
 — Ethan
-HOKO Collectables — Melbourne
+HOKO Collectables — Victoria
 hokocollectables.com • @hokocollectables
 *Collector first. Seller second.*
 

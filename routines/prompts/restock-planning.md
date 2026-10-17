@@ -15,7 +15,7 @@ Run it monthly or when stock falls below minimum levels.
 | Current market prices | SV ETB ~$70, PSA 10 Charizard ~$300 |
 | Supplier availability | Japan stock confirmed, local TBA |
 | Games in demand | Pokemon, One Piece |
-| Upcoming events | Melbourne Card Show in 3 weeks |
+| Upcoming events | a card show in 3 weeks |
 
 ---
 

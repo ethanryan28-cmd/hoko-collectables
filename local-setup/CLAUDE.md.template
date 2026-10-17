@@ -6,12 +6,12 @@ This is the home base for running HOKO Collectables operations through Claude Co
 
 - **Name:** HOKO Collectables
 - **Site:** https://www.hokocollectables.com (Shopify)
-- **Based:** Melbourne, Australia (est. 2024)
+- **Based:** Victoria, Australia (selling since 2023)
 - **Owner / GitHub:** ethanryan28-cmd
 - **Socials:** Instagram & TikTok — @hokocollectables
 - **Motto:** "Collector first. Seller second."
-- **Positioning:** Collector-run (~20 yrs hobby experience), honest grading (LP means LP), transparent buybacks, careful packing, same-day dispatch.
-- **Active promos:** HOKO10 (10% off first order), free AU shipping over $100, VIP loyalty with restock early-access, 48-hr collection-quote turnaround.
+- **Positioning:** Collector-run (~20 yrs hobby experience), honest grading (LP means LP), transparent buybacks, careful packing, Dispatched within 1–3 business days.
+- **Active promos:** WELCOME10 (10% off first order), free AU shipping over $100, VIP loyalty with restock early-access, 48-hr collection-quote turnaround.
 
 ## Product Domain (TCG sealed + graded — post May 2026 pivot)
 
@@ -30,7 +30,7 @@ HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new single
 **Out of scope (sell-through existing, don't replenish):**
 
 - Loose singles — existing Shopify/eBay stock clears naturally
-- Mystery packs / bulk single lots
+- Repacks / bulk single lots
 - Slabs from unverified graders (HGA, GMG, etc.)
 
 ## Channel Strategy (post sealed-only pivot)
@@ -39,11 +39,9 @@ HOKO is strictly sealed product + PSA/BGS/CGC slabs going forward. No new single
 |---------|------|----------------|
 | **Shopify** | Brand experience + margin | Sealed product + PSA/BGS/CGC slabs. Existing premium singles sell-through, no new singles. |
 | **eBay** | Search-driven acquisition | Sealed + slabs. Captures buyers who search the platform directly. Insert bridge stays. |
-| **Whatnot** | On-demand live | Sealed pack-rip / box-break shows when owner chooses to go live. |
 
-**Bridge plan:** every eBay parcel includes a printed insert with HOKO10 + Shopify URL to convert eBay buyers into Shopify customers.
+**Bridge plan:** every eBay parcel includes a printed insert with WELCOME10 + Shopify URL to convert eBay buyers into Shopify customers.
 
-**Pivot in progress (May 2026):** archiving sub-$50 products from Shopify via `scripts/shopify/archive_cheap_singles.py` (catches most cheap singles + low-end accessories). Premium singles ($50+) stay listed and sell through naturally. Singles inventory moves via the Whatnot liquidation stream + eBay sell-through.
 
 **Primary path is the script:**
 
@@ -92,7 +90,7 @@ When ~30-40% sold through, check current supplier/lot replacement cost. If it ro
 
 ### 2. Price at market, never undercut
 
-HOKO10 is customer acquisition; day-to-day pricing is at market. Moat = honest grading + same-day dispatch + buybacks + trust, not low price. Bigger sellers can always go lower on volume.
+WELCOME10 is customer acquisition; day-to-day pricing is at market. Moat = honest grading + Dispatched within 1–3 business days + buybacks + trust, not low price. Bigger sellers can always go lower on volume.
 
 ### 3. Collection buybacks: rigid, professional, copy-paste
 
@@ -117,7 +115,6 @@ Directional intent: HOKO will offer **consignment** alongside buybacks.
 
 **Casual cases now:** if seller DMs about a collection wanting top dollar, offer consignment as the alternative. Single-page contract per item.
 
-**Formal launch:** Phase 2 (months 4-6) — intake form, tracking system, marketed as a service. Needs Whatnot + Shopify flow proven first.
 
 **Deliverables when launching (not yet written):**
 - Consignment agreement template
@@ -127,7 +124,7 @@ Directional intent: HOKO will offer **consignment** alongside buybacks.
 
 ### 4. Be platform-agnostic — own the brand
 
-eBay/Whatnot/TCGPlayer/conventions are channels, not the business. Every parcel, caption, stream, DM reinforces the brand identity (`hokocollectables.com`, `@hokocollectables`, "Collector first. Seller second.") so the audience follows when channels change.
+eBay/live shows/TCGPlayer/conventions are channels, not the business. Every parcel, caption, stream, DM reinforces the brand identity (`hokocollectables.com`, `@hokocollectables`, "Collector first. Seller second.") so the audience follows when channels change.
 
 ## Tooling
 
@@ -188,7 +185,7 @@ Propose a balanced pillar mix for the week, ask which pillar today belongs to, t
 **Generate:**
 1. **Title** — max 80 chars, AU TCG search terms, no ALL CAPS / no emojis
 2. **Item specifics** — Brand, Set, Card Number, Card Name, Rarity, Language, Condition, Graded, Year, Features
-3. **Description** — one-line hook, bullet list (item / condition honest / packaging), trust block *"Collector-run from Melbourne. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*, cross-sell *"Browse our full range and save 10% on your first order at hokocollectables.com with code HOKO10."*
+3. **Description** — one-line hook, bullet list (item / condition honest / packaging), trust block *"Collector-run from Victoria. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*, cross-sell *"Browse our full range and save 10% on your first order at hokocollectables.com with code WELCOME10."*
 4. Suggested eBay AU category path
 5. Suggested price logic if not pinned (sold-comp reasoning)
 
@@ -199,7 +196,7 @@ Propose a balanced pillar mix for the week, ask which pillar today belongs to, t
 **Generate:**
 - Title, meta description (~155 chars)
 - 3-paragraph description: (1) the set + why it matters, (2) what's inside, (3) chase cards + why they matter
-- Bullet block: same-day dispatch if before 2pm AEST, padded packaging, HOKO trust signals
+- Bullet block: Dispatched within 1–3 business days if before 2pm AEST, padded packaging, HOKO trust signals
 - Shopify tags + collection assignments
 
 ### Social caption (IG / TikTok)
@@ -210,11 +207,10 @@ Propose a balanced pillar mix for the week, ask which pillar today belongs to, t
 1. Hook
 2. Body (2–4 short lines)
 3. CTA
-4. 8–12 hashtags (mix #pokemontcg with #tcgaustralia #melbournecollectors)
+4. 8–12 hashtags (mix #pokemontcg with #tcgaustralia #victoriacollectors)
 
 If TikTok: also produce a 3-beat video script (Hook → Show → Pitch), under 30s.
 
-### Whatnot show prep
 
 **Ask owner for:** date/time AEST, show type, featured products, starting bid baseline, duration.
 
@@ -224,7 +220,7 @@ If TikTok: also produce a 3-beat video script (Hook → Show → Pitch), under 3
 
 **Ask owner for:** channel, buyer type, order value bracket.
 
-**Generate:** Under 80 words. Collector-to-collector. Pitch Shopify especially for eBay buyers. HOKO10 for first-timers. Sign off *"— Ethan, HOKO Collectables, Melbourne"*. Suggest UTM-tracked QR target.
+**Generate:** Under 80 words. Collector-to-collector. Pitch Shopify especially for eBay buyers. WELCOME10 for first-timers. Sign off *"— Ethan, HOKO Collectables, Victoria"*. Suggest UTM-tracked QR target.
 
 ---
 
@@ -233,7 +229,6 @@ If TikTok: also produce a 3-beat video script (Hook → Show → Pitch), under 3
 When owner dumps a raw voice transcript (Whisper Flow / phone dictation / iOS native):
 
 1. **Extract, don't invent.** Pull only what he said.
-2. **Categorise** into: listings, social, Whatnot prep, customer messages, pricing decisions, restock notes, to-dos, strategic thoughts.
 3. **Produce structured output** per bucket, using Reference Prompts as templates.
 4. **Use `[FILL IN: ...]` placeholders** for missing info — never block on minor details.
 5. **End with a tight to-do list** of what to review.

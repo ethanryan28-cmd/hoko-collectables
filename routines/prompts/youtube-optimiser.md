@@ -42,7 +42,7 @@ Line 6+: Links
 - Instagram: @hokocollectables
 - TikTok: @hokocollectables
 - Sell your collection / buyback: hokocollectables.com or DM
-- Use code HOKO10 for 10% off your first Shopify order
+- Use code WELCOME10 for 10% off your first Shopify order
 Timestamps: add if video is over 3 minutes (owner fills in)
 
 ### 3. Tags (15-20)
@@ -67,6 +67,6 @@ Mix of:
 For each existing video, flag as OK / Needs update / Missing entirely:
 - Is title searchable? (set name + Australia + year)
 - Does description have timestamps?
-- Does it have shop link and HOKO10 code?
+- Does it have shop link and WELCOME10 code?
 - Are tags present and relevant?
 - Does thumbnail have text overlay with set name?

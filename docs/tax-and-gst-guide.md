@@ -83,14 +83,12 @@ The ATO requires you to keep business records for **5 years** from when you lodg
 
 **What to keep for HOKO:**
 - All purchase invoices (supplier invoices, eBay purchase history, grading receipts)
-- All sales records (eBay/Shopify/Whatnot payout reports)
 - Postage receipts (Australia Post receipts or MyPost Business statements)
 - Bank statements showing business transactions
 - Buyback records (what you paid, to whom, for what)
 - Consignment records (if Phase 2 is active)
 
 **Recommended system:**
-- Export monthly payout reports from eBay, Shopify, and Whatnot
 - Save all purchase invoices as PDFs in a folder by month
 - Use a simple spreadsheet (or Xero/MYOB) to log income and expenses
 - Reconcile against bank statement monthly
@@ -138,7 +136,6 @@ HOKO Collectables is currently operating as a sole trader (assumed). Key points:
 
 - [ ] Export eBay monthly payout summary
 - [ ] Export Shopify monthly payout summary
-- [ ] Export Whatnot show payment records
 - [ ] Log all stock purchases with supplier name, amount, and whether GST was charged
 - [ ] Log all business expenses (postage, fees, supplies)
 - [ ] File receipts (paper or PDF)
@@ -148,7 +145,6 @@ HOKO Collectables is currently operating as a sole trader (assumed). Key points:
 
 ## Practical checklist — quarterly (BAS time)
 
-- [ ] Total all sales for the quarter (eBay + Shopify + Whatnot + any cash sales)
 - [ ] Calculate GST collected (total sales x 1/11 if GST-registered)
 - [ ] Total all GST-eligible purchases for the quarter
 - [ ] Calculate GST credits (sum of GST amounts on valid tax invoices)
@@ -176,5 +172,4 @@ Get an accountant (or at minimum a bookkeeper) when:
 
 ## Related files
 
-- `docs/platform-fees.md` — eBay/Shopify/Whatnot fee tables and net margin calculator
 - `routines/prompts/end-of-month-review.md` — monthly financial summary (feeds into BAS records)

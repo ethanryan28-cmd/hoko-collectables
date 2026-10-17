@@ -29,7 +29,7 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 STORE_URL = os.getenv("SHOPIFY_STORE_URL", "hoko-collectables.myshopify.com")
 API_TOKEN = os.getenv("SHOPIFY_API_TOKEN", "")
-API_VERSION = "2024-01"
+API_VERSION = "2025-01"
 DEFAULT_CSV_OUT = f"inventory-check-{datetime.now().strftime('%Y%m%d')}.csv"
 
 

@@ -32,7 +32,7 @@ from time import sleep
 # ---------------------------------------------------------------------------
 STORE_URL = os.getenv("SHOPIFY_STORE_URL", "hoko-collectables.myshopify.com")
 API_TOKEN = os.getenv("SHOPIFY_API_TOKEN", "")
-API_VERSION = "2024-01"
+API_VERSION = "2025-01"
 MIN_PRICE = 1.00   # Safety floor — reject updates below this price
 MAX_PRICE = 9999.00  # Safety ceiling — reject updates above this price
 RATE_LIMIT_DELAY = 0.5  # Seconds between API calls (stay under Shopify rate limit)

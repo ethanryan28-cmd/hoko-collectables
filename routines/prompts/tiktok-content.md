@@ -29,7 +29,6 @@ Choose one:
 | New stock haul | Spread new arrivals on table, show each one |
 | Price check | Show current market price on screen + comment |
 | Card story | Brief history or context about a specific card or set |
-| Show recap | Highlights from a Whatnot show or card fair |
 | Day in the life | Behind-the-scenes of running HOKO |
 | Hot take | Opinion piece — e.g. 'you're buying the wrong slabs' |
 | Tutorial | How to check a PSA cert / how to grade your cards |

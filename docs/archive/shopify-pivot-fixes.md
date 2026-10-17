@@ -43,14 +43,14 @@ Site shows both "$50" and "$100" as free-shipping threshold depending where you 
 ## 4. Rewrite hero subheadline
 
 **Current:**
-> Pokemon, MTG, One Piece & Japanese Sealed. Honestly graded, packed properly, shipped tracked from Melbourne.
+> Pokemon, MTG, One Piece & Japanese Sealed. Honestly graded, packed properly, shipped tracked from Victoria.
 
 Problem: "sealed" buried at end, "graded" reads as singles condition.
 
 **New:**
-> Sealed boxes, ETBs & graded slabs. Pokémon, MTG, One Piece, Japanese imports. Honest grading. Same-day dispatch from Melbourne.
+> Sealed boxes, ETBs & graded slabs. Pokémon, MTG, One Piece, Japanese imports. Honest grading. Dispatched within 1–3 business days from Victoria.
 
-- [ ] Voice: *"Update the homepage hero subheadline to: 'Sealed boxes, ETBs & graded slabs. Pokémon, MTG, One Piece, Japanese imports. Honest grading. Same-day dispatch from Melbourne.'"*
+- [ ] Voice: *"Update the homepage hero subheadline to: 'Sealed boxes, ETBs & graded slabs. Pokémon, MTG, One Piece, Japanese imports. Honest grading. Dispatched within 1–3 business days from Victoria.'"*
 
 ---
 
@@ -114,4 +114,4 @@ Bigger lifts — *not* required for the pivot, do later when working capital is 
 - Founder story page
 - Structured buyback intake form (replacing free-text "Sell Your Cards" form, mirroring `templates/collection-buyback-intake.md`)
 - **Consignment intake page** (Phase 2 — when the consignment service formally launches)
-- Sticky HOKO10 banner (currently only in footer signup)
+- Sticky WELCOME10 banner (currently only in footer signup)

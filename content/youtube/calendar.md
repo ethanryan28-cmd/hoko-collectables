@@ -4,7 +4,7 @@ One post per day, queue-ordered: `run.py publish` posts the first `queued` row d
 so a missed day rolls forward. Rows with `pin = yes` are fixed beats and wait for their date.
 Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR, Terastal, newest One Piece) take 3 of every 4 sealed slots; older sets fill the rest. OOS-SUPPLIER boxes are left out.
 
-- **Christmas cutoff (sealed imports):** order by **Monday 30 November 2026** — see CUTOFF.md
+- **Christmas cutoff (sealed imports):** order by **Monday 7 December 2026** — see CUTOFF.md
 - **BF:** list opens 1 Nov · countdown 20 / 24 / 26 Nov · live 27 Nov (free AU post on every sealed box 27–30 Nov)
 - **TikTok** is manual — `publish` writes TODAY.md with the reel + caption.
 - `blocked:draft-product` = the Shopify product is still a draft (no public page to link). Publish it in Shopify,
@@ -53,14 +53,14 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-11-20 | **BF countdown — 7 days** · Abyss Eye (M5) · no shrink $120 | reels/beats/2026-11-20.mp4 | captions/2026-11-20.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-21 | **Roundup: One Piece JP boxes in stock right now** | reels/roundups/one-piece.mp4 | captions/2026-11-21.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-22 | Detective Pikachu 098/SVP Black Star Promo BGS 9 $475 · h1 | reels/slab/10655248613654/h1.mp4 | captions/2026-11-22.txt | IG, YT, TT(manual) | queued |  |
-| 2026-11-23 | **Christmas cutoff reel — order sealed by Mon 30 Nov** · Nihil Zero (M3) · no shrink $115 | reels/beats/2026-11-23.mp4 | captions/2026-11-23.txt | IG, YT, TT(manual) | queued | yes |
+| 2026-11-23 | Nihil Zero (M3) · no shrink $115 · h2 | reels/sealed/10734773895446/h2.mp4 | captions/2026-11-23.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-24 | **BF countdown — 3 days** · Nihil Zero (M3) $130 | reels/beats/2026-11-24.mp4 | captions/2026-11-24.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-25 | Mega Gengar Starter Deck $70 · h1 | reels/sealed/10734773862678/h1.mp4 | captions/2026-11-25.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-26 | **BF countdown — tomorrow** · Inferno X (M2) $270 | reels/beats/2026-11-26.mp4 | captions/2026-11-26.txt | IG, YT, TT(manual) | blocked:draft-product | yes |
 | 2026-11-27 | **It's live — BF: free AU post on every sealed box 27–30 Nov** · Mega Symphonia (M1S) $165 | reels/beats/2026-11-27.mp4 | captions/2026-11-27.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-28 | **Roundup: Japanese sealed under $200** | reels/roundups/under-200.mp4 | captions/2026-11-28.txt | IG, YT, TT(manual) | queued |  |
-| 2026-11-29 | Mega Brave (M1L) $175 · h2 | reels/sealed/10734773731606/h2.mp4 | captions/2026-11-29.txt | IG, YT, TT(manual) | queued |  |
-| 2026-11-30 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h1 | reels/slab/10655248220438/h1.mp4 | captions/2026-11-30.txt | IG, YT, TT(manual) | queued |  |
+| 2026-11-29 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h1 | reels/slab/10655248220438/h1.mp4 | captions/2026-11-29.txt | IG, YT, TT(manual) | queued |  |
+| 2026-11-30 | **Christmas cutoff reel — order sealed by Mon 7 Dec** · Mega Brave (M1L) $175 | reels/beats/2026-11-30.mp4 | captions/2026-11-30.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-12-01 | **Tip: What "no outer shrink" means** | reels/tips/no-outer-shrink.mp4 | captions/2026-12-01.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-02 | Terastal Festival ex (sv8a) $280 · h1 | reels/sealed/10734779433238/h1.mp4 | captions/2026-12-02.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-03 | VSTAR Universe (s12a) $375 · h2 | reels/sealed/10734779564310/h2.mp4 | captions/2026-12-03.txt | IG, YT, TT(manual) | queued |  |

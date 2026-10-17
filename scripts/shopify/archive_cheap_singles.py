@@ -38,7 +38,7 @@ import time
 import requests
 
 THRESHOLD_AUD = 50.0
-API_VERSION = "2024-10"  # bump to latest Shopify API version when convenient
+API_VERSION = "2025-01"  # bump to latest Shopify API version when convenient
 PAGE_SIZE = 100
 RATE_LIMIT_SLEEP = 0.5
 

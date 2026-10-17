@@ -31,13 +31,13 @@ Each box contains [FILL IN: number] packs of [FILL IN: number] cards. [Optional:
 
 Condition: Factory sealed. [FILL IN: any condition notes.]
 
-We have been collecting for ~20 years and we pack every order like we would want our own collection packed -- double-boxed, bubble wrap, corner protectors. Same-day dispatch for orders placed before 2pm AEST.
+We have been collecting for ~20 years and we pack every order like we would want our own collection packed -- double-boxed, bubble wrap, corner protectors. Dispatched within 1–3 business days for orders placed before 2pm AEST.
 
 Shipping: Free tracked Australia-wide on orders over $100. Express upgrade available at checkout.
 
 Returns: We do not accept returns on opened sealed product. If your order arrives damaged in transit, contact us within 48 hours with photos and we will sort it.
 
-Discount code: First order? Use HOKO10 at checkout for 10% off.
+Discount code: First order? Use WELCOME10 at checkout for 10% off.
 
 ---
 
@@ -46,7 +46,7 @@ Discount code: First order? Use HOKO10 at checkout for 10% off.
 Product title format:
 [Set Name] [Product Type] -- English | [Year]
 
-Example: Pokemon Surging Sparks Elite Trainer Box -- English | 2024
+Example: Pokemon Prismatic Evolutions Elite Trainer Box -- English | 2025
 Example: Magic: The Gathering Final Fantasy Play Booster Box -- English | 2025
 
 Product description:
@@ -62,7 +62,7 @@ Condition: Factory sealed.
 
 Shipping: Free tracked Australia-wide on orders over $100.
 
-New customer? Use HOKO10 for 10% off your first order.
+New customer? Use WELCOME10 for 10% off your first order.
 
 ---
 
@@ -87,7 +87,7 @@ We only buy and sell PSA, BGS, and CGC graded slabs. No HGA, GMG, or unverified 
 
 Shipping: Free tracked Australia-wide on orders over $100. Slabs are packed in a rigid slab mailer inside a reinforced box.
 
-Use HOKO10 for 10% off your first order.
+Use WELCOME10 for 10% off your first order.
 
 ---
 

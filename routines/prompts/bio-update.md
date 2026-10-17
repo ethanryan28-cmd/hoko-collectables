@@ -8,7 +8,6 @@ Run it quarterly or when the business positioning changes significantly.
 ## When to Update Your Bio
 
 - After a major pivot (e.g. May 2026 pivot to sealed + slabs only)
-- When you add or remove a platform (e.g. launching on Whatnot)
 - When your primary offering changes
 - Quarterly audit — is the current bio still accurate?
 
@@ -30,9 +29,8 @@ Run it quarterly or when the business positioning changes significantly.
 |---|---|
 | What HOKO sells | PSA/BGS/CGC graded slabs + sealed TCG |
 | Games covered | Pokemon, MTG, One Piece, Dragon Ball Super |
-| Location | Melbourne, Australia |
+| Location | Victoria, Australia |
 | Key service | Buyback program |
-| Platform links to include | Shopify store, eBay, Whatnot |
 | Platform | Instagram (150 chars) / TikTok (80 chars) / Facebook (255 chars) |
 | Tone | Professional-casual, collector-to-collector |
 
@@ -44,17 +42,17 @@ Run it quarterly or when the business positioning changes significantly.
 Write a social media bio for HOKO Collectables.
 
 About HOKO:
-- Melbourne-based TCG collectables business
+- Victoria-based TCG collectables business
 - Sells PSA, BGS, and CGC graded slabs only (no HGA, GMG, unverified graders)
 - Sells sealed TCG product: Pokemon, MTG, One Piece, Dragon Ball Super
 - Runs a buyback program (buys graded slabs from collectors)
 - Motto: Collector first. Seller second.
-- Founded 2024 by Ethan
+- Selling since 2023 by Ethan
 
 Platform: [INSTAGRAM / TIKTOK / FACEBOOK]
 Character limit: [150 for Instagram / 80 for TikTok / 255 for Facebook]
 
-Additional details to include: [ANY SPECIFIC POINTS — e.g. Whatnot shows, website link]
+Additional details to include: [ANY SPECIFIC POINTS — e.g. live shows shows, website link]
 
 Output:
 1. PRIMARY BIO (within character limit)
@@ -80,13 +78,12 @@ Rules:
 | Instagram | 150 characters | Name field (30 chars) is separate and searchable |
 | TikTok | 80 characters | Keep it punchy — most people read on mobile |
 | Facebook | 255 characters | Page 'short description' |
-| Whatnot | 500 characters | Seller bio on profile page |
 
 ---
 
 ## Notes
 
-- Instagram Name field should include 'Melbourne' and 'TCG' for searchability
+- Instagram Name field should include 'Victoria' and 'TCG' for searchability
 - Link-in-bio should point to Shopify store as primary
 - Use Linktree or similar if you want to link to both Shopify and eBay
 - Update bio simultaneously across all platforms when making changes
