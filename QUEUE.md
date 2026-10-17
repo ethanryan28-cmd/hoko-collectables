@@ -4,7 +4,7 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 
 ## 2026-10-17 · Organic-2: JP-sealed links, channels, social readiness, JAN retry (`claude/organic-2-1017-h3c9kj`)
 - **Status:** built, merged. EB-05 guide → DRAFT pre-order link accepted by Ethan. Report → `REPORT-2026-10-17-organic-2.md`
-- 2026 guide stock list rebuilt from live: 14 Pokémon + 4 One Piece boxes, OP-17/OP-13 out, M6a → product, range $115–$470. JP cards guide: price/pull-rate bullet replaced with the per-box line. Both read back byte-exact.
+- 2026 guide stock list rebuilt from live: 14 Pokémon + 4 One Piece boxes, OP-17/OP-13 out, M6a → product, range $115–$470. JP cards guide: price/pull-rate bullet replaced with the per-box line; the separate pull-rate bullet removed (follow-up). Both read back byte-exact.
 - Dead-link sweep: 40 articles, 3 DRAFT links → 1 left (EB-05, no ACTIVE equivalent). `data/deadlinks-2026-10-17-organic-2.csv`
 - Channels: 20/20 ACTIVE jp-sealed on all 7, no writes. Social: env all MISSING, dry-run 0 invalid, Discord-only test added (44 tests OK). FB12/M7 JAN still blank.
 - **Ethan to do:** social keys + clip render (MANUAL in the report); EB-05 link goes live when the pre-order is published.

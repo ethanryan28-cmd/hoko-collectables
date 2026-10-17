@@ -39,7 +39,7 @@ Everything else in the body is byte-identical: the script asserts that undoing t
 
 Links before → after: 2 → 2 (collection, M1S — both unchanged). Read-back MATCH.
 
-Finding, not actioned (outside "one bullet in, one out"): the same article still says "Pull rates in Japanese sets are often better than English equivalents (you pull chase cards more frequently)" under *Different set structure*. Same unbacked claim the brief removed from the price bullet. Say if you want it gone.
+Follow-up (Ethan, same day): the *Different set structure* bullet "Pull rates in Japanese sets are often better than English equivalents (you pull chase cards more frequently)" was removed. Nothing else changed. Backups `reports/backups/2026-10-17-organic-2-pullrate-before.json` / `-after.json`; read-back MATCH (updatedAt 05:41:30Z).
 
 Files: `scripts/shopify/articles_organic2_2026_10_17.py` (build + check + banned-word assert), backups `reports/backups/2026-10-17-organic-2-articles-before.json` / `-after.json`.
 
@@ -109,7 +109,6 @@ Barcode field on both products: unchanged (empty). Notes appended to both rows o
 
 **Ethan only:**
 - EB-05: publishing the pre-order (15431829848342) is your click. It fixes the last DRAFT link in the EB-05 guide. Price is still the $235 placeholder from the pre-orders run.
-- Optional: drop the "Pull rates in Japanese sets are often better…" bullet from the Japanese cards guide (one line, say so).
 - Social keys. One line per key. Put them in **claude.ai/code → this environment → Environment variables** for cloud-run, and/or Windows *User* environment variables for the PC runner. Never in the repo.
   - `DISCORD_WEBHOOK_PICKUPS`: Discord → HOKO server → #pickups-and-drops → Edit Channel → Integrations → Webhooks → New Webhook → Copy Webhook URL
   - `DISCORD_WEBHOOK_TIKTOK_QUEUE`: same steps on #tiktok-queue
