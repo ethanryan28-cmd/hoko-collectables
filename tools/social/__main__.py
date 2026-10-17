@@ -11,7 +11,8 @@
   dry-run    validate every future payload for every platform → data/social-dryrun.json
   check      queue gate: ≥14 days per platform, no repeats (7 d; hot sets 2 d), hot-set share ≥ target, no banned words / prices
   phone-pack today's tiktok_queue clips + instagram items as markdown for the phone (Victoria day; next day
-             with items if today has none) → stdout + data/phone-pack-log.csv. --date YYYY-MM-DD overrides today
+             with items if today has none) → stdout + data/phone-pack-log.csv. --date YYYY-MM-DD overrides today;
+             --days N adds the next N-1 days with items (default 1)
   render     render any clip the next 14 days need (PC only: ffmpeg + content/youtube deps)
 """
 
@@ -39,6 +40,7 @@ def main(argv=None):
     sub.add_parser('render')
     pp = sub.add_parser('phone-pack')
     pp.add_argument('--date', help='YYYY-MM-DD (default today, Victoria)')
+    pp.add_argument('--days', type=int, default=1, help='print N days with items, starting from day 1 (default 1)')
     cr = sub.add_parser('cloud-run')
     cr.add_argument('--dry-run', action='store_true', help='no renders / uploads / posts; print JSON summary')
     cr.add_argument('--render-limit', type=int, default=None, help='render at most N missing clips this pass')
