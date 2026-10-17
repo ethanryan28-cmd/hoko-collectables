@@ -60,7 +60,7 @@ Run 1's dead-link table (`data/deadlinks-2026-10-17-organic-2.csv`) still holds:
 - `python -m tools.social dry-run`: 0 invalid on all 7 platforms. Valid: discord 14, facebook 29, instagram 29, pinterest 43, tiktok 42, tiktok_queue 14, youtube 29.
 - `python -m tools.social cloud-run --dry-run --no-render`: every platform NOT CONFIGURED, "invalid payloads / rule violations: 0", would_post 0. `data/social-runner.log` restored afterwards, so nothing changed.
 - Discord-only: `NotConfigured.test_discord_only_posts_discord_and_nothing_else` passes. It sets only `DISCORD_WEBHOOK_PICKUPS`, uses a fake HTTP client and no network: Discord posts, everything else stays NOT CONFIGURED.
-- Clips: 49 queued mp4s are gitignored, so they aren't in this container (media missing 29/29/42). cloud-run renders them at run time, and the session-start hook installs the render deps.
+- Clips: 49 queued mp4s are gitignored, so they aren't in this container (media missing 29/29/42). cloud-run renders them at run time, but the 17:12 social cloud-run could not install `piper-tts` (PyPI unreachable), so render on the PC or fix the environment setup script.
 
 ## Step 6 — JAN result
 
