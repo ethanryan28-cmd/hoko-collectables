@@ -462,7 +462,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
     post = 'Tracked post from Victoria' if kind == 'slab' else 'Free AU post on sealed'
     L_tag = text_layer(tag, 46, 120, color=(15, 15, 15), black=True, box=(*GOLD, 255))
     L_hook = text_layer(hook.upper(), 92, 215)
-    L_badge = text_layer(p, 110, 1500, color=GOLD, stroke=12)
+    L_badge = text_layer(p, 110 if kind == 'slab' else 80, 1500, color=GOLD, stroke=12)
     L_sub = text_layer(sub, 50, 1715, black=False, stroke=7)
     L_post = text_layer(post, 46, 250, black=False, box=(0, 0, 0, 190))
     L_body = None

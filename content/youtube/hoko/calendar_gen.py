@@ -103,9 +103,9 @@ TIPS = [
      'If you cannot verify it, walk away.',
      ['Cert checks online', 'Public pop reports', "Can't verify it? Walk away"]),
     ('buyback', 'Selling a collection? Here is how we buy',
-     'Selling a collection? We buy sealed and PSA, BGS or CGC slabs over a hundred dollars. One photo and a list '
+     'Selling a collection? We buy sealed and PSA, BGS or CGC slabs. One photo and a list '
      'gets you a quote in forty eight hours. Link in bio.',
-     ['Sealed + verified slabs $100+', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
+     ['Sealed + PSA / BGS / CGC slabs', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
 ]
 
 
