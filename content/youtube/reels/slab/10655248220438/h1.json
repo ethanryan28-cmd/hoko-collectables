@@ -4,7 +4,7 @@
   "hook_index": 1,
   "hook": "One in stock \u2014 PSA 9 Magikarp, $450",
   "voiceover": "One in stock. PSA 9 Magikarp. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 8.0,
   "url": "https://www.hokocollectables.com/products/magikarp-080-073-art-rare-sv1a-triplet-beat-japanese-pokemon-psa-9",
   "title": "Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese Pokemon PSA 9",

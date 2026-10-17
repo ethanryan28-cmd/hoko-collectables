@@ -38,7 +38,7 @@ Never write: the name of the live-auction app HOKO left in 2026 (the W-word), eB
   - `WELCOME10` — 10% off the discount-eligible collection, once per customer, active
   - `THANKS10` — 10% off the discount-eligible collection, active
   - `BFDROP5` — $5 off Japanese sealed, once per customer, scheduled 27–30 Nov 2026
-  - Black Friday automatics, scheduled 27–30 Nov: 10% off singles under $100 (discount-eligible), free AU postage on orders $100+
+  - Black Friday automatics, scheduled 27–30 Nov: 10% off singles under $100 (discount-eligible), free AU postage on orders $100+ (all products, AU only — re-read 17 Oct 2026; Ethan's ruling is free postage on every Japanese sealed box, no minimum — the automatic is still to be changed to that by Ethan)
   - The old welcome code ending in "10" that package inserts used to carry no longer exists; use `WELCOME10`.
 
 ## Channels

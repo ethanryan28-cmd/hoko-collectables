@@ -1,13 +1,13 @@
 {
-  "product_id": "10734779171094",
+  "product_id": "15417947291926",
   "kind": "sealed",
-  "hook_index": 1,
+  "hook_index": 3,
   "hook": "Why we only buy PSA, BGS and CGC",
   "voiceover": "Why only PSA, BGS and CGC? The cert checks online and the pop reports are public. If you cannot verify it, walk away.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.4,
-  "url": "https://www.hokocollectables.com/products/pokemon-super-electric-breaker-sv8-sealed-japanese-booster-box",
-  "title": "Pokemon Super Electric Breaker (sv8) Sealed Japanese Booster Box",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 11.65,
+  "url": "https://www.hokocollectables.com/products/pre-order-dragon-ball-super-reach-the-god-fb12-sealed-japanese-booster-box",
+  "title": "[PRE-ORDER] Dragon Ball Super Reach the God (FB12) Sealed Japanese Booster Box",
   "reel": "reels/tips/verified-graders.mp4",
   "words": 23
 }

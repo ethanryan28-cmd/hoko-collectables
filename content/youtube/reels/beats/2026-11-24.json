@@ -1,13 +1,13 @@
 {
-  "product_id": "10734773862678",
+  "product_id": "10734773633302",
   "kind": "sealed",
-  "hook_index": 2,
+  "hook_index": 1,
   "hook": "Black Friday: 3 days",
   "voiceover": "Black Friday, 3 days. Free postage on every sealed box, the twenty seventh to the thirtieth of November. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.05,
-  "url": "https://www.hokocollectables.com/products/pokemon-mega-gengar-starter-deck-japanese",
-  "title": "Pokemon Mega Gengar Starter Deck \u2014 Japanese",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 10.74,
+  "url": "https://www.hokocollectables.com/products/pokemon-heat-wave-arena-sv9a-sealed-japanese-booster-box",
+  "title": "Pokemon Heat Wave Arena (sv9a) Sealed Japanese Booster Box",
   "reel": "reels/beats/2026-11-24.mp4",
   "words": 21
 }

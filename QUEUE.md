@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF render: 38 clips in en-AU, queue check, BF automatic re-read (`claude/bf-render-1017-idka4q`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-bf-render.md`
+- Cloud run, PyPI reachable this time: edge-tts William worked through the proxy CA (session-only sitecustomize, no repo code change). 38/38 clips rendered + ffprobe PASS (1080×1920, audio, 8–20 s, no "$" spoken): EB-05/M7/FB12 h3 (`stale_render` cleared), the 27 the queue listed missing, 6 BF beats (text unchanged, none said $100). mp4s are gitignored, so only sidecars are committed.
+- Queue: topup kept all 165 items, check PASS, 60% hot on every platform, 0 invalid, 0 missing media, all platforms NOT CONFIGURED; 47 tests OK. `source.csv` not refreshed (no token): committed rows already right.
+- BF free-shipping automatic read live: still "$100+, all products, AU". CLAUDE.md line now says so explicitly.
+- **Ethan to do:** change that automatic to Japanese Sealed / no minimum; PC: `run.py source` + `tools.social render` (mp4s are local-only); decide on the 3-line `tts.py` proxy fix.
+
 ## 2026-10-17 · BF lock-in: M7 + FB12 live, newest-set links, BF page/collection, social queue 60% newest (`claude/bf-lockin-1017`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-lockin.md`
 - M7 + FB12 ACTIVE, CONTINUE, 7/7 channels. FB12 = Bandai JP pack art; **M7 = HOKO placeholder card (no publisher art exists yet)** — swap when pokemon-card.com publishes. 24/24 ACTIVE jp-sealed on all 7 channels.

@@ -4,7 +4,7 @@
   "hook_index": 1,
   "hook": "One in stock \u2014 PSA 10 Pikachu, $599",
   "voiceover": "One in stock. PSA 10 Pikachu. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
   "duration": 8.0,
   "url": "https://www.hokocollectables.com/products/pikachu-27-black-star-promo-pokemon-psa-10-gem-mint",
   "title": "Pikachu 27 Black Star Promo Pokemon PSA 10 GEM MINT",
