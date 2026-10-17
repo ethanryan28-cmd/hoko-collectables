@@ -11,6 +11,16 @@ import sys
 from pathlib import Path
 
 EDGE_VOICE = os.environ.get('HOKO_TTS_VOICE', 'en-AU-WilliamMultilingualNeural')
+PIPER_VOICE = 'en_GB-alan-medium'                       # the fallback voice (same one the PC renders used)
+PIPER_DEFAULT = Path(__file__).resolve().parent.parent / '.cache' / 'piper' / f'{PIPER_VOICE}.onnx'
+
+
+def piper_model():
+    """HOKO_PIPER_MODEL if set, else the default download location (content/youtube/.cache/piper/)."""
+    m = os.environ.get('HOKO_PIPER_MODEL')
+    if m and Path(m).exists():
+        return Path(m)
+    return PIPER_DEFAULT if PIPER_DEFAULT.exists() else None
 
 
 def _edge(text, out_mp3):
@@ -24,10 +34,10 @@ def _edge(text, out_mp3):
 
 
 def _piper(text, out_wav):
-    model = os.environ.get('HOKO_PIPER_MODEL')
-    if not model or not Path(model).exists():
-        raise RuntimeError('HOKO_PIPER_MODEL not set / missing')
-    subprocess.run([sys.executable, '-m', 'piper', '-m', model, '-f', str(out_wav), '--length-scale', '0.92'],
+    model = piper_model()
+    if not model:
+        raise RuntimeError('HOKO_PIPER_MODEL not set / missing (cloud-run downloads en_GB-alan-medium to .cache/piper)')
+    subprocess.run([sys.executable, '-m', 'piper', '-m', str(model), '-f', str(out_wav), '--length-scale', '0.92'],
                    input=text, text=True, check=True, capture_output=True)
 
 
@@ -47,7 +57,7 @@ def synth(text, out_base):
     if engine is None:
         try:
             _piper(text, tmp)
-            engine = 'piper:' + Path(os.environ['HOKO_PIPER_MODEL']).stem
+            engine = 'piper:' + piper_model().stem
         except Exception as e:
             errors.append(f'piper: {e}')
             raise RuntimeError('No TTS engine worked — ' + ' | '.join(errors))

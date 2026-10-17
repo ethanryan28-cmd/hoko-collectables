@@ -11,6 +11,7 @@ QUEUE_PATH = CONTENT / 'social-queue.json'
 LOG_PATH = DATA / 'social-post-log.csv'
 MEDIA_CACHE_PATH = DATA / 'social-media-cache.json'
 DRYRUN_PATH = DATA / 'social-dryrun.json'
+RUNNER_LOG_PATH = DATA / 'social-runner.log'     # cloud-run transcript (committed with the CSV)
 
 TZ_NAME = 'Australia/Melbourne'
 SITE = 'https://www.hokocollectables.com'
@@ -47,7 +48,10 @@ NEEDS = {
     'discord': ['DISCORD_WEBHOOK_PICKUPS'],
     'tiktok_queue': ['DISCORD_WEBHOOK_TIKTOK_QUEUE'],
     'tiktok': ['TIKTOK_CLIENT_KEY', 'TIKTOK_CLIENT_SECRET', 'TIKTOK_REFRESH_TOKEN', 'SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],
+    'shopify_files': ['SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],     # hosting clips for IG / FB / TikTok
 }
+# order used by `env` and cloud-run. tiktok = direct API (needs TIKTOK_ENABLED=true); tiktok_queue = phone pack via Discord
+PLATFORM_ORDER = ['instagram', 'facebook', 'youtube', 'pinterest', 'discord', 'tiktok_queue', 'tiktok', 'shopify_files']
 
 
 def get(key, default=None):
@@ -60,7 +64,20 @@ def tiktok_enabled():
 
 
 def missing(platform):
-    return [k for k in NEEDS[platform] if not get(k)]
+    """Env keys this platform still needs. For the TikTok API, TIKTOK_ENABLED=true counts as a key."""
+    out = [k for k in NEEDS[platform] if not get(k)]
+    if platform == 'tiktok' and not tiktok_enabled():
+        out.insert(0, 'TIKTOK_ENABLED')
+    return out
+
+
+def platform_lines():
+    """One line per platform: '<platform>: set' or '<platform>: MISSING A, B'. Never a value."""
+    out = []
+    for p in PLATFORM_ORDER:
+        m = missing(p)
+        out.append(f'{p}: set' if not m else f'{p}: MISSING {", ".join(m)}')
+    return out
 
 
 def env_report():

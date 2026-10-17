@@ -65,11 +65,12 @@ def state(log_rows):
 
 # ------------------------------------------------------------------ timing
 
-def action(item, now):
-    """'send' | 'send-late' | 'wait' | 'stale' for this item at `now`."""
+def action(item, now, grace=LATE_GRACE):
+    """'send' | 'send-late' | 'wait' | 'stale' for this item at `now`. `grace` = how long after its slot an
+    item may still go out (6 h on the PC runner, 7 h for cloud-run's late-post window)."""
     slot = parse(item['slot'])
     p = item['platform']
-    if now > slot + LATE_GRACE:
+    if now > slot + grace:
         return 'stale'
     if p == 'youtube':
         if slot - now > YT_HORIZON:
@@ -125,7 +126,7 @@ def configured(platform):
 
 # ------------------------------------------------------------------ run
 
-def run(now=None, http=None, queue=None, log_path=None, out=print):
+def run(now=None, http=None, queue=None, log_path=None, out=print, grace=LATE_GRACE):
     now = now or now_tz()
     http = http or Http()
     q = queue or load_queue()
@@ -142,13 +143,13 @@ def run(now=None, http=None, queue=None, log_path=None, out=print):
         last, attempts = st.get(it['id'], ('', 0))
         if last in ('OK', 'FAIL', 'SKIP'):
             continue
-        act = action(it, now)
+        act = action(it, now, grace)
         if act == 'wait':
             continue
         base = {'ts': now.isoformat(timespec='seconds'), 'item_id': it['id'], 'platform': p, 'slot': it['slot'],
                 'asset_id': it.get('asset_id') or ','.join(c['asset_id'] for c in it.get('clips', []))}
         if act == 'stale':
-            append_log(dict(base, status='SKIP', error='stale: slot passed by more than 6h'), log_path)
+            append_log(dict(base, status='SKIP', error=f'stale: slot passed by more than {grace.total_seconds() / 3600:g}h'), log_path)
             summary[p] = summary.get(p, []) + ['SKIP']
             continue
         if not configured(p):

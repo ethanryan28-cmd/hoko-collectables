@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Consolidated run: JP sealed routing, social cloud-run, store hygiene (`claude/consolidated-1017`)
+- **Status:** built. Report → `REPORT-2026-10-17-consolidated.md`
+- Routing: M5 sealed + OP-16 back ACTIVE (CONTINUE), 15 boxes tagged `route:kanade-single` / `route:urara-batch` + metafield `hoko.supplier`, 3 raise-to-floor prices, `japan-direct-sealed` re-sorted, BF page tiles, `data/routing-2026-10-17.csv`, `hot_sets` updated. eBay sold-count trim NOT CHECKED (eBay 403 from the cloud) — no in-stock box drafted.
+- Social: `python -m tools.social cloud-run` + `env`, README Cloud section, 43 tests, queue topped to 15 days/platform; run log + CSV now committed.
+- Hygiene: policy diffs + paste blocks (connector lacks `write_legal_policies`), discount-eligible clean, 0 customer orders stuck, abandoned checkouts read.
+- **Ethan to do:** see MANUAL in the report (env vars + trigger, paste policies, eBay trim, M6a/OP-17 pricing)
+
 ## 2026-10-17 · Finish run: CLAUDE.md canon rewrite, store drift gate, pre-order gates, 14-day cutoff (`claude/finish-1017`)
 - **Status:** built. Report → `REPORT-2026-10-17-finish.md`
 - CLAUDE.md rewritten to canon; dead live-show / sealed-only docs → `docs/archive/`; repo banned-word gate 0; live-store drift scan + fixes; discounts read-only; M7 / OP-18 / FB12 kept DRAFT (not on the Urara list yet); lead time 21 → 14 days, cutoff Mon 7 Dec; `reports/shopify-inventory-2026-10-17.csv`

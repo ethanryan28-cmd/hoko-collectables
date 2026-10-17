@@ -1,6 +1,10 @@
 """python -m tools.social <command>
 
-  env        list every env key the poster uses: set / MISSING (values are never printed)
+  env        one line per platform: '<platform>: set' or '<platform>: MISSING KEY, KEY' (values never printed)
+             --keys lists every key instead
+  cloud-run  one unattended pass from Claude Code web: env → topup → render missing clips (fallback voice) →
+             host → post with a 7 h late window → data/social-post-log.csv + data/social-runner.log
+             --dry-run prints a JSON summary and makes no renders / uploads / posts
   build      rebuild content/social-queue.json from today, 14 days ahead (keeps nothing)
   topup      keep today+ items, append days up to 14 ahead (daily "HOKO Social Topup", 23:00)
   run        post / schedule what is due (every 15 min, "HOKO Social Runner"); --dry-run = validate only
@@ -20,7 +24,8 @@ from . import config as C
 def main(argv=None):
     ap = argparse.ArgumentParser(prog='python -m tools.social')
     sub = ap.add_subparsers(dest='cmd', required=True)
-    sub.add_parser('env')
+    e = sub.add_parser('env')
+    e.add_argument('--keys', action='store_true', help='one line per env key instead of per platform')
     b = sub.add_parser('build')
     b.add_argument('--start', help='YYYY-MM-DD (default today, Victoria)')
     t = sub.add_parser('topup')
@@ -30,11 +35,18 @@ def main(argv=None):
     sub.add_parser('dry-run')
     sub.add_parser('check')
     sub.add_parser('render')
+    cr = sub.add_parser('cloud-run')
+    cr.add_argument('--dry-run', action='store_true', help='no renders / uploads / posts; print JSON summary')
+    cr.add_argument('--render-limit', type=int, default=None, help='render at most N missing clips this pass')
+    cr.add_argument('--no-render', action='store_true', help='skip rendering (report missing clips only)')
     a = ap.parse_args(argv)
 
     if a.cmd == 'env':
-        print('\n'.join(C.env_report()))
+        print('\n'.join(C.env_report() if a.keys else C.platform_lines()))
         return 0
+    if a.cmd == 'cloud-run':
+        from . import cloud_run
+        return cloud_run.main(a)
     from . import queue_builder as qb
     from .schedule import now
     today = now().date()
