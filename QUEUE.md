@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF media 2: live William gate, 71 clips rendered + committed, merged (`claude/bf-media-1017`)
+- **Status:** built, merged. Reports → `REPORT-2026-10-17-bf-media.md` (tts fix, stopped at gate) + `REPORT-2026-10-17-bf-media-2.md` (this run)
+- Network open this session (PyPI 200, Bing reachable). The branch's `tts.py` proxy-CA fix rendered live (`edge-tts:en-AU-WilliamMultilingualNeural`, verification on, no sitecustomize). 54 tests OK.
+- 71/71 mp4s rendered in William (45 sealed incl. EB-05/M7/FB12 h3 forced, 12 slab, 4 tips, 4 roundups, 6 BF beats). ffprobe PASS 1080×1920, audio, 8–20 s, no "$" spoken. **86.5 MB committed**, mp4s now in git. 30 sidecars piper → William.
+- Queue: check PASS 60% hot everywhere, dry-run 0 invalid / **0 missing media** (was 30), all platforms NOT CONFIGURED.
+- **Ethan to do:** BF free-shipping automatic edit; platform keys; env setup line + network allowlist (in the report MANUAL).
+
 ## 2026-10-17 · BF media: tts.py proxy-CA fix, un-ignore reels mp4s, re-render + keep (`claude/bf-media-1017`)
 - **Status:** built, **NOT merged** — stopped at the Step 1 live-render gate. Report → `REPORT-2026-10-17-bf-media.md`
 - Cloud run with every render host policy-denied (403 at the proxy): PyPI, `speech.platform.bing.com`, `huggingface.co`. No edge-tts / piper / faster-whisper installable, so **0 clips rendered, 0 MB committed**; the 38 bf-render mp4s are still gone.
