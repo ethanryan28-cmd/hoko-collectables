@@ -38,7 +38,7 @@ from datetime import datetime
 
 STORE = os.environ.get("SHOPIFY_STORE", "")
 TOKEN = os.environ.get("SHOPIFY_ADMIN_TOKEN", "")
-API_VERSION = "2024-01"
+API_VERSION = "2025-01"
 
 def api_url(endpoint: str) -> str:
     return f"https://{STORE}/admin/api/{API_VERSION}/{endpoint}"

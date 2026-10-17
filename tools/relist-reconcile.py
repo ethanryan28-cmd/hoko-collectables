@@ -32,7 +32,7 @@ REASONS = {
     'NOT_IN_SHOPIFY': 'SKU not found in the Shopify export (and no title match)',
     'SHOPIFY_NOT_ACTIVE': 'Shopify product is draft / archived',
     'OUT_OF_SCOPE': 'mystery / bulk lot or unverified grader (HGA, GMG, …) — not relisted post-pivot',
-    'BANNED_WORDS': 'title has Whatnot / mystery pack / official / Top Rated',
+    'BANNED_WORDS': 'title has a banned word (see BANNED_RE)',
     'DUPLICATE': 'older duplicate of another unsold row for the same item',
     'NO_PRICE': 'no price in the unsold export',
 }

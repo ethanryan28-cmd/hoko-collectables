@@ -24,7 +24,7 @@ def get_env():
 
 def fetch_orders(store, token, min_dt=None, max_dt=None):
     headers = {"X-Shopify-Access-Token": token}
-    url = f"https://{store}/admin/api/2024-01/orders.json"
+    url = f"https://{store}/admin/api/2025-01/orders.json"
     params = {"status": "any", "fulfillment_status": "shipped", "limit": 250}
     if min_dt: params["created_at_min"] = min_dt
     if max_dt: params["created_at_max"] = max_dt

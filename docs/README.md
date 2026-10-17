@@ -17,7 +17,6 @@ For AI prompt templates, see `routines/prompts/README.md`.
 | `photography-guide.md` | Slab and sealed photo standards, equipment, file naming | Reference when photographing new stock |
 | `supplier-guide.md` | Sourcing principles, supplier types, red flags, authenticity checks | Reference when evaluating a new supplier |
 | `tax-and-gst-guide.md` | GST registration, BAS dates, deductibles, record-keeping | Review quarterly; share relevant sections with accountant |
-| `whatnot-setup-guide.md` | Whatnot seller account setup and show guide | Reference before your first show or when onboarding to Whatnot |
 
 ---
 
@@ -25,7 +24,6 @@ For AI prompt templates, see `routines/prompts/README.md`.
 
 **Before a listing run:** Check `photography-guide.md` for photo standards.
 
-**Before a Whatnot show:** Run through `whatnot-setup-guide.md` — lot naming, show config, post-show steps.
 
 **When a buyer wants to sell:** Direct them to the buyback process in `buyback-policy.md`.
 

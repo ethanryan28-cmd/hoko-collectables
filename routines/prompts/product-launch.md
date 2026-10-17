@@ -23,7 +23,7 @@ Works for new slab arrivals, sealed product restocks, or new lines.
 ## The Prompt
 
 ```
-You are writing a product launch post for HOKO Collectables, a Melbourne-based
+You are writing a product launch post for HOKO Collectables, a Victoria-based
 graded slab and sealed TCG seller. Voice: collector-to-collector, honest, AU English.
 No hype, no made-up scarcity, no 'grab yours before it's gone.'
 
@@ -80,6 +80,6 @@ For slab posts:
 
 - Made-up demand signals ('this one won't last')
 - Fabricated comparisons ('similar sold for $X')
-- HOKO10 discount code in product posts
+- WELCOME10 discount code in product posts
 - Consignment mentions
 - Prices in USD (always AUD unless explicitly international listing)

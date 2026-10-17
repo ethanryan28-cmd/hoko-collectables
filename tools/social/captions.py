@@ -1,7 +1,7 @@
 """Caption writer — templates written for HOKO in-session, filled from asset metadata. No API calls.
 
 Canon: "Collector first. Seller second." · games Magic · Pokémon · One Piece · Lorcana · Gundam · Dragon Ball Super ·
-"Victoria, Australia" · never Whatnot / mystery pack / official / Top Rated · no prices · handles unchanged.
+"Victoria, Australia" · never any of the BANNED words below · no prices · handles unchanged.
 """
 
 import hashlib

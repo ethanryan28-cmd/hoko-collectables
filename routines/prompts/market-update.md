@@ -40,7 +40,7 @@ Do not post market updates as filler. Only post when there's something genuinely
 
 ```
 You are writing a short market update post for HOKO Collectables' social media.
-HOKO is a Melbourne-based graded slab and sealed TCG seller. Voice: collector-to-collector,
+HOKO is a Victoria-based graded slab and sealed TCG seller. Voice: collector-to-collector,
 honest, AU English. Never hype, never pump.
 
 Write a market update post based on the following:

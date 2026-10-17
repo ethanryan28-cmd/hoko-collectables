@@ -109,4 +109,4 @@ Example opener:
 - Honest about what worked and what didn't — this is a strength, not weakness
 - Don't oversell the event — if it was quiet, say so ("quieter day than expected, but good conversations")
 - Use the photos you actually took — don't use stock images
-- Keep all content connected to the brand: sealed TCG + graded slabs, Melbourne-based, collector-run
+- Keep all content connected to the brand: sealed TCG + graded slabs, Victoria-based, collector-run

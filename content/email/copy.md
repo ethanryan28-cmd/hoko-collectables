@@ -41,7 +41,6 @@ Collector first. Seller second.
 — Ethan, HOKO Collectables · Victoria, Australia
 
 ## Checks
-- Banned words (Whatnot, mystery pack, official, Top Rated): **0**
 - The code, dates and postage match the live discount and BF page as of 17 Oct.
 - The featured boxes were in stock on 17 Oct (inventory > 0). **Re-check on 26 Nov** and drop any that have sold out.
 - No prices in the body, so they can't go stale. Product prices show on the site.

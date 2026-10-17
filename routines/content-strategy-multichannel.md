@@ -1,6 +1,6 @@
 # HOKO content strategy — multi-channel phased plan
 
-Long-game content plan across IG, TikTok, YouTube, Whatnot. **Don't launch everything at once** — sequence matters more than scope. Each phase has graduation criteria; don't move to the next until you hit them.
+Long-game content plan across IG, TikTok, YouTube, live shows. **Don't launch everything at once** — sequence matters more than scope. Each phase has graduation criteria; don't move to the next until you hit them.
 
 This sits on top of the daily content loop already in CLAUDE.md (3 photos + voice-dump → 5 pillars). That's always-on. This doc is the *bigger picture* for new formats and channels.
 
@@ -37,7 +37,7 @@ Your signature format. Protect it.
 - **One video per collection** that comes through buyback
 - **Format:** authority hook (1 sec) → "this collection came in today" (overview shot, 3 sec) → walkthrough of valuation logic (15-30 sec — show 2-3 highlight pieces, talk through how you priced them) → final offer + outcome ("paid $X, here's the breakdown") → CTA ("got a collection? hokocollectables.com/sell")
 - **Why this is the moat:** drives buyback inquiries directly, educates viewers on real card values, builds trust through transparency, and *no other AU seller is doing this on video*
-- **Hashtags:** `#pokemontcg #cardvalues #tcgaustralia #pokemoncards #collectionbuyback #melbournecollectors`
+- **Hashtags:** `#pokemontcg #cardvalues #tcgaustralia #pokemoncards #collectionbuyback #victoriacollectors`
 - **TikTok hook (first 3 sec spoken):** "This collection just walked through my door — let me show you what it's actually worth..." / "Guy DM'd me about selling his binder. Here's what I paid and why..."
 - **Confidentiality:** anonymise the seller (no names, no faces, no obvious location detail). Get verbal permission to film the collection before recording.
 - Cross-post to IG Reels + YouTube Shorts only after a video does numbers
@@ -49,17 +49,14 @@ Your signature format. Protect it.
 - Format: react → explain → opinion, 30-60 sec
 - Open with the authority hook for first-time viewers
 
-### Monthly Whatnot show
 
 - Start with one show per month while you build the format
-- Use `routines/whatnot-singles-liquidation-show.md` as the structural template
 - Live shows are gold for follower → buyer conversion
 
 ### Phase 1 graduation criteria
 
 - 5,000 IG followers
 - 10,000 TikTok followers
-- 1,000 Whatnot followers
 - Daily content loop habitual (not skipping more than 1 day/week)
 - At least 1 Collection Buyback Walkthrough video over 50k views
 
@@ -75,13 +72,9 @@ Audience now cares about your face and voice. Time to add formats that need that
 
 - Walking-the-dog rambles (TCG market thoughts, what you sold today, behind-the-scenes)
 - Driving voice memos turned into shorts
-- Post-Whatnot debrief videos (what worked, what didn't, biggest hit)
 - Format: low-fi, phone-camera, talk-to-camera
 
-### Bi-weekly Whatnot shows
 
-- Sealed pack rip format becomes the regular Whatnot rhythm
-- Whatnot algorithm rewards consistency — predictable schedule = bigger rooms
 
 ### First YouTube longform
 
@@ -108,7 +101,6 @@ This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
 
 - 15,000 IG
 - 30,000 TikTok
-- 5,000 Whatnot
 - 2,000 YouTube subscribers
 - 3+ YouTube videos published
 
@@ -128,7 +120,6 @@ This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
 - Format: format-of-the-week + chat-style commentary while playing
 - Works because the audience is now invested in YOU, not just product
 
-### Weekly Whatnot schedule
 
 - Same time every week (e.g. Sunday 8pm AEST)
 - Algorithm rewards consistency hard at this volume
@@ -137,7 +128,6 @@ This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
 ### Phase 3 graduation criteria
 
 - 50,000 combined social followers
-- 20,000 Whatnot followers
 - 10,000 YouTube subscribers
 - Consistent weekly cadence on all 3 formats for 3+ months
 
@@ -148,7 +138,7 @@ This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
 Only add these when there's a clear HOKO link, not as hobby projects.
 
 - **Gaming streams** — only if there's a TCG angle (TCG online tournament watch parties, Pokémon Unite while pulling packs, etc.). Just "playing games" doesn't tie to brand.
-- **IRL events / pop-ups** — Melbourne TCG show appearances, HOKO sponsored events, meet-and-greets
+- **IRL events / pop-ups** — Victoria TCG show appearances, HOKO sponsored events, meet-and-greets
 - **Owned media** — newsletter, podcast, Discord community
 
 ---
@@ -219,7 +209,7 @@ For when you need to post but don't have a planned idea. All 5 of these use only
 | **Reveal** | 5 sec | Flip → hold steady → let the silence land |
 | **Walkthrough** | 45-60 sec | Break down the grade — centering, surface, edges. Reference a comp: *"sold for $X on eBay last week."* Honest take. |
 | **Closer (PC)** | 10 sec | *"Got slabs like this? HOKO buys at 75-80% FMV — DM me. Browse what HOKO sells at hokocollectables.com."* |
-| **Closer (Commercial)** | 10 sec | *"Listed now at hokocollectables.com — HOKO10 for 10% off. Collector first. Seller second."* |
+| **Closer (Commercial)** | 10 sec | *"Listed now at hokocollectables.com — WELCOME10 for 10% off. Collector first. Seller second."* |
 
 #### Batch-filming slab content
 
@@ -243,7 +233,7 @@ If you film a PC slab and use the commercial closer ("listed now at HOKO"), view
 
 - **Time:** 2-3 min
 - **When:** Periodic — once a week or whenever you want to drive Shopify clicks
-- **Format:** Hook ("$50 at HOKO — what would I buy?") → walk through 3-5 SKUs from your live inventory → recommend the smart pick → CTA to Shopify with HOKO10
+- **Format:** Hook ("$50 at HOKO — what would I buy?") → walk through 3-5 SKUs from your live inventory → recommend the smart pick → CTA to Shopify with WELCOME10
 - **Price tiers to rotate:** $20, $50, $100, $250, $500
 - **Pillar:** The Tip + The Hit-list combined
 - **Why it works:** Inherently watchable (curiosity loop), drives store traffic directly, highlights current inventory

@@ -9,7 +9,7 @@ Covers product setup, collections, shipping, and store settings.
 
 - **Platform:** Shopify (Basic or Shopify plan)
 - **Currency:** AUD
-- **Timezone:** Melbourne (AEST/AEDT)
+- **Timezone:** Victoria (AEST/AEDT)
 - **Primary market:** Australia
 - **Tax:** GST inclusive pricing (10%) — display prices include GST
 

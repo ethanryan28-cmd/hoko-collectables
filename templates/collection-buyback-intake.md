@@ -42,7 +42,7 @@ If your collection includes loose singles or items we don't buy, we can usually 
 Send the photo and list and I'll have a quote back within 48 hours.
 
 — Ethan
-HOKO Collectables — Melbourne
+HOKO Collectables — Victoria
 hokocollectables.com  •  @hokocollectables
 *Collector first. Seller second.*
 

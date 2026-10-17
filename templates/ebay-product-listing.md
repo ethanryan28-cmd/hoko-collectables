@@ -11,7 +11,7 @@ Pricing: at replacement cost. Never undercut.
 [Card/Item Name] [Set Name] [Language] [Condition/Grade] [Edition] [Year] [Key Feature]
 
 Examples:
-- Pokemon Charizard ex Surging Sparks English NM Full Art 2024
+- Pokemon Charizard ex Prismatic Evolutions English NM Full Art 2025
 - Pokemon Mega Dream M2a Booster Box Japanese Factory Sealed 2025
 - Pokemon Charizard Base Set 1st Edition PSA 9 1999
 
@@ -64,13 +64,13 @@ Use light HTML for eBay. Keep it mobile-readable -- short paragraphs, bullet poi
 [Honest one-liner about condition. LP means LP. If there is a flaw, describe it. Do not oversell.]
 
 <b>Packaging and dispatch:</b>
-Collector-packed from Melbourne. Every order: rigid mailer + bubble wrap + corner protectors. Tracked postage only. Same-day dispatch on orders placed before 2pm AEST, Mon-Fri.
+Collector-packed from Victoria. Every order: rigid mailer + bubble wrap + corner protectors. Tracked postage only. Dispatched within 1–3 business days on orders placed before 2pm AEST, Mon-Fri.
 
 <b>About HOKO:</b>
 Collector-run shop (~20 years hobby experience). Honest grading, transparent buybacks, careful packing. 270+ eBay feedbacks, 100% positive.
 
 <b>Browse our full range and save 10% on your first Shopify order:</b>
-hokocollectables.com -- use code HOKO10 at checkout.
+hokocollectables.com -- use code WELCOME10 at checkout.
 
 ---
 

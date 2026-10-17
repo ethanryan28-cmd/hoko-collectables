@@ -107,7 +107,7 @@ def hashtags(row, kind):
         base = ['#sealedproduct', '#boosterbox', '#tcgcollector']
         base += ['#pokemontcg', '#japanesepokemon', '#pokemonjapan', '#pokemoncollector', '#pokemonaustralia'] \
             if g == 'pokemon' else ['#onepiecetcg', '#onepiececardgame', '#onepiecejapanese', '#onepieceaustralia']
-    base += ['#tcgaustralia', '#melbournecollectors', '#aussiecollector', '#hokocollectables']
+    base += ['#tcgaustralia', '#victoriacollectors', '#aussiecollector', '#hokocollectables']
     seen = []
     for t in base:
         if t not in seen:

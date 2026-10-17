@@ -48,7 +48,7 @@ Free shipping threshold to maintain: $100 AUD
 
 - **Never price below replacement cost** — even if the market dipped, HOKO does not subsidise buyers from its margin
 - **Never undercut market** — if new price is above current market, note it but still recommend the replacement-cost price; the moat is service not price
-- **HOKO10** is for acquisition only; day-to-day pricing is at market (not HOKO10-discounted cost)
+- **WELCOME10** is for acquisition only; day-to-day pricing is at market (not WELCOME10-discounted cost)
 - **Buyback rates** (75-80% of FMV) are separate and not affected by this repricing exercise
 
 ---

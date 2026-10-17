@@ -27,7 +27,6 @@ Sort extracted content into whichever of these buckets apply:
 |--------|---------|
 | Listings to draft | "I've got a Charizard ex, near mint, thinking $80" |
 | Social posts | "Just opened a box, pulled two hits" |
-| Whatnot show ideas | "Thinking of doing a live Friday night" |
 | Customer DMs / replies | "That guy asking about the Battle Partners lot" |
 | Pricing / buyback decisions | "Bloke wants to sell his binder, I said no singles" |
 | Restock / inventory notes | "Getting another 6 Mega Dream boxes next week" |
@@ -39,7 +38,6 @@ Sort extracted content into whichever of these buckets apply:
 One section per bucket. Within each:
 - **Listings:** Draft title + description using routines/prompts/ebay-listing.md or routines/prompts/shopify-sealed.md format. Add [FILL IN] where details are missing.
 - **Social posts:** Draft caption + hashtags using routines/prompts/social-caption.md format. Label the content pillar (The Pull / The Drop / The Story / The Tip / The Hit-list).
-- **Whatnot ideas:** Note the concept with a suggested show title and any prep needed.
 - **DM replies:** Draft a reply in HOKO voice — collector-to-collector, honest, AU English.
 - **Pricing/buyback:** State the decision clearly. If it involves a buyback quote, flag whether it fits the rules (PSA/BGS/CGC slabs $100+, sealed only, no singles, no HGA/GMG).
 - **Restock notes:** Confirm SKU, quantity, estimated arrival. Flag if it needs a Shopify listing or SKU watchlist update.

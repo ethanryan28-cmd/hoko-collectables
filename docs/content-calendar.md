@@ -60,7 +60,7 @@ Minimum viable week: 1 TikTok + 2 Instagram posts.
 - Post on behalf of Ethan without his approval
 - Fabricate card names, prices, or sold comparisons
 - Mention consignment — Phase 2 only
-- Use HOKO10 code in public posts
+- Use WELCOME10 code in public posts
 - Make financial advice claims
 
 ---
@@ -84,7 +84,7 @@ Minimum viable week: 1 TikTok + 2 Instagram posts.
 #pokemoncards #mtgcards #gradedcards #psacards #tcgcollector
 
 **Location tags:**
-#melbournecollector #australiatcg #pokemonaustralia
+#victoriacollector #australiatcg #pokemonaustralia
 
 **Niche tags (rotate per post):**
 #bgs #cgc #psa10 #onepiecetcg #dragonballtcg #sealedtcg

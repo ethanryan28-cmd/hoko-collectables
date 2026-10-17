@@ -41,10 +41,10 @@ Example: `Charizard Base Set 1999 PSA 9 | Pokemon TCG | Shadowless Holo | HOKO C
 - What the card is (set, variant, significance)
 - Grade context (why this grade matters for this card — e.g. PSA 9 base set Charizard is strong because raw copies are risky)
 - Grader credentials (PSA/BGS/CGC only — note cert can be verified at [grader website])
-- Shipping (free AU shipping over $100, secure packaging, same-day dispatch)
+- Shipping (free AU shipping over $100, secure packaging, Dispatched within 1–3 business days)
 
 **Meta description** (140-160 chars):
-> [Grade] [Card name] [Set] — authenticated by [grader]. Secure packaging, same-day dispatch. Melbourne-based collector shop.
+> [Grade] [Card name] [Set] — authenticated by [grader]. Secure packaging, Dispatched within 1–3 business days. Victoria-based collector shop.
 
 **Price recommendation** (if "calculate" was entered):
 ```
@@ -83,7 +83,7 @@ Example: `Charizard Base Set 1999 PSA 9 Shadowless Holo Pokemon TCG English`
 **Description** (plain text, collector voice):
 Note the cert number and direct buyers to verify at PSA/BGS/CGC website.
 Include condition note (what the slab itself looks like — any case scratches? note them honestly).
-Free AU shipping over $100, Express Post, same-day dispatch. Secure packaging (bubble wrap + rigid mailer).
+Free AU shipping over $100, Express Post, Dispatched within 1–3 business days. Secure packaging (bubble wrap + rigid mailer).
 
 **Price:** [Shopify price + $5-10 to account for eBay fees, or match market]
 

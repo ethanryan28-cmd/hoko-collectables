@@ -1,6 +1,6 @@
 ————————–———# HOKO Consignment Tracking Schema
 
-> Phase 2 operational doc. Do not market consignment until Whatnot + Shopify flow is proven.
+> Phase 2 operational doc. Do not market consignment until live shows + Shopify flow is proven.
 > For casual inbound consignment cases only until formal launch.
 
 ---
@@ -27,7 +27,6 @@ Single source of truth for all active and closed consignment items. One row per 
 | J | agreed_list_price_aud | Currency | Agreed listing price in AUD (inc. GST) |
 | K | commission_rate_pct | Number | HOKO commission percent (typically 20). Enter as integer. |
 | L | consignor_payout_aud | Currency | Auto-calculated: agreed_list_price_aud * (1 - commission_rate_pct/100) |
-| M | channels | Text | Where listed: Shopify / eBay / Whatnot / combination |
 | N | date_received | Date | YYYY-MM-DD date item physically received by HOKO |
 | O | contract_signed | Boolean | TRUE / FALSE single-page consignment agreement signed and filed |
 | P | shopify_product_url | URL | Full Shopify product URL once listed. Leave blank until live. |
@@ -36,7 +35,6 @@ Single source of truth for all active and closed consignment items. One row per 
 | S | date_sold | Date | YYYY-MM-DD date item sold. Leave blank until sold. |
 | T | sale_price_aud | Currency | Actual sale price (may differ from list price if negotiated) |
 | U | actual_payout_aud | Currency | Auto-calculated: sale_price_aud * (1 - commission_rate_pct/100) |
-| V | platform_fee_aud | Currency | eBay/Whatnot/Shopify payment fee deducted (estimate if needed) |
 | W | net_hoko_revenue_aud | Currency | Auto-calculated: sale_price_aud - actual_payout_aud - platform_fee_aud |
 | X | payout_date | Date | YYYY-MM-DD date HOKO paid consignor. Leave blank until paid. |
 | Y | payout_method | Enum | bank-transfer (standard) / other |

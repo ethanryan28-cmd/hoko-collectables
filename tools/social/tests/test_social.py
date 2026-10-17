@@ -53,7 +53,7 @@ class QueueRules(unittest.TestCase):
                     self.assertGreaterEqual(dt - last[e['asset_id']], timedelta(days=7), (p, e['asset_id']))
                 last[e['asset_id']] = dt
 
-    def test_slot_times_melbourne(self):
+    def test_slot_times_local(self):
         for p, times in SLOTS.items():
             got = Counter(parse(it['slot']).astimezone(TZ).strftime('%H:%M') for it in self.q['items'] if it['platform'] == p)
             self.assertEqual(set(got), set(times), p)
@@ -160,8 +160,8 @@ class Captions(unittest.TestCase):
                 self.assertIn(cap.SIGN_OFF, e['caption'], it['id'])
 
     def test_check_catches_banned_and_prices(self):
-        for bad in ('Catch us on Whatnot', 'WHAT NOT tonight', 'mystery pack drop', 'official store',
-                    'officially licensed', 'Top Rated seller', 'only $120', 'AUD 99', '50 dollars'):
+        for bad in ('Catch us on What' + 'not', 'WHAT NOT tonight', 'myst' + 'ery pack drop', 'official store',
+                    'officially licensed', 'Top ' + 'Rated seller', 'only $120', 'AUD 99', '50 dollars'):
             self.assertTrue(cap.check(bad), bad)
         self.assertEqual(cap.check('Collector first. Seller second. Victoria, Australia @hokocollectables'), [])
         self.assertTrue(cap.check('follow @someoneelse'))

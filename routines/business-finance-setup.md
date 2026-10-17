@@ -1,6 +1,6 @@
 # Business finance setup — HOKO Collectables (AU)
 
-Minimum viable financial infrastructure for a Melbourne TCG sole trader / ABN business. Owner asked: bank account + safety finances. This doc captures the operational setup — **not financial advice**. Real tax / structure decisions go through a registered accountant.
+Minimum viable financial infrastructure for a Victoria TCG sole trader / ABN business. Owner asked: bank account + safety finances. This doc captures the operational setup — **not financial advice**. Real tax / structure decisions go through a registered accountant.
 
 ---
 
@@ -55,7 +55,6 @@ CBA doesn't do auto-percentage splits like Up does — you'll use **fixed weekly
 
 **Important context (May 2026):** owner's 90-day total was $4,712, but most-recent 30 days dropped to $730 — a 37.6% decline. The pivot to sealed-only + slabs (higher AOV than current cheap-singles mix) is designed to reverse this. As monthly revenue climbs back toward $1,500+ and beyond, scale these transfer amounts up proportionally.
 
-**Trigger to revisit amounts:** any month where eBay gross exceeds $1,000, or after a Whatnot stream lands, bump transfers up.
 
 #### Fix 4 — Move business expenses to come from the business account (10 min)
 
@@ -63,25 +62,21 @@ CBA doesn't do auto-percentage splits like Up does — you'll use **fixed weekly
 - [ ] **eBay store fees** → update payment method
 - [ ] **Postage** (Sendle / Australia Post / Aramex) → update billing
 - [ ] **Supplier payments** → use business account for wires / BPAY / cards
-- [ ] **Whatnot fees** (when streaming) → business account
 
 From here: personal account = personal life only. Business account = HOKO only. No mixing.
 
 ### After the 4 fixes are done
 
-- [ ] **Engage an accountant** ($500-1500/yr in Melbourne) to confirm the actual tax % for your bracket + structure (sole trader vs Pty Ltd)
+- [ ] **Engage an accountant** ($500-1500/yr in Victoria) to confirm the actual tax % for your bracket + structure (sole trader vs Pty Ltd)
 - [ ] **Personal emergency fund** — separate goal, target 2 months living expenses (~$4-6k) in a CBA NetBank Saver linked to your personal account
 - [ ] **Revisit transfer amounts every 2-3 months** as revenue grows
 
-### One-off cash events (Whatnot streams, large buybacks, lot sales)
 
 **Don't apply the weekly auto-split to one-off cash events.** They distort the maths because:
 
 - The weekly transfers assume steady revenue
-- A $3k Whatnot stream is ~8 weeks of normal revenue arriving at once
 - Auto-splitting would over-allocate to tax (you owe tax on *profit*, not gross sales)
 
-**When a large event lands** (e.g. Whatnot stream payout, big collection sale):
 
 | Bucket | Allocation for one-off events | Why |
 |---|---|---|
@@ -159,7 +154,7 @@ This is the generic checklist for any AU TCG sole trader starting from scratch. 
 - [ ] Inside the business account, create the 4 named savers / sub-accounts (OPEX, Tax, Restock, Wage)
 - [ ] Set up automated split rule (Up) or scheduled fixed transfers (CBA): every payout that lands → distribute across the 4 buckets on the % allocation above
 - [ ] Update Shopify Payments + eBay payout destinations to the business account
-- [ ] Find + engage an accountant in Melbourne (Google "small business accountant Melbourne sole trader" / ask in TCG seller groups for recommendations)
+- [ ] Find + engage an accountant in Victoria (Google "small business accountant Victoria sole trader" / ask in TCG seller groups for recommendations)
 - [ ] Open / fund personal emergency fund — target 2 months living expenses (~$4-6k)
 
 ---

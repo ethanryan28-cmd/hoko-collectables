@@ -22,7 +22,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest='cmd', required=True)
     sub.add_parser('env')
     b = sub.add_parser('build')
-    b.add_argument('--start', help='YYYY-MM-DD (default today, Melbourne)')
+    b.add_argument('--start', help='YYYY-MM-DD (default today, Victoria)')
     t = sub.add_parser('topup')
     t.add_argument('--render', action='store_true', help='then render missing clips (PC)')
     r = sub.add_parser('run')

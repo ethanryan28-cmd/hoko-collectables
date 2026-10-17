@@ -29,7 +29,7 @@ Sealed product and graded slabs are valuable. Pack them like you'd pack somethin
 4. If there's void space, fill with scrunched paper or additional bubble wrap (no polystyrene peanuts — they shift)
 5. Seal with packing tape on all flaps
 6. Mark the outside: **FRAGILE** (stamp or written label)
-7. Include the **HOKO10 package insert card** before sealing
+7. Include the **WELCOME10 package insert card** before sealing
 
 ### What NOT to do
 - Never use a soft satchel for slabs — they'll flex and the case can crack
@@ -52,7 +52,7 @@ Sealed product and graded slabs are valuable. Pack them like you'd pack somethin
 3. If the box is too large, fill void with bubble wrap or scrunched paper
 4. Seal all seams with heavy-duty packing tape — at minimum top, bottom, and both side seams
 5. For Japanese sealed product: extra care with shrink wrap — double-wrap if the shrink is loose or delicate
-6. Include the **HOKO10 package insert card** before sealing
+6. Include the **WELCOME10 package insert card** before sealing
 7. Mark **FRAGILE** if the set contains anything breakable (e.g. premium collection with metal coins/figures)
 
 ### What NOT to do
@@ -74,7 +74,7 @@ Sealed product and graded slabs are valuable. Pack them like you'd pack somethin
 1. For individual packs: slide into a toploader or between two pieces of cardboard for rigidity
 2. Place in a rigid bubble mailer — seal and tape the top
 3. For small lots (2-5 packs): wrap together in bubble wrap, place in rigid bubble mailer
-4. Include **HOKO10 package insert card**
+4. Include **WELCOME10 package insert card**
 
 ---
 
@@ -82,10 +82,10 @@ Sealed product and graded slabs are valuable. Pack them like you'd pack somethin
 
 **Every single order — no exceptions.**
 
-Include the HOKO10 discount card (or printed equivalent) in every parcel:
+Include the WELCOME10 discount card (or printed equivalent) in every parcel:
 
 > HOKO Collectables | hokocollectables.com  
-> Use HOKO10 for 10% off your first store order  
+> Use WELCOME10 for 10% off your first store order  
 > @hokocollectables on IG + TikTok  
 > Collector first. Seller second.
 
@@ -122,5 +122,5 @@ Keep a stock of these at all times:
 | Rigid cardboard mailers (A4 and A3 size) | For slabs and small sealed |
 | Double-wall cardboard boxes (various sizes) | For booster boxes and ETBs |
 | Heavy-duty packing tape + dispenser | Don't skimp — cheap tape fails |
-| HOKO10 package insert cards | Print a batch; reorder before you run out |
+| WELCOME10 package insert cards | Print a batch; reorder before you run out |
 | Fragile stickers or stamp | Optional but professional |

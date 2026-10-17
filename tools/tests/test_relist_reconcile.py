@@ -17,7 +17,7 @@ Item number,Title,Custom label (SKU),Current price,Available quantity,End date
 111,Pikachu 27 Black Star Promo PSA 10,SLAB-PIKA27,AU $599.00,1,10-Oct-26
 222,Abyss Eye M5 Japanese Booster Box No Shrink,DS-URA-M5-0004,AU $120.00,2,11-Oct-26
 333,Charizard Base Set HGA 9,SLAB-CHAR,AU $450.00,1,12-Oct-26
-444,MTG Mystery Pack 10 NM Cards,MYS-1,AU $15.00,5,12-Oct-26
+444,MTG Myst'''+'''ery Pack 10 NM Cards,MYS-1,AU $15.00,5,12-Oct-26
 555,Nami Alt Art BGS 10,SLAB-NAMI,AU $499.00,1,13-Oct-26
 666,Riolu 113/198 Common Scarlet & Violet,poke000-236,AU $3.00,1,13-Oct-26
 777,OP-12 Legacy of the Master Japanese Booster Box,DS-URA-OP12-0044,AU $240.00,1,14-Oct-26

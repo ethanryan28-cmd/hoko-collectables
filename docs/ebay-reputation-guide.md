@@ -6,7 +6,7 @@ How HOKO Collectables protects and grows its eBay seller reputation. Updated for
 
 ## Why reputation matters
 
-eBay's algorithm heavily weights seller metrics when ranking listings. A seller with Top Rated status and high feedback gets significantly more visibility than an identical listing from a lower-rated seller. For a small shop like HOKO, this is a meaningful competitive advantage — especially in the graded slab and sealed TCG categories where buyers have multiple options.
+eBay's algorithm heavily weights seller metrics when ranking listings. A seller with 100% positive status and high feedback gets significantly more visibility than an identical listing from a lower-rated seller. For a small shop like HOKO, this is a meaningful competitive advantage — especially in the graded slab and sealed TCG categories where buyers have multiple options.
 
 ---
 
@@ -24,9 +24,9 @@ eBay's algorithm heavily weights seller metrics when ranking listings. A seller 
 
 ---
 
-## Top Rated Seller requirements (Australia)
+## 100% positive feedback requirements (Australia)
 
-To qualify for eBay Top Rated Seller (TRS) status:
+To qualify for eBay 100% positive feedback (TRS) status:
 
 - Active eBay member for at least 90 days
 - Minimum 100 transactions and $1,000 AUD in sales in the past 12 months
@@ -36,9 +36,9 @@ To qualify for eBay Top Rated Seller (TRS) status:
 - Tracking uploaded within handling time on ≥ 95% of transactions
 
 TRS gives you:
-- Top Rated badge on listings (builds buyer trust)
+- 100% positive badge on listings (builds buyer trust)
 - Improved search placement
-- Access to Top Rated Plus listings (extra discount + badge on listing)
+- Access to 100% positive Plus listings (extra discount + badge on listing)
 
 ---
 
@@ -60,7 +60,7 @@ A defect is recorded when:
 
 ### Building positive feedback
 - Send post-purchase follow-up messages (see `routines/prompts/customer-review-request.md`)
-- Include a HOKO10 insert in every package — it creates goodwill
+- Include a WELCOME10 insert in every package — it creates goodwill
 - Pack well — damaged arrivals are the #1 cause of negative feedback for collectables
 - Ship same day or next day — buyers notice and mention it in feedback
 

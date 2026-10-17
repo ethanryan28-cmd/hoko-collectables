@@ -8,14 +8,12 @@
 ## Inputs
 
 - **Buyer username/name:** [eBay username or Shopify name]
-- **Platform:** eBay / Shopify / Whatnot / Instagram
 - **What they bought (most recent):** [product name]
 - **What they bought previously:** [previous purchase(s)]
 - **Any known collecting interest?** [e.g. 'vintage Pokemon', 'BGS 10s', 'MTG Commander'] or 'unknown'
 - **Reason for reaching out:** [choose one below]
   - 2nd+ purchase milestone
   - You just got new stock relevant to their collection
-  - Post-show follow-up (they attended a Whatnot show)
   - Buyback outreach (they may have cards they'd sell)
   - General check-in
 
@@ -49,7 +47,6 @@ Cheers,
 Ethan — HOKO Collectables
 ```
 
-### Post-Whatnot show follow-up
 ```
 Hey [NAME],
 
@@ -107,7 +104,6 @@ Reach out proactively to buyers who:
 - Have bought 3+ times
 - Spent over $300 in total
 - Left positive feedback mentioning specific cards or sets (they care)
-- Engaged with your Whatnot shows regularly
 
 ---
 

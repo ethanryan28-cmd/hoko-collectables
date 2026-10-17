@@ -47,7 +47,7 @@ EFTPOS available?: [yes — Square / yes — Tap to Pay on iPhone / no]
 - [ ] Receipt book or ability to send digital receipts
 
 **Admin:**
-- [ ] Business cards or HOKO10 discount cards (give one with every purchase)
+- [ ] Business cards or WELCOME10 discount cards (give one with every purchase)
 - [ ] Bags/packaging for sold items (bubble wrap for slabs, bags for sealed)
 - [ ] Packing tape + scissors
 - [ ] Phone charger / portable battery
@@ -77,7 +77,7 @@ Do NOT undercut your Shopify/eBay prices to move stock — your online buyers wi
 
 ### 3. Elevator pitch (memorise or save to phone)
 
-> "HOKO Collectables — Melbourne-based, collector-run. We do sealed TCG and PSA/BGS/CGC graded slabs. Everything's priced at market, honest grading, same-day dispatch on online orders. If you're looking to sell a collection, we do buybacks too — here's my card."
+> "HOKO Collectables — Victoria-based, collector-run. We do sealed TCG and PSA/BGS/CGC graded slabs. Everything's priced at market, honest grading, Dispatched within 1–3 business days on online orders. If you're looking to sell a collection, we do buybacks too — here's my card."
 
 ---
 
@@ -97,7 +97,7 @@ Generate this section as a checklist:
 ### 5. Social content plan for the event
 
 **Day before:**
-> "Heading to [event name] this [day] in [suburb]! Come find us — we'll have sealed [games] and graded slabs on the table. Table [number if known]. Collector first. Seller second. #hokocollectables #[game]tcg #melbourne"
+> "Heading to [event name] this [day] in [suburb]! Come find us — we'll have sealed [games] and graded slabs on the table. Table [number if known]. Collector first. Seller second. #hokocollectables #[game]tcg #victoria"
 
 **Morning of (story):**
 > "Setting up at [event name] — table ready. Come say hi if you're here today 🤙 [photo of table setup]"
@@ -110,7 +110,7 @@ Generate this section as a checklist:
 
 ## Reminders (never skip)
 
-- Give a HOKO10 card to every buyer — this is the conversion from convention sale to Shopify repeat customer
+- Give a WELCOME10 card to every buyer — this is the conversion from convention sale to Shopify repeat customer
 - Buyback at conventions: take their contact details and inventory photo, send formal quote within 48 hours via the intake email template — don't negotiate on the spot
 - Never accept a buyback for HGA/GMG/unverified grader slabs — politely decline on the day
 - Pack remaining inventory securely before leaving — don't rush the pack-down

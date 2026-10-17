@@ -4,7 +4,6 @@ Generate the printed insert that goes inside an order.
 
 ## Inputs
 
-- **Channel order came from:** eBay / Shopify / Whatnot
 - **Buyer type:** first-time / repeat / VIP
 - **Order value bracket:** under $50 / $50–200 / $200+
 
@@ -14,9 +13,8 @@ A short, hand-feeling note — **under 80 words**. Should:
 
 - Thank in collector-to-collector tone, never corporate
 - Pitch hokocollectables.com (especially if order came from eBay)
-- **eBay first-timers:** lead with HOKO10 code
-- **Repeat / VIP:** thank with something exclusive (early restock list signup, Whatnot show invite)
+- **eBay first-timers:** lead with WELCOME10 code
 - Mention socials (@hokocollectables)
-- Sign off: *"— Ethan, HOKO Collectables, Melbourne"*
+- Sign off: *"— Ethan, HOKO Collectables, Victoria"*
 
-Also produce a **QR code target URL** suggestion with UTM tracking, e.g. `hokocollectables.com/?utm_source=ebay-insert&utm_campaign=hoko10`.
+Also produce a **QR code target URL** suggestion with UTM tracking, e.g. `hokocollectables.com/?utm_source=ebay-insert&utm_campaign=welcome10`.

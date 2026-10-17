@@ -20,8 +20,8 @@ Generate an eBay AU listing for a TCG item.
 3. **Description** (mobile-readable, light HTML):
    - One-line hook
    - Bullet list: what you're buying, condition described honestly, packaging
-   - Trust block: *"Collector-run from Melbourne. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*
-   - Cross-sell: *"Browse our full Pokémon / MTG / OPCG range and save 10% on your first order at hokocollectables.com with code HOKO10."*
+   - Trust block: *"Collector-run from Victoria. Honest grading — LP means LP. Tracked dispatch within 24 hrs."*
+   - Cross-sell: *"Browse our full Pokémon / MTG / OPCG range and save 10% on your first order at hokocollectables.com with code WELCOME10."*
 4. **Suggested eBay AU category path**
 5. **Suggested price logic** if I didn't pin one (use sold-comp reasoning)
 

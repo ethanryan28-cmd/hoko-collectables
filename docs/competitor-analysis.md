@@ -15,7 +15,6 @@ Review quarterly or when the market shifts significantly.
 | Moat | Service, curation, collector trust — not price |
 | Buyback | 75-80% FMV, rigid rules, bank/storage facility meetings only |
 | Voice | Collector-to-collector, AU English, honest |
-| Platforms | Shopify, eBay, Whatnot, TikTok/Instagram |
 
 ---
 
@@ -41,9 +40,8 @@ Examples: Individual sellers with social followings
 
 ---
 
-### Segment 3 — Whatnot Sellers
 
-Examples: Regular Whatnot streamers
+Examples: Regular live shows streamers
 
 **Their strengths:** Live engagement, fast sales
 **Their weaknesses:** Variable card quality, often include ungraded or HGA product
@@ -53,7 +51,7 @@ Examples: Regular Whatnot streamers
 
 ### Segment 4 — LGS (Local Game Stores)
 
-Examples: Card shops in Melbourne
+Examples: Card shops in Victoria
 
 **Their strengths:** Walk-in traffic, local presence, new product
 **Their weaknesses:** Limited slab selection, often no buyback, RRP or above on sealed
@@ -70,7 +68,6 @@ Monitor these sources for market pricing:
 | eBay AU sold listings | PSA 10 comps for core slabs, sealed prices |
 | eBay US sold listings | USD → AUD for international benchmark |
 | TCGPlayer | MTG sealed pricing |
-| Whatnot recent sales | Live show prices for comparable slabs |
 | Pokémon Centre AU | New sealed RRP (for ETBs, UPC, booster boxes) |
 
 **Rule:** HOKO prices at replacement cost. If eBay AU comps are $300, HOKO prices at $300.
@@ -83,7 +80,7 @@ Never price below market to drive volume — moat is service, not price.
 Being clear about what HOKO doesn't do is part of the brand:
 
 - Not a bulk singles seller
-- Not a mystery pack dealer
+- No repacks
 - Not an HGA or GMG buyer/seller
 - Not a 'cheapest price' store
 - Not a general TCG store — specialist only
