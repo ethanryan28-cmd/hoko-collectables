@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Organic run: JANs, product + collection SEO, article internal links (`claude/organic-1017`)
+- **Status:** built. Report → `REPORT-2026-10-17-organic.md`
+- JAN barcode on all 20 live Japanese boxes + EB-05 (13 written, 8 already present and re-verified; OP-18 bonus) — sources per row in `data/jan-2026-10-17.csv`. FB12 / M7 drafts blank (no verifiable JAN yet).
+- SEO title ≤ 60 / description ≤ 155 / main-image alt on the 21 + the three other pre-order drafts; `japan-direct-sealed` collection SEO set.
+- 5 JP-sealed articles got one internal-link sentence each (collection + a live box; M6a ↔ EB-05 guides cross-linked). Backups in `reports/backups/2026-10-17-organic-*`.
+- **Ethan to do:** nothing blocking. Optional: fix the 2026 guide's stock list (links OP-17/OP-13 drafts, calls M6a a pre-order) — see report findings.
+
 ## 2026-10-17 · Newest push: M6a copy to canon, OP-17 duplicate archived, source from connector, two articles (`claude/newest-push-1017`)
 - **Status:** built. Report → `REPORT-2026-10-17-newest-push.md`
 - M6a (15398993723670) description rebuilt on the M5 template (cutoff, proof, authenticity, spot-a-fake, returns; no-shrink + 20-pack lines kept), `label:NEEDS-COMP` dropped, SEO description added.
