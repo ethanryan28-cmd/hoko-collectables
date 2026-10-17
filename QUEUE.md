@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · No price frames: strip prices from frame + voice, re-render 75, captions/ rebuilt, PC publisher retired (`claude/no-price-frames`)
+- **Status:** built, merged. Report → `REPORT-2026-10-18-no-price-frames.md`
+- `reel.py`: hooks, voiceover, pre-order card, gold price slot (now `SEALED · JAPANESE` / grader+grade), roundup labels (set code) and postage strip carry no figure. `calendar_gen.py`: roundup/beat captions de-priced, `under-200` roundup retitled, buyback tip drops `$100+`. 2 new tests, 56 OK.
+- 75/75 clips re-rendered in William (incl. 4 drafted-product clips that only had sidecars), 93.8 MB, 0 `$` in sidecars, 36 clips frame-checked. captions/ rebuilt: only `$5 off boxes` left (15 files, ruling 4). check PASS 60%, dry-run 0 invalid / 0 missing.
+- `run.py publish` / `hoko-publish.cmd` / "HOKO publish" marked RETIRED in both READMEs; `publish.run()` prints a retired line.
+- **Ethan to do:** PC `schtasks /Delete /TN "HOKO publish" /F`; BF automatic edit; platform keys; env setup + allowlist; optional: BF beat on-screen `$5 off`.
+
 ## 2026-10-17 · BF media tidy: run-2 fold-in, cloud docs, caption prices out (`claude/bf-media-tidy-1017-1tsocy`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-media-tidy.md`
 - Merged `claude/bf-media-render-queue-376p0p` (report + QUEUE only). `cloud_run.py` docstring + dry-run log line now describe the tts.py proxy-CA path (no logic change).
