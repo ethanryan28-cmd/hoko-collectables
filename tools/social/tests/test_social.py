@@ -118,10 +118,17 @@ class QueueRules(unittest.TestCase):
         self.assertEqual(pack['clips'][0]['asset_id'], 'beat/2026-11-27')
 
     def test_beat_on_draft_box_is_ineligible_and_skipped(self):
-        beat = next(a for a in ASSETS if a.id == 'beat/2026-11-26')      # features Inferno X (M2), now DRAFT
+        # mark the 26 Nov beat's featured box DRAFT, whatever box the last render picked
+        from tools.social import assets as A
+        pid = next(a for a in ASSETS if a.id == 'beat/2026-11-26').product_id
+        real = A.product_eligible
+        with mock.patch.object(A, 'product_eligible',
+                               side_effect=lambda r: (False, 'status DRAFT') if r and r.get('id') == pid else real(r)):
+            assets = load_assets(START)
+        beat = next(a for a in assets if a.id == 'beat/2026-11-26')
         self.assertFalse(beat.eligible)
         self.assertIn('featured box', beat.reason)
-        q = build(start=date(2026, 11, 20), n=10)
+        q = build(start=date(2026, 11, 20), n=10, assets=assets)
         used = {e['asset_id'] for i in q['items'] for e in (i.get('clips') or [i]) if e.get('asset_id')}
         self.assertNotIn('beat/2026-11-26', used)
         self.assertIn('beat/2026-11-27', used)
