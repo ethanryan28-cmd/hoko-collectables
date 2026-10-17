@@ -146,6 +146,26 @@ class NotConfigured(unittest.TestCase):
         finally:
             p.tmp.cleanup()
 
+    def test_discord_only_posts_discord_and_nothing_else(self):
+        p = Paths()
+        try:
+            q = build(n=2)
+            d = next(i for i in q['items'] if i['platform'] == 'discord')
+            now = parse(d['slot']) + timedelta(minutes=1)
+            due = [i for i in q['items'] if parse(i['slot']) <= now]
+            h = FakeHttp()
+            with mock.patch.dict(os.environ, dict(NO_KEYS, DISCORD_WEBHOOK_PICKUPS=WEBHOOK)):
+                s = cloud_run.run(now=now, queue={'items': due}, http=h, **p.kw())
+            self.assertTrue(h.calls)
+            self.assertTrue(all(url.startswith('https://discord.example/api/webhooks/') for _, url in h.calls), h.calls)
+            self.assertEqual(s['platforms']['discord'], 'configured')
+            self.assertTrue(all(v == 'NOT CONFIGURED' for k, v in s['platforms'].items() if k != 'discord'), s['platforms'])
+            ok = {r['platform'] for r in runner.read_log(p.csv) if r['status'] == 'OK'}
+            self.assertEqual(ok, {'discord'})
+            self.assertNotIn('secret-token-value', p.csv.read_text() + p.log.read_text())
+        finally:
+            p.tmp.cleanup()
+
     def test_hosting_not_configured_hosts_nothing(self):
         it = {'id': 'instagram:x', 'platform': 'instagram', 'media': 'content/youtube/reels/sealed/1/h1.mp4'}
         lines = []
