@@ -27,7 +27,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-10-25 | Detective Pikachu 098/SVP Black Star Promo BGS 9 $475 · h0 | reels/slab/10655248613654/h0.mp4 | captions/2026-10-25.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-26 | Super Electric Breaker (sv8) $390 · h1 | reels/sealed/10734779171094/h1.mp4 | captions/2026-10-26.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-27 | **Tip: What "no outer shrink" means** | reels/tips/no-outer-shrink.mp4 | captions/2026-10-27.txt | IG, YT, TT(manual) | queued |  |
-| 2026-10-28 | Inferno X (M2) $270 · h1 | reels/sealed/10734773666070/h1.mp4 | captions/2026-10-28.txt | IG, YT, TT(manual) | queued |  |
+| 2026-10-28 | Inferno X (M2) $270 · h1 | reels/sealed/10734773666070/h1.mp4 | captions/2026-10-28.txt | IG, YT, TT(manual) | blocked:draft-product |  |
 | 2026-10-29 | Magikarp 080/073 Art Rare SV1a Triplet Beat Japanese PSA 9 $450 · h0 | reels/slab/10655248220438/h0.mp4 | captions/2026-10-29.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-30 | Mega Symphonia (M1S) $165 · h1 | reels/sealed/15413124268310/h1.mp4 | captions/2026-10-30.txt | IG, YT, TT(manual) | queued |  |
 | 2026-10-31 | **Roundup: Japanese sealed under $200** | reels/roundups/under-200.mp4 | captions/2026-10-31.txt | IG, YT, TT(manual) | queued |  |
@@ -43,7 +43,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-11-10 | **Tip: Selling a collection? Here is how we buy** | reels/tips/buyback.mp4 | captions/2026-11-10.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-11 | Hadou Seeker (M7) $190 · h3 | reels/sealed/15417947455766/h3.mp4 | captions/2026-11-11.txt | IG, YT, TT(manual) | blocked:draft-product |  |
 | 2026-11-12 | Pikachu 27 Black Star Promo PSA 10 $599 · h1 | reels/slab/10655248810262/h1.mp4 | captions/2026-11-12.txt | IG, YT, TT(manual) | queued |  |
-| 2026-11-13 | Ruler of the Black Flame (sv3) $280 · h1 | reels/sealed/10734771896598/h1.mp4 | captions/2026-11-13.txt | IG, YT, TT(manual) | queued |  |
+| 2026-11-13 | Ruler of the Black Flame (sv3) $280 · h1 | reels/sealed/10734771896598/h1.mp4 | captions/2026-11-13.txt | IG, YT, TT(manual) | blocked:draft-product |  |
 | 2026-11-14 | **Roundup: Every Mega-era box in stock, cheapest first** | reels/roundups/mega-era.mp4 | captions/2026-11-14.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-15 | The Dominance of God (OP-18) $200 · h3 | reels/sealed/15417946865942/h3.mp4 | captions/2026-11-15.txt | IG, YT, TT(manual) | blocked:draft-product |  |
 | 2026-11-16 | Nami Alt Art R EB02017 BGS 10 $499 · h1 | reels/slab/10655248777494/h1.mp4 | captions/2026-11-16.txt | IG, YT, TT(manual) | queued |  |
@@ -56,7 +56,7 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-11-23 | **Christmas cutoff reel — order sealed by Mon 30 Nov** · Nihil Zero (M3) · no shrink $115 | reels/beats/2026-11-23.mp4 | captions/2026-11-23.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-24 | **BF countdown — 3 days** · Nihil Zero (M3) $130 | reels/beats/2026-11-24.mp4 | captions/2026-11-24.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-25 | Mega Gengar Starter Deck $70 · h1 | reels/sealed/10734773862678/h1.mp4 | captions/2026-11-25.txt | IG, YT, TT(manual) | queued |  |
-| 2026-11-26 | **BF countdown — tomorrow** · Inferno X (M2) $270 | reels/beats/2026-11-26.mp4 | captions/2026-11-26.txt | IG, YT, TT(manual) | queued | yes |
+| 2026-11-26 | **BF countdown — tomorrow** · Inferno X (M2) $270 | reels/beats/2026-11-26.mp4 | captions/2026-11-26.txt | IG, YT, TT(manual) | blocked:draft-product | yes |
 | 2026-11-27 | **It's live — BF: free AU post on every sealed box 27–30 Nov** · Mega Symphonia (M1S) $165 | reels/beats/2026-11-27.mp4 | captions/2026-11-27.txt | IG, YT, TT(manual) | queued | yes |
 | 2026-11-28 | **Roundup: Japanese sealed under $200** | reels/roundups/under-200.mp4 | captions/2026-11-28.txt | IG, YT, TT(manual) | queued |  |
 | 2026-11-29 | Mega Brave (M1L) $175 · h2 | reels/sealed/10734773731606/h2.mp4 | captions/2026-11-29.txt | IG, YT, TT(manual) | queued |  |
@@ -82,6 +82,6 @@ Mix: 2 sealed : 1 slab. Hot sets (`hot_sets` in config.json — Mega era, VSTAR,
 | 2026-12-19 | **Roundup: One Piece JP boxes in stock right now** | reels/roundups/one-piece.mp4 | captions/2026-12-19.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-20 | Nihil Zero (M3) $130 · h1 | reels/sealed/15413124170006/h1.mp4 | captions/2026-12-20.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-21 | Detective Pikachu 098/SVP Black Star Promo BGS 9 $475 · h0 | reels/slab/10655248613654/h0.mp4 | captions/2026-12-21.txt | IG, YT, TT(manual) | queued |  |
-| 2026-12-22 | **Tip: How to spot a fake Japanese box** | reels/tips/spot-a-fake.mp4 | captions/2026-12-22.txt | IG, YT, TT(manual) | queued |  |
+| 2026-12-22 | **Tip: How to spot a fake Japanese box** | reels/tips/spot-a-fake.mp4 | captions/2026-12-22.txt | IG, YT, TT(manual) | blocked:draft-product |  |
 | 2026-12-23 | Raging Surf (sv3a) $235 · h2 | reels/sealed/10734778482966/h2.mp4 | captions/2026-12-23.txt | IG, YT, TT(manual) | queued |  |
 | 2026-12-24 | Mega Symphonia (M1S) $165 · h1 | reels/sealed/15413124268310/h1.mp4 | captions/2026-12-24.txt | IG, YT, TT(manual) | queued |  |
