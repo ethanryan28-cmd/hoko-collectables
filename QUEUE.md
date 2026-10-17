@@ -2,6 +2,10 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF media 2, run 2: resume check — already merged, verified (`claude/bf-media-render-queue-376p0p`)
+- **Status:** verified, nothing redone. Report → `REPORT-2026-10-17-bf-media-2.md` (## Run 2)
+- main `e967b58`, 71 mp4s / 86.5 MB on origin/main, 54 tests OK.
+
 ## 2026-10-17 · BF media 2: live William gate, 71 clips rendered + committed, merged (`claude/bf-media-1017`)
 - **Status:** built, merged. Reports → `REPORT-2026-10-17-bf-media.md` (tts fix, stopped at gate) + `REPORT-2026-10-17-bf-media-2.md` (this run)
 - Network open this session (PyPI 200, Bing reachable). The branch's `tts.py` proxy-CA fix rendered live (`edge-tts:en-AU-WilliamMultilingualNeural`, verification on, no sitecustomize). 54 tests OK.
