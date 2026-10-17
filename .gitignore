@@ -1,8 +1,7 @@
 
-# social auto-poster run state (tools/social)
-data/social-post-log.csv
+# social auto-poster run state (tools/social). data/social-post-log.csv and data/social-runner.log are
+# committed on purpose: cloud-run (Claude Code web) writes them and they are the idempotency record.
 data/social-media-cache.json
 data/social-dryrun.json
-data/social-runner.log
 __pycache__/
 .pytest_cache/

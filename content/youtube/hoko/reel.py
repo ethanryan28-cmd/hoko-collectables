@@ -347,7 +347,10 @@ def word_times(wav, tempo, delay=0.3, script=None):
                          capture_output=True, check=True).stdout
     audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768.0
     if _whisper is None:
-        from faster_whisper import WhisperModel
+        try:
+            from faster_whisper import WhisperModel
+        except ImportError:        # cloud container without faster-whisper: space the script evenly instead
+            return even_words(wav, tempo, delay, script)
         _whisper = WhisperModel('base', device='auto', compute_type='int8')
     segs, _ = _whisper.transcribe(audio, word_timestamps=True, language='en')
     out = []
@@ -355,6 +358,19 @@ def word_times(wav, tempo, delay=0.3, script=None):
         for w_ in sg.words or []:
             out.append((w_.start / tempo + delay, w_.end / tempo + delay, w_.word.strip()))
     return align_to_script(out, script) if script else out
+
+
+def even_words(wav, tempo, delay=0.3, script=None):
+    """Fallback for word_times when faster-whisper is not installed: the script's words spread evenly over
+    the voiceover length (90% of it, speech trails off before the end). Captions still read correctly,
+    they just are not beat-matched."""
+    if not script:
+        return []
+    dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0',
+                                str(wav)], capture_output=True, text=True).stdout or 0) / tempo
+    sw = script.split()
+    span = (dur * 0.9) / max(1, len(sw))
+    return [(delay + i * span, delay + (i + 1) * span, w) for i, w in enumerate(sw)]
 
 
 def caption_layers(words, y=1385):
