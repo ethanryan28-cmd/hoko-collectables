@@ -184,3 +184,12 @@ cloud-run `--dry-run --no-render`: instagram, facebook, youtube, pinterest, disc
 - `git push origin claude/bf-media-1017`, then `git merge --no-ff claude/bf-media-1017` into `main`, `git push origin main`. Confirmed with `git ls-remote --heads origin`.
 
 ## COMPLETE
+
+## Run 2 — verification (resume check, nothing redone)
+- origin/main = `e967b58` (Merge claude/bf-media-1017), matches local main; prior report already ended `## COMPLETE` → Steps 1–4 skipped per Step 0 rule.
+- mp4s on origin/main: **71** (`git ls-tree … | grep -c 'reels/.*\.mp4$'`), 71 on disk.
+- Total committed: **86.5 MB** (82.5 MiB).
+- `python -m unittest discover -s tools/social/tests -t .` → **54 tests OK**.
+- No renders, no Shopify writes, no main push this run; only this section + QUEUE line pushed to `claude/bf-media-render-queue-376p0p`.
+
+## COMPLETE
