@@ -2,6 +2,13 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF media: tts.py proxy-CA fix, un-ignore reels mp4s, re-render + keep (`claude/bf-media-1017`)
+- **Status:** built, **NOT merged** — stopped at the Step 1 live-render gate. Report → `REPORT-2026-10-17-bf-media.md`
+- Cloud run with every render host policy-denied (403 at the proxy): PyPI, `speech.platform.bing.com`, `huggingface.co`. No edge-tts / piper / faster-whisper installable, so **0 clips rendered, 0 MB committed**; the 38 bf-render mp4s are still gone.
+- Done + tested: `content/youtube/hoko/tts.py` trusts `SSL_CERT_FILE` / `REQUESTS_CA_BUNDLE` / `/root/.ccr/ca-bundle.crt` via a verifying `ssl.create_default_context(cafile=…)` handed to edge-tts' connector **and** its per-request context (edge-tts 7.x overrides the connector), `proxy=$HTTPS_PROXY`; no env var → unchanged PC path. 7 new unit tests, 54 OK. `content/youtube/.gitignore` now keeps `reels/**/*.mp4` (out/, wav, cache, inbox still ignored). README Cloud line added.
+- Queue: check PASS 15 days / 60% hot on all 6, 0 invalid, **missing media 30** (the unrendered clips), all platforms NOT CONFIGURED.
+- **Ethan to do:** merge the branch or re-run with network (prompt line in the report MANUAL); PC render + push the mp4s meanwhile; BF automatic edit + platform keys still pending.
+
 ## 2026-10-17 · BF render: 38 clips in en-AU, queue check, BF automatic re-read (`claude/bf-render-1017-idka4q`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-render.md`
 - Cloud run, PyPI reachable this time: edge-tts William worked through the proxy CA (session-only sitecustomize, no repo code change). 38/38 clips rendered + ffprobe PASS (1080×1920, audio, 8–20 s, no "$" spoken): EB-05/M7/FB12 h3 (`stale_render` cleared), the 27 the queue listed missing, 6 BF beats (text unchanged, none said $100). mp4s are gitignored, so only sidecars are committed.

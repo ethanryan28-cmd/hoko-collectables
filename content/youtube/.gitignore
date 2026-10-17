@@ -5,7 +5,11 @@
 client_secret*.json
 
 # rendered / cached media (reproducible: run.py reel ... / run.py shorts)
+# Reels under reels/ ARE committed (since 17 Oct 2026 — cloud runs lost them with the container, and a
+# cloud-run only renders what's missing). Everything else rendered stays ignored: Shorts source video /
+# cuts (out/), wavs, the tts/whisper cache, the inbox.
 *.mp4
+!reels/**/*.mp4
 *.wav
 .cache/
 out/
