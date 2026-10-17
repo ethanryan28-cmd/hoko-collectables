@@ -2,6 +2,11 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Social auto-poster + brand canon + M7 + relist + BF email (`ethan/social-autoposter`)
+- **Status:** built. Report → `REPORT-2026-10-17T1140+1100.md`
+- `tools/social/` (14-day queue → IG/FB/YT/Pinterest/Discord + TikTok phone pack), brand canon sweep live + draft theme, M7 spec, `tools/relist-reconcile.py`, `content/email/bf-early-access.*`
+- **Ethan to do:** see MANUAL in the report (env keys → render → dry-run → install-tasks.ps1; publish the draft theme; meta description in Chrome)
+
 ## 2026-10-13 · HOKO content machine (`content/youtube/`)
 - **Status:** built. Report → `content/youtube/REPORT.md`
 - Reel engine, Shorts cutter + packager, 14 Oct → 24 Dec calendar, IG/YT auto-publish, comment queue

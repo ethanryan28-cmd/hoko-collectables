@@ -1,0 +1,624 @@
+{
+ "deleted_on": "2026-10-17",
+ "reason": "Ethan: delete archived mystery pack products",
+ "products": [
+  {
+   "id": "gid://shopify/Product/10495486624022",
+   "title": "Dragon Ball Super Mystery Pack — 10 NM Cards | HOKO Collectables",
+   "handle": "dragon-ball-super-mystery-pack-10-nm-cards-hoko-collectables",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "dragon-ball-super",
+    "game:dbs",
+    "mystery-pack",
+    "singles"
+   ],
+   "descriptionHtml": "<p><strong>Dragon Ball Super Mystery Pack — 10 NM Cards | HOKO Collectables</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": "HOKO-DBS-MYSTERY-MIX",
+    "price": "9.99",
+    "compareAtPrice": "15.00",
+    "inventoryQuantity": 9
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10495488229654",
+   "title": "MTG Mystery Pack — Final Fantasy & More | 10 NM Cards | HOKO Collectables",
+   "handle": "mtg-mystery-pack-final-fantasy-more-10-nm-cards-hoko-collectables",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "final-fantasy",
+    "game:mtg",
+    "mtg",
+    "mystery-pack",
+    "singles"
+   ],
+   "descriptionHtml": "<p><strong>MTG Mystery Pack — Final Fantasy &amp; More | 10 NM Cards | HOKO Collectables</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": "HOKO-MTG-MYSTERY-FF",
+    "price": "12.99",
+    "compareAtPrice": "20.00",
+    "inventoryQuantity": 4
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10499885924630",
+   "title": "HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle",
+   "handle": "hoko-sealed-pokemon-mystery-pack-10-cards-paradox-rift-trainer-bundle",
+   "status": "ARCHIVED",
+   "productType": "",
+   "tags": [
+    "game:pokemon",
+    "mystery-pack",
+    "paradox-rift",
+    "pokemon",
+    "trainer-bundle"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 8
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10499886907670",
+   "title": "HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals",
+   "handle": "hoko-sealed-dragon-ball-super-mystery-pack-10-cards-fearsome-rivals",
+   "status": "ARCHIVED",
+   "productType": "",
+   "tags": [
+    "dragon-ball-super",
+    "fearsome-rivals",
+    "game:dbs",
+    "mystery-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 9
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10499888251158",
+   "title": "HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy & Universes Beyond Rares",
+   "handle": "hoko-sealed-mtg-mystery-pack-10-cards-final-fantasy-universes-beyond-rares",
+   "status": "ARCHIVED",
+   "productType": "",
+   "tags": [
+    "fallout",
+    "final-fantasy",
+    "game:mtg",
+    "mtg",
+    "mystery-pack",
+    "rares"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy &amp; Universes Beyond Rares</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "12.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 4
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10500708204822",
+   "title": "HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle",
+   "handle": "hoko-sealed-pokemon-mystery-pack-10-cards-paradox-rift-trainer-bundle-1",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "game:pokemon",
+    "mystery-pack",
+    "paradox-rift",
+    "pokemon",
+    "tcg",
+    "trainer-bundle"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 8
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10500708729110",
+   "title": "HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals",
+   "handle": "hoko-sealed-dragon-ball-super-mystery-pack-10-cards-fearsome-rivals-1",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "dragon-ball-super",
+    "fearsome-rivals",
+    "game:dbs",
+    "mystery-pack",
+    "tcg"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 9
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10500712300822",
+   "title": "HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy & Universes Beyond Rares",
+   "handle": "hoko-sealed-mtg-mystery-pack-10-cards-final-fantasy-universes-beyond-rares-1",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "fallout",
+    "final-fantasy",
+    "game:mtg",
+    "mtg",
+    "mystery-pack",
+    "rares",
+    "tcg",
+    "universes-beyond"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy &amp; Universes Beyond Rares</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "12.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 4
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10500829151510",
+   "title": "HOKO Mystery Pack — Starter Tier",
+   "handle": "hoko-mystery-pack-starter-tier",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "mystery-pack",
+    "starter",
+    "value-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Mystery Pack — Starter Tier</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "15.00",
+    "compareAtPrice": null,
+    "inventoryQuantity": 10
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10502645743894",
+   "title": "HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle",
+   "handle": "hoko-sealed-pokemon-mystery-pack-10-cards-paradox-rift-trainer-bundle-2",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "game:pokemon",
+    "mystery-pack",
+    "paradox-rift",
+    "pokemon",
+    "tcg",
+    "trainer-bundle"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Pokemon Mystery Pack — 10 Cards Paradox Rift Trainer Bundle</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 8
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10502648168726",
+   "title": "HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals",
+   "handle": "hoko-sealed-dragon-ball-super-mystery-pack-10-cards-fearsome-rivals-2",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "dragon-ball-super",
+    "fearsome-rivals",
+    "game:dbs",
+    "mystery-pack",
+    "tcg"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed Dragon Ball Super Mystery Pack — 10 Cards Fearsome Rivals</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 9
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10502649905430",
+   "title": "HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy & Universes Beyond Rares",
+   "handle": "hoko-sealed-mtg-mystery-pack-10-cards-final-fantasy-universes-beyond-rares-2",
+   "status": "ARCHIVED",
+   "productType": "mystery-pack",
+   "tags": [
+    "fallout",
+    "final-fantasy",
+    "game:mtg",
+    "mtg",
+    "mystery-pack",
+    "rares",
+    "tcg",
+    "universes-beyond"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Sealed MTG Mystery Pack — 10 Cards Final Fantasy &amp; Universes Beyond Rares</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "12.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 4
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10503607288086",
+   "title": "HOKO Mystery Pack — Starter Tier",
+   "handle": "hoko-mystery-pack-starter-tier-1",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "mystery-pack",
+    "starter",
+    "value-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Mystery Pack — Starter Tier</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "14.95",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10503608238358",
+   "title": "HOKO Mystery Pack — Standard Tier",
+   "handle": "hoko-mystery-pack-standard-tier",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "graded-chance",
+    "mystery-pack",
+    "standard"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Mystery Pack — Standard Tier</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "34.95",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10503608860950",
+   "title": "HOKO Mystery Pack — Premium Tier",
+   "handle": "hoko-mystery-pack-premium-tier",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "high-value",
+    "mystery-pack",
+    "premium"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Mystery Pack — Premium Tier</strong> — sourced and condition-verified by HOKO Collectables.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>✨ How We Pack</h3><p>Raw singles: sleeved → toploader → bubble wrap → stiffened mailer. Foils get foil-safe packing. Shipped to arrive in NM condition.</p><h3>🎴 Condition Grading</h3><p>HOKO uses a three-point scale: <strong>Near Mint</strong> (close to mint, possible minor edgewear or scratching), <strong>Played</strong> (visible wear — indents, whitening, nicks, scuffs), <strong>Damaged</strong> (major edgewear, bends, creases, tears). Cards scanned individually; we err toward the lower grade.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "79.95",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10508011634966",
+   "title": "HOKO MTG Mystery Pack — Holo Tier",
+   "handle": "hoko-mtg-mystery-pack-bronze-edition-4",
+   "status": "ARCHIVED",
+   "productType": "Sealed Trading Cards - Mystery Pack",
+   "tags": [
+    "featured",
+    "foil",
+    "game:mtg",
+    "hand-verified",
+    "hoko-mystery",
+    "mtg",
+    "mtg-mystery-pack",
+    "mystery-pack",
+    "rares"
+   ],
+   "descriptionHtml": "<p><strong>HOKO MTG Mystery Pack — Holo Tier</strong> — hand-picked by HOKO Collectables. Every pack guaranteed to contain at least one foil or holo Magic: The Gathering card, individually graded and sleeve-protected before dispatch.</p><h3>🎁 What You Get</h3><p>1× hand-selected MTG foil or holo card in Near Mint condition. Sleeved and stiffened for safe transit. Cards span all formats — Commander, Modern, Legacy, and casual staples. Good chance of something spicy.</p><h3>🎴 Condition</h3><p>Every card individually graded. <strong>Near Mint</strong>: minimal wear, excellent presentation. <strong>Lightly Played</strong>: minor surface wear, fully playable. Cards below LP excluded from mystery packs.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "10.00",
+    "compareAtPrice": null,
+    "inventoryQuantity": 10
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10508049187094",
+   "title": "HOKO MTG Mystery Pack — Rare Tier",
+   "handle": "hoko-mtg-mystery-pack-silver-edition",
+   "status": "ARCHIVED",
+   "productType": "Sealed Trading Cards - Mystery Pack",
+   "tags": [
+    "featured",
+    "foil",
+    "game:mtg",
+    "hand-verified",
+    "hoko-mystery",
+    "mtg",
+    "mtg-mystery-pack",
+    "mystery-pack",
+    "mythic",
+    "premium",
+    "rares"
+   ],
+   "descriptionHtml": "<p><strong>HOKO MTG Mystery Pack — Rare Tier</strong> — hand-picked by HOKO Collectables. Guaranteed rare or mythic rare Magic: The Gathering card, individually graded and sleeve-protected.</p><h3>🎁 What You Get</h3><p>1× hand-selected MTG rare or mythic rare in Near Mint condition. Sleeved and stiffened for safe transit. Cards span Commander, Modern, Legacy — we pick cards with real play and trade value. Strictly better pulls than the Holo Tier.</p><h3>🎴 Condition</h3><p>Every card individually graded. <strong>Near Mint</strong>: minimal wear, excellent presentation. <strong>Lightly Played</strong>: minor surface wear, fully playable. Cards below LP excluded.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "15.00",
+    "compareAtPrice": null,
+    "inventoryQuantity": 8
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10508049973526",
+   "title": "HOKO MTG Mystery Pack — Ultra Rare Tier",
+   "handle": "hoko-mtg-mystery-pack-gold-edition",
+   "status": "ARCHIVED",
+   "productType": "Sealed Trading Cards - Mystery Pack",
+   "tags": [
+    "chase-cards",
+    "featured",
+    "foil",
+    "game:mtg",
+    "hand-verified",
+    "hoko-mystery",
+    "mtg",
+    "mtg-mystery-pack",
+    "mystery-pack",
+    "mythic",
+    "rares",
+    "ultra-premium"
+   ],
+   "descriptionHtml": "<p><strong>HOKO MTG Mystery Pack — Ultra Rare Tier.</strong> 1x hand-selected MTG rare or mythic foil — pulled from our best current stock, individually graded to Near Mint before packing. Not bulk box picks. Every card in this tier is one we would keep ourselves. Foil finish preferred. A contents card is included so you know exactly what you got.</p><h3>🎴 Condition</h3><p>Every card individually graded to Near Mint standard before inclusion in this tier. Cards showing Played condition are excluded.</p><h3>📦 Shipping</h3><p>Australia only. Parcel post is $15.25 and free on orders over $30; Tracked Parcel is $12.50 and free on orders over $30; Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia.</p><h3>✨ How We Pack</h3><p>Foils: foil-safe penny sleeve → toploader → bubble wrap → stiffened mailer.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": "1x hand-selected MTG rare or mythic foil, Near Mint condition. Hand-picked from top stock by a 20-year Victoria collector. Tracked shipping Australia-wide."
+   },
+   "variant": {
+    "sku": null,
+    "price": "35.00",
+    "compareAtPrice": null,
+    "inventoryQuantity": 5
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150711574",
+   "title": "HOKO Pokemon Mystery Pack — Holo Tier ($15+ guaranteed)",
+   "handle": "hoko-pokemon-mystery-pack-holo-tier-15-guaranteed",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "featured",
+    "game:pokemon",
+    "hoko-mystery",
+    "mystery-pack",
+    "pokemon-mystery-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Pokemon Mystery Pack — Holo Tier ($15+ guaranteed)</strong> — hand-picked by HOKO Collectables. Every pack contains at least one holo Pokemon TCG single with a market value of $15 or more, individually graded and packed.</p><h3>🎁 What You Get</h3><p>1× hand-selected Pokemon holo single — guaranteed $15+ market value at time of packing. Sleeved and stiffened for safe transit. Could be a reverse holo, standard holo, or rarer — all Near Mint.</p><h3>🎴 Condition</h3><p>Every card individually graded. <strong>Near Mint</strong>: minimal wear, excellent presentation. Cards below NM excluded from mystery packs.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150744342",
+   "title": "HOKO Pokemon Mystery Pack — Rare Tier ($25+ guaranteed + sealed pack)",
+   "handle": "hoko-pokemon-mystery-pack-rare-tier-25-guaranteed-sealed-pack",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "featured",
+    "game:pokemon",
+    "hoko-mystery",
+    "mystery-pack",
+    "pokemon-mystery-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Pokemon Mystery Pack — Rare Tier ($25+ guaranteed + sealed pack)</strong> — hand-picked by HOKO Collectables. Guaranteed $25+ rare Pokemon single plus a sealed booster pack — all individually selected and graded.</p><h3>🎁 What You Get</h3><p>1× hand-selected Pokemon rare single ($25+ market value) <strong>plus</strong> 1× sealed booster pack from current or recent sets. Both Near Mint. Sleeved and bubble-wrapped for safe transit.</p><h3>🎴 Condition</h3><p>All singles graded Near Mint before dispatch. Sealed packs factory fresh. No dented or damaged packs sent.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "14.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150777110",
+   "title": "HOKO Pokemon Mystery Pack — Ultra Rare Tier ($45+ guaranteed + 2 sealed packs)",
+   "handle": "hoko-pokemon-mystery-pack-ultra-rare-tier-45-guaranteed-2-sealed-packs",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "featured",
+    "game:pokemon",
+    "hoko-mystery",
+    "mystery-pack",
+    "pokemon-mystery-pack",
+    "premium"
+   ],
+   "descriptionHtml": "<p><strong>HOKO Pokemon Mystery Pack — Ultra Rare Tier ($45+ guaranteed + 2 sealed packs)</strong> — hand-picked by HOKO Collectables. Our best mystery tier: guaranteed $45+ ultra rare Pokemon single plus two sealed booster packs.</p><h3>🎁 What You Get</h3><p>1× hand-selected Pokemon ultra rare single ($45+ market value — ex, V, VMAX, illustration rare, or better) <strong>plus</strong> 2× sealed booster packs from current or recent sets. All Near Mint. Packed in toploader, bubble wrap, and stiffened mailer.</p><h3>🎴 Condition</h3><p>All singles graded Near Mint. Sealed packs factory fresh. This tier is reserved for our best pulls — we don't cut corners here.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "24.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150809878",
+   "title": "HOKO One Piece Mystery Pack — Rare Tier ($15+ guaranteed) — COMING SOON",
+   "handle": "hoko-one-piece-mystery-pack-rare-tier-15-guaranteed-coming-soon",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "coming-soon",
+    "game:onepiece",
+    "hoko-mystery",
+    "mystery-pack",
+    "onepiece-mystery-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO One Piece Mystery Pack — Rare Tier ($15+ guaranteed) — COMING SOON</strong> — launching soon from HOKO Collectables. Guaranteed $15+ One Piece TCG rare single, hand-picked and graded.</p><h3>⏳ Coming Soon</h3><p>This product is not yet live. Add to wishlist or check back soon — we'll announce launch via our <a href=\"https://www.instagram.com/hoko.collectables/\">Instagram</a> and <a href=\"https://discord.gg/4eFCy5YPFU\">Discord</a>.</p><h3>🎁 What You'll Get</h3><p>1× hand-selected One Piece TCG rare single — $15+ market value. Sleeved and stiffened for safe transit. Cards from English and Japanese sets.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Honest grading, careful packing, every order tracked. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "9.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150842646",
+   "title": "HOKO One Piece Mystery Pack — Super Rare Tier ($25+ guaranteed + sealed pack) — COMING SOON",
+   "handle": "hoko-one-piece-mystery-pack-super-rare-tier-25-guaranteed-sealed-pack-coming-soon",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "coming-soon",
+    "game:onepiece",
+    "hoko-mystery",
+    "mystery-pack",
+    "onepiece-mystery-pack"
+   ],
+   "descriptionHtml": "<p><strong>HOKO One Piece Mystery Pack — Super Rare Tier ($25+ guaranteed + sealed pack) — COMING SOON</strong> — launching soon from HOKO Collectables. Guaranteed $25+ One Piece TCG super rare single plus a sealed booster pack.</p><h3>⏳ Coming Soon</h3><p>Not yet live. Follow us on <a href=\"https://www.instagram.com/hoko.collectables/\">Instagram</a> or join our <a href=\"https://discord.gg/4eFCy5YPFU\">Discord</a> for launch announcements.</p><h3>🎁 What You'll Get</h3><p>1× hand-selected One Piece TCG super rare ($25+ value) <strong>plus</strong> 1× sealed One Piece booster pack. All Near Mint or better. Sleeved and bubble-wrapped for transit.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "14.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  },
+  {
+   "id": "gid://shopify/Product/10530150908182",
+   "title": "HOKO One Piece Mystery Pack — Secret Rare Tier ($45+ guaranteed + 2 sealed packs) — COMING SOON",
+   "handle": "hoko-one-piece-mystery-pack-secret-rare-tier-45-guaranteed-2-sealed-packs-coming-soon",
+   "status": "ARCHIVED",
+   "productType": "Mystery Pack",
+   "tags": [
+    "coming-soon",
+    "game:onepiece",
+    "hoko-mystery",
+    "mystery-pack",
+    "onepiece-mystery-pack",
+    "premium"
+   ],
+   "descriptionHtml": "<p><strong>HOKO One Piece Mystery Pack — Secret Rare Tier ($45+ guaranteed + 2 sealed packs) — COMING SOON</strong> — our best One Piece mystery tier. Guaranteed $45+ secret rare or special card plus two sealed booster packs.</p><h3>⏳ Coming Soon</h3><p>Not yet live. Follow us on <a href=\"https://www.instagram.com/hoko.collectables/\">Instagram</a> or join our <a href=\"https://discord.gg/4eFCy5YPFU\">Discord</a> for launch announcements.</p><h3>🎁 What You'll Get</h3><p>1× hand-selected One Piece TCG secret rare or SP card ($45+ value) <strong>plus</strong> 2× sealed One Piece booster packs. All Near Mint. Packed in toploader, bubble wrap, and stiffened mailer.</p><h3>📦 Shipping</h3><p>Australia only. Standard letter post is $3 and untracked. Tracked Parcel is $12.50 and free on orders over $30. Express Post is $19.50. Dispatched within 1–3 business days, Monday to Friday, from Victoria, Australia. Combined postage applies automatically on multiple items.</p><h3>🤝 About HOKO</h3><p>Victoria-based, collector-run. 20 years in the hobby. Email <a href=\"mailto:support@hokocollectables.com\">support@hokocollectables.com</a> or DM <a href=\"https://www.instagram.com/hoko.collectables/\">@hoko.collectables</a>.</p>",
+   "seo": {
+    "title": null,
+    "description": null
+   },
+   "variant": {
+    "sku": null,
+    "price": "24.99",
+    "compareAtPrice": null,
+    "inventoryQuantity": 0
+   }
+  }
+ ]
+}
