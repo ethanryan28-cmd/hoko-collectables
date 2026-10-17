@@ -117,6 +117,15 @@ class QueueRules(unittest.TestCase):
         pack = next(i for i in q['items'] if i['platform'] == 'tiktok_queue' and i['slot'].startswith('2026-11-27'))
         self.assertEqual(pack['clips'][0]['asset_id'], 'beat/2026-11-27')
 
+    def test_beat_on_draft_box_is_ineligible_and_skipped(self):
+        beat = next(a for a in ASSETS if a.id == 'beat/2026-11-26')      # features Inferno X (M2), now DRAFT
+        self.assertFalse(beat.eligible)
+        self.assertIn('featured box', beat.reason)
+        q = build(start=date(2026, 11, 20), n=10)
+        used = {e['asset_id'] for i in q['items'] for e in (i.get('clips') or [i]) if e.get('asset_id')}
+        self.assertNotIn('beat/2026-11-26', used)
+        self.assertIn('beat/2026-11-27', used)
+
     def test_topup_keeps_existing_and_extends(self):
         q1 = build(n=15)
         q2 = qb.build(start=START + timedelta(days=1), n_days=15, existing=q1, assets=ASSETS)

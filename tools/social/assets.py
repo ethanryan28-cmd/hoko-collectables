@@ -183,11 +183,15 @@ def load(today=None):
         meta = _read(j)
         d = j.stem
         bf = d <= '2026-11-30' and 'cutoff' not in meta.get('voiceover', '').lower() and 'christmas' not in meta.get('voiceover', '').lower()
+        # a beat is rendered around one featured box; if that box is no longer buyable the clip is stale
+        feat = sealed.get(str(meta.get('product_id', '')))
+        ok, why = product_eligible(feat) if feat else (True, '')
         out.append(Asset(id=f'beat/{d}', kind='beat', media_type='video',
                          media=str(j.with_suffix('.mp4').relative_to(REPO)).replace('\\', '/'),
                          url=f'{SITE}/pages/black-friday' if bf else f'{SITE}/collections/japan-direct-sealed',
                          name=strip_prices(meta.get('hook', '')), hook=strip_prices(meta.get('hook', '')),
-                         game='pokemon', jp_sealed=True, pin_date=d,
+                         game='pokemon', jp_sealed=True, pin_date=d, product_id=str(meta.get('product_id', '')),
+                         eligible=ok, reason='' if ok else f'featured box {why}; re-render with run.py calendar',
                          extra={'voiceover': strip_prices(meta.get('voiceover', '')), 'bf': bf}))
 
     # Shorts cut from long-form, CardDrop renders, social bank — sidecar json with hook/url/title/game
