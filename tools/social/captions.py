@@ -56,10 +56,10 @@ ROUNDUP_LINES = {
 }
 # Black Friday week (20–30 Nov): every caption carries this block. No dollar figures (PRICE_RE), the code only.
 BF_LINES = [
-    'Black Friday box drop, 27–30 Nov: code BFDROP5 takes money off any Japanese sealed box, one use per customer.',
+    'Black Friday box drop, 27–30 Nov: code BFDROP5 takes money off any Japanese sealed box, one use per customer, and every sealed box ships free within Australia that weekend.',
     'Join the box drop list on the Black Friday page at hokocollectables.com — list members hear first.',
 ]
-BF_LIVE_LINE = 'Black Friday is live until Monday 30 Nov: BFDROP5 on any Japanese sealed box, one use per customer.'
+BF_LIVE_LINE = 'Black Friday is live until Monday 30 Nov: BFDROP5 on any Japanese sealed box, one use per customer, and every sealed box ships free within Australia.'
 
 
 def bf_lines(day):

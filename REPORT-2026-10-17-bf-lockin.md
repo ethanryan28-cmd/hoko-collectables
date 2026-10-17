@@ -92,7 +92,11 @@ Checks: `python -m tools.social check` → PASS (15 days all platforms, 0 violat
 | tests OK | PASS — 47 |
 | 0 banned words on everything touched | PASS on customer-facing text (articles, page, captions, titles, alt, config, CLAUDE.md, this report). Grep hits outside copy, recorded not fixed: the M6a product image's **CDN filename** (`m6a-30th-celebration-sealed-box-<the o-word>-white.jpg`, a pre-existing Shopify file that appears in page/queue `src` URLs only); the IANA time-zone string for Victoria's capital in `tools/social/config.py` / queue metadata; the gate's own regex and tests |
 
-## OPEN QUESTION — free sealed postage (Ethan's call, no agent change)
+## OPEN QUESTION — ANSWERED 17 Oct 07:27 (Ethan, in chat): **free postage on all sealed, no minimum**; M7 stays live with the placeholder
+
+Follow-up (`claude/bf-postage-1017`, read back): BF page now says "Every Japanese sealed box ships free within Australia that weekend, no minimum, no code needed."; `content/email/bf-early-access.html` + `copy.md` reworded the same way (preview text too); BF-week caption lines carry it; the four beat reels already said it. **Still Ethan's click (discount edit):** Shopify admin → Discounts → the scheduled Black Friday free-shipping automatic → change from "all orders $100+" to applies to collection *Japanese Sealed*, no minimum purchase, dates unchanged 27–30 Nov. Until that's done, the live automatic still covers every sealed box (cheapest is $115 ≥ $100), so the page wording is true either way.
+
+### Original question (for the record)
 
 The live scheduled Black Friday automatic (27–30 Nov) gives free AU postage on **orders $100+**; your 11 Oct pick was **free postage on all sealed, no minimum**. Nothing was changed. Three places currently say or imply a threshold, and all three are yours to settle with one word:
 1. Shopify automatic discount (scheduled, $100+) — a discount edit, Ethan-only.
