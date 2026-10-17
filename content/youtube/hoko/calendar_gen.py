@@ -103,9 +103,9 @@ TIPS = [
      'If you cannot verify it, walk away.',
      ['Cert checks online', 'Public pop reports', "Can't verify it? Walk away"]),
     ('buyback', 'Selling a collection? Here is how we buy',
-     'Selling a collection? We buy sealed and PSA, BGS or CGC slabs over a hundred dollars. One photo and a list '
+     'Selling a collection? We buy sealed and PSA, BGS or CGC slabs. One photo and a list '
      'gets you a quote in forty eight hours. Link in bio.',
-     ['Sealed + verified slabs $100+', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
+     ['Sealed + graded slabs', 'One photo + a list → quote in 48 hrs', 'Bank transfer on the day']),
 ]
 
 
@@ -122,7 +122,7 @@ def roundups(cfg):
          by_price([r for r in live if r['game'] == 'pokemon' and r.get('set_code', '').startswith('M')])[:4]),
         ('one-piece', 'One Piece JP boxes in stock right now', 'IN STOCK NOW',
          by_price([r for r in live if r['game'] == 'onepiece'])[:4]),
-        ('under-200', 'Japanese sealed under $200', 'IN STOCK NOW',
+        ('under-200', 'Cheapest Japanese sealed in stock', 'IN STOCK NOW',
          by_price([r for r in live if float(r['price']) < 200])[:4]),
         ('preorders', 'Pre-orders landing before Christmas', 'PRE-ORDER',
          sorted(pre, key=lambda r: r['release_date'])[:4]),
@@ -130,12 +130,12 @@ def roundups(cfg):
     return [r for r in out if r[3]]
 
 
-# spoken opener where the on-screen title carries a price
+# spoken opener where it differs from the on-screen title
 SPOKEN_HOOK = {'under-200': 'The cheapest Japanese sealed in stock right now'}
 
 
 def roundup_vo(hook, items, pre=False):
-    # no prices in the voiceover (social rule); they stay on the on-screen list and in the caption
+    # no prices in the voiceover, the frame or the caption (Ethan 17 Oct 2026)
     parts = []
     for it in items:
         name = set_name(it)
@@ -151,8 +151,8 @@ def roundup_caption(hook, items, pre=False):
     lines = [hook, '']
     for i, it in enumerate(items, 1):
         extra = f' · JP release {dshort(date.fromisoformat(it["release_date"]))}' if pre else ''
-        lines.append(f'{i}. {short_title(it)} — {price_str(it["price"])}{extra}\n   {it["url"]}')
-    lines += ['', 'All sealed, all tracked from Victoria. Free AU post on sealed orders $250+.',
+        lines.append(f'{i}. {short_title(it)}{extra}\n   {it["url"]}')
+    lines += ['', 'All sealed, all tracked from Victoria. Free AU post on sealed boxes.',
               '', 'Collector first. Seller second.', '',
               ' '.join(reel.hashtags(items[0], 'sealed'))]
     return '\n'.join(lines) + '\n'
@@ -171,24 +171,24 @@ def tip_caption(tip, row):
 def beat_caption(label, row, cfg):
     cutoff = date.fromisoformat(cfg['christmas_cutoff'])
     url = cfg.get('bf_list_url') or '{{BF_LIST_URL}}'
-    s, p = short_title(row), price_str(row['price'])
+    s = short_title(row)
     tags = ' '.join(reel.hashtags(row, 'sealed'))
     co = dshort(cutoff)
     if label.startswith('BF box drop list'):
         body = (f"BF box drop list is open.\n\nJoin the BF box drop list — $5 off boxes {url}\n"
                 f"List members hear first when the Black Friday boxes go up on 27 Nov.\n\n"
-                f"Featured: {s} — {p}. {row['url']}")
+                f"Featured: {s}. {row['url']}")
     elif label.startswith('BF countdown'):
         n = label.split('— ')[1]
         body = (f"Black Friday: {n}.\n\nFree AU post on every sealed box, 27–30 Nov.\n"
-                f"Join the BF box drop list — $5 off boxes {url}\n\nFeatured: {s} — {p}. {row['url']}")
+                f"Join the BF box drop list — $5 off boxes {url}\n\nFeatured: {s}. {row['url']}")
     elif label.startswith("It's live"):
         body = (f"It's live. Black Friday at HOKO.\n\nFree AU post on every sealed box, 27–30 Nov.\n"
-                f"Christmas delivery on sealed imports: order by {co}.\n\n{s} — {p}. {row['url']}")
+                f"Christmas delivery on sealed imports: order by {co}.\n\n{s}. {row['url']}")
     else:
         body = (f"Christmas cutoff: order sealed by {co}.\n\nJapanese sealed is imported to order — "
                 f"after {co} we can't promise it lands before Christmas.\n"
-                f"Slabs ship from Victoria in 1–3 business days.\n\n{s} — {p}. {row['url']}")
+                f"Slabs ship from Victoria in 1–3 business days.\n\n{s}. {row['url']}")
     return f"{body}\n\nCollector first. Seller second.\n\n{tags}\n"
 
 

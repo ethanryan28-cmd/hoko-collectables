@@ -1,6 +1,10 @@
 # HOKO content machine
 
-Reels from existing Shopify photos → BF/Christmas calendar → auto-publish to Instagram + YouTube Shorts.
+Reels from existing Shopify photos → BF/Christmas calendar. Posting is done by `tools/social/` (see its README).
+
+> **RETIRED 17 Oct 2026:** `run.py publish`, `run.py schedule`, `hoko-publish.cmd` and the Windows Task Scheduler job
+> **HOKO publish**. `tools/social` is the only poster. On the PC, remove the job once:
+> `schtasks /Delete /TN "HOKO publish" /F`. The files stay in the repo for reference; don't re-register the task.
 Legit growth only: no bots, no bought engagement, nothing posts a reply without an approval tick.
 
 Setup (once, on the PC): `pip install faster-whisper edge-tts google-api-python-client google-auth-oauthlib requests pillow numpy` + ffmpeg on PATH, copy `.env.example` → `.env` and fill it in.
@@ -13,11 +17,11 @@ Setup (once, on the PC): `pip install faster-whisper edge-tts google-api-python-
 | `python content/youtube/run.py shorts` | `inbox/*.mp4` long-form → 3–5 vertical Shorts with burned captions → `out/<video>/short_N.mp4/.json` |
 | `python content/youtube/run.py package <video>` | 3 title variants + 3 thumbnails (1280x720) → `out/<video>/package/` |
 | `python content/youtube/run.py calendar` | Rebuild `calendar.md` (14 Oct → 24 Dec), `CUTOFF.md`, dated captions, BF/Christmas beat reels |
-| `python content/youtube/run.py publish` | Post today's queued row to IG + YT Shorts, mark it posted, write `TODAY.md` for TikTok (`--dry-run` mocks APIs) |
+| ~~`python content/youtube/run.py publish`~~ | **RETIRED 17 Oct 2026** (use `tools/social`). Was: post today's queued row to IG + YT Shorts, mark it posted, write `TODAY.md` for TikTok (`--dry-run` mocks APIs) |
 | `python content/youtube/run.py comments` | Pull comments on last 10 YT videos → `comments/queue.md` with drafted replies + `APPROVE [ ]` |
 | `python content/youtube/run.py comments --post` | Post only the replies you ticked `[x]` (drafts with `[FILL IN]` are skipped) |
 | `python content/youtube/run.py cutoff` | Dry-run: show the Christmas-cutoff line on one sealed product; `--apply` writes all + collection; `--remove` after Christmas |
-| `python content/youtube/run.py schedule` | Register Windows Task Scheduler job **HOKO publish**, daily 6:30pm, via `hoko-publish.cmd` |
+| ~~`python content/youtube/run.py schedule`~~ | **RETIRED 17 Oct 2026.** Was: register Windows Task Scheduler job **HOKO publish** via `hoko-publish.cmd`. Remove it: `schtasks /Delete /TN "HOKO publish" /F` |
 
 Make the sealed reels actually sell — fill two columns in `sealed/source.csv` (voice-dump them, one line per set):
 - `chase` — the cards people rip the box for, e.g. `Umbreon ex SAR, Eevee ex SAR`. Unlocks a "What's in [set]?" reel per box (hook 4), which goes first in rotation.
@@ -26,6 +30,8 @@ Then `python content/youtube/run.py reel sealed all` and `run.py calendar`. Neve
 
 Notes
 - Voice: edge-tts `en-AU-WilliamMultilingualNeural`. If edge-tts can't connect it falls back to Piper (`HOKO_PIPER_MODEL`). Each reel's `.json` records which voice it used.
-- `*.mp4` is gitignored. `publish` renders a missing reel on the fly, so a fresh clone works.
+- Reel mp4s under `reels/` are committed (since 17 Oct 2026); other mp4s are gitignored.
+- No prices in the frame or the voiceover (Ethan 17 Oct 2026): hooks, the pre-order card, the badge slot and roundup
+  labels carry no figure. `tools/social/tests/test_reel_prices.py` checks it.
 - First YouTube run opens a browser once for OAuth; the token is cached in `.secrets/` (gitignored).
 - Settings (cutoff, lead time, BF list URL) live in `config.json`; change them and re-run `calendar`.
