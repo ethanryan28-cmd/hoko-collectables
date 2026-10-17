@@ -41,6 +41,6 @@ Collector first. Seller second.
 — Ethan, HOKO Collectables · Victoria, Australia
 
 ## Checks
-- The code and dates match the live discount as of 17 Oct. Postage wording = Ethan's 17 Oct ruling (free on every sealed box, no minimum); the Shopify free-shipping automatic must be changed from "$100+ all orders" to "Japanese Sealed collection, no minimum" before this sends.
+- The code and dates match the live discount as of 17 Oct. Postage wording = Ethan's 17 Oct ruling (free on every sealed box, no minimum); ~~the Shopify free-shipping automatic must be changed from "$100+ all orders" to "Japanese Sealed collection, no minimum" before this sends.~~ Done 17 Oct (Ethan: automatic "Black Friday: Free AU postage", every AU order, no minimum).
 - The featured boxes were in stock on 17 Oct (inventory > 0). **Re-check on 26 Nov** and drop any that have sold out.
 - No prices in the body, so they can't go stale. Product prices show on the site.

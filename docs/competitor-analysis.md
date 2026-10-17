@@ -80,7 +80,7 @@ Never price below market to drive volume — moat is service, not price.
 Being clear about what HOKO doesn't do is part of the brand:
 
 - Not a bulk singles seller
-- No repacks
+- No re-sealed packs
 - Not an HGA or GMG buyer/seller
 - Not a 'cheapest price' store
 - Not a general TCG store — specialist only

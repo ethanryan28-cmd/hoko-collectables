@@ -23,7 +23,7 @@ HOKO now sells strictly:
 - Pre-orders on the newest Japanese sets
 - Graded slabs: PSA, BGS, CGC only
 
-Out of scope: repacks and bulk lots, HGA/GMG slabs.
+Out of scope: re-sealed packs and bulk lots, HGA/GMG slabs.
 
 Buying: sealed, PSA/BGS/CGC slabs ($100+) and premium singles ($25+), Australia-wide, 70–85% of eBay last-sold. Itemised offer within 1–2 business days.
 

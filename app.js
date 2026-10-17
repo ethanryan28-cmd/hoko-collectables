@@ -546,7 +546,7 @@ const PRODUCT_DESCS = {
     figures: 'A highly detailed, museum-quality figure from our certified-authentic collection. Perfect mint condition, comes with original packaging and certificate of authenticity.',
     cards:   'A rare and highly sought-after trading card in excellent condition. Independently graded and verified. Stored in protective sleeve. Perfect addition to any collection.',
     vintage: 'An original vintage piece in remarkable condition for its age. Thoroughly cleaned and professionally inspected. A true collector's treasure from a golden era.',
-    anime:   'Official licensed merchandise from a reputable manufacturer. Highly detailed sculpt with premium paint applications. Comes in original box with all accessories.',
+    anime:   'Licensed merchandise from a reputable manufacturer. Highly detailed sculpt with premium paint applications. Comes in original box with all accessories.',
     comics:  'A premium-condition comic or art piece, independently graded and verified. Stored in archival-quality materials. A cornerstone for any serious collection.',
     sports:  'Authentic sports memorabilia with certificate of authenticity. Verified by a reputable third-party service. An iconic piece of sports history.',
 };

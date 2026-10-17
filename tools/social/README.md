@@ -28,6 +28,7 @@ python -m tools.social dry-run    # build + validate every payload, no network â
 python -m tools.social run        # post / schedule what's due (the 15-minute task)
 python -m tools.social render     # render clips the queue needs (PC: ffmpeg + content/youtube deps)
 python -m tools.social cloud-run  # one unattended pass from Claude Code web (see Cloud below); --dry-run = JSON summary only
+python -m tools.social phone-pack # today's TikTok clips + Instagram items as markdown for the phone (see Phone pack below)
 python -m unittest discover -s tools/social/tests -t .
 ```
 
@@ -60,6 +61,14 @@ A platform with missing keys is skipped and reported as `NOT CONFIGURED`. Add th
 - **Runner.** `data/social-post-log.csv` is the source of truth: OK / FAIL / SKIP mean done. A failed post is logged RETRY,
   retried on the next run, and marked FAIL after 2 retries. Anything more than 6 h past its slot is logged SKIP
   instead of going out late.
+
+## Phone pack
+
+`python -m tools.social phone-pack [--date YYYY-MM-DD]` prints the day's `tiktok_queue` clips and Instagram items as
+markdown: platform + slot Â· name, the clip as a `raw.githubusercontent.com/.../main/<media>` mp4 URL (reels are
+committed), the product link, and the caption verbatim in a code block. Day = today in Victoria; if it has no
+TikTok / Instagram items, the next day that does. Every printed item is appended to `data/phone-pack-log.csv`
+(`date,platform,asset_id,url`, header written if the file is new). A scheduled cloud task (07:10 daily) runs it.
 
 ## Cloud (Claude Code web, no PC)
 

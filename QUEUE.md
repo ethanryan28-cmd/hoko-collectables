@@ -2,12 +2,33 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · Close-out: discount canon, `phone-pack`, QUEUE tidy (`claude/hoko-close-out-1018-6c8z6p`)
+- **Status:** built, merged. Report → `REPORT-2026-10-18-close-out.md`
+- CLAUDE.md free-postage line = the live automatic ("Black Friday: Free AU postage", every AU order, no minimum); `local-setup/CLAUDE.md.template` = copy of CLAUDE.md; email Checks bullet marked done.
+- New `python -m tools.social phone-pack [--date]`: today's (Victoria) TikTok + Instagram items as markdown with raw.githubusercontent mp4 URLs, logged to `data/phone-pack-log.csv`. 10 tests, 66 OK. Scheduled task `trig_01QeakRTdC9hVqwinFfMP1CB` (07:10) calls it.
+- Repo banned-word gate now a script (`scripts/banned-word-gate.sh`), 0 hits (5 demo/doc lines reworded). check PASS 60%.
+- **Ethan to do:** see WAITING ON PC / WAITING ON ETHAN below.
+
+## WAITING ON PC
+- Platform keys (IG/FB, YouTube, Pinterest, Discord webhooks). Chrome task `trig_01Adhr9RC9iZHFwUnMvX7zVj` runs when the PC is on.
+- Cloud environment: setup-script line `pip install edge-tts piper-tts` + network allowlist (list in the MANUAL of `REPORT-2026-10-17-bf-media-2.md`).
+- `schtasks /Delete /TN "HOKO publish" /F` (PC publisher retired).
+- Publish the draft theme (Ethan's click).
+- Policies (paste blocks, `REPORT-2026-10-17-consolidated.md`) · meta description (Chrome) · BF email.
+
+## WAITING ON ETHAN (not PC)
+- Prices for the M7 / OP-18 / FB12 pre-orders.
+- eBay relist (reconcile first with `tools/relist-reconcile.py`; never bulk relist).
+
+## DONE 17 Oct (struck in the entries below)
+- ~~BF free-postage automatic~~ → "Black Friday: Free AU postage", every AU order, no minimum · ~~M6a ACTIVE~~ · ~~We Buy Cards menu item~~ · ~~`run.py cutoff --apply`~~ · ~~$5 BF code~~ = `BFDROP5` · ~~cloud-run poster scheduled task~~ `trig_015SKsJWBRCz4Y549d2kHgeL` (4×/day) · ~~test orders #1058 / #1434~~ archived · ~~phone-pack scheduled task~~ `trig_01QeakRTdC9hVqwinFfMP1CB` (07:10)
+
 ## 2026-10-18 · No price frames: strip prices from frame + voice, re-render 75, captions/ rebuilt, PC publisher retired (`claude/no-price-frames`)
 - **Status:** built, merged. Report → `REPORT-2026-10-18-no-price-frames.md`
 - `reel.py`: hooks, voiceover, pre-order card, gold price slot (now `SEALED · JAPANESE` / grader+grade), roundup labels (set code) and postage strip carry no figure. `calendar_gen.py`: roundup/beat captions de-priced, `under-200` roundup retitled, buyback tip drops `$100+`. 2 new tests, 56 OK.
 - 75/75 clips re-rendered in William (incl. 4 drafted-product clips that only had sidecars), 93.8 MB, 0 `$` in sidecars, 36 clips frame-checked. captions/ rebuilt: only `$5 off boxes` left (15 files, ruling 4). check PASS 60%, dry-run 0 invalid / 0 missing.
 - `run.py publish` / `hoko-publish.cmd` / "HOKO publish" marked RETIRED in both READMEs; `publish.run()` prints a retired line.
-- **Ethan to do:** PC `schtasks /Delete /TN "HOKO publish" /F`; BF automatic edit; platform keys; env setup + allowlist; optional: BF beat on-screen `$5 off`.
+- **Ethan to do:** PC `schtasks /Delete /TN "HOKO publish" /F`; ~~BF automatic edit~~ (done 17 Oct); platform keys; env setup + allowlist; optional: BF beat on-screen `$5 off`.
 
 ## 2026-10-17 · BF media tidy: run-2 fold-in, cloud docs, caption prices out (`claude/bf-media-tidy-1017-1tsocy`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-media-tidy.md`
@@ -15,7 +36,7 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - `reel.caption_text`: price + postage figure out (incl. priced hooks). 61 `reels/**/*.caption.txt` rewritten without rendering, 0 with `$N`, backup in `reports/backups/2026-10-17-bf-media-tidy-captions/`. Nothing reads those files. 0 mp4/json touched. 54 tests OK, check PASS 60%, dry-run 0 invalid / 0 missing.
 - `due_unconfigured` 29 on FB/YT = native 14-day scheduling, not a bug.
 - Pre-order clips show the price on screen (`preorder_body`), left for Ethan. `captions/<date>.txt` (read by PC `run.py publish`) still carry prices, needing a no-render calendar rebuild.
-- **Ethan to do:** on-screen price ruling; captions/ rebuild yes/no; BF automatic edit; platform keys; env setup + allowlist.
+- **Ethan to do:** on-screen price ruling; captions/ rebuild yes/no; ~~BF automatic edit~~ (done 17 Oct); platform keys; env setup + allowlist.
 
 ## 2026-10-17 · Social poster cloud-run 20:13 (`claude/social-cloud-2026-10-17-2012`)
 - **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T2013+1100.md`
@@ -31,21 +52,21 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Network open this session (PyPI 200, Bing reachable). The branch's `tts.py` proxy-CA fix rendered live (`edge-tts:en-AU-WilliamMultilingualNeural`, verification on, no sitecustomize). 54 tests OK.
 - 71/71 mp4s rendered in William (45 sealed incl. EB-05/M7/FB12 h3 forced, 12 slab, 4 tips, 4 roundups, 6 BF beats). ffprobe PASS 1080×1920, audio, 8–20 s, no "$" spoken. **86.5 MB committed**, mp4s now in git. 30 sidecars piper → William.
 - Queue: check PASS 60% hot everywhere, dry-run 0 invalid / **0 missing media** (was 30), all platforms NOT CONFIGURED.
-- **Ethan to do:** BF free-shipping automatic edit; platform keys; env setup line + network allowlist (in the report MANUAL).
+- **Ethan to do:** ~~BF free-shipping automatic edit~~ (done 17 Oct); platform keys; env setup line + network allowlist (in the report MANUAL).
 
 ## 2026-10-17 · BF media: tts.py proxy-CA fix, un-ignore reels mp4s, re-render + keep (`claude/bf-media-1017`)
 - **Status:** built, **NOT merged** — stopped at the Step 1 live-render gate. Report → `REPORT-2026-10-17-bf-media.md`
 - Cloud run with every render host policy-denied (403 at the proxy): PyPI, `speech.platform.bing.com`, `huggingface.co`. No edge-tts / piper / faster-whisper installable, so **0 clips rendered, 0 MB committed**; the 38 bf-render mp4s are still gone.
 - Done + tested: `content/youtube/hoko/tts.py` trusts `SSL_CERT_FILE` / `REQUESTS_CA_BUNDLE` / `/root/.ccr/ca-bundle.crt` via a verifying `ssl.create_default_context(cafile=…)` handed to edge-tts' connector **and** its per-request context (edge-tts 7.x overrides the connector), `proxy=$HTTPS_PROXY`; no env var → unchanged PC path. 7 new unit tests, 54 OK. `content/youtube/.gitignore` now keeps `reels/**/*.mp4` (out/, wav, cache, inbox still ignored). README Cloud line added.
 - Queue: check PASS 15 days / 60% hot on all 6, 0 invalid, **missing media 30** (the unrendered clips), all platforms NOT CONFIGURED.
-- **Ethan to do:** merge the branch or re-run with network (prompt line in the report MANUAL); PC render + push the mp4s meanwhile; BF automatic edit + platform keys still pending.
+- **Ethan to do:** merge the branch or re-run with network (prompt line in the report MANUAL); PC render + push the mp4s meanwhile; ~~BF automatic edit~~ (done 17 Oct) + platform keys still pending.
 
 ## 2026-10-17 · BF render: 38 clips in en-AU, queue check, BF automatic re-read (`claude/bf-render-1017-idka4q`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-render.md`
 - Cloud run, PyPI reachable this time: edge-tts William worked through the proxy CA (session-only sitecustomize, no repo code change). 38/38 clips rendered + ffprobe PASS (1080×1920, audio, 8–20 s, no "$" spoken): EB-05/M7/FB12 h3 (`stale_render` cleared), the 27 the queue listed missing, 6 BF beats (text unchanged, none said $100). mp4s are gitignored, so only sidecars are committed.
 - Queue: topup kept all 165 items, check PASS, 60% hot on every platform, 0 invalid, 0 missing media, all platforms NOT CONFIGURED; 47 tests OK. `source.csv` not refreshed (no token): committed rows already right.
 - BF free-shipping automatic read live: still "$100+, all products, AU". CLAUDE.md line now says so explicitly.
-- **Ethan to do:** change that automatic to Japanese Sealed / no minimum; PC: `run.py source` + `tools.social render` (mp4s are local-only); decide on the 3-line `tts.py` proxy fix.
+- **Ethan to do:** ~~change that automatic to Japanese Sealed / no minimum~~ (done 17 Oct: every AU order, no minimum); PC: `run.py source` + `tools.social render` (mp4s are local-only); decide on the 3-line `tts.py` proxy fix.
 
 ## 2026-10-17 · BF lock-in: M7 + FB12 live, newest-set links, BF page/collection, social queue 60% newest (`claude/bf-lockin-1017`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-bf-lockin.md`
@@ -53,7 +74,7 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - M6a + EB-05 guides link the other four newest; 2026 guide has a "Newest releases" list; 0 dead links across 41 articles. BF page = 5 newest tiles + collection link, no postage figure; `japan-direct-sealed` sorted M6a, EB-05, OP-18, M7, FB12 first.
 - Social: `hot_sets` = the 5, builder pushes them to ≥60% (2-day hot repeat), BF-week block 20–30 Nov built in (BFDROP5 + box drop list, product/collection links only), check PASS, 47 tests. All platforms NOT CONFIGURED. CLAUDE.md: newest-sets rule + prices-are-Ethan's line.
 - 07:27 Ethan ruled: free postage on ALL sealed, no minimum; M7 stays live with the placeholder. Page/email/captions reworded (`claude/bf-postage-1017`).
-- **Ethan to do:** edit the scheduled BF free-shipping automatic (all orders $100+ → Japanese Sealed collection, no minimum); social keys + piper in the env setup; PC re-render of EB-05/M7/FB12 h3 clips.
+- **Ethan to do:** ~~edit the scheduled BF free-shipping automatic (all orders $100+ → Japanese Sealed collection, no minimum)~~ (done 17 Oct: every AU order, no minimum); social keys + piper in the env setup; PC re-render of EB-05/M7/FB12 h3 clips.
 
 ## 2026-10-17 · Organic-2 run 2: re-verify + eBay box maths (`claude/organic-2-1017-9a79lu`)
 - **Status:** built, merged. Report → `REPORT-2026-10-17-organic-2.md`
@@ -93,14 +114,14 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - M6a no-shrink routed `route:urara-batch` (stays DRAFT, status write not in scope); OP-17 ×2 stay DRAFT (Kanade case-only floor $390 vs $200/$175, Urara 0 stock). Rows appended to `data/routing-2026-10-17.csv`.
 - 90-day release scan: only EB-05 Heroines vol.2 (31 Oct) had no product → DRAFT pre-order 15431829848342 at $235 (median of AU Japanese-box pre-orders), top of `japan-direct-sealed`. M7 / OP-18 untouched. `data/preorders-2026-10-17.csv`.
 - Cutoff gate: M5 sealed + OP-16 were missing the 7 Dec line → added (backup in `reports/backups/`). All 19 ACTIVE jp-sealed now carry it.
-- **Ethan to do:** flip M6a to ACTIVE if wanted; merge the duplicate OP-17 listings; confirm EB-05 price when Urara lists it.
+- **Ethan to do:** ~~flip M6a to ACTIVE if wanted~~ (ACTIVE); merge the duplicate OP-17 listings; confirm EB-05 price when Urara lists it.
 
 ## 2026-10-17 · Consolidated run: JP sealed routing, social cloud-run, store hygiene (`claude/consolidated-1017`)
 - **Status:** built. Report → `REPORT-2026-10-17-consolidated.md`
 - Routing: M5 sealed + OP-16 back ACTIVE (CONTINUE), 15 boxes tagged `route:kanade-single` / `route:urara-batch` + metafield `hoko.supplier`, 3 raise-to-floor prices, `japan-direct-sealed` re-sorted, BF page tiles, `data/routing-2026-10-17.csv`, `hot_sets` updated. eBay sold-count trim NOT CHECKED (eBay 403 from the cloud) — no in-stock box drafted.
 - Social: `python -m tools.social cloud-run` + `env`, README Cloud section, 43 tests, queue topped to 15 days/platform; run log + CSV now committed.
 - Hygiene: policy diffs + paste blocks (connector lacks `write_legal_policies`), discount-eligible clean, 0 customer orders stuck, abandoned checkouts read.
-- **Ethan to do:** see MANUAL in the report (env vars + trigger, paste policies, eBay trim, M6a/OP-17 pricing)
+- **Ethan to do:** see MANUAL in the report (env vars + ~~trigger~~ (cloud-run trigger `trig_015SKsJWBRCz4Y549d2kHgeL`, 4×/day), ~~test orders #1058/#1434~~ (archived), paste policies, eBay trim, M6a/OP-17 pricing)
 
 ## 2026-10-17 · Finish run: CLAUDE.md canon rewrite, store drift gate, pre-order gates, 14-day cutoff (`claude/finish-1017`)
 - **Status:** built. Report → `REPORT-2026-10-17-finish.md`
@@ -117,7 +138,7 @@ Work queue for Claude Code runs. Newest first. Each entry: date · what · statu
 - Reel engine, Shorts cutter + packager, 14 Oct → 24 Dec calendar, IG/YT auto-publish, comment queue
 - **Ethan to do (MANUAL):**
   1. Fill `content/youtube/.env` from `.env.example` (IG, YT OAuth, Shopify Admin token)
-  2. `python content/youtube/run.py cutoff` → check the example → `--apply` (Shopify write was blocked in the cloud run)
+  2. ~~`python content/youtube/run.py cutoff` → check the example → `--apply` (Shopify write was blocked in the cloud run)~~ (done)
   3. `python content/youtube/run.py schedule` on the PC (registers "HOKO publish", 6:30pm daily)
   4. `python content/youtube/run.py reel sealed all --force` + `reel slab all --force` on the PC to re-voice reels in en-AU (cloud run used a fallback voice)
-  5. Create the $5-off BF box code in Shopify (not created — by design)
+  5. ~~Create the $5-off BF box code in Shopify (not created — by design)~~ (done: `BFDROP5`)
