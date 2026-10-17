@@ -1,0 +1,5 @@
+article_id,article_handle,href,anchor,status_before,product_id,action,status_after
+688213655830,japanese-pokemon-one-piece-booster-boxes-australia-2026,/products/one-piece-tcg-op-17-sealed-japanese-booster-box,OP-17,DRAFT,10734775730454,removed in step 1 (stock list rebuilt from live ACTIVE boxes),gone
+688213655830,japanese-pokemon-one-piece-booster-boxes-australia-2026,/products/one-piece-tcg-op-13-sealed-japanese-booster-box,OP-13,DRAFT,10734775566614,removed in step 1 (stock list rebuilt from live ACTIVE boxes),gone
+688213655830,japanese-pokemon-one-piece-booster-boxes-australia-2026,/collections/japan-direct-sealed,30th Celebration (M6a),COLLECTION_OK (not the product),15398993723670,repointed to /products/pokemon-30th-celebration-m6a-sealed-japanese-booster-box in step 1,ACTIVE
+688481534230,one-piece-heroines-edition-vol-2-eb-05-release-date-pre-order-australia,/products/pre-order-one-piece-heroines-edition-vol-2-eb-05-sealed-japanese-booster-box,One Piece Heroines Edition vol.2 (EB-05) Sealed Japanese Booster Box — pre-order,DRAFT,15431829848342,left as is: no ACTIVE EB-05 product exists (pre-order draft stays DRAFT per step 4),DRAFT
