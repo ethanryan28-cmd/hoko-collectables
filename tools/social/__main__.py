@@ -9,7 +9,7 @@
   topup      keep today+ items, append days up to 14 ahead (daily "HOKO Social Topup", 23:00)
   run        post / schedule what is due (every 15 min, "HOKO Social Runner"); --dry-run = validate only
   dry-run    validate every future payload for every platform → data/social-dryrun.json
-  check      queue gate: ≥14 days per platform, no 7-day repeats, no banned words / prices
+  check      queue gate: ≥14 days per platform, no repeats (7 d; hot sets 2 d), hot-set share ≥ target, no banned words / prices
   render     render any clip the next 14 days need (PC only: ffmpeg + content/youtube deps)
 """
 
@@ -67,10 +67,15 @@ def main(argv=None):
         v = qb.violations(q)
         short = [p for p in ('youtube', 'instagram', 'facebook', 'pinterest', 'discord', 'tiktok_queue') if cov.get(p, 0) < 14]
         print(f'days per platform {cov}')
+        hot = C.hot_config()
+        hs = qb.hot_share(q, start=today)
+        print(f'hot sets {hot["hot_sets"]} share target {hot["share"]:.0%} · '
+              + ' · '.join(f'{p} {h}/{n} ({s:.0%})' for p, (h, n, s) in hs.items()))
+        under = [p for p, (h, n, s) in hs.items() if p != 'all' and n and s < hot['share']] if hot['hot_sets'] else []
         for x in v:
             print('  ✗', x)
-        ok = not v and not short
-        print('PASS' if ok else f'FAIL (short: {short}, violations: {len(v)})')
+        ok = not v and not short and not under
+        print('PASS' if ok else f'FAIL (short: {short}, violations: {len(v)}, hot share under target: {under})')
         return 0 if ok else 1
     if a.cmd in ('dry-run',) or (a.cmd == 'run' and a.dry_run):
         from . import runner
