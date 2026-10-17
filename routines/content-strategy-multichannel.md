@@ -123,7 +123,7 @@ This is the *anti-PSA-fraud* investigative piece. Big swing, careful production.
 
 - Same time every week (e.g. Sunday 8pm AEST)
 - Algorithm rewards consistency hard at this volume
-- Show formats rotate: pack rip / slab showcase / mystery box / collection feature
+- Show formats rotate: pack rip / slab showcase / collection feature
 
 ### Phase 3 graduation criteria
 

@@ -2,12 +2,12 @@
   "product_id": "10734779564310",
   "kind": "sealed",
   "hook_index": 2,
-  "hook": "VSTAR Universe for $390 \u2014 free AU post over $250",
-  "voiceover": "VSTAR Universe, $390. Free Australian postage when your sealed order is over two fifty. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.44,
+  "hook": "VSTAR Universe \u2014 sealed Japanese booster box",
+  "voiceover": "VSTAR Universe. Sealed Japanese booster box, free Australian postage on sealed boxes. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 10.18,
   "url": "https://www.hokocollectables.com/products/pokemon-vstar-universe-s12a-sealed-japanese-booster-box",
   "title": "Pokemon VSTAR Universe (s12a) Sealed Japanese Booster Box",
   "reel": "reels/sealed/10734779564310/h2.mp4",
-  "words": 17
+  "words": 15
 }

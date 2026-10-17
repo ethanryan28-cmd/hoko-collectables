@@ -33,8 +33,22 @@ def validate(p, item, ctx):
     return errs
 
 
+def preview(items, now, n=3):
+    """Next `n` future #pickups-and-drops items as they would post: plain lines, no secrets."""
+    from ..schedule import parse
+    state = 'would post' if C.get('DISCORD_WEBHOOK_URL') else 'NOT CONFIGURED (DISCORD_WEBHOOK_URL missing)'
+    nxt = sorted((i for i in items if i.get('platform') == 'discord' and not i.get('error') and parse(i['slot']) > now),
+                 key=lambda i: i['slot'])[:n]
+    out = [f'Discord next {len(nxt)} · {state}']
+    for it in nxt:
+        e = build(it, {})['embeds'][0]
+        out += [f'- {it["slot"][:16]} · {e["title"]}', *(f'    {l}' for l in e['description'].splitlines()),
+                f'    link: {e["url"]}', f'    image: {e["image"]["url"]}']
+    return out
+
+
 def send(item, p, http, ctx):
-    r = http.request('POST', C.get('DISCORD_WEBHOOK_PICKUPS') + '?wait=true', json=p)
+    r = http.request('POST', C.get('DISCORD_WEBHOOK_URL') + '?wait=true', json=p)
     return str(r.json().get('id', 'ok'))
 
 

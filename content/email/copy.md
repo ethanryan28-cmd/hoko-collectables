@@ -7,7 +7,7 @@
 ## Code facts (read from Shopify 17 Oct, unchanged)
 - `BFDROP5`: **$5 off**, applies to the **Japanese Sealed** collection (`/collections/japanese-sealed`), **one use per customer**, any customer.
 - Active **Fri 27 Nov 00:00 → Mon 30 Nov 23:59 AEDT** (scheduled).
-- The live BF page (`/pages/black-friday`) says: Black Friday runs 27–30 Nov. Every Australian order of $100 or more ships free that weekend, no code needed. Japanese sealed boxes are dispatched tracked from Victoria within 2–4 business days.
+- The live BF page (`/pages/black-friday`) says: Black Friday runs 27–30 Nov. Every Japanese sealed box ships free within Australia that weekend, no minimum, no code needed. Japanese sealed boxes are dispatched tracked from Victoria within 2–4 business days.
 - ⚠ The code isn't segment-limited and starts the same minute as the public sale. "Early access" here means *the list hears first and gets the extra $5*. It doesn't mean they shop earlier. To make it a real head start, move `startsAt` to Thu 26 Nov 6pm in Shopify (discount edit, not done here per the hard rules).
 
 ## Subject line options
@@ -15,7 +15,7 @@
 2. You're on the list: $5 off Japanese sealed, 27–30 Nov
 3. BFDROP5: first look at the Black Friday box drop
 
-**Preview text:** $5 off any Japanese sealed box from Friday, and free postage on $100+.
+**Preview text:** $5 off any Japanese sealed box from Friday, and every sealed box ships free within Australia.
 
 ## Body
 
@@ -26,7 +26,7 @@ You joined the box drop list, so here's your code before anyone else hears about
 **BFDROP5** takes $5 off a Japanese sealed box from **12am Friday 27 November** to **11:59pm Monday 30 November** (AEDT).
 
 - $5 off Japanese sealed booster boxes. One use per customer.
-- Every Australian order of $100 or more ships free that weekend, with no code needed.
+- Every Japanese sealed box ships free within Australia that weekend, no minimum, no code needed.
 - Dispatched tracked from Victoria within 2–4 business days, packed by hand.
 
 The boxes come in small batches. When one sells out, it stays out until the next shipment lands.
@@ -41,6 +41,6 @@ Collector first. Seller second.
 — Ethan, HOKO Collectables · Victoria, Australia
 
 ## Checks
-- The code, dates and postage match the live discount and BF page as of 17 Oct.
+- The code and dates match the live discount as of 17 Oct. Postage wording = Ethan's 17 Oct ruling (free on every sealed box, no minimum); ~~the Shopify free-shipping automatic must be changed from "$100+ all orders" to "Japanese Sealed collection, no minimum" before this sends.~~ Done 17 Oct (Ethan: automatic "Black Friday: Free AU postage", every AU order, no minimum).
 - The featured boxes were in stock on 17 Oct (inventory > 0). **Re-check on 26 Nov** and drop any that have sold out.
 - No prices in the body, so they can't go stale. Product prices show on the site.

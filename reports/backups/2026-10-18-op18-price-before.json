@@ -1,0 +1,11 @@
+{
+  "read_at": "2026-10-17 (cloud clock), run dated 18 Oct 2026",
+  "product_id": "gid://shopify/Product/15417946865942",
+  "title": "[PRE-ORDER] One Piece The Dominance of God (OP-18) Sealed Japanese Booster Box",
+  "handle": "pre-order-one-piece-the-dominance-of-god-op-18-sealed-japanese-booster-box",
+  "status": "ACTIVE",
+  "tags": ["booster-box","dropship-urara","game:onepiece","japanese","jp-sealed","label:PRE-ORDER","moq-6","onepiece","preorder","sealed","set:OP-18","supplier:urara"],
+  "variants": [
+    {"id": "gid://shopify/ProductVariant/67686723518742", "sku": "PRE-URA-OP18-BOX", "price": "200.00", "compareAtPrice": null, "inventoryPolicy": "DENY", "inventoryQuantity": 6}
+  ]
+}

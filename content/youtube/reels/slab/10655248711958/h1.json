@@ -2,12 +2,12 @@
   "product_id": "10655248711958",
   "kind": "slab",
   "hook_index": 1,
-  "hook": "One in stock \u2014 BGS 9.5 Nico Robin, $275",
-  "voiceover": "One in stock. BGS 9.5 Nico Robin, $275. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 9.79,
+  "hook": "One in stock \u2014 BGS 9.5 Nico Robin",
+  "voiceover": "One in stock. BGS 9.5 Nico Robin. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 8.0,
   "url": "https://www.hokocollectables.com/products/nico-robin-op12-087-alt-art-super-rare-one-piece-bgs-9-5-gold",
   "title": "Nico Robin OP12-087 Alt Art Super Rare One Piece BGS 9.5 Gold",
   "reel": "reels/slab/10655248711958/h1.mp4",
-  "words": 11
+  "words": 10
 }

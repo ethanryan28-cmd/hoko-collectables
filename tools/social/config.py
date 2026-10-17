@@ -29,7 +29,8 @@ KEYS = {
     'YT_REFRESH_TOKEN': ('youtube', 'OAuth refresh token with youtube.upload scope'),
     'PINTEREST_TOKEN': ('pinterest', 'Pinterest v5 access token with pins:write, boards:read'),
     'PINTEREST_BOARD_ID': ('pinterest', 'board the pins go to'),
-    'DISCORD_WEBHOOK_PICKUPS': ('discord', 'webhook URL for #pickups-and-drops'),
+    'DISCORD_WEBHOOK_URL': ('discord', 'webhook URL for #pickups-and-drops'),
+    'DISCORD_WEBHOOK_PICKUPS': ('discord', 'old name for DISCORD_WEBHOOK_URL, still read if that is unset'),
     'DISCORD_WEBHOOK_TIKTOK_QUEUE': ('tiktok', 'webhook URL for #tiktok-queue (clips + captions for the phone)'),
     'TIKTOK_ENABLED': ('tiktok', 'true to post via the Content Posting API (default false)'),
     'TIKTOK_CLIENT_KEY': ('tiktok', 'TikTok app client key (only if TIKTOK_ENABLED=true)'),
@@ -45,7 +46,7 @@ NEEDS = {
     'facebook': ['META_PAGE_TOKEN', 'FB_PAGE_ID', 'SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],
     'youtube': ['YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN'],
     'pinterest': ['PINTEREST_TOKEN', 'PINTEREST_BOARD_ID'],
-    'discord': ['DISCORD_WEBHOOK_PICKUPS'],
+    'discord': ['DISCORD_WEBHOOK_URL'],
     'tiktok_queue': ['DISCORD_WEBHOOK_TIKTOK_QUEUE'],
     'tiktok': ['TIKTOK_CLIENT_KEY', 'TIKTOK_CLIENT_SECRET', 'TIKTOK_REFRESH_TOKEN', 'SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],
     'shopify_files': ['SHOPIFY_STORE', 'SHOPIFY_ADMIN_TOKEN'],     # hosting clips for IG / FB / TikTok
@@ -54,9 +55,16 @@ NEEDS = {
 PLATFORM_ORDER = ['instagram', 'facebook', 'youtube', 'pinterest', 'discord', 'tiktok_queue', 'tiktok', 'shopify_files']
 
 
+# new key name -> older names still read when the new one is unset
+ALIASES = {'DISCORD_WEBHOOK_URL': ('DISCORD_WEBHOOK_PICKUPS',)}
+
+
 def get(key, default=None):
-    v = os.environ.get(key)
-    return v if v not in (None, '') else default
+    for k in (key, *ALIASES.get(key, ())):
+        v = os.environ.get(k)
+        if v not in (None, ''):
+            return v
+    return default
 
 
 def tiktok_enabled():
@@ -87,3 +95,22 @@ def env_report():
     for k, (plat, what) in KEYS.items():
         out.append(f'{k:<{w}}  {"set" if get(k) else "MISSING":<7}  {plat:<18}  {what}')
     return out
+
+
+# --- newest-set ("hot") push — read from content/youtube/config.json -----------------------------------------
+HOT_CONFIG_PATH = YT_CONTENT / 'config.json'
+HOT_SHARE_DEFAULT = 0.6          # share of queue slots the hot sets must take (gate in `check`)
+HOT_REPEAT_DAYS_DEFAULT = 2      # a hot asset may repeat on the same platform after this many days (others: 7)
+BF_WEEK = ('2026-11-20', '2026-11-30')   # Black Friday week block: every caption carries the BF line
+
+
+def hot_config():
+    """hot_sets, hot share and hot repeat window from content/youtube/config.json (never throws)."""
+    import json
+    try:
+        cfg = json.loads(HOT_CONFIG_PATH.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        cfg = {}
+    return {'hot_sets': list(cfg.get('hot_sets') or []),
+            'share': float(cfg.get('social_hot_share', HOT_SHARE_DEFAULT)),
+            'repeat_days': int(cfg.get('social_hot_repeat_days', HOT_REPEAT_DAYS_DEFAULT))}

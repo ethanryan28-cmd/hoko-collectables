@@ -186,6 +186,7 @@ def write_today(row, reel, caption, results):
 # ---------------------------------------------------------------- main
 
 def run(dry_run=False, when=None):
+    print('RETIRED 17 Oct 2026: tools/social is the only poster. Remove the task: schtasks /Delete /TN "HOKO publish" /F')
     when = date.fromisoformat(when) if when else today()
     due = cal.next_due(when)
     if not due:

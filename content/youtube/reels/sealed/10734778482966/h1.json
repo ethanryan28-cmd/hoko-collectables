@@ -3,11 +3,11 @@
   "kind": "sealed",
   "hook_index": 1,
   "hook": "Raging Surf \u2014 sealed Japanese booster box, in Victoria now",
-  "voiceover": "Raging Surf. Sealed Japanese booster box, in Victoria now. $245 on HOKO. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 11.17,
+  "voiceover": "Raging Surf. Sealed Japanese booster box, in Victoria now. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 8.46,
   "url": "https://www.hokocollectables.com/products/pokemon-raging-surf-sv3a-sealed-japanese-booster-box",
   "title": "Pokemon Raging Surf (sv3a) Sealed Japanese Booster Box",
   "reel": "reels/sealed/10734778482966/h1.mp4",
-  "words": 15
+  "words": 12
 }

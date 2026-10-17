@@ -2,12 +2,12 @@
   "product_id": "10734779072790",
   "kind": "sealed",
   "hook_index": 2,
-  "hook": "Stellar Miracle for $210 \u2014 free AU post over $250",
-  "voiceover": "Stellar Miracle, $210. Free Australian postage when your sealed order is over two fifty. Link in bio.",
-  "tts": "piper:en_GB-alan-medium",
-  "duration": 10.91,
+  "hook": "Stellar Miracle \u2014 sealed Japanese booster box",
+  "voiceover": "Stellar Miracle. Sealed Japanese booster box, free Australian postage on sealed boxes. Link in bio.",
+  "tts": "edge-tts:en-AU-WilliamMultilingualNeural",
+  "duration": 9.82,
   "url": "https://www.hokocollectables.com/products/pokemon-stellar-miracle-sv7-sealed-japanese-booster-box",
   "title": "Pokemon Stellar Miracle (sv7) Sealed Japanese Booster Box",
   "reel": "reels/sealed/10734779072790/h2.mp4",
-  "words": 17
+  "words": 15
 }

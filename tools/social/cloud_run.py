@@ -8,8 +8,9 @@ What one pass does, in order:
   2. topup     if any platform has fewer than MIN_QUEUED_DAYS queued, the queue is topped up to today + 14.
   3. render    clips the queue needs that are not on disk are rendered here via content/youtube/run.py
                (reel <kind> <id> --hook k, or `calendar` for tips / roundups / beats). The en-AU edge-tts voice
-               cannot connect from the cloud, so the Piper voice is downloaded to content/youtube/.cache/piper/
-               and every clip rendered with it is logged "fallback voice". Clips cut from source video
+               trusts the session proxy CA via content/youtube/hoko/tts.py (SSL_CERT_FILE / REQUESTS_CA_BUNDLE /
+               /root/.ccr/ca-bundle.crt); the Piper voice in content/youtube/.cache/piper/ is used only if Bing is
+               still unreachable, and every clip rendered with it is logged "fallback voice". Clips cut from source video
                (shorts / carddrop / social-bank) cannot be rendered here and are reported.
   4. host      clips due now for Instagram / Facebook (and TikTok API when enabled) are uploaded to Shopify
                Files (tools/social/hosting.py; needs SHOPIFY_STORE + SHOPIFY_ADMIN_TOKEN).
@@ -197,7 +198,7 @@ def render(missing, log, limit=None, dry=False):
         return [], cannot
     if dry:
         planned = [m for _, ms in cmds for m in ms]
-        log(f'dry-run: would render {len(planned)} clip(s) with the fallback voice')
+        log(f'dry-run: would render {len(planned)} clip(s) (en-AU edge-tts, Piper fallback)')
         return planned[:limit] if limit else planned, cannot
     probs = render_deps()
     if probs:
