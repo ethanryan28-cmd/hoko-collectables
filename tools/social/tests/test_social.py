@@ -32,6 +32,18 @@ def entries(q, platform):
                 yield it, e
 
 
+class TopupHotShare(unittest.TestCase):
+    """Topup keeps past items; only today+ may count toward the hot share, or a hot-heavy past starves the new window."""
+
+    def test_topup_window_meets_hot_share(self):
+        hot = C.hot_config()
+        for back in (1, 3, 7, 14):
+            q0 = build(start=START - timedelta(days=back))
+            q = build(start=START, existing=q0)
+            for p, (h, n, s) in qb.hot_share(q, start=START).items():
+                self.assertGreaterEqual(s, hot['share'], (back, p, h, n))
+
+
 class QueueRules(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
