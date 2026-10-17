@@ -2,6 +2,11 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Social poster cloud-run 17:12 (`claude/social-cloud-2026-10-17-1711`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T1712+1100.md`
+- All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 2 SKIP (stale 07:00 / 10:00 slots). Queue 15 days/platform, 0 invalid. 49 clips unrendered — `piper-tts` could not be installed (PyPI unreachable from the sandbox).
+- **Ethan to do:** set the platform env vars + add `piper-tts` to the environment setup script (or render on the PC).
+
 ## 2026-10-17 · Organic-2: JP-sealed links, channels, social readiness, JAN retry (`claude/organic-2-1017-h3c9kj`)
 - **Status:** built, merged. EB-05 guide → DRAFT pre-order link accepted by Ethan. Report → `REPORT-2026-10-17-organic-2.md`
 - 2026 guide stock list rebuilt from live: 14 Pokémon + 4 One Piece boxes, OP-17/OP-13 out, M6a → product, range $115–$470. JP cards guide: price/pull-rate bullet replaced with the per-box line; the separate pull-rate bullet removed (follow-up). Both read back byte-exact.
