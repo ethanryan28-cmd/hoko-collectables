@@ -15,7 +15,8 @@
 
 - **Singles are core.** List / post / ship singles across all six games every week. English and Japanese.
 - **Japanese sealed is the push.** Booster boxes imported from Japan by HOKO (supplier Urara.Chii; copy says "imported from Japan by HOKO" or "direct from our Japanese distributor"). Line to use everywhere: **"Dispatched tracked from Victoria within 2–4 business days once it lands."**
-- **Pre-orders** on the newest Japanese sets (currently M7 Aura Seeker, OP-18, FB12 as drafts). Pre-order line: **"Pre-order — dispatched tracked from Victoria once it lands."**
+- **Pre-orders** on the newest Japanese sets (live 17 Oct 2026: EB-05, OP-18, M7 Aura Seeker, FB12; M6a is the newest live Pokémon box). Pre-order line: **"Pre-order — dispatched tracked from Victoria once it lands."**
+- **Newest sets only, every game:** supplier orders, pre-orders, content and homepage all point at the newest release per game; older boxes stay live untouched. The five newest are `hot_sets` in `content/youtube/config.json` and take ≥60% of the social queue.
 - **Graded slabs:** PSA, BGS, CGC only. Every slab is one item; photograph the exact copy.
 - **Buying:** sealed, PSA/BGS/CGC slabs ($100+ each) and premium singles ($25+), Australia-wide, 70–85% of eBay last-sold. Quote form on `/pages/sell-your-cards`. Consignment at 70% to the seller via `/pages/consign-your-cards`.
 
@@ -48,7 +49,7 @@ Never write: the name of the live-auction app HOKO left in 2026 (the W-word), eB
 
 ## Hard rules for agents
 
-- **Pricing, discounts, promos, markdowns are Ethan's.** Never create, edit, schedule or delete one. Report, don't act.
+- **Pricing, discounts, promos, markdowns are Ethan's.** Never create, edit, schedule or delete one. Report, don't act. Prices are Ethan's — no agent price change without his number.
 - **eBay offers:** capped at 5%, and only if Ethan sets them.
 - **Never bulk relist** without reconciling against inventory. **Never end, relist or delete listings.**
 - **Never touch payments, billing or banking.** Never change a marketplace category or a social handle.

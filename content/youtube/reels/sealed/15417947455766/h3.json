@@ -2,12 +2,14 @@
   "product_id": "15417947455766",
   "kind": "sealed",
   "hook_index": 3,
-  "hook": "Pre-order \u2014 lands November",
-  "voiceover": "Pre-order open. Hadou Seeker, Pok\u00e9mon. Japan release 27 November, ships from Victoria a few days after. $190 on HOKO. Link in bio.",
+  "hook": "Pre-order — lands November",
+  "voiceover": "Pre-order open. Aura Seeker, Pokémon. Japan release 27 November, ships from Victoria a few days after. Link in bio.",
   "tts": "piper:en_GB-alan-medium",
   "duration": 11.8,
   "url": "https://www.hokocollectables.com/products/pre-order-pokemon-hadou-seeker-m7-sealed-japanese-booster-box",
-  "title": "[PRE-ORDER] Pokemon Hadou Seeker (M7) Sealed Japanese Booster Box",
+  "title": "[PRE-ORDER] Pokemon Aura Seeker (M7) Sealed Japanese Booster Box",
   "reel": "reels/sealed/15417947455766/h3.mp4",
-  "words": 22
+  "words": 22,
+  "stale_render": true,
+  "stale_note": "text updated 2026-10-17 bf-lockin (title/voiceover/no price); mp4 needs re-render"
 }

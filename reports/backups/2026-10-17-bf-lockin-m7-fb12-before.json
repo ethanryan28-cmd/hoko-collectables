@@ -1,0 +1,7 @@
+{
+  "read_at": "2026-10-17T07:08Z",
+  "products": [
+    {"id":"gid://shopify/Product/15417947455766","title":"[PRE-ORDER] Pokemon Aura Seeker (M7) Sealed Japanese Booster Box","status":"DRAFT","media":[],"variant":{"id":"gid://shopify/ProductVariant/67686728827158","price":"190.00","inventoryPolicy":"DENY","inventoryQuantity":6,"sku":"PRE-URA-M7-BOX"},"publications":[]},
+    {"id":"gid://shopify/Product/15417947291926","title":"[PRE-ORDER] Dragon Ball Super Reach the God (FB12) Sealed Japanese Booster Box","status":"DRAFT","media":[],"variant":{"id":"gid://shopify/ProductVariant/67686727483670","price":"165.00","inventoryPolicy":"DENY","inventoryQuantity":6,"sku":"PRE-URA-FB12-BOX"},"publications":[]}
+  ]
+}

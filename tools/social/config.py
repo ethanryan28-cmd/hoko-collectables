@@ -87,3 +87,22 @@ def env_report():
     for k, (plat, what) in KEYS.items():
         out.append(f'{k:<{w}}  {"set" if get(k) else "MISSING":<7}  {plat:<18}  {what}')
     return out
+
+
+# --- newest-set ("hot") push — read from content/youtube/config.json -----------------------------------------
+HOT_CONFIG_PATH = YT_CONTENT / 'config.json'
+HOT_SHARE_DEFAULT = 0.6          # share of queue slots the hot sets must take (gate in `check`)
+HOT_REPEAT_DAYS_DEFAULT = 2      # a hot asset may repeat on the same platform after this many days (others: 7)
+BF_WEEK = ('2026-11-20', '2026-11-30')   # Black Friday week block: every caption carries the BF line
+
+
+def hot_config():
+    """hot_sets, hot share and hot repeat window from content/youtube/config.json (never throws)."""
+    import json
+    try:
+        cfg = json.loads(HOT_CONFIG_PATH.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        cfg = {}
+    return {'hot_sets': list(cfg.get('hot_sets') or []),
+            'share': float(cfg.get('social_hot_share', HOT_SHARE_DEFAULT)),
+            'repeat_days': int(cfg.get('social_hot_repeat_days', HOT_REPEAT_DAYS_DEFAULT))}

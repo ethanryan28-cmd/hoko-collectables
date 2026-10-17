@@ -8,6 +8,7 @@ import hashlib
 import re
 
 from .assets import GAME_NAMES
+from .config import BF_WEEK
 
 SIGN_OFF = 'Collector first. Seller second.'
 GAMES_LINE = 'Magic · Pokémon · One Piece · Lorcana · Gundam · Dragon Ball Super'
@@ -53,6 +54,23 @@ ROUNDUP_LINES = {
     'under-200': 'Japanese sealed that won\'t blow the budget. Full list on the site.',
     'preorders': 'Pre-orders landing before Christmas, dispatched tracked from Victoria once they land.',
 }
+# Black Friday week (20–30 Nov): every caption carries this block. No dollar figures (PRICE_RE), the code only.
+BF_LINES = [
+    'Black Friday box drop, 27–30 Nov: code BFDROP5 takes money off any Japanese sealed box, one use per customer.',
+    'Join the box drop list on the Black Friday page at hokocollectables.com — list members hear first.',
+]
+BF_LIVE_LINE = 'Black Friday is live until Monday 30 Nov: BFDROP5 on any Japanese sealed box, one use per customer.'
+
+
+def bf_lines(day):
+    """BF-week block for a posting date (ISO string); empty outside 20–30 Nov."""
+    if not (BF_WEEK[0] <= str(day) <= BF_WEEK[1]):
+        return []
+    if str(day) >= '2026-11-27':
+        return [BF_LIVE_LINE]
+    return list(BF_LINES)
+
+
 CTA = {
     'instagram': 'Link in bio → hokocollectables.com',
     'facebook': 'Shop it here: {url}',
@@ -140,6 +158,9 @@ def caption(asset, platform, day, cta=True, tags=True, games=None):
     head = headline(asset)
     parts = [head, '']
     parts += body(asset, platform, day)
+    bf = bf_lines(day)
+    if bf:
+        parts += [''] + bf
     if games:
         parts += ['', GAMES_LINE]
     c = CTA.get(platform, '')
@@ -160,7 +181,7 @@ def youtube_title(asset):
 
 def pinterest_fields(asset, day):
     title = headline(asset)[:100]
-    desc = ' '.join(body(asset, 'pinterest', day) + [SIGN_OFF, f'Packed by hand in {WHERE}.'])
+    desc = ' '.join(body(asset, 'pinterest', day) + bf_lines(day) + [SIGN_OFF, f'Packed by hand in {WHERE}.'])
     return title, desc[:500], f'{asset.name} — HOKO Collectables'[:500]
 
 
