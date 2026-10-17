@@ -17,7 +17,7 @@ from .publish import shopify_gql
 Q = """query($q:String!,$after:String){ products(first:100, query:$q, after:$after){
   pageInfo{ hasNextPage endCursor }
   nodes{ id handle title status productType tags onlineStoreUrl totalInventory publishedAt
-         priceRangeV2{ minVariantPrice{ amount } } images(first:4){ nodes{ url } }
+         priceRangeV2{ minVariantPrice{ amount } } variants(first:1){ nodes{ inventoryPolicy } } images(first:4){ nodes{ url } }
          metafields(first:10, namespace:"custom"){ nodes{ key value } } } } }"""
 
 SLAB_RE = re.compile(r'\b(PSA|BGS|CGC|TAG)\s+(\d+(?:\.\d)?)\s*(.*)$')
@@ -57,6 +57,7 @@ def refresh():
             id=n['id'].split('/')[-1], handle=n['handle'], title=n['title'], set_code=mf.get('set_code', ''),
             game=next((t.split(':')[1] for t in n['tags'] if t.startswith('game:')), ''),
             price=n['priceRangeV2']['minVariantPrice']['amount'], inventory=n['totalInventory'], status=n['status'],
+            policy=(n['variants']['nodes'] or [{}])[0].get('inventoryPolicy', 'DENY'),
             release_date=mf.get('release_date', ''), listed_at=(n['publishedAt'] or '')[:10],
             url=n['onlineStoreUrl'] or f"https://www.hokocollectables.com/products/{n['handle']}",
             flags='|'.join(t for t in n['tags'] if t in KEEP_FLAGS), images='|'.join(ims),

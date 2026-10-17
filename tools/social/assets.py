@@ -104,7 +104,8 @@ def _flags(row):
 
 
 def product_eligible(row):
-    """Promotable = ACTIVE, not supplier-out-of-stock, inventory > 0 (live variants are DENY, so 0 = not buyable)."""
+    """Promotable = ACTIVE, not supplier-out-of-stock, and buyable: inventory > 0, or inventoryPolicy CONTINUE
+    (import-to-order boxes in the live set sell at 0 stock since 17 Oct 2026)."""
     if not row:
         return False, 'no source row'
     if row.get('status') != 'ACTIVE':
@@ -116,7 +117,7 @@ def product_eligible(row):
         inv = int(float(row.get('inventory') or 0))
     except ValueError:
         inv = 0
-    if inv <= 0:   # every live variant is inventoryPolicy DENY: 0 stock = sold out, even drop-ship
+    if inv <= 0 and (row.get('policy') or 'DENY').upper() != 'CONTINUE':   # DENY at 0 stock = sold out
         return False, 'inventory 0'
     return True, ''
 
@@ -185,7 +186,7 @@ def load(today=None):
         bf = d <= '2026-11-30' and 'cutoff' not in meta.get('voiceover', '').lower() and 'christmas' not in meta.get('voiceover', '').lower()
         # a beat is rendered around one featured box; if that box is no longer buyable the clip is stale
         feat = sealed.get(str(meta.get('product_id', '')))
-        ok, why = product_eligible(feat) if feat else (True, '')
+        ok, why = product_eligible(feat) if feat else (False, 'not in sealed/source.csv (DRAFT or removed)')
         out.append(Asset(id=f'beat/{d}', kind='beat', media_type='video',
                          media=str(j.with_suffix('.mp4').relative_to(REPO)).replace('\\', '/'),
                          url=f'{SITE}/pages/black-friday' if bf else f'{SITE}/collections/japan-direct-sealed',

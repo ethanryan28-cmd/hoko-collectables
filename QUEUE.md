@@ -2,6 +2,14 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · Newest push: M6a copy to canon, OP-17 duplicate archived, source from connector, two articles (`claude/newest-push-1017`)
+- **Status:** built. Report → `REPORT-2026-10-17-newest-push.md`
+- M6a (15398993723670) description rebuilt on the M5 template (cutoff, proof, authenticity, spot-a-fake, returns; no-shrink + 20-pack lines kept), `label:NEEDS-COMP` dropped, SEO description added.
+- OP-17: kept 10734775730454, archived 15402647453974, 301 from the old handle.
+- `content/youtube/sealed/source.csv` + `slabs/source.csv` rebuilt from the connector (20 ACTIVE boxes + 2 pre-order drafts; 6 slabs); new `policy` column so CONTINUE boxes at 0 stock are promotable; 3 clips rendered in the cloud; queue rebuilt — all 20 live boxes in 14 days, M6a on 19 Oct.
+- Articles published: M6a buying guide, EB-05 release/pre-order guide.
+- **Ethan to do:** re-voice the 3 cloud clips in en-AU on the PC if wanted; `run.py source` on the PC now emits `policy`.
+
 ## 2026-10-17 · Pre-orders run: M6a/OP-17 routing, EB-05 pre-order draft, cutoff gate (`claude/preorders-1017`)
 - **Status:** built. Report → `REPORT-2026-10-17-preorders.md`
 - M6a no-shrink routed `route:urara-batch` (stays DRAFT, status write not in scope); OP-17 ×2 stay DRAFT (Kanade case-only floor $390 vs $200/$175, Urara 0 stock). Rows appended to `data/routing-2026-10-17.csv`.
