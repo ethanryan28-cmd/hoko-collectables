@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from . import tts
 from .common import (dshort, FONT_BLACK, FONT_BOLD, FPS, H, ROOT, SITE, W, config, fetch_image, flags, game_label,
-                     load_rows, price_str, product_kind, rel, set_name, short_title)
+                     load_rows, product_kind, rel, set_name, short_title)
 
 REELS = ROOT / 'reels'
 GOLD = (242, 193, 78)
@@ -53,15 +53,14 @@ def slab_short(row):
 
 
 def hook_text(row, kind, k):
-    """(on-screen hook, voiceover script). Voiceovers never say a price (social rule); the on-screen card does."""
-    p = price_str(row['price'])
+    """(on-screen hook, voiceover script). Neither the hook nor the voiceover says a price (Ethan 17 Oct 2026)."""
     if kind == 'slab':
         g = f"{row['grader']} {row['grade']}"
         name = slab_short(row)
         if k == 0:
             return (f"{g} {row['card']}",
                     f"{g} {row['card']}. Tracked from Victoria. Link in bio.")
-        return (f"One in stock — {g} {name}, {p}",
+        return (f"One in stock — {g} {name}",
                 f"One in stock. {g} {name}. Link in bio.")
     s = set_name(row)
     kd = product_kind(row)
@@ -75,8 +74,8 @@ def hook_text(row, kind, k):
             n_packs, n_cards = row['packs'].lower().split('x')
             return (f"{s} — {n_packs} packs, {n_cards} cards a pack",
                     f"{s}. {n_packs} packs, {n_cards} cards a pack, factory sealed. Link in bio.")
-        return (f"{s} for {p} — free AU post over $250",
-                f"{s}. Free Australian postage when your sealed order is over two fifty. Link in bio.")
+        return (f"{s} — sealed Japanese {kd}",
+                f"{s}. Sealed Japanese {kd}, free Australian postage on sealed boxes. Link in bio.")
     if k == 4:
         return (f"What's in {s}?",
                 f"What's in {s}? {row['chase']}. Sealed {kd}. Link in bio.")
@@ -91,7 +90,7 @@ def preorder_body(row):
     from datetime import date
     rd = date.fromisoformat(row['release_date'])
     return [f'{set_name(row)} ({row["set_code"]})', f'JP release {dshort(rd)}', 'Ships from Victoria 2–4 days after',
-            f'{price_str(row["price"])} · free AU post $250+']
+            'Free AU post on sealed']
 
 
 # ---------------------------------------------------------------- captions
@@ -119,12 +118,7 @@ def caption_text(row, kind, k, when=None):
     """Caption for posting date `when` (date or None = pre-November base copy)."""
     from datetime import date
     cfg = config()
-    hook, _ = hook_text(row, kind, k)
-    # no price or postage figure — CLAUDE.md: no prices in social captions (the on-screen hook keeps its price)
-    if kind == 'slab' and k != 0:
-        hook = hook.rsplit(', ', 1)[0]
-    elif kind == 'sealed' and k == 2 and not row.get('packs'):
-        hook = f"{set_name(row)} — sealed Japanese {product_kind(row)}"
+    hook, _ = hook_text(row, kind, k)   # hook_text carries no price or postage figure
     lines = [hook, '']
     if kind == 'slab':
         label = f" {row['grade_label']}" if row.get('grade_label') else ''
@@ -453,7 +447,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
                           else CardSlide(it.get('set_code') or 'NEW', i))
             lab = Image.new('RGBA', (W, H), (0, 0, 0, 0))
             lab.alpha_composite(text_layer(f'#{i + 1}  {short_title(it)}', 60, 1490, black=True, stroke=8))
-            lab.alpha_composite(text_layer(price_str(it['price']), 130, 1590, color=GOLD, stroke=11))
+            lab.alpha_composite(text_layer(it.get('set_code') or 'NEW', 130, 1590, color=GOLD, stroke=11))
             item_layers.append(lab)
     else:
         imgs = [fetch_image(u) for u in row['reel_images'].split('|') if u][:3]
@@ -462,13 +456,13 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
                       for i, p in enumerate(imgs)]
         else:
             slides = [CardSlide(row.get('set_code') or 'NEW', int(row['id'][-3:]))]
-    p = price_str(row['price'])
+    p = f"{row['grader']} {row['grade']}" if kind == 'slab' else 'SEALED · JAPANESE'   # no price in frame
     tag = tag or (f"{row['grader']} {row['grade']}" if kind == 'slab' else f"JAPANESE SEALED · {game_label(row).upper()}")
     sub = row['card'] if kind == 'slab' else short_title(row)
-    post = 'Tracked post · free $150+' if kind == 'slab' else 'Free AU post on sealed $250+'
+    post = 'Tracked post from Victoria' if kind == 'slab' else 'Free AU post on sealed'
     L_tag = text_layer(tag, 46, 120, color=(15, 15, 15), black=True, box=(*GOLD, 255))
     L_hook = text_layer(hook.upper(), 92, 215)
-    L_price = text_layer(p, 170, 1500, color=GOLD, stroke=12)
+    L_badge = text_layer(p, 110, 1500, color=GOLD, stroke=12)
     L_sub = text_layer(sub, 50, 1715, black=False, stroke=7)
     L_post = text_layer(post, 46, 250, black=False, box=(0, 0, 0, 190))
     L_body = None
@@ -515,7 +509,7 @@ def render(row, kind, k, out_mp4, force=False, override=None, body=None, tag=Non
                     fr.alpha_composite(_fade(L_body, a))
                 else:
                     fr.alpha_composite(_fade(L_post, a))
-                    fr.alpha_composite(_fade(L_price, a))
+                    fr.alpha_composite(_fade(L_badge, a))
                     fr.alpha_composite(_fade(L_sub, a))
             cap = caption_at(L_words, t)
             if cap is not None and (not items or t >= hook_end):

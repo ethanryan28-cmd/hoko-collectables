@@ -4,6 +4,10 @@ The poster queues 14 days of posts across Instagram, Facebook, YouTube Shorts, P
 package sent to your phone, and then posts them on schedule. Its content comes from what's already in `content/`. It
 replaces the old one-post-a-day `content/youtube/run.py publish` job.
 
+> **The PC "HOKO publish" job is RETIRED (17 Oct 2026). `tools/social` is the only poster.** `run.py publish`,
+> `run.py schedule` and `hoko-publish.cmd` stay in the repo but must not run. Remove the task on the PC:
+> `schtasks /Delete /TN "HOKO publish" /F` (`install-tasks.ps1` only disables it).
+
 | Platform | When (AEDT/AEST) | How |
 |---|---|---|
 | Instagram Reels | 12:15, 19:15 | Graph API. The clip is hosted on Shopify Files and published at the slot (no native scheduling). |
