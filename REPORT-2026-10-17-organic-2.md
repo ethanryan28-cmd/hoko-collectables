@@ -98,7 +98,7 @@ Barcode field on both products: unchanged (empty). Notes appended to both rows o
 | 43 tests OK | PASS — **44** OK (the 43 + the new Discord-only test) |
 | Edited articles = before + stated edit only | PASS — 688213655830 and 683629674774 read back MATCH against the built after-bodies; the build asserts undoing the edits returns the backup byte for byte |
 
-**Stopped at the merge.** Per the run protocol a failed gate is the stop, so nothing went to `main`. Everything is on `claude/organic-2-1017-h3c9kj`. To finish: either publish the EB-05 pre-order (gate goes to 0) or accept the one link, then merge the branch (`git checkout main && git merge --no-ff claude/organic-2-1017-h3c9kj && git push`).
+**Update (Ethan, same day): EB-05 link accepted as is; merge approved.** Originally stopped at the merge. Per the run protocol a failed gate is the stop, so nothing went to `main`. Everything is on `claude/organic-2-1017-h3c9kj`. To finish: either publish the EB-05 pre-order (gate goes to 0) or accept the one link, then merge the branch (`git checkout main && git merge --no-ff claude/organic-2-1017-h3c9kj && git push`).
 
 ## NOT CHECKED
 - Storefront HTTP from the cloud (shell proxy blocks hokocollectables.com). Links were verified by Admin API handle → status, not by fetching pages.
@@ -108,7 +108,6 @@ Barcode field on both products: unchanged (empty). Notes appended to both rows o
 ## MANUAL
 
 **Ethan only:**
-- Merge `claude/organic-2-1017-h3c9kj` into main (held back by the EB-05 link gate; see Step 7).
 - EB-05: publishing the pre-order (15431829848342) is your click. It fixes the last DRAFT link in the EB-05 guide. Price is still the $235 placeholder from the pre-orders run.
 - Optional: drop the "Pull rates in Japanese sets are often better…" bullet from the Japanese cards guide (one line, say so).
 - Social keys. One line per key. Put them in **claude.ai/code → this environment → Environment variables** for cloud-run, and/or Windows *User* environment variables for the PC runner. Never in the repo.
