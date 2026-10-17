@@ -2,10 +2,22 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF media tidy: run-2 fold-in, cloud docs, caption prices out (`claude/bf-media-tidy-1017-1tsocy`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-bf-media-tidy.md`
+- Merged `claude/bf-media-render-queue-376p0p` (report + QUEUE only). `cloud_run.py` docstring + dry-run log line now describe the tts.py proxy-CA path (no logic change).
+- `reel.caption_text`: price + postage figure out (incl. priced hooks). 61 `reels/**/*.caption.txt` rewritten without rendering, 0 with `$N`, backup in `reports/backups/2026-10-17-bf-media-tidy-captions/`. Nothing reads those files. 0 mp4/json touched. 54 tests OK, check PASS 60%, dry-run 0 invalid / 0 missing.
+- `due_unconfigured` 29 on FB/YT = native 14-day scheduling, not a bug.
+- Pre-order clips show the price on screen (`preorder_body`), left for Ethan. `captions/<date>.txt` (read by PC `run.py publish`) still carry prices, needing a no-render calendar rebuild.
+- **Ethan to do:** on-screen price ruling; captions/ rebuild yes/no; BF automatic edit; platform keys; env setup + allowlist.
+
 ## 2026-10-17 · Social poster cloud-run 20:13 (`claude/social-cloud-2026-10-17-2012`)
 - **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-17T2013+1100.md`
 - All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 3 SKIP (stale 11:00 / 12:15 slots). Queue 15 days/platform, 0 invalid, 0 clips missing. PyPI still unreachable (edge-tts / piper-tts not installable) — no render was needed.
 - **Ethan to do:** set the platform env vars; add `edge-tts piper-tts` to the environment setup script.
+
+## 2026-10-17 · BF media 2, run 2: resume check — already merged, verified (`claude/bf-media-render-queue-376p0p`)
+- **Status:** verified, nothing redone. Report → `REPORT-2026-10-17-bf-media-2.md` (## Run 2)
+- main `e967b58`, 71 mp4s / 86.5 MB on origin/main, 54 tests OK.
 
 ## 2026-10-17 · BF media 2: live William gate, 71 clips rendered + committed, merged (`claude/bf-media-1017`)
 - **Status:** built, merged. Reports → `REPORT-2026-10-17-bf-media.md` (tts fix, stopped at gate) + `REPORT-2026-10-17-bf-media-2.md` (this run)

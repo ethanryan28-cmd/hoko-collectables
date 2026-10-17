@@ -120,13 +120,16 @@ def caption_text(row, kind, k, when=None):
     from datetime import date
     cfg = config()
     hook, _ = hook_text(row, kind, k)
-    p = price_str(row['price'])
+    # no price or postage figure — CLAUDE.md: no prices in social captions (the on-screen hook keeps its price)
+    if kind == 'slab' and k != 0:
+        hook = hook.rsplit(', ', 1)[0]
+    elif kind == 'sealed' and k == 2 and not row.get('packs'):
+        hook = f"{set_name(row)} — sealed Japanese {product_kind(row)}"
     lines = [hook, '']
     if kind == 'slab':
         label = f" {row['grade_label']}" if row.get('grade_label') else ''
         lines += [f"{row['card']} — {row['grader']} {row['grade']}{label}.",
-                  'Verified grader (PSA / BGS / CGC only). Ships from Victoria.',
-                  f'{p} — tracked post, free on orders $150+.']
+                  'Verified grader (PSA / BGS / CGC only). Ships from Victoria.']
     else:
         extra = ' (outer film removed, packs untouched)' if 'no-shrink' in flags(row) else ''
         if k == 4:
@@ -136,8 +139,7 @@ def caption_text(row, kind, k, when=None):
             rd = date.fromisoformat(row['release_date'])
             extra += f". Pre-order: Japan release {dshort(rd)}, ships tracked from Victoria 2–4 business days after"
         lines += [f"{short_title(row)} — sealed Japanese {game_label(row)} {product_kind(row)}{extra}.",
-                  'Imported direct from our Japanese distributor. Packed carefully, tracked from Victoria.',
-                  f'{p} — free AU post on sealed orders $250+.']
+                  'Imported direct from our Japanese distributor. Packed carefully, tracked from Victoria.']
     lines.append(f"Grab it at hokocollectables.com → {row['url']}")
     if when is not None:
         cutoff = date.fromisoformat(cfg['christmas_cutoff'])
