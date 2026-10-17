@@ -2,6 +2,14 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-17 · BF media tidy: run-2 fold-in, cloud docs, caption prices out (`claude/bf-media-tidy-1017-1tsocy`)
+- **Status:** built, merged. Report → `REPORT-2026-10-17-bf-media-tidy.md`
+- Merged `claude/bf-media-render-queue-376p0p` (report + QUEUE only). `cloud_run.py` docstring + dry-run log line now describe the tts.py proxy-CA path (no logic change).
+- `reel.caption_text`: price + postage figure out (incl. priced hooks). 61 `reels/**/*.caption.txt` rewritten without rendering, 0 with `$N`, backup in `reports/backups/2026-10-17-bf-media-tidy-captions/`. Nothing reads those files. 0 mp4/json touched. 54 tests OK, check PASS 60%, dry-run 0 invalid / 0 missing.
+- `due_unconfigured` 29 on FB/YT = native 14-day scheduling, not a bug.
+- Pre-order clips show the price on screen (`preorder_body`), left for Ethan. `captions/<date>.txt` (read by PC `run.py publish`) still carry prices, needing a no-render calendar rebuild.
+- **Ethan to do:** on-screen price ruling; captions/ rebuild yes/no; BF automatic edit; platform keys; env setup + allowlist.
+
 ## 2026-10-17 · BF media 2, run 2: resume check — already merged, verified (`claude/bf-media-render-queue-376p0p`)
 - **Status:** verified, nothing redone. Report → `REPORT-2026-10-17-bf-media-2.md` (## Run 2)
 - main `e967b58`, 71 mp4s / 86.5 MB on origin/main, 54 tests OK.
