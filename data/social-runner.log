@@ -131,3 +131,36 @@
 2026-10-18T07:11:44+11:00 youtube NOT CONFIGURED: 28 
 2026-10-18T07:11:44+11:00 facebook NOT CONFIGURED: 28 
 2026-10-18T07:11:44+11:00 cloud-run end
+2026-10-18T12:12:05+11:00 cloud-run start · late window 7 h
+2026-10-18T12:12:05+11:00 instagram: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 facebook: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 youtube: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 pinterest: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 discord: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 tiktok: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 shopify_files: NOT CONFIGURED
+2026-10-18T12:12:05+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-18T12:12:05+11:00 invalid payloads / rule violations: 1
+2026-10-18T12:12:05+11:00   ✗ facebook:2026-10-18T12:15: scheduled_publish_time only 175s ahead (needs ≥ 600)
+2026-10-18T12:12:05+11:00 clips missing on disk: 0
+2026-10-18T12:12:05+11:00 due now: 59 · on configured platforms: 0 · hosted: 0
+2026-10-18T12:12:05+11:00 tiktok_queue NOT CONFIGURED: 1 
+2026-10-18T12:12:05+11:00 pinterest NOT CONFIGURED: 1 
+2026-10-18T12:12:05+11:00 youtube NOT CONFIGURED: 29 
+2026-10-18T12:12:05+11:00 facebook NOT CONFIGURED: 28 
+2026-10-18T12:12:05+11:00 cloud-run end
+2026-10-18T12:13:50+11:00 cloud-run DRY-RUN start · late window 7 h
+2026-10-18T12:13:50+11:00 instagram: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 facebook: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 youtube: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 pinterest: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 discord: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 tiktok_queue: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 tiktok: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 shopify_files: NOT CONFIGURED
+2026-10-18T12:13:50+11:00 queue days per platform {'tiktok_queue': 15, 'pinterest': 15, 'youtube': 15, 'instagram': 15, 'facebook': 15, 'discord': 15}
+2026-10-18T12:13:51+11:00 invalid payloads / rule violations: 0
+2026-10-18T12:13:51+11:00 clips missing on disk: 0
+2026-10-18T12:13:51+11:00 due now: 59 · on configured platforms: 0 · hosted: 0
+2026-10-18T12:13:51+11:00 cloud-run end
