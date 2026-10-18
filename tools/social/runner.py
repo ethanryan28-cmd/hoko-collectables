@@ -201,7 +201,10 @@ def dry_run(now=None, queue=None, out=print, write=True):
             continue
         # act at the moment the runner would: YT/FB ahead of time (now), the rest at the slot
         act_now = now if p in ('youtube', 'facebook') else slot
-        ctx = {'now': act_now, 'late': False, 'hosted_url': PLACEHOLDER_URL, 'size': 1}
+        # mirror action(): a Facebook slot under FB_MIN_LEAD away goes out as 'send-late' (published=true),
+        # not as a native schedule, so don't flag the <10 min lead that the live runner never sends
+        late = p == 'facebook' and slot - now < FB_MIN_LEAD
+        ctx = {'now': act_now, 'late': late, 'hosted_url': PLACEHOLDER_URL, 'size': 1}
         pl, errs = payload(it, ctx)
         if p == 'tiktok_queue':
             medias = [c['media'] for c in it.get('clips', [])]

@@ -2,6 +2,12 @@
 
 Work queue for Claude Code runs. Newest first. Each entry: date · what · status · where the report is.
 
+## 2026-10-18 · Social poster cloud-run 12:12 (`claude/social-cloud-2026-10-18-1211`)
+- **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-18T1212+1100.md`
+- All 8 platforms NOT CONFIGURED. 0 posted, 0 FAIL, 0 SKIP. Queue 15 days/platform, 0 clips missing. PyPI still blocked.
+- `invalid.count` = 1 was a false positive: run fired 3 min before the 12:15 FB slot and the pre-flight validated it as a native schedule (needs ≥ 10 min) though the live runner sends it `published=true` (send-late). `runner.dry_run` now mirrors `action()`; +1 test, 83 OK.
+- **Ethan to do:** set the platform env vars; add `edge-tts piper-tts` to the env setup; consider moving this trigger to ~12:20 so the midday Reel posts at its slot instead of via the next run's late window.
+
 ## 2026-10-18 · Social poster cloud-run 07:11 (`claude/social-cloud-2026-10-18-0711`)
 - **Status:** ran, merged. Report → `reports/social/REPORT-2026-10-18T0711+1100.md`
 - All 8 platforms NOT CONFIGURED (no env keys in the cloud environment). 0 posted, 0 FAIL, 0 SKIP (queue starts 18 Oct; 57 due in the 14-day FB/YT windows). Queue 15 days/platform, 0 invalid, 0 clips missing. PyPI still unreachable (piper-tts / edge-tts not installable) — no render was needed.

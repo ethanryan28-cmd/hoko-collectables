@@ -355,6 +355,16 @@ class DryRun(unittest.TestCase):
         p = facebook.build(it, {'now': now, 'late': False, 'hosted_url': 'https://cdn.shopify.com/x.mp4'})
         self.assertTrue(any('600' in e for e in facebook.validate(p, it, {'now': now})))
 
+    def test_dry_run_within_facebook_lead_is_send_late_not_invalid(self):
+        # cloud-run 18 Oct 12:12 landed 3 min before the 12:15 FB slot: the runner sends that as
+        # published=true (send-late), so the pre-flight must not call it a scheduling violation
+        q = build()
+        it = next(i for i in q['items'] if i['platform'] == 'facebook')
+        now = parse(it['slot']) - timedelta(minutes=3)
+        rep = runner.dry_run(now=now, queue=q, out=lambda *_: None, write=False)
+        self.assertFalse([x for x in rep['problems'] if '600' in x], rep['problems'][:5])
+        self.assertEqual(runner.action(it, now, timedelta(hours=7)), 'send-late')
+
 
 if __name__ == '__main__':
     unittest.main()
